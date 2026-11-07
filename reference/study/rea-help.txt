@@ -1,0 +1,29 @@
+usage: rea-video [-h] [-v] [--env-file ENV_FILE]
+                 {decompose,stems,probe,eval,capsule,remake-plan,remake-run,capsule-draft,assemble,tiles,summary,review,apply-review,correct,prefs,memory}
+                 ...
+
+逆向拆解视频：逐镜头判断实拍 / AI 生成 / 代码渲染 / 混合，并生成复刻方案
+
+positional arguments:
+  {decompose,stems,probe,eval,capsule,remake-plan,remake-run,capsule-draft,assemble,tiles,summary,review,apply-review,correct,prefs,memory}
+    decompose           拆解一条视频
+    stems               只把声音剥离成 原声 / 人声 / 配乐 三条轨
+    probe               只看容器元数据/来源线索
+    eval                在带标注的样本集上评测拆解准确率
+    capsule             导出 capsule-cinema 的视频分析 JSON（供生成胶囊草稿）
+    remake-plan         为 AI 类镜头生成 capsule-cinema 复刻任务
+    remake-run          用 capsule-cinema 执行 remake-plan 生成的任务（会计费，先 --dry-run）
+    capsule-draft       用拆解结果生成 capsule-cinema 胶囊草稿
+    assemble            把复刻结果按原时间线拼回，并输出对比视频
+    tiles               按时间抽帧拼图，近距离检查某一段（agent 复核用）
+    summary             紧凑打印拆解结果（低置信镜头会被标出来）
+    review              能看图的 agent 当 VLM：生成逐镜看图任务和答案模板
+    apply-review        把 agent 看图的答案并入结论，重写 breakdown.json 和报告
+    correct             用户指出判错：改正这条视频的结论，并记入记忆（以后同类镜头会提示复核）
+    prefs               查看 / 设置用户偏好（默认引擎、是否开 VLM、VLM 配置文件、复核者、自由文字说明）
+    memory              看记住了什么：偏好、常见纠正类型；可导出为评测样本
+
+options:
+  -h, --help            show this help message and exit
+  -v, --verbose
+  --env-file ENV_FILE   额外的 .env（例如 capsule-cinema/.env，用于 VLM 配置）

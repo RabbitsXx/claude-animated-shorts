@@ -1,0 +1,25 @@
+09:12:25 INFO video QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4 1080x1920 30.00fps 63.17s
+09:12:28 INFO detected 10 shots
+09:12:30 INFO separating stems (vocals / music)
+09:12:30 INFO downloading UVR-MDX-NET-Inst_HQ_3.onnx (~67 MB) -> F:\Create Cartoon\claude-animated-shorts\tools\rea-video\.models\UVR-MDX-NET-Inst_HQ_3.onnx
+09:13:07 INFO packaging layer: subtitle timeline, 花字, stickers
+09:14:07 INFO downloading face model face_detection_yunet_2023mar.onnx -> F:\Create Cartoon\claude-animated-shorts\tools\rea-video\.models\face_detection_yunet_2023mar.onnx
+09:14:09 INFO shot_001 00:00.000-00:06.967 det=ai_video(45%) dynamic
+09:14:11 INFO shot_002 00:06.967-00:09.967 det=ai_video(62%) dynamic
+09:14:14 INFO shot_003 00:09.967-00:16.167 det=ai_video(45%) dynamic
+09:14:17 INFO shot_004 00:16.167-00:21.000 det=ai_video(50%) dynamic
+09:14:19 INFO shot_005 00:21.000-00:22.200 det=ai_video(54%) dynamic
+09:14:21 INFO shot_006 00:22.200-00:31.633 det=ai_video(48%) dynamic
+09:14:24 INFO shot_007 00:31.633-00:34.067 det=ai_video(57%) dynamic
+09:14:26 INFO shot_008 00:34.067-00:44.300 det=ai_video(50%) dynamic
+09:14:29 INFO shot_009 00:44.300-00:45.000 det=ai_video(52%) dynamic
+09:14:31 INFO shot_010 00:45.000-01:03.167 det=ai_video(52%) dynamic
+09:14:32 INFO done in 127.4s -> F:\Create Cartoon\claude-animated-shorts\pipeline\quality\reference-study\rea
+{
+  "out": "pipeline\\quality\\reference-study\\rea",
+  "verdict": "Mixed production: live action 93% + AI-generated video 7%; overlays: styled text, text labels, subtitles (composited in code / an editor); real material used: live footage (59.0s); audio: voice + 78 sound effects; packaging: styled text ×8, text labels ×126, 77 sound effects land on text / sticker pops",
+  "shots": 10,
+  "confidence": 0.534,
+  "vlm": "No VLM; live action / AI / 3D are told apart from pixel statistics only, so confidence is limited. An agent that can see images: run rea-video review, look at each shot and merge with apply-review; otherwise configure a VLM (any OpenAI-compatible multimodal model, e.g. Gemini / GPT-4o / Doubao / Qwen-VL): set REA_VLM_BASE_URL, REA_VLM_API_KEY and REA_VLM_MODEL (several models comma-separated as fallbacks), then rerun with --vlm",
+  "report": "pipeline\\quality\\reference-study\\rea\\report.html"
+}

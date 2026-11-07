@@ -1,0 +1,9 @@
+{
+ "provider": "ElevenLabs",
+ "voiceId": "BTEPH6wbWkb66Dys0ry6",
+ "model": "eleven_v3",
+ "duration": 63.999958,
+ "tempoCorrection": 1.105,
+ "wordCount": 177,
+ "listened": false
+}

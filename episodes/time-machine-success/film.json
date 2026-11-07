@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "time-machine-success",
+  "language": "en",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "targetSeconds": [
+    55,
+    70
+  ],
+  "voiceId": "BTEPH6wbWkb66Dys0ry6",
+  "style": "original-hybrid-3d2d",
+  "imageGeneration": false
+}

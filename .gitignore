@@ -1,0 +1,21 @@
+.env
+.env.*
+node_modules/
+archive/
+studio2/.runs/
+studio2/.tmp/
+**/.browser-profile*/
+episodes/*/renders/
+episodes/*/voice/cache/
+episodes/*/audio/cache/
+episodes/*/out/review/
+reference/study/samples/
+# Large generated media (regenerable from cache) and third-party reference audio: never push to the public repo.
+episodes/*/out/
+episodes/*/audio/*.wav
+episodes/*/audio/*.mp3
+episodes/*/voice/*.wav
+episodes/*/voice/*.mp3
+reference/study/audio*.wav
+reference/study/rea/stems/
+reference/study/rea/**/*.wav

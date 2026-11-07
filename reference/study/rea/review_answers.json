@@ -1,0 +1,1347 @@
+{
+  "by": "Codex visual review; audio listening not performed",
+  "shots": [
+    {
+      "id": "shot_001",
+      "time": "0.00-6.97",
+      "label_probs": {
+        "live_action": 0,
+        "ai_video": 0.08,
+        "avatar": 0,
+        "cg_3d": 0.9,
+        "code_render": 0,
+        "screen_capture": 0,
+        "still_motion": 0,
+        "static_hold": 0,
+        "anim_2d": 0.02,
+        "stop_motion": 0,
+        "film_footage": 0
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Agent inspected all ten tool shot sheets, a whole-video 254-frame sample sequence at approximately 0.25-second intervals, and selected native-resolution details.",
+        "Stable rail/support topology, fixed scene landmarks and coherent parallax across moving camera views support a rendered 3D world; faces and clothing are deliberately flat illustrated characters.",
+        "No creator source project was supplied: the exact engine, asset provenance, rigging software and whether AI assisted authoring cannot be proven from the encoded clip. Do not infer live action merely from pixel statistics."
+      ],
+      "description": "At 0-2.63s a patched-overall worker raises, swings and lands a long sledgehammer on a detailed steel coaster. The torso leans, face compresses and sparks mark contact. Camera rapidly dollies back to reveal the huge loop, then dissolves at about 2.63s to a moving scaffold view. From 5.3s camera pushes into an opened empty wallet and facial disappointment; a tiny fly is a visual gag. This is multiple staging beats in a rendered 3D park with a flat illustrated actor, not documentary footage.",
+      "embedded_assets": [],
+      "ai_edits": [],
+      "replication": {
+        "image_prompt": "Original detailed stylized 3D environment with physically coherent materials, support structures and layered depth, expressive flat illustrated cast with costume-specific seams and accessories. Preserve readable action and the actual local framing.",
+        "video_prompt": "At 0-2.63s a patched-overall worker raises, swings and lands a long sledgehammer on a detailed steel coaster. The torso leans, face compresses and sparks mark contact. Camera rapidly dollies back to reveal the huge loop, then dissolves at about 2.63s to a moving scaffold view. From 5.3s camera pushes into an opened empty wallet and facial disappointment; a tiny fly is a visual gag. This is multiple staging beats in a rendered 3D park with a flat illustrated actor, not documentary footage. For an original adaptation, author the required geometry and physical acting in Blender/Three.js; stage anticipation, contact, follow-through and reaction. This is a code/3D reconstruction brief, not permission for image/video generation.",
+        "video_prompt_en": "At 0-2.63s a patched-overall worker raises, swings and lands a long sledgehammer on a detailed steel coaster. The torso leans, face compresses and sparks mark contact. Camera rapidly dollies back to reveal the huge loop, then dissolves at about 2.63s to a moving scaffold view. From 5.3s camera pushes into an opened empty wallet and facial disappointment; a tiny fly is a visual gag. This is multiple staging beats in a rendered 3D park with a flat illustrated actor, not documentary footage."
+      },
+      "aspects": {
+        "framing": {
+          "shot_size": "Varies within the detected group; see temporal breakdown",
+          "camera_angle": "Deliberate action-oriented virtual camera, including low views and POV where described",
+          "composition": "Actor or physical mechanism is the focal point; foreground, middle action and persistent background have separate depth."
+        },
+        "camera": {
+          "camera_support": "Virtual 3D camera inferred from stable perspective/parallax",
+          "lens": "Actual focal length cannot be recovered; compare framing directly",
+          "speed": "Purposeful dolly/tracking/reveal, with holds for reactions; not a uniform slow pan."
+        },
+        "lighting": {
+          "location": "Stylized rendered exterior/station; not a live-action lighting plan",
+          "key_light": "Daylight key or blue night fill with warm scene lamps depending on segment",
+          "light_quality": "Visible soft cast shadows and material separation",
+          "fill_light": "Ambient/environment fill inferred visually",
+          "rim_light": "Unverified",
+          "catchlight": "Illustrated eyes; do not invent real camera catchlights",
+          "practicals": "Night colored bulbs, station fixtures and lantern when present",
+          "color_temp": "Exact Kelvin unverified",
+          "lighting_setup": "3D lighting reconstruction, no physical equipment claim"
+        },
+        "grade": {
+          "color_grade": "Saturated blue/green daytime with warm props, contrasted with deep blue night and warm practical lights; retain material detail."
+        }
+      },
+      "split_suggestion": {
+        "cuts": [
+          2.63
+        ],
+        "labels": [
+          "cg_3d",
+          "cg_3d"
+        ],
+        "note": "Approximate visually reviewed scene transitions/dissolve centers; detector merged these. Continuous camera moves inside a scene are described as beats, not additional cuts."
+      }
+    },
+    {
+      "id": "shot_002",
+      "time": "6.97-9.97",
+      "label_probs": {
+        "live_action": 0,
+        "ai_video": 0.08,
+        "avatar": 0,
+        "cg_3d": 0.9,
+        "code_render": 0,
+        "screen_capture": 0,
+        "still_motion": 0,
+        "static_hold": 0,
+        "anim_2d": 0.02,
+        "stop_motion": 0,
+        "film_footage": 0
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Agent inspected all ten tool shot sheets, a whole-video 254-frame sample sequence at approximately 0.25-second intervals, and selected native-resolution details.",
+        "Stable rail/support topology, fixed scene landmarks and coherent parallax across moving camera views support a rendered 3D world; faces and clothing are deliberately flat illustrated characters.",
+        "No creator source project was supplied: the exact engine, asset provenance, rigging software and whether AI assisted authoring cannot be proven from the encoded clip. Do not infer live action merely from pixel statistics."
+      ],
+      "description": "A cream-waistcoated rival stands beside a blueprint board, construction crane and partly assembled white circular loop. Camera approaches from wide park geography to readable character and board; eyes/brows/mouth change from smug to speaking. Trees, wheel, fences and bunting give depth and continuity. Different character costume, same flat illustrated family.",
+      "embedded_assets": [],
+      "ai_edits": [],
+      "replication": {
+        "image_prompt": "Original detailed stylized 3D environment with physically coherent materials, support structures and layered depth, expressive flat illustrated cast with costume-specific seams and accessories. Preserve readable action and the actual local framing.",
+        "video_prompt": "A cream-waistcoated rival stands beside a blueprint board, construction crane and partly assembled white circular loop. Camera approaches from wide park geography to readable character and board; eyes/brows/mouth change from smug to speaking. Trees, wheel, fences and bunting give depth and continuity. Different character costume, same flat illustrated family. For an original adaptation, author the required geometry and physical acting in Blender/Three.js; stage anticipation, contact, follow-through and reaction. This is a code/3D reconstruction brief, not permission for image/video generation.",
+        "video_prompt_en": "A cream-waistcoated rival stands beside a blueprint board, construction crane and partly assembled white circular loop. Camera approaches from wide park geography to readable character and board; eyes/brows/mouth change from smug to speaking. Trees, wheel, fences and bunting give depth and continuity. Different character costume, same flat illustrated family."
+      },
+      "aspects": {
+        "framing": {
+          "shot_size": "Varies within the detected group; see temporal breakdown",
+          "camera_angle": "Deliberate action-oriented virtual camera, including low views and POV where described",
+          "composition": "Actor or physical mechanism is the focal point; foreground, middle action and persistent background have separate depth."
+        },
+        "camera": {
+          "camera_support": "Virtual 3D camera inferred from stable perspective/parallax",
+          "lens": "Actual focal length cannot be recovered; compare framing directly",
+          "speed": "Purposeful dolly/tracking/reveal, with holds for reactions; not a uniform slow pan."
+        },
+        "lighting": {
+          "location": "Stylized rendered exterior/station; not a live-action lighting plan",
+          "key_light": "Daylight key or blue night fill with warm scene lamps depending on segment",
+          "light_quality": "Visible soft cast shadows and material separation",
+          "fill_light": "Ambient/environment fill inferred visually",
+          "rim_light": "Unverified",
+          "catchlight": "Illustrated eyes; do not invent real camera catchlights",
+          "practicals": "Night colored bulbs, station fixtures and lantern when present",
+          "color_temp": "Exact Kelvin unverified",
+          "lighting_setup": "3D lighting reconstruction, no physical equipment claim"
+        },
+        "grade": {
+          "color_grade": "Saturated blue/green daytime with warm props, contrasted with deep blue night and warm practical lights; retain material detail."
+        }
+      }
+    },
+    {
+      "id": "shot_003",
+      "time": "9.97-16.17",
+      "label_probs": {
+        "live_action": 0,
+        "ai_video": 0.08,
+        "avatar": 0,
+        "cg_3d": 0.9,
+        "code_render": 0,
+        "screen_capture": 0,
+        "still_motion": 0,
+        "static_hold": 0,
+        "anim_2d": 0.02,
+        "stop_motion": 0,
+        "film_footage": 0
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Agent inspected all ten tool shot sheets, a whole-video 254-frame sample sequence at approximately 0.25-second intervals, and selected native-resolution details.",
+        "Stable rail/support topology, fixed scene landmarks and coherent parallax across moving camera views support a rendered 3D world; faces and clothing are deliberately flat illustrated characters.",
+        "No creator source project was supplied: the exact engine, asset provenance, rigging software and whether AI assisted authoring cannot be proven from the encoded clip. Do not infer live action merely from pixel statistics."
+      ],
+      "description": "Night test at the wooden station: cart moves into the foreground; printed crushed test-dummy material is visibly inside, worker reacts with wide eyes. Camera tracks beside rails then pushes toward worried worker; by 15.3s worker reaches for an upright sledgehammer and leans into the grip. Rail sleepers, plank grain, handrails, rope, banner, bin/stump and fluorescent/colored practical lights stay spatially fixed.",
+      "embedded_assets": [],
+      "ai_edits": [],
+      "replication": {
+        "image_prompt": "Original detailed stylized 3D environment with physically coherent materials, support structures and layered depth, expressive flat illustrated cast with costume-specific seams and accessories. Preserve readable action and the actual local framing.",
+        "video_prompt": "Night test at the wooden station: cart moves into the foreground; printed crushed test-dummy material is visibly inside, worker reacts with wide eyes. Camera tracks beside rails then pushes toward worried worker; by 15.3s worker reaches for an upright sledgehammer and leans into the grip. Rail sleepers, plank grain, handrails, rope, banner, bin/stump and fluorescent/colored practical lights stay spatially fixed. For an original adaptation, author the required geometry and physical acting in Blender/Three.js; stage anticipation, contact, follow-through and reaction. This is a code/3D reconstruction brief, not permission for image/video generation.",
+        "video_prompt_en": "Night test at the wooden station: cart moves into the foreground; printed crushed test-dummy material is visibly inside, worker reacts with wide eyes. Camera tracks beside rails then pushes toward worried worker; by 15.3s worker reaches for an upright sledgehammer and leans into the grip. Rail sleepers, plank grain, handrails, rope, banner, bin/stump and fluorescent/colored practical lights stay spatially fixed."
+      },
+      "aspects": {
+        "framing": {
+          "shot_size": "Varies within the detected group; see temporal breakdown",
+          "camera_angle": "Deliberate action-oriented virtual camera, including low views and POV where described",
+          "composition": "Actor or physical mechanism is the focal point; foreground, middle action and persistent background have separate depth."
+        },
+        "camera": {
+          "camera_support": "Virtual 3D camera inferred from stable perspective/parallax",
+          "lens": "Actual focal length cannot be recovered; compare framing directly",
+          "speed": "Purposeful dolly/tracking/reveal, with holds for reactions; not a uniform slow pan."
+        },
+        "lighting": {
+          "location": "Stylized rendered exterior/station; not a live-action lighting plan",
+          "key_light": "Daylight key or blue night fill with warm scene lamps depending on segment",
+          "light_quality": "Visible soft cast shadows and material separation",
+          "fill_light": "Ambient/environment fill inferred visually",
+          "rim_light": "Unverified",
+          "catchlight": "Illustrated eyes; do not invent real camera catchlights",
+          "practicals": "Night colored bulbs, station fixtures and lantern when present",
+          "color_temp": "Exact Kelvin unverified",
+          "lighting_setup": "3D lighting reconstruction, no physical equipment claim"
+        },
+        "grade": {
+          "color_grade": "Saturated blue/green daytime with warm props, contrasted with deep blue night and warm practical lights; retain material detail."
+        }
+      }
+    },
+    {
+      "id": "shot_004",
+      "time": "16.17-21.00",
+      "label_probs": {
+        "live_action": 0,
+        "ai_video": 0.08,
+        "avatar": 0,
+        "cg_3d": 0.9,
+        "code_render": 0,
+        "screen_capture": 0,
+        "still_motion": 0,
+        "static_hold": 0,
+        "anim_2d": 0.02,
+        "stop_motion": 0,
+        "film_footage": 0
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Agent inspected all ten tool shot sheets, a whole-video 254-frame sample sequence at approximately 0.25-second intervals, and selected native-resolution details.",
+        "Stable rail/support topology, fixed scene landmarks and coherent parallax across moving camera views support a rendered 3D world; faces and clothing are deliberately flat illustrated characters.",
+        "No creator source project was supplied: the exact engine, asset provenance, rigging software and whether AI assisted authoring cannot be proven from the encoded clip. Do not infer live action merely from pixel statistics."
+      ],
+      "description": "Night hammering: an exaggerated body/arm swing meets the lower rail with sparks and a bright golden sweep. The track bottom visibly changes curvature while the camera retreats enough to show the full curve. Camera returns to worker; expression changes and a small shrug answers the narrative question. Real geometry/silhouette change is part of the explanation, not just a new camera angle.",
+      "embedded_assets": [],
+      "ai_edits": [],
+      "replication": {
+        "image_prompt": "Original detailed stylized 3D environment with physically coherent materials, support structures and layered depth, expressive flat illustrated cast with costume-specific seams and accessories. Preserve readable action and the actual local framing.",
+        "video_prompt": "Night hammering: an exaggerated body/arm swing meets the lower rail with sparks and a bright golden sweep. The track bottom visibly changes curvature while the camera retreats enough to show the full curve. Camera returns to worker; expression changes and a small shrug answers the narrative question. Real geometry/silhouette change is part of the explanation, not just a new camera angle. For an original adaptation, author the required geometry and physical acting in Blender/Three.js; stage anticipation, contact, follow-through and reaction. This is a code/3D reconstruction brief, not permission for image/video generation.",
+        "video_prompt_en": "Night hammering: an exaggerated body/arm swing meets the lower rail with sparks and a bright golden sweep. The track bottom visibly changes curvature while the camera retreats enough to show the full curve. Camera returns to worker; expression changes and a small shrug answers the narrative question. Real geometry/silhouette change is part of the explanation, not just a new camera angle."
+      },
+      "aspects": {
+        "framing": {
+          "shot_size": "Varies within the detected group; see temporal breakdown",
+          "camera_angle": "Deliberate action-oriented virtual camera, including low views and POV where described",
+          "composition": "Actor or physical mechanism is the focal point; foreground, middle action and persistent background have separate depth."
+        },
+        "camera": {
+          "camera_support": "Virtual 3D camera inferred from stable perspective/parallax",
+          "lens": "Actual focal length cannot be recovered; compare framing directly",
+          "speed": "Purposeful dolly/tracking/reveal, with holds for reactions; not a uniform slow pan."
+        },
+        "lighting": {
+          "location": "Stylized rendered exterior/station; not a live-action lighting plan",
+          "key_light": "Daylight key or blue night fill with warm scene lamps depending on segment",
+          "light_quality": "Visible soft cast shadows and material separation",
+          "fill_light": "Ambient/environment fill inferred visually",
+          "rim_light": "Unverified",
+          "catchlight": "Illustrated eyes; do not invent real camera catchlights",
+          "practicals": "Night colored bulbs, station fixtures and lantern when present",
+          "color_temp": "Exact Kelvin unverified",
+          "lighting_setup": "3D lighting reconstruction, no physical equipment claim"
+        },
+        "grade": {
+          "color_grade": "Saturated blue/green daytime with warm props, contrasted with deep blue night and warm practical lights; retain material detail."
+        }
+      }
+    },
+    {
+      "id": "shot_005",
+      "time": "21.00-22.20",
+      "label_probs": {
+        "live_action": 0,
+        "ai_video": 0.08,
+        "avatar": 0,
+        "cg_3d": 0.9,
+        "code_render": 0,
+        "screen_capture": 0,
+        "still_motion": 0,
+        "static_hold": 0,
+        "anim_2d": 0.02,
+        "stop_motion": 0,
+        "film_footage": 0
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Agent inspected all ten tool shot sheets, a whole-video 254-frame sample sequence at approximately 0.25-second intervals, and selected native-resolution details.",
+        "Stable rail/support topology, fixed scene landmarks and coherent parallax across moving camera views support a rendered 3D world; faces and clothing are deliberately flat illustrated characters.",
+        "No creator source project was supplied: the exact engine, asset provenance, rigging software and whether AI assisted authoring cannot be proven from the encoded clip. Do not infer live action merely from pixel statistics."
+      ],
+      "description": "Rival observes through a long telescope on tripod, turns toward the viewer and laughs with head and torso tilt. Warm hanging lantern makes a pool of light on grass; the loop and wheel remain behind him in blue night light. A short character reaction bridges the engineering action and sabotage.",
+      "embedded_assets": [],
+      "ai_edits": [],
+      "replication": {
+        "image_prompt": "Original detailed stylized 3D environment with physically coherent materials, support structures and layered depth, expressive flat illustrated cast with costume-specific seams and accessories. Preserve readable action and the actual local framing.",
+        "video_prompt": "Rival observes through a long telescope on tripod, turns toward the viewer and laughs with head and torso tilt. Warm hanging lantern makes a pool of light on grass; the loop and wheel remain behind him in blue night light. A short character reaction bridges the engineering action and sabotage. For an original adaptation, author the required geometry and physical acting in Blender/Three.js; stage anticipation, contact, follow-through and reaction. This is a code/3D reconstruction brief, not permission for image/video generation.",
+        "video_prompt_en": "Rival observes through a long telescope on tripod, turns toward the viewer and laughs with head and torso tilt. Warm hanging lantern makes a pool of light on grass; the loop and wheel remain behind him in blue night light. A short character reaction bridges the engineering action and sabotage."
+      },
+      "aspects": {
+        "framing": {
+          "shot_size": "Varies within the detected group; see temporal breakdown",
+          "camera_angle": "Deliberate action-oriented virtual camera, including low views and POV where described",
+          "composition": "Actor or physical mechanism is the focal point; foreground, middle action and persistent background have separate depth."
+        },
+        "camera": {
+          "camera_support": "Virtual 3D camera inferred from stable perspective/parallax",
+          "lens": "Actual focal length cannot be recovered; compare framing directly",
+          "speed": "Purposeful dolly/tracking/reveal, with holds for reactions; not a uniform slow pan."
+        },
+        "lighting": {
+          "location": "Stylized rendered exterior/station; not a live-action lighting plan",
+          "key_light": "Daylight key or blue night fill with warm scene lamps depending on segment",
+          "light_quality": "Visible soft cast shadows and material separation",
+          "fill_light": "Ambient/environment fill inferred visually",
+          "rim_light": "Unverified",
+          "catchlight": "Illustrated eyes; do not invent real camera catchlights",
+          "practicals": "Night colored bulbs, station fixtures and lantern when present",
+          "color_temp": "Exact Kelvin unverified",
+          "lighting_setup": "3D lighting reconstruction, no physical equipment claim"
+        },
+        "grade": {
+          "color_grade": "Saturated blue/green daytime with warm props, contrasted with deep blue night and warm practical lights; retain material detail."
+        }
+      }
+    },
+    {
+      "id": "shot_006",
+      "time": "22.20-31.63",
+      "label_probs": {
+        "live_action": 0,
+        "ai_video": 0.08,
+        "avatar": 0,
+        "cg_3d": 0.9,
+        "code_render": 0,
+        "screen_capture": 0,
+        "still_motion": 0,
+        "static_hold": 0,
+        "anim_2d": 0.02,
+        "stop_motion": 0,
+        "film_footage": 0
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Agent inspected all ten tool shot sheets, a whole-video 254-frame sample sequence at approximately 0.25-second intervals, and selected native-resolution details.",
+        "Stable rail/support topology, fixed scene landmarks and coherent parallax across moving camera views support a rendered 3D world; faces and clothing are deliberately flat illustrated characters.",
+        "No creator source project was supplied: the exact engine, asset provenance, rigging software and whether AI assisted authoring cannot be proven from the encoded clip. Do not infer live action merely from pixel statistics."
+      ],
+      "description": "At night the sleeping worker remains in a chair while the rival operates cables/turning motion and squeezes the loop into a tall narrow shape. Camera moves out/up to expose the changing whole silhouette and back toward the rival breaking a twig as a visual metaphor. Around 28.6s dissolve to a bright daytime opening: father and child with balloon, queue, booths, flags, wheel, confetti and red carpet. Camera travels past them toward the rival park. Night and morning are different story beats merged by the detector.",
+      "embedded_assets": [],
+      "ai_edits": [],
+      "replication": {
+        "image_prompt": "Original detailed stylized 3D environment with physically coherent materials, support structures and layered depth, expressive flat illustrated cast with costume-specific seams and accessories. Preserve readable action and the actual local framing.",
+        "video_prompt": "At night the sleeping worker remains in a chair while the rival operates cables/turning motion and squeezes the loop into a tall narrow shape. Camera moves out/up to expose the changing whole silhouette and back toward the rival breaking a twig as a visual metaphor. Around 28.6s dissolve to a bright daytime opening: father and child with balloon, queue, booths, flags, wheel, confetti and red carpet. Camera travels past them toward the rival park. Night and morning are different story beats merged by the detector. For an original adaptation, author the required geometry and physical acting in Blender/Three.js; stage anticipation, contact, follow-through and reaction. This is a code/3D reconstruction brief, not permission for image/video generation.",
+        "video_prompt_en": "At night the sleeping worker remains in a chair while the rival operates cables/turning motion and squeezes the loop into a tall narrow shape. Camera moves out/up to expose the changing whole silhouette and back toward the rival breaking a twig as a visual metaphor. Around 28.6s dissolve to a bright daytime opening: father and child with balloon, queue, booths, flags, wheel, confetti and red carpet. Camera travels past them toward the rival park. Night and morning are different story beats merged by the detector."
+      },
+      "aspects": {
+        "framing": {
+          "shot_size": "Varies within the detected group; see temporal breakdown",
+          "camera_angle": "Deliberate action-oriented virtual camera, including low views and POV where described",
+          "composition": "Actor or physical mechanism is the focal point; foreground, middle action and persistent background have separate depth."
+        },
+        "camera": {
+          "camera_support": "Virtual 3D camera inferred from stable perspective/parallax",
+          "lens": "Actual focal length cannot be recovered; compare framing directly",
+          "speed": "Purposeful dolly/tracking/reveal, with holds for reactions; not a uniform slow pan."
+        },
+        "lighting": {
+          "location": "Stylized rendered exterior/station; not a live-action lighting plan",
+          "key_light": "Daylight key or blue night fill with warm scene lamps depending on segment",
+          "light_quality": "Visible soft cast shadows and material separation",
+          "fill_light": "Ambient/environment fill inferred visually",
+          "rim_light": "Unverified",
+          "catchlight": "Illustrated eyes; do not invent real camera catchlights",
+          "practicals": "Night colored bulbs, station fixtures and lantern when present",
+          "color_temp": "Exact Kelvin unverified",
+          "lighting_setup": "3D lighting reconstruction, no physical equipment claim"
+        },
+        "grade": {
+          "color_grade": "Saturated blue/green daytime with warm props, contrasted with deep blue night and warm practical lights; retain material detail."
+        }
+      },
+      "split_suggestion": {
+        "cuts": [
+          28.6
+        ],
+        "labels": [
+          "cg_3d",
+          "cg_3d"
+        ],
+        "note": "Approximate visually reviewed scene transitions/dissolve centers; detector merged these. Continuous camera moves inside a scene are described as beats, not additional cuts."
+      }
+    },
+    {
+      "id": "shot_007",
+      "time": "31.63-34.07",
+      "label_probs": {
+        "live_action": 0,
+        "ai_video": 0.08,
+        "avatar": 0,
+        "cg_3d": 0.9,
+        "code_render": 0,
+        "screen_capture": 0,
+        "still_motion": 0,
+        "static_hold": 0,
+        "anim_2d": 0.02,
+        "stop_motion": 0,
+        "film_footage": 0
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Agent inspected all ten tool shot sheets, a whole-video 254-frame sample sequence at approximately 0.25-second intervals, and selected native-resolution details.",
+        "Stable rail/support topology, fixed scene landmarks and coherent parallax across moving camera views support a rendered 3D world; faces and clothing are deliberately flat illustrated characters.",
+        "No creator source project was supplied: the exact engine, asset provenance, rigging software and whether AI assisted authoring cannot be proven from the encoded clip. Do not infer live action merely from pixel statistics."
+      ],
+      "description": "At the rival station a queue of distinct flat illustrated citizens watches; rival steps/climbs into the front cart and smirks. The first-customer character, red seats, rope barriers, striped posts, canopy, sleepers and carriage framework provide concrete scale. Crowd expressions/gestures change in support of the main action.",
+      "embedded_assets": [],
+      "ai_edits": [],
+      "replication": {
+        "image_prompt": "Original detailed stylized 3D environment with physically coherent materials, support structures and layered depth, expressive flat illustrated cast with costume-specific seams and accessories. Preserve readable action and the actual local framing.",
+        "video_prompt": "At the rival station a queue of distinct flat illustrated citizens watches; rival steps/climbs into the front cart and smirks. The first-customer character, red seats, rope barriers, striped posts, canopy, sleepers and carriage framework provide concrete scale. Crowd expressions/gestures change in support of the main action. For an original adaptation, author the required geometry and physical acting in Blender/Three.js; stage anticipation, contact, follow-through and reaction. This is a code/3D reconstruction brief, not permission for image/video generation.",
+        "video_prompt_en": "At the rival station a queue of distinct flat illustrated citizens watches; rival steps/climbs into the front cart and smirks. The first-customer character, red seats, rope barriers, striped posts, canopy, sleepers and carriage framework provide concrete scale. Crowd expressions/gestures change in support of the main action."
+      },
+      "aspects": {
+        "framing": {
+          "shot_size": "Varies within the detected group; see temporal breakdown",
+          "camera_angle": "Deliberate action-oriented virtual camera, including low views and POV where described",
+          "composition": "Actor or physical mechanism is the focal point; foreground, middle action and persistent background have separate depth."
+        },
+        "camera": {
+          "camera_support": "Virtual 3D camera inferred from stable perspective/parallax",
+          "lens": "Actual focal length cannot be recovered; compare framing directly",
+          "speed": "Purposeful dolly/tracking/reveal, with holds for reactions; not a uniform slow pan."
+        },
+        "lighting": {
+          "location": "Stylized rendered exterior/station; not a live-action lighting plan",
+          "key_light": "Daylight key or blue night fill with warm scene lamps depending on segment",
+          "light_quality": "Visible soft cast shadows and material separation",
+          "fill_light": "Ambient/environment fill inferred visually",
+          "rim_light": "Unverified",
+          "catchlight": "Illustrated eyes; do not invent real camera catchlights",
+          "practicals": "Night colored bulbs, station fixtures and lantern when present",
+          "color_temp": "Exact Kelvin unverified",
+          "lighting_setup": "3D lighting reconstruction, no physical equipment claim"
+        },
+        "grade": {
+          "color_grade": "Saturated blue/green daytime with warm props, contrasted with deep blue night and warm practical lights; retain material detail."
+        }
+      }
+    },
+    {
+      "id": "shot_008",
+      "time": "34.07-44.30",
+      "label_probs": {
+        "live_action": 0,
+        "ai_video": 0.08,
+        "avatar": 0,
+        "cg_3d": 0.9,
+        "code_render": 0,
+        "screen_capture": 0,
+        "still_motion": 0,
+        "static_hold": 0,
+        "anim_2d": 0.02,
+        "stop_motion": 0,
+        "film_footage": 0
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Agent inspected all ten tool shot sheets, a whole-video 254-frame sample sequence at approximately 0.25-second intervals, and selected native-resolution details.",
+        "Stable rail/support topology, fixed scene landmarks and coherent parallax across moving camera views support a rendered 3D world; faces and clothing are deliberately flat illustrated characters.",
+        "No creator source project was supplied: the exact engine, asset provenance, rigging software and whether AI assisted authoring cannot be proven from the encoded clip. Do not infer live action merely from pixel statistics."
+      ],
+      "description": "Owner boards his cart, the camera rides/orbits with its climb, then hands the viewer a forward cart POV that progressively reveals the modified tall narrow loop and drop. Around 41.4s dissolve to a road analogy: a vintage turquoise car takes a tight hairpin slowly, with a visible driver and detailed chrome/paint/tires/glass/guardrail/road surface. This road insert is a separate explanatory scene inside one detected group.",
+      "embedded_assets": [],
+      "ai_edits": [],
+      "replication": {
+        "image_prompt": "Original detailed stylized 3D environment with physically coherent materials, support structures and layered depth, expressive flat illustrated cast with costume-specific seams and accessories. Preserve readable action and the actual local framing.",
+        "video_prompt": "Owner boards his cart, the camera rides/orbits with its climb, then hands the viewer a forward cart POV that progressively reveals the modified tall narrow loop and drop. Around 41.4s dissolve to a road analogy: a vintage turquoise car takes a tight hairpin slowly, with a visible driver and detailed chrome/paint/tires/glass/guardrail/road surface. This road insert is a separate explanatory scene inside one detected group. For an original adaptation, author the required geometry and physical acting in Blender/Three.js; stage anticipation, contact, follow-through and reaction. This is a code/3D reconstruction brief, not permission for image/video generation.",
+        "video_prompt_en": "Owner boards his cart, the camera rides/orbits with its climb, then hands the viewer a forward cart POV that progressively reveals the modified tall narrow loop and drop. Around 41.4s dissolve to a road analogy: a vintage turquoise car takes a tight hairpin slowly, with a visible driver and detailed chrome/paint/tires/glass/guardrail/road surface. This road insert is a separate explanatory scene inside one detected group."
+      },
+      "aspects": {
+        "framing": {
+          "shot_size": "Varies within the detected group; see temporal breakdown",
+          "camera_angle": "Deliberate action-oriented virtual camera, including low views and POV where described",
+          "composition": "Actor or physical mechanism is the focal point; foreground, middle action and persistent background have separate depth."
+        },
+        "camera": {
+          "camera_support": "Virtual 3D camera inferred from stable perspective/parallax",
+          "lens": "Actual focal length cannot be recovered; compare framing directly",
+          "speed": "Purposeful dolly/tracking/reveal, with holds for reactions; not a uniform slow pan."
+        },
+        "lighting": {
+          "location": "Stylized rendered exterior/station; not a live-action lighting plan",
+          "key_light": "Daylight key or blue night fill with warm scene lamps depending on segment",
+          "light_quality": "Visible soft cast shadows and material separation",
+          "fill_light": "Ambient/environment fill inferred visually",
+          "rim_light": "Unverified",
+          "catchlight": "Illustrated eyes; do not invent real camera catchlights",
+          "practicals": "Night colored bulbs, station fixtures and lantern when present",
+          "color_temp": "Exact Kelvin unverified",
+          "lighting_setup": "3D lighting reconstruction, no physical equipment claim"
+        },
+        "grade": {
+          "color_grade": "Saturated blue/green daytime with warm props, contrasted with deep blue night and warm practical lights; retain material detail."
+        }
+      },
+      "split_suggestion": {
+        "cuts": [
+          41.4
+        ],
+        "labels": [
+          "cg_3d",
+          "cg_3d"
+        ],
+        "note": "Approximate visually reviewed scene transitions/dissolve centers; detector merged these. Continuous camera moves inside a scene are described as beats, not additional cuts."
+      }
+    },
+    {
+      "id": "shot_009",
+      "time": "44.30-45.00",
+      "label_probs": {
+        "live_action": 0,
+        "ai_video": 0.08,
+        "avatar": 0,
+        "cg_3d": 0.9,
+        "code_render": 0,
+        "screen_capture": 0,
+        "still_motion": 0,
+        "static_hold": 0,
+        "anim_2d": 0.02,
+        "stop_motion": 0,
+        "film_footage": 0
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Agent inspected all ten tool shot sheets, a whole-video 254-frame sample sequence at approximately 0.25-second intervals, and selected native-resolution details.",
+        "Stable rail/support topology, fixed scene landmarks and coherent parallax across moving camera views support a rendered 3D world; faces and clothing are deliberately flat illustrated characters.",
+        "No creator source project was supplied: the exact engine, asset provenance, rigging software and whether AI assisted authoring cannot be proven from the encoded clip. Do not infer live action merely from pixel statistics."
+      ],
+      "description": "At about 44.3s dissolve to an elevated rear chase view of a red open car and other traffic approaching the same road hairpin faster. Vehicle yaw, outward drift and the first skid begin; the animation continues into detector group 10. Dust/smoke here is a visible effect; exact audio identity remains unverified.",
+      "embedded_assets": [],
+      "ai_edits": [],
+      "replication": {
+        "image_prompt": "Original detailed stylized 3D environment with physically coherent materials, support structures and layered depth, expressive flat illustrated cast with costume-specific seams and accessories. Preserve readable action and the actual local framing.",
+        "video_prompt": "At about 44.3s dissolve to an elevated rear chase view of a red open car and other traffic approaching the same road hairpin faster. Vehicle yaw, outward drift and the first skid begin; the animation continues into detector group 10. Dust/smoke here is a visible effect; exact audio identity remains unverified. For an original adaptation, author the required geometry and physical acting in Blender/Three.js; stage anticipation, contact, follow-through and reaction. This is a code/3D reconstruction brief, not permission for image/video generation.",
+        "video_prompt_en": "At about 44.3s dissolve to an elevated rear chase view of a red open car and other traffic approaching the same road hairpin faster. Vehicle yaw, outward drift and the first skid begin; the animation continues into detector group 10. Dust/smoke here is a visible effect; exact audio identity remains unverified."
+      },
+      "aspects": {
+        "framing": {
+          "shot_size": "Varies within the detected group; see temporal breakdown",
+          "camera_angle": "Deliberate action-oriented virtual camera, including low views and POV where described",
+          "composition": "Actor or physical mechanism is the focal point; foreground, middle action and persistent background have separate depth."
+        },
+        "camera": {
+          "camera_support": "Virtual 3D camera inferred from stable perspective/parallax",
+          "lens": "Actual focal length cannot be recovered; compare framing directly",
+          "speed": "Purposeful dolly/tracking/reveal, with holds for reactions; not a uniform slow pan."
+        },
+        "lighting": {
+          "location": "Stylized rendered exterior/station; not a live-action lighting plan",
+          "key_light": "Daylight key or blue night fill with warm scene lamps depending on segment",
+          "light_quality": "Visible soft cast shadows and material separation",
+          "fill_light": "Ambient/environment fill inferred visually",
+          "rim_light": "Unverified",
+          "catchlight": "Illustrated eyes; do not invent real camera catchlights",
+          "practicals": "Night colored bulbs, station fixtures and lantern when present",
+          "color_temp": "Exact Kelvin unverified",
+          "lighting_setup": "3D lighting reconstruction, no physical equipment claim"
+        },
+        "grade": {
+          "color_grade": "Saturated blue/green daytime with warm props, contrasted with deep blue night and warm practical lights; retain material detail."
+        }
+      }
+    },
+    {
+      "id": "shot_010",
+      "time": "45.00-63.17",
+      "label_probs": {
+        "live_action": 0,
+        "ai_video": 0.08,
+        "avatar": 0,
+        "cg_3d": 0.9,
+        "code_render": 0,
+        "screen_capture": 0,
+        "still_motion": 0,
+        "static_hold": 0,
+        "anim_2d": 0.02,
+        "stop_motion": 0,
+        "film_footage": 0
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Agent inspected all ten tool shot sheets, a whole-video 254-frame sample sequence at approximately 0.25-second intervals, and selected native-resolution details.",
+        "Stable rail/support topology, fixed scene landmarks and coherent parallax across moving camera views support a rendered 3D world; faces and clothing are deliberately flat illustrated characters.",
+        "No creator source project was supplied: the exact engine, asset provenance, rigging software and whether AI assisted authoring cannot be proven from the encoded clip. Do not infer live action merely from pixel statistics."
+      ],
+      "description": "Continuation of the fast road car: it strikes/breaks the barrier and tumbles, with flying debris and dust. Around 46.25s dissolve back to a white circular coaster, camera tracks toward its tight bottom while a golden moving highlight demonstrates the sharp bend and a cart crosses it. Around 52.2s return to the modified tall loop: owner cart rises and slows toward its tighter top; close upside-down face changes from shock to relief while the camera tracks/orbits with it. At about 59.6s camera returns to the receding park and the rival ride produces a huge comic explosion; the owner in the foreground looks back and smirks. This is several explanatory and payoff beats, not one uninterrupted live-action take.",
+      "embedded_assets": [],
+      "ai_edits": [],
+      "replication": {
+        "image_prompt": "Original detailed stylized 3D environment with physically coherent materials, support structures and layered depth, expressive flat illustrated cast with costume-specific seams and accessories. Preserve readable action and the actual local framing.",
+        "video_prompt": "Continuation of the fast road car: it strikes/breaks the barrier and tumbles, with flying debris and dust. Around 46.25s dissolve back to a white circular coaster, camera tracks toward its tight bottom while a golden moving highlight demonstrates the sharp bend and a cart crosses it. Around 52.2s return to the modified tall loop: owner cart rises and slows toward its tighter top; close upside-down face changes from shock to relief while the camera tracks/orbits with it. At about 59.6s camera returns to the receding park and the rival ride produces a huge comic explosion; the owner in the foreground looks back and smirks. This is several explanatory and payoff beats, not one uninterrupted live-action take. For an original adaptation, author the required geometry and physical acting in Blender/Three.js; stage anticipation, contact, follow-through and reaction. This is a code/3D reconstruction brief, not permission for image/video generation.",
+        "video_prompt_en": "Continuation of the fast road car: it strikes/breaks the barrier and tumbles, with flying debris and dust. Around 46.25s dissolve back to a white circular coaster, camera tracks toward its tight bottom while a golden moving highlight demonstrates the sharp bend and a cart crosses it. Around 52.2s return to the modified tall loop: owner cart rises and slows toward its tighter top; close upside-down face changes from shock to relief while the camera tracks/orbits with it. At about 59.6s camera returns to the receding park and the rival ride produces a huge comic explosion; the owner in the foreground looks back and smirks. This is several explanatory and payoff beats, not one uninterrupted live-action take."
+      },
+      "aspects": {
+        "framing": {
+          "shot_size": "Varies within the detected group; see temporal breakdown",
+          "camera_angle": "Deliberate action-oriented virtual camera, including low views and POV where described",
+          "composition": "Actor or physical mechanism is the focal point; foreground, middle action and persistent background have separate depth."
+        },
+        "camera": {
+          "camera_support": "Virtual 3D camera inferred from stable perspective/parallax",
+          "lens": "Actual focal length cannot be recovered; compare framing directly",
+          "speed": "Purposeful dolly/tracking/reveal, with holds for reactions; not a uniform slow pan."
+        },
+        "lighting": {
+          "location": "Stylized rendered exterior/station; not a live-action lighting plan",
+          "key_light": "Daylight key or blue night fill with warm scene lamps depending on segment",
+          "light_quality": "Visible soft cast shadows and material separation",
+          "fill_light": "Ambient/environment fill inferred visually",
+          "rim_light": "Unverified",
+          "catchlight": "Illustrated eyes; do not invent real camera catchlights",
+          "practicals": "Night colored bulbs, station fixtures and lantern when present",
+          "color_temp": "Exact Kelvin unverified",
+          "lighting_setup": "3D lighting reconstruction, no physical equipment claim"
+        },
+        "grade": {
+          "color_grade": "Saturated blue/green daytime with warm props, contrasted with deep blue night and warm practical lights; retain material detail."
+        }
+      },
+      "split_suggestion": {
+        "cuts": [
+          46.25,
+          52.2,
+          59.6
+        ],
+        "labels": [
+          "cg_3d",
+          "cg_3d",
+          "cg_3d",
+          "cg_3d"
+        ],
+        "note": "Approximate visually reviewed scene transitions/dissolve centers; detector merged these. Continuous camera moves inside a scene are described as beats, not additional cuts."
+      }
+    }
+  ],
+  "aspects": {
+    "camera": {
+      "setups": "One coherent park with multiple purposeful virtual camera routes; short clearly motivated road analogy",
+      "gear_guess": "Exact software/renderer/camera unknown; Blender/Three.js is a proposed original rebuild route"
+    },
+    "lighting": {
+      "lighting_overall": "Day/night change serves narrative time. Warm practicals and sparks create night accents; vivid daylight preserves foliage and material contrast."
+    },
+    "grade": {
+      "grade_overall": "Vivid daylight blue/green, saturated costume colors and textured materials; blue night with warm light pools."
+    },
+    "editing": {
+      "editing": "Detected ten groups under-segment dissolves. Six extra approximate transition centers proposed; distinguish true scene changes from camera moves and acting beats. Captions are short white bold words/phrases with black outline around lower-middle screen."
+    },
+    "format": {
+      "format": "Narrated comic physics story with 3D environments/props, expressive flat illustrated cast, in-world mechanism demonstrations, road analogy and visual payoff; not a slideshow or generic explainer presenter."
+    }
+  },
+  "cast": {
+    "style": "Detailed coherent 3D world and physically readable props with expressive flat 2D illustrated characters. Visual inspection supports this grammar; exact production software and source assets remain unknown.",
+    "characters": [
+      {
+        "id": "A",
+        "name": "Worker/ride owner",
+        "kind": "Flat illustrated actor",
+        "look": "Red stitched cap, yellow shirt, blue patched overalls, round pale face with thick dark outline, dot eyes and expressive brows/mouth, thin dark limbs; small costume patches/buttons/stitches matter at close range.",
+        "role": "Builds and adjusts ride, reacts to failed test, boards modified ride, relief/payoff.",
+        "voice": "Narration source unverified; no character voice identification claimed.",
+        "shots": [
+          1,
+          3,
+          4,
+          6,
+          8,
+          10
+        ]
+      },
+      {
+        "id": "B",
+        "name": "Rival",
+        "kind": "Flat illustrated actor",
+        "look": "Dark swept hair, cream waistcoat/jacket, tie/round lapel detail, thin dark limbs, smug brows and broad laughing mouth.",
+        "role": "Copies ride, observes through telescope, sabotages shape, boards rival ride.",
+        "voice": "Unverified",
+        "shots": [
+          2,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "id": "C",
+        "name": "Visitors and queue",
+        "kind": "Supporting flat illustrated cast",
+        "look": "Distinct adult/child heights, patterned clothes, hats/glasses; child with red balloon; crowd gestures support opening.",
+        "role": "Scale, life and stakes without distracting from focal action.",
+        "voice": "Unverified",
+        "shots": [
+          6,
+          7
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "S1",
+        "where": "Owner park construction loop and scaffold",
+        "when": "Day / night / next day",
+        "look": "Stable dark steel rail trusses, construction tools, grassy hills and trees; practical light string at night.",
+        "shots": [
+          1,
+          3,
+          4,
+          6,
+          8,
+          10
+        ]
+      },
+      {
+        "id": "S2",
+        "where": "Rival white circular-loop park and opening queue",
+        "when": "Day / night / next morning",
+        "look": "White track, crane/blueprint, wheel, bunting, booths, red carpet and wooden station.",
+        "shots": [
+          2,
+          5,
+          6,
+          7,
+          10
+        ]
+      },
+      {
+        "id": "S3",
+        "where": "Road hairpin analogy",
+        "when": "Day",
+        "look": "Banked/tight asphalt hairpin, guardrails/posts, hill, foliage and cars; distinct explanatory insert.",
+        "shots": [
+          8,
+          9,
+          10
+        ]
+      }
+    ],
+    "props": [
+      {
+        "name": "Sledgehammer and reshaping rail",
+        "note": "Physical swing/contact, sparks and visible changed curve.",
+        "shots": [
+          1,
+          3,
+          4,
+          10
+        ]
+      },
+      {
+        "name": "Wallet",
+        "note": "Open hinged wallet with seams and a tiny fly supports an emotion gag.",
+        "shots": [
+          1
+        ]
+      },
+      {
+        "name": "Telescope, tripod and lantern",
+        "note": "Observation/laugh pose and a practical light pool.",
+        "shots": [
+          5
+        ]
+      },
+      {
+        "name": "Ride carriages",
+        "note": "Wood/paint/metal/text/seats and rider support; attached to continuous rail path with orientation and variable speed.",
+        "shots": [
+          1,
+          3,
+          7,
+          8,
+          10
+        ]
+      },
+      {
+        "name": "Vintage road cars",
+        "note": "Actual modeled cabin, chrome grille, lights, glass and tires; slow/fast contrast, skid/debris.",
+        "shots": [
+          8,
+          9,
+          10
+        ]
+      }
+    ]
+  },
+  "packaging": {
+    "stickers": [],
+    "text": [
+      {
+        "id": "text_001",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_002",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_003",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_004",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_005",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_006",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_007",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_008",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_009",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_010",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_011",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_012",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_013",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_014",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_015",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_016",
+        "kind": "scene"
+      },
+      {
+        "id": "text_017",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_018",
+        "kind": "scene"
+      },
+      {
+        "id": "text_019",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_020",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_021",
+        "kind": "scene"
+      },
+      {
+        "id": "text_022",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_023",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_024",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_025",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_026",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_027",
+        "kind": "scene"
+      },
+      {
+        "id": "text_028",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_029",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_030",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_031",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_032",
+        "kind": "scene"
+      },
+      {
+        "id": "text_033",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_034",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_035",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_036",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_037",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_038",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_039",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_040",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_041",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_042",
+        "kind": "scene"
+      },
+      {
+        "id": "text_043",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_044",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_045",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_046",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_047",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_048",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_049",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_050",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_051",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_052",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_053",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_054",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_055",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_056",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_057",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_058",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_059",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_060",
+        "kind": "scene"
+      },
+      {
+        "id": "text_061",
+        "kind": "scene"
+      },
+      {
+        "id": "text_062",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_063",
+        "kind": "scene"
+      },
+      {
+        "id": "text_064",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_065",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_066",
+        "kind": "scene"
+      },
+      {
+        "id": "text_067",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_068",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_069",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_070",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_071",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_072",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_073",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_074",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_075",
+        "kind": "scene"
+      },
+      {
+        "id": "text_076",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_077",
+        "kind": "scene"
+      },
+      {
+        "id": "text_078",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_079",
+        "kind": "scene"
+      },
+      {
+        "id": "text_080",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_081",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_082",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_083",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_084",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_085",
+        "kind": "scene"
+      },
+      {
+        "id": "text_087",
+        "kind": "scene"
+      },
+      {
+        "id": "text_086",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_088",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_089",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_090",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_091",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_092",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_093",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_094",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_095",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_096",
+        "kind": "scene"
+      },
+      {
+        "id": "text_097",
+        "kind": "scene"
+      },
+      {
+        "id": "text_098",
+        "kind": "scene"
+      },
+      {
+        "id": "text_099",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_100",
+        "kind": "scene"
+      },
+      {
+        "id": "text_101",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_102",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_103",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_104",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_105",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_106",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_107",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_108",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_109",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_110",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_111",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_112",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_113",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_114",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_115",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_116",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_117",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_118",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_119",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_120",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_121",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_122",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_123",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_124",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_125",
+        "kind": "scene"
+      },
+      {
+        "id": "text_126",
+        "kind": "scene"
+      },
+      {
+        "id": "text_127",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_128",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_129",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_130",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_131",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_132",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_133",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_134",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_135",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_136",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_137",
+        "kind": "subtitle"
+      },
+      {
+        "id": "text_138",
+        "kind": "subtitle"
+      }
+    ],
+    "missed": [
+      {
+        "t0": 6.2,
+        "t1": 6.8,
+        "what": "Tiny fly at the worker face/wallet gag; visible graphic/object, whether 2D overlay or scene geometry unverified",
+        "where": "Near center of extreme face closeup"
+      },
+      {
+        "t0": 16.3,
+        "t1": 18.7,
+        "what": "Golden rail glow/sparks synchronized visually with hammering and curvature change; animated explanatory effect",
+        "where": "Along lower coaster curve"
+      },
+      {
+        "t0": 61.1,
+        "t1": 63.167,
+        "what": "Comic explosion behind the owner; volumetric simulation versus billboard/stock element unverified",
+        "where": "Background rival ride, then large upper image"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1317 @@
+{
+  "instructions": "你是这次的 VLM：逐个镜头看图，判断「底层画面」的制作方式，把答案写进 review_answers.json，然后运行\n  rea-video apply-review <输出目录> --by <你的名字>\n把你的判断并入结论（会重写 breakdown.json、report.md、report.html）。\n\n怎么看：\n1. 先看 storyboard.jpg 建立整体印象；每个镜头看 images 里的 sheet（首/中/尾联系表），需要时运行 zoom_cmd 抽帧细看。\n2. priority=high 的镜头（低置信、次选接近、转码后实拍/AI 待确认）一定要看；其余镜头也尽量都答。\n3. 只依据画面证据，独立判断（这里不给 VLM 的答案，它会在融合时单独计入）。tool 一栏是确定性取证的结果，可能有误，但帧率类证据（24→30 重复帧）和 AIGC 标识可靠，\n   和画面印象冲突时不要轻易推翻（见 SKILL.md「平台转码视频」）。\n4. 看不出就把概率分散开，例如 ai_video 0.55 / live_action 0.45，并在 evidence 写清缺什么证据。\n5. 没看过的镜头不要填（保持 label_probs 全 0），apply-review 会跳过它。\n\n底层画面类别（label_probs 的 key，概率和为 1）：\n- live_action：真实摄像机/手机实拍（真实人物与环境、真实光影与物理、传感器噪声、手持抖动、对焦呼吸、运动模糊自然）\n- ai_video：AI 生成视频（文生/图生/参考生视频）。常见破绽：物体或手指形变、纹理\"沸腾\"闪烁、物理不合理、文字乱码、背景人物畸形、过于完美的光线与皮肤、动作缓慢漂浮、镜头结尾定格\n- avatar：数字人口播（一张人像被音频驱动说话，嘴型驱动、头部轻微摆动、身体几乎不动）\n- cg_3d：传统 3D 渲染（Blender/C4D/UE），几何干净、材质规则、光影一致、运动精确无形变\n- code_render：代码/模板渲染的画面（MG 动效、文字排版、UI、图表、PPT 式卡片、渐变/毛玻璃/霓虹辉光背景、分形和着色器生成的色场，以及暗底上的粒子/点云/线框数据可视化：Remotion/HTML/Canvas、Three.js、Manim、AE Plexus/Trapcode 这类按参数生成的图形）\n- screen_capture：屏幕录制或网页/应用截图（真实界面元素、光标、滚动）\n- still_motion：一张静态图片做推拉摇移（Ken Burns），画面内部无独立运动\n- static_hold：静帧定格（图片或卡片停留不动）\n- anim_2d：2D 动画（手绘逐帧、Live2D、AE/Spine 角色动画、扁平插画风动画）：线条和平涂色块、角色有骨骼或逐帧动作，常见\"一拍二\"（每两帧才变一次）\n- stop_motion：定格动画（黏土、毛毡、纸偶、乐高等实物逐帧拍摄）：真实材质和灯光、动作一顿一顿、帧间轻微闪烁、指纹和纹理细节\n- film_footage：剪进来的已有影视作品画面（电影、电视剧、网剧、竖屏短剧的片段，影视解说、混剪、名场面合集常见）：认得出的演员或剧集、专业剧组的布光和多机位、大量群演和成套布景、片头片尾字幕、台标或平台水印、嵌在黑边里的宽画幅\n\n注意区分：卡通/3D 风格的 AI 视频（形变、闪烁、不精确）与真正的 3D 渲染（几何稳定、精确）；\nAI 生成的写实视频与实拍（看手、文字、背景细节、物理）；AI 生成的动画风视频（形变、线条游移）与真正的 2D 动画（线条稳定、按帧精确）；\nAI 仿定格风格（材质在帧间漂移）与真正的定格动画（同一实物、光照不变、只有逐帧位移）；\n影视片段（剪自已有的电影/电视剧/短剧：live_action 只用于视频作者或客户自己拍的画面）与 AI 短剧（脸过于完美且千人一面、手和文字出错、群演和背景稀少、物体形变）；\"影视效果\"\"剧情需要\"这类免责声明在 AI 短剧解说里也常见，不能单独作为影视片段的证据；\n暗底发光粒子拼成的器官、人体、地球、分子等科普画面是代码渲染（粒子系统），不是 3D 实体模型，也不是 AI 视频或实拍：亮部由成千上万个点或细线组成、没有连续的明暗表面，常配 HUD 式章节牌和引线标注。\n代码绘制的画面没有材质纹理：大面积平滑渐变、纯色块、辉光、毛玻璃卡片、CSS 3D 翻转卡片都是代码渲染，不是 3D 渲染（3D 渲染有布料/木纹/金属等材质、有投影和物体间的光影关系）；分形缩放、plasma 之类彩虹色场是着色器生成，不是实拍或 AI 视频。\n\n每个镜头要填：label_probs（11 类，和为 1）、image_source（ai_image|photo|graphic|screenshot|unknown）、evidence（看到的具体证据）、\ndescription（主体、动作、场景、运镜；代码渲染画面写清图形元素是什么（粒子/渐变/图表/卡片/文字/矢量图形）、拼成什么形状、颜色、怎么动、文字和数字组件在哪，报告的「代码合成」逐镜表直接用它；代码镜头另有 images.strip 关键帧条（约每 0.5 秒一张），报告「逐镜动效时间轴」已测好每个元素的位置、出现时间、方向、快慢和色值，你按编号补「它是什么」即可，例如\"1–12：圆角图标卡片，依次弹入\"）、embedded_assets（画面里的真实素材：截图、照片、实拍片段、Logo，\nkind 取 real_footage|photo|screenshot|screen_recording|product_photo|logo|ai_image，is_real_material 为 true/false）。\n某个镜头其实是多刀合并的（暗底图形卡和暗底口播交替时，切点分数低容易被合成一个长镜头）就加 split_suggestion：\n{\"cuts\": [切点秒数], \"labels\": [各段类别，比 cuts 多一个], \"note\": \"看到的交替结构\"}，报告会在该镜头标注拆分建议；不是合并段就不要填。\n实拍或定格镜头被 AI 二次加工过时填 ai_edits：[{\"kind\": \"face_swap|lip_sync|restyle|outfit_swap|bg_replace|object_edit|beautify\", \"evidence\": \"看到的破绽\"}]（换脸、对口型、风格化、换装、换背景、加删物体、美颜）；没有就留空。\nAI 生成 / 3D / 实拍镜头再填 replication：image_prompt（复刻首帧的中文图像提示词：主体、构图、光线、风格，具体可执行）、\nvideo_prompt（复刻该镜头的中文视频提示词：写清动作过程和结束状态、运镜；只写想要的内容，不写否定句）、video_prompt_en（英文版）。\n这些提示词会被合并进「生成单元」的多镜头提示词，所以每镜只写这一镜的内容，统一的风格和场景描述写在 description 里即可。\n\n实拍/写实镜头再填 aspects（怎么拍、怎么打光；纯图形/界面画面不填），像素测不出的部分靠你看：\n  framing.shot_size（景别）：特写|近景|中景|全景|远景（按画面主体，人物按头肩/半身/全身）\n  framing.camera_angle（机位角度）：平视|略俯拍|俯拍|顶拍（正上方俯拍桌面）|略仰拍|仰拍\n  framing.composition（构图）：主体位置与留白（居中/三分线/对称/框中框），竖屏还是横屏\n  camera.camera_support（拍摄方式）：手持自拍（前置镜头）|他人手持|三脚架/支架固定|稳定器|桌面俯拍支架|无法判断\n  camera.lens（镜头）：手机前置广角|手机后置主摄|手机长焦|相机人像/长焦|无法判断（依据：透视变形、背景虚化）\n  camera.speed（速度）：正常|慢动作|延时摄影|变速（先快后慢等）|倒放；依据（水花、头发、人流、云的运动）\n  lighting.location（场景）：室内|户外；白天|夜晚；具体场景（卧室/办公室/桌面/街边/车内…）\n  lighting.key_light（主光）：主光方向与高度（如：画面左前方 45° 略高）及光源（窗户/环形灯/柔光箱/台灯/路灯/屏幕/顶灯）\n  lighting.light_quality（软硬）：柔光|硬光|混合，依据（阴影边缘、投影）\n  lighting.fill_light（补光）：有无补光/反光板，暗部多暗\n  lighting.rim_light（轮廓光）：有无轮廓光/背景灯（头发、肩膀、物体边缘的亮边）\n  lighting.catchlight（眼神光）：眼神光形状（方形=柔光箱/窗，圆环=环形灯，点状=小灯/路灯，无）；没有人脸写不适用\n  lighting.practicals（可见光源）：画面里能看到的光源（台灯、灯带、路灯、招牌、屏幕）\n  lighting.color_temp（色温）：暖|中性|冷|混合（主体和背景是否不同色温）\n  lighting.lighting_setup（布光方案）：一句话布光方案（如：环形灯正面平光 + 暖色背景灯；两盏柔光箱 45° 夹打桌面）\n  grade.color_grade（调色风格）：调色风格：自然 / 青橙电影感 / 日系清新 / 复古胶片 / 黑白 / 高饱和 / 暗调…，写依据（暗部颜色、黑位、饱和度）\n工具已经测了景别、主体光比、主光左右/上下、软硬、色温、背景虚化（见每镜 aspects），你主要补：机位角度、\n拍摄方式（自拍/支架）、主光是什么光源、眼神光、轮廓光/背景灯、画面里可见的光源；和测量冲突时写明依据。\n最后在答案顶层的 aspects 里写整片：机位/场景、推测设备、整体布光、剪辑手法、视频形式。\n\n答案顶层的 cast 写整片的角色、场景和道具（看 storyboard.jpg 和各镜截图）：characters 每个主要角色一条（id 编号、name 称呼、kind person|animal|cartoon|avatar|product|other、\nlook 外观写到能据此再画出同一个角色、role 作用、voice 音色、shots 出场镜头号）；同一个角色在不同镜头要认成同一个。scenes 每个地点一条（id、where、when、look、shots）；\nprops 道具 / 商品 / Logo（name、note、shots）；style 一句整体视觉风格与调色。\n\n剪辑包装（tasks.packaging，有才做）：\n- stickers：工具找到的贴纸 / 动图 / 画中画，看 image（贴纸截图）和 frame_cmd 抽的帧，在答案 packaging.stickers 里填\n  is_overlay（true = 后期贴上去的；false = 画面本身的东西，例如 3D 里突然出现的物体）和 what（表情包 / GIF / emoji / 箭头 / 小窗里放的什么）。\n- text：工具分好类的花字 / 标题 / 文字标注，分错了就在 packaging.text 里填 kind（subtitle / huazi / title / label / counter / scene；counter 是跳动的数字）。\n- 工具漏掉的贴纸、动图，写进 packaging.missed：{\"t0\": 秒, \"t1\": 秒, \"what\": \"...\", \"where\": \"画面位置\"}。",
+  "video": "C:\\Users\\LoliR\\Downloads\\QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4",
+  "storyboard": "storyboard.jpg",
+  "video_context": {
+    "transcoded": false,
+    "platform": [],
+    "native30": true,
+    "film_hint_share": 0.0
+  },
+  "aigc": null,
+  "shots": [
+    {
+      "id": "shot_001",
+      "index": 1,
+      "start": 0.0,
+      "end": 6.967,
+      "duration": 6.967,
+      "priority": "high",
+      "why": [
+        "置信度低（39%）",
+        "次选 AI-generated video 接近（26%）"
+      ],
+      "tool": {
+        "label": "live_action",
+        "label_zh": "live action",
+        "confidence": 0.39,
+        "second": [
+          "ai_video",
+          0.257
+        ],
+        "evidence": [
+          "Photographic texture: noise σ=0.16, 352 colours, 20% flat blocks",
+          "The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps",
+          "Temporal noise 0.94, 43% of pixels unchanged frame to frame: sensor noise is present, consistent with live action"
+        ]
+      },
+      "hints": "noise_sigma=0.157; temporal_noise=0.937; flat_ratio=0.201; palette95=352; dup_ratio=0; camera=smooth_move; kenburns_score=0; local_motion_ratio=0.461; temporal_family=dynamic, pulldown=None, graphic_score=0.239, fine_dark=0.0, vector_fill=0.0; 确定性初判=live_action (39%)",
+      "aspects": {
+        "framing": {
+          "shot_size": "close-up",
+          "camera_angle": null,
+          "position": "centred",
+          "subject": "focus"
+        },
+        "camera": {
+          "support": "moving",
+          "support_zh": "moving camera (gimbal / handheld pan)",
+          "move": "push-in"
+        },
+        "lighting": {
+          "key_direction": "frontal (from the camera side; both sides of the subject about equally bright)",
+          "vertical": "at subject height",
+          "ratio": "about 1.1:1 (0.2 stops)",
+          "quality": "soft light (almost no lit / shadow edge)",
+          "color_temp": "cool (daylight / cool-white LED)",
+          "depth": "background clearly blurred (shallow depth of field / portrait mode)",
+          "separation": "subject brighter than background",
+          "low_light": false,
+          "mixed_color": true,
+          "point_lights": 0,
+          "setup": "soft_front",
+          "setup_name": "soft frontal light (flat light)"
+        },
+        "grade": {
+          "look": "natural (close to the original colours)",
+          "saturation": "high saturation",
+          "contrast": "normal contrast",
+          "black": "lifted blacks (greyish shadows)",
+          "tone": "cool"
+        }
+      },
+      "images": {
+        "sheet": "shots/shot_001.jpg",
+        "first": "shots/shot_001_first.jpg",
+        "last": "shots/shot_001_last.jpg"
+      },
+      "zoom_cmd": "rea-video tiles 'C:\\Users\\LoliR\\Downloads\\QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4' --start 0.00 --end 6.97 --every 0.2 -o 'pipeline\\quality\\reference-study\\rea/check_shot_001.jpg'"
+    },
+    {
+      "id": "shot_002",
+      "index": 2,
+      "start": 6.967,
+      "end": 9.967,
+      "duration": 3.0,
+      "priority": "high",
+      "why": [
+        "置信度低（62%）"
+      ],
+      "tool": {
+        "label": "ai_video",
+        "label_zh": "AI-generated video",
+        "confidence": 0.618,
+        "second": [
+          "cg_3d",
+          0.205
+        ],
+        "evidence": [
+          "Photographic texture: noise σ=0.15, 364 colours, 21% flat blocks"
+        ]
+      },
+      "hints": "noise_sigma=0.149; temporal_noise=0.1; flat_ratio=0.208; palette95=364; dup_ratio=0.0353; camera=smooth_move; kenburns_score=0; local_motion_ratio=0.0317; temporal_family=dynamic, pulldown=None, graphic_score=0.246, fine_dark=0.0, vector_fill=0.0; 确定性初判=ai_video (62%)",
+      "aspects": {
+        "framing": {
+          "shot_size": "medium close-up",
+          "camera_angle": null,
+          "position": "centred",
+          "subject": "focus"
+        },
+        "camera": {
+          "support": "moving",
+          "support_zh": "moving camera (gimbal / handheld pan)",
+          "move": null
+        },
+        "lighting": {
+          "key_direction": "frontal (from the camera side; both sides of the subject about equally bright)",
+          "vertical": "from above (ceiling light / street lamp / high source)",
+          "ratio": "about 1.2:1 (0.2 stops)",
+          "quality": "soft light (almost no lit / shadow edge)",
+          "color_temp": "cool (daylight / cool-white LED)",
+          "depth": "background clearly blurred (shallow depth of field / portrait mode)",
+          "separation": "subject brighter than background",
+          "low_light": false,
+          "mixed_color": true,
+          "point_lights": 49,
+          "setup": "colored_ambient",
+          "setup_name": "coloured ambient light (RGB lights / neon)"
+        },
+        "grade": {
+          "look": "natural (close to the original colours)",
+          "saturation": "high saturation",
+          "contrast": "normal contrast",
+          "black": "normal blacks",
+          "tone": "cool"
+        }
+      },
+      "images": {
+        "sheet": "shots/shot_002.jpg",
+        "first": "shots/shot_002_first.jpg",
+        "last": "shots/shot_002_last.jpg"
+      },
+      "zoom_cmd": "rea-video tiles 'C:\\Users\\LoliR\\Downloads\\QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4' --start 6.97 --end 9.97 --every 0.2 -o 'pipeline\\quality\\reference-study\\rea/check_shot_002.jpg'"
+    },
+    {
+      "id": "shot_003",
+      "index": 3,
+      "start": 9.967,
+      "end": 16.167,
+      "duration": 6.2,
+      "priority": "high",
+      "why": [
+        "置信度低（56%）"
+      ],
+      "tool": {
+        "label": "live_action",
+        "label_zh": "live action",
+        "confidence": 0.557,
+        "second": [
+          "ai_video",
+          0.217
+        ],
+        "evidence": [
+          "Photographic texture: noise σ=0.47, 223 colours, 7% flat blocks",
+          "The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps",
+          "Temporal noise 1.50, 19% of pixels unchanged frame to frame: sensor noise is present, consistent with live action"
+        ]
+      },
+      "hints": "noise_sigma=0.471; temporal_noise=1.5; flat_ratio=0.0672; palette95=223; dup_ratio=0; camera=smooth_move; kenburns_score=0; local_motion_ratio=0.138; temporal_family=dynamic, pulldown=None, graphic_score=0.116, fine_dark=0.0, vector_fill=0.0; 确定性初判=live_action (56%)",
+      "aspects": {
+        "framing": {
+          "shot_size": "medium shot",
+          "camera_angle": null,
+          "position": "centred",
+          "subject": "focus"
+        },
+        "camera": {
+          "support": "moving",
+          "support_zh": "moving camera (gimbal / handheld pan)",
+          "move": "push-in"
+        },
+        "lighting": {
+          "key_direction": "frontal (from the camera side; both sides of the subject about equally bright)",
+          "vertical": "from above (ceiling light / street lamp / high source)",
+          "ratio": "about 1.2:1 (0.3 stops)",
+          "quality": "soft light (wide lit-to-shadow ramp)",
+          "color_temp": "cool (daylight / cool-white LED)",
+          "depth": "background slightly soft",
+          "separation": "subject and background about equally bright",
+          "low_light": false,
+          "mixed_color": true,
+          "point_lights": 18,
+          "setup": "soft_front",
+          "setup_name": "soft frontal light (flat light)"
+        },
+        "grade": {
+          "look": "natural (close to the original colours)",
+          "saturation": "normal saturation",
+          "contrast": "normal contrast",
+          "black": "normal blacks",
+          "tone": "cool"
+        }
+      },
+      "images": {
+        "sheet": "shots/shot_003.jpg",
+        "first": "shots/shot_003_first.jpg",
+        "last": "shots/shot_003_last.jpg"
+      },
+      "zoom_cmd": "rea-video tiles 'C:\\Users\\LoliR\\Downloads\\QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4' --start 9.97 --end 16.17 --every 0.2 -o 'pipeline\\quality\\reference-study\\rea/check_shot_003.jpg'"
+    },
+    {
+      "id": "shot_004",
+      "index": 4,
+      "start": 16.167,
+      "end": 21.0,
+      "duration": 4.833,
+      "priority": "high",
+      "why": [
+        "置信度低（56%）"
+      ],
+      "tool": {
+        "label": "live_action",
+        "label_zh": "live action",
+        "confidence": 0.557,
+        "second": [
+          "ai_video",
+          0.26
+        ],
+        "evidence": [
+          "Photographic texture: noise σ=0.24, 189 colours, 11% flat blocks",
+          "The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps",
+          "Temporal noise 1.35, 30% of pixels unchanged frame to frame: sensor noise is present, consistent with live action"
+        ]
+      },
+      "hints": "noise_sigma=0.243; temporal_noise=1.35; flat_ratio=0.112; palette95=189; dup_ratio=0; camera=smooth_move; kenburns_score=0; local_motion_ratio=0.364; temporal_family=dynamic, pulldown=None, graphic_score=0.077, fine_dark=0.0, vector_fill=0.0; 确定性初判=live_action (56%)",
+      "aspects": {
+        "framing": {
+          "shot_size": "medium close-up",
+          "camera_angle": null,
+          "position": "centred",
+          "subject": "focus"
+        },
+        "camera": {
+          "support": "moving",
+          "support_zh": "moving camera (gimbal / handheld pan)",
+          "move": "push-in"
+        },
+        "lighting": {
+          "key_direction": "frame left, three-quarter front",
+          "vertical": "from below (screen / desk bounce / low source)",
+          "ratio": "about 1.4:1 (0.5 stops)",
+          "quality": "medium-soft",
+          "color_temp": "cool (daylight / cool-white LED)",
+          "depth": "background clearly blurred (shallow depth of field / portrait mode)",
+          "separation": "subject and background about equally bright",
+          "low_light": false,
+          "mixed_color": true,
+          "point_lights": 1,
+          "setup": "key_fill",
+          "setup_name": "three-quarter key + fill (standard set-up)"
+        },
+        "grade": {
+          "look": "natural (close to the original colours)",
+          "saturation": "high saturation",
+          "contrast": "normal contrast",
+          "black": "normal blacks",
+          "tone": "cool"
+        }
+      },
+      "images": {
+        "sheet": "shots/shot_004.jpg",
+        "first": "shots/shot_004_first.jpg",
+        "last": "shots/shot_004_last.jpg"
+      },
+      "zoom_cmd": "rea-video tiles 'C:\\Users\\LoliR\\Downloads\\QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4' --start 16.17 --end 21.00 --every 0.2 -o 'pipeline\\quality\\reference-study\\rea/check_shot_004.jpg'"
+    },
+    {
+      "id": "shot_005",
+      "index": 5,
+      "start": 21.0,
+      "end": 22.2,
+      "duration": 1.2,
+      "priority": "high",
+      "why": [
+        "置信度低（54%）"
+      ],
+      "tool": {
+        "label": "ai_video",
+        "label_zh": "AI-generated video",
+        "confidence": 0.54,
+        "second": [
+          "live_action",
+          0.224
+        ],
+        "evidence": [
+          "Photographic texture: noise σ=0.40, 224 colours, 14% flat blocks",
+          "Per-frame sharpness oscillates periodically (period 2 frames, correlation 0.62) with no duplicate frames: frame interpolation / rate conversion, or just the rhythm of a re-encode (transcodes whose platform tags were stripped show it too); not enough on its own to call AI"
+        ]
+      },
+      "hints": "noise_sigma=0.402; temporal_noise=1.25; flat_ratio=0.141; palette95=224; dup_ratio=0; camera=smooth_move; kenburns_score=0; local_motion_ratio=0.319; temporal_family=dynamic, pulldown=interpolated, graphic_score=0.107, fine_dark=0.0, vector_fill=0.0; 确定性初判=ai_video (54%)",
+      "aspects": {
+        "framing": {
+          "shot_size": "medium close-up",
+          "camera_angle": null,
+          "position": "centred",
+          "subject": "face"
+        },
+        "camera": {
+          "support": "moving",
+          "support_zh": "moving camera (gimbal / handheld pan)",
+          "move": "push-in"
+        },
+        "lighting": {
+          "key_direction": "frontal (from the camera side; both sides of the subject about equally bright)",
+          "vertical": "from below (screen / desk bounce / low source)",
+          "ratio": "about 1.1:1 (0.2 stops)",
+          "quality": "soft light (almost no lit / shadow edge)",
+          "color_temp": "cool (daylight / cool-white LED)",
+          "depth": "background slightly soft",
+          "separation": "subject brighter than background",
+          "low_light": false,
+          "mixed_color": true,
+          "point_lights": 15,
+          "setup": "soft_front",
+          "setup_name": "soft frontal light (flat light)"
+        },
+        "grade": {
+          "look": "natural (close to the original colours)",
+          "saturation": "high saturation",
+          "contrast": "normal contrast",
+          "black": "normal blacks",
+          "tone": "cool"
+        }
+      },
+      "images": {
+        "sheet": "shots/shot_005.jpg",
+        "first": "shots/shot_005_first.jpg",
+        "last": "shots/shot_005_last.jpg"
+      },
+      "zoom_cmd": "rea-video tiles 'C:\\Users\\LoliR\\Downloads\\QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4' --start 21.00 --end 22.20 --every 0.2 -o 'pipeline\\quality\\reference-study\\rea/check_shot_005.jpg'"
+    },
+    {
+      "id": "shot_006",
+      "index": 6,
+      "start": 22.2,
+      "end": 31.633,
+      "duration": 9.433,
+      "priority": "high",
+      "why": [
+        "置信度低（50%）"
+      ],
+      "tool": {
+        "label": "live_action",
+        "label_zh": "live action",
+        "confidence": 0.505,
+        "second": [
+          "ai_video",
+          0.251
+        ],
+        "evidence": [
+          "Photographic texture: noise σ=0.25, 159 colours, 15% flat blocks",
+          "The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps",
+          "Temporal noise 1.17, 33% of pixels unchanged frame to frame: sensor noise is present, consistent with live action"
+        ]
+      },
+      "hints": "noise_sigma=0.253; temporal_noise=1.17; flat_ratio=0.155; palette95=159; dup_ratio=0; camera=smooth_move; kenburns_score=0; local_motion_ratio=0.388; temporal_family=dynamic, pulldown=None, graphic_score=0.133, fine_dark=0.0, vector_fill=0.0; 确定性初判=live_action (50%)",
+      "aspects": {
+        "framing": {
+          "shot_size": "medium close-up",
+          "camera_angle": null,
+          "position": "centred",
+          "subject": "focus"
+        },
+        "camera": {
+          "support": "moving",
+          "support_zh": "moving camera (gimbal / handheld pan)",
+          "move": "push-in"
+        },
+        "lighting": {
+          "key_direction": "frontal (from the camera side; both sides of the subject about equally bright)",
+          "vertical": "from above (ceiling light / street lamp / high source)",
+          "ratio": "about 1.3:1 (0.4 stops)",
+          "quality": "medium-soft",
+          "color_temp": "cool (daylight / cool-white LED)",
+          "depth": "background clearly blurred (shallow depth of field / portrait mode)",
+          "separation": "subject and background about equally bright",
+          "low_light": false,
+          "mixed_color": true,
+          "point_lights": 1,
+          "setup": "soft_front",
+          "setup_name": "soft frontal light (flat light)"
+        },
+        "grade": {
+          "look": "natural (close to the original colours)",
+          "saturation": "high saturation",
+          "contrast": "low contrast",
+          "black": "normal blacks",
+          "tone": "cool"
+        }
+      },
+      "images": {
+        "sheet": "shots/shot_006.jpg",
+        "first": "shots/shot_006_first.jpg",
+        "last": "shots/shot_006_last.jpg"
+      },
+      "zoom_cmd": "rea-video tiles 'C:\\Users\\LoliR\\Downloads\\QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4' --start 22.20 --end 31.63 --every 0.2 -o 'pipeline\\quality\\reference-study\\rea/check_shot_006.jpg'"
+    },
+    {
+      "id": "shot_007",
+      "index": 7,
+      "start": 31.633,
+      "end": 34.067,
+      "duration": 2.433,
+      "priority": "high",
+      "why": [
+        "置信度低（46%）",
+        "次选 AI-generated video 接近（33%）"
+      ],
+      "tool": {
+        "label": "live_action",
+        "label_zh": "live action",
+        "confidence": 0.459,
+        "second": [
+          "ai_video",
+          0.331
+        ],
+        "evidence": [
+          "Photographic texture: noise σ=0.23, 523 colours, 13% flat blocks",
+          "The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps"
+        ]
+      },
+      "hints": "noise_sigma=0.226; temporal_noise=0.886; flat_ratio=0.127; palette95=523; dup_ratio=0; camera=smooth_move; kenburns_score=0; local_motion_ratio=0.126; temporal_family=dynamic, pulldown=None, graphic_score=0.101, fine_dark=0.0, vector_fill=0.0; 确定性初判=live_action (46%)",
+      "aspects": {
+        "framing": {
+          "shot_size": "medium close-up",
+          "camera_angle": null,
+          "position": "left of centre",
+          "subject": "focus"
+        },
+        "camera": {
+          "support": "moving",
+          "support_zh": "moving camera (gimbal / handheld pan)",
+          "move": "push-in"
+        },
+        "lighting": {
+          "key_direction": "frontal (from the camera side; both sides of the subject about equally bright)",
+          "vertical": "from below (screen / desk bounce / low source)",
+          "ratio": "about 1.3:1 (0.3 stops)",
+          "quality": "hard light (sharp shadow edge)",
+          "color_temp": "neutral (about 5000K)",
+          "depth": "background clearly blurred (shallow depth of field / portrait mode)",
+          "separation": "subject brighter than background",
+          "low_light": false,
+          "mixed_color": true,
+          "point_lights": 44,
+          "setup": "soft_front",
+          "setup_name": "soft frontal light (flat light)"
+        },
+        "grade": {
+          "look": "vivid, high saturation",
+          "saturation": "high saturation",
+          "contrast": "normal contrast",
+          "black": "lifted blacks (greyish shadows)",
+          "tone": "cool"
+        }
+      },
+      "images": {
+        "sheet": "shots/shot_007.jpg",
+        "first": "shots/shot_007_first.jpg",
+        "last": "shots/shot_007_last.jpg"
+      },
+      "zoom_cmd": "rea-video tiles 'C:\\Users\\LoliR\\Downloads\\QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4' --start 31.63 --end 34.07 --every 0.2 -o 'pipeline\\quality\\reference-study\\rea/check_shot_007.jpg'"
+    },
+    {
+      "id": "shot_008",
+      "index": 8,
+      "start": 34.067,
+      "end": 44.3,
+      "duration": 10.233,
+      "priority": "high",
+      "why": [
+        "置信度低（56%）"
+      ],
+      "tool": {
+        "label": "live_action",
+        "label_zh": "live action",
+        "confidence": 0.562,
+        "second": [
+          "ai_video",
+          0.251
+        ],
+        "evidence": [
+          "Photographic texture: noise σ=0.22, 247 colours, 10% flat blocks",
+          "The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps",
+          "Temporal noise 1.60, 21% of pixels unchanged frame to frame: sensor noise is present, consistent with live action"
+        ]
+      },
+      "hints": "noise_sigma=0.215; temporal_noise=1.6; flat_ratio=0.104; palette95=247; dup_ratio=0; camera=smooth_move; kenburns_score=0; local_motion_ratio=0.174; temporal_family=dynamic, pulldown=None, graphic_score=0.08, fine_dark=0.0, vector_fill=0.0; 确定性初判=live_action (56%)",
+      "aspects": {
+        "framing": {
+          "shot_size": "medium close-up",
+          "camera_angle": null,
+          "position": "centred",
+          "subject": "focus"
+        },
+        "camera": {
+          "support": "moving",
+          "support_zh": "moving camera (gimbal / handheld pan)",
+          "move": "push-in"
+        },
+        "lighting": {
+          "key_direction": "frame right, three-quarter front",
+          "vertical": "from above (ceiling light / street lamp / high source)",
+          "ratio": "about 1.5:1 (0.6 stops)",
+          "quality": "soft light (wide lit-to-shadow ramp)",
+          "color_temp": "neutral (about 5000K)",
+          "depth": "background clearly blurred (shallow depth of field / portrait mode)",
+          "separation": "subject and background about equally bright",
+          "low_light": false,
+          "mixed_color": false,
+          "point_lights": 8,
+          "setup": "key_fill",
+          "setup_name": "three-quarter key + fill (standard set-up)"
+        },
+        "grade": {
+          "look": "natural (close to the original colours)",
+          "saturation": "normal saturation",
+          "contrast": "normal contrast",
+          "black": "normal blacks",
+          "tone": "neutral"
+        }
+      },
+      "images": {
+        "sheet": "shots/shot_008.jpg",
+        "first": "shots/shot_008_first.jpg",
+        "last": "shots/shot_008_last.jpg"
+      },
+      "zoom_cmd": "rea-video tiles 'C:\\Users\\LoliR\\Downloads\\QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4' --start 34.07 --end 44.30 --every 0.2 -o 'pipeline\\quality\\reference-study\\rea/check_shot_008.jpg'"
+    },
+    {
+      "id": "shot_009",
+      "index": 9,
+      "start": 44.3,
+      "end": 45.0,
+      "duration": 0.7,
+      "priority": "high",
+      "why": [
+        "置信度低（56%）"
+      ],
+      "tool": {
+        "label": "live_action",
+        "label_zh": "live action",
+        "confidence": 0.562,
+        "second": [
+          "ai_video",
+          0.274
+        ],
+        "evidence": [
+          "Photographic texture: noise σ=0.13, 148 colours, 10% flat blocks",
+          "The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps",
+          "Temporal noise 1.27, 31% of pixels unchanged frame to frame: sensor noise is present, consistent with live action"
+        ]
+      },
+      "hints": "noise_sigma=0.133; temporal_noise=1.27; flat_ratio=0.103; palette95=148; dup_ratio=0; camera=smooth_move; kenburns_score=0; local_motion_ratio=0.506; temporal_family=dynamic, pulldown=None, graphic_score=0.059, fine_dark=0.0, vector_fill=0.0; 确定性初判=live_action (56%)",
+      "aspects": {
+        "framing": {
+          "shot_size": "medium shot",
+          "camera_angle": null,
+          "position": "left of centre",
+          "subject": "focus"
+        },
+        "camera": {
+          "support": "moving",
+          "support_zh": "moving camera (gimbal / handheld pan)",
+          "move": "push-in"
+        },
+        "lighting": {
+          "key_direction": "frontal (from the camera side; both sides of the subject about equally bright)",
+          "vertical": "from above (ceiling light / street lamp / high source)",
+          "ratio": "about 1.1:1 (0.1 stops)",
+          "quality": "soft light (almost no lit / shadow edge)",
+          "color_temp": "cool (daylight / cool-white LED)",
+          "depth": "background clearly blurred (shallow depth of field / portrait mode)",
+          "separation": "background brighter than subject (backlit / background lights brighter)",
+          "low_light": false,
+          "mixed_color": false,
+          "point_lights": 24,
+          "setup": "soft_front",
+          "setup_name": "soft frontal light (flat light)"
+        },
+        "grade": {
+          "look": "airy Japanese-style (bright, low saturation, lifted blacks)",
+          "saturation": "low saturation",
+          "contrast": "normal contrast",
+          "black": "lifted blacks (greyish shadows)",
+          "tone": "cool"
+        }
+      },
+      "images": {
+        "sheet": "shots/shot_009.jpg",
+        "first": "shots/shot_009_first.jpg",
+        "last": "shots/shot_009_last.jpg"
+      },
+      "zoom_cmd": "rea-video tiles 'C:\\Users\\LoliR\\Downloads\\QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4' --start 44.30 --end 45.00 --every 0.2 -o 'pipeline\\quality\\reference-study\\rea/check_shot_009.jpg'"
+    },
+    {
+      "id": "shot_010",
+      "index": 10,
+      "start": 45.0,
+      "end": 63.167,
+      "duration": 18.167,
+      "priority": "high",
+      "why": [
+        "置信度低（57%）"
+      ],
+      "tool": {
+        "label": "live_action",
+        "label_zh": "live action",
+        "confidence": 0.57,
+        "second": [
+          "ai_video",
+          0.269
+        ],
+        "evidence": [
+          "Photographic texture: noise σ=0.19, 261 colours, 10% flat blocks",
+          "The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps",
+          "Temporal noise 1.32, 28% of pixels unchanged frame to frame: sensor noise is present, consistent with live action"
+        ]
+      },
+      "hints": "noise_sigma=0.185; temporal_noise=1.32; flat_ratio=0.101; palette95=261; dup_ratio=0; camera=smooth_move; kenburns_score=0; local_motion_ratio=0.396; temporal_family=dynamic, pulldown=None, graphic_score=0.057, fine_dark=0.0, vector_fill=0.0; 确定性初判=live_action (57%)",
+      "aspects": {
+        "framing": {
+          "shot_size": "medium close-up",
+          "camera_angle": null,
+          "position": "centred",
+          "subject": "focus"
+        },
+        "camera": {
+          "support": "moving",
+          "support_zh": "moving camera (gimbal / handheld pan)",
+          "move": "push-in"
+        },
+        "lighting": {
+          "key_direction": "frontal (from the camera side; both sides of the subject about equally bright)",
+          "vertical": "from above (ceiling light / street lamp / high source)",
+          "ratio": "about 1.0:1 (0.1 stops)",
+          "quality": "soft light (almost no lit / shadow edge)",
+          "color_temp": "neutral (about 5000K)",
+          "depth": "background clearly blurred (shallow depth of field / portrait mode)",
+          "separation": "subject and background about equally bright",
+          "low_light": false,
+          "mixed_color": true,
+          "point_lights": 7,
+          "setup": "soft_front",
+          "setup_name": "soft frontal light (flat light)"
+        },
+        "grade": {
+          "look": "natural (close to the original colours)",
+          "saturation": "high saturation",
+          "contrast": "normal contrast",
+          "black": "lifted blacks (greyish shadows)",
+          "tone": "cool"
+        }
+      },
+      "images": {
+        "sheet": "shots/shot_010.jpg",
+        "first": "shots/shot_010_first.jpg",
+        "last": "shots/shot_010_last.jpg"
+      },
+      "zoom_cmd": "rea-video tiles 'C:\\Users\\LoliR\\Downloads\\QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4' --start 45.00 --end 63.17 --every 0.2 -o 'pipeline\\quality\\reference-study\\rea/check_shot_010.jpg'"
+    }
+  ],
+  "packaging": {
+    "stickers": [],
+    "text": [
+      {
+        "id": "text_001",
+        "t0": 0.0,
+        "t1": 0.2,
+        "text": "bent",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.1% (about 78px)"
+      },
+      {
+        "id": "text_002",
+        "t0": 0.5,
+        "t1": 0.6,
+        "text": "roller",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.7% (about 70px)"
+      },
+      {
+        "id": "text_003",
+        "t0": 1.0,
+        "t1": 1.1,
+        "text": "loop",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.3% (about 83px)"
+      },
+      {
+        "id": "text_004",
+        "t0": 1.5,
+        "t1": 1.6,
+        "text": "out of",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.8% (about 72px)"
+      },
+      {
+        "id": "text_005",
+        "t0": 2.0,
+        "t1": 2.1,
+        "text": "shape.",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.8% (about 92px)"
+      },
+      {
+        "id": "text_006",
+        "t0": 2.4,
+        "t1": 2.8,
+        "text": "see,",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.4% (about 84px)"
+      },
+      {
+        "id": "text_007",
+        "t0": 3.0,
+        "t1": 3.1,
+        "text": "filrst",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.4% (about 84px)"
+      },
+      {
+        "id": "text_008",
+        "t0": 3.5,
+        "t1": 3.6,
+        "text": "ever",
+        "kind": "label",
+        "style": "white text, black outline, yellow box, line height 3.8% (about 72px)"
+      },
+      {
+        "id": "text_009",
+        "t0": 4.0,
+        "t1": 4.1,
+        "text": "to go",
+        "kind": "label",
+        "style": "white text, black outline, line height 5.1% (about 98px)"
+      },
+      {
+        "id": "text_010",
+        "t0": 4.3,
+        "t1": 4.6,
+        "text": "psdn",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.6% (about 89px)"
+      },
+      {
+        "id": "text_011",
+        "t0": 5.0,
+        "t1": 5.1,
+        "text": "and",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.3% (about 83px)"
+      },
+      {
+        "id": "text_012",
+        "t0": 5.5,
+        "t1": 5.7,
+        "text": "it cost him",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.5% (about 85px)"
+      },
+      {
+        "id": "text_013",
+        "t0": 6.0,
+        "t1": 6.6,
+        "text": "everything.",
+        "kind": "label",
+        "style": "white text, black outline, brown box, line height 4.6% (about 88px)"
+      },
+      {
+        "id": "text_014",
+        "t0": 6.9,
+        "t1": 7.1,
+        "text": "course,",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.5% (about 85px)"
+      },
+      {
+        "id": "text_015",
+        "t0": 7.2,
+        "t1": 7.6,
+        "text": "his",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.9% (about 94px)"
+      },
+      {
+        "id": "text_016",
+        "t0": 8.0,
+        "t1": 9.6,
+        "text": "TNIVS/LOOP",
+        "kind": "label",
+        "style": "grey text, line height 1.6% (about 31px)"
+      },
+      {
+        "id": "text_017",
+        "t0": 8.0,
+        "t1": 8.1,
+        "text": "copies it",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.2% (about 81px)"
+      },
+      {
+        "id": "text_018",
+        "t0": 8.5,
+        "t1": 9.1,
+        "text": "LOOP",
+        "kind": "label",
+        "style": "black text, grey outline, line height 1.6% (about 31px)"
+      },
+      {
+        "id": "text_019",
+        "t0": 8.1,
+        "t1": 9.1,
+        "text": "bolt",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.9% (about 74px)"
+      },
+      {
+        "id": "text_020",
+        "t0": 9.1,
+        "t1": 9.9,
+        "text": "But",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.7% (about 70px)"
+      },
+      {
+        "id": "text_021",
+        "t0": 10.0,
+        "t1": 12.1,
+        "text": "OPENING TOMOR",
+        "kind": "label",
+        "style": "brown text, purple outline, keywords highlighted in blue, line height 7.3% (about 140px)"
+      },
+      {
+        "id": "text_022",
+        "t0": 9.9,
+        "t1": 10.2,
+        "text": "before",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.9% (about 75px)"
+      },
+      {
+        "id": "text_023",
+        "t0": 10.3,
+        "t1": 10.6,
+        "text": "opening,",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.8% (about 74px)"
+      },
+      {
+        "id": "text_024",
+        "t0": 11.0,
+        "t1": 11.5,
+        "text": "test",
+        "kind": "label",
+        "style": "white text, black outline, red box, line height 3.6% (about 69px)"
+      },
+      {
+        "id": "text_025",
+        "t0": 11.5,
+        "t1": 11.7,
+        "text": "dummy",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.4% (about 84px)"
+      },
+      {
+        "id": "text_026",
+        "t0": 12.0,
+        "t1": 12.1,
+        "text": "back",
+        "kind": "label",
+        "style": "white text, black outline, purple box, line height 3.9% (about 75px)"
+      },
+      {
+        "id": "text_027",
+        "t0": 12.2,
+        "t1": 14.1,
+        "text": "OPENING TOMOR",
+        "kind": "label",
+        "style": "blue text, purple outline, keywords highlighted in brown, line height 9.4% (about 181px)"
+      },
+      {
+        "id": "text_028",
+        "t0": 12.5,
+        "t1": 12.6,
+        "text": "crushed",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.7% (about 70px)"
+      },
+      {
+        "id": "text_029",
+        "t0": 13.0,
+        "t1": 13.1,
+        "text": "a soda can.",
+        "kind": "label",
+        "style": "white text, line height 3.0% (about 59px)"
+      },
+      {
+        "id": "text_030",
+        "t0": 13.5,
+        "t1": 13.6,
+        "text": "But",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.0% (about 76px)"
+      },
+      {
+        "id": "text_031",
+        "t0": 14.0,
+        "t1": 14.1,
+        "text": "he can't",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.7% (about 70px)"
+      },
+      {
+        "id": "text_032",
+        "t0": 14.5,
+        "t1": 16.1,
+        "text": "DOPENING",
+        "kind": "label",
+        "style": "brown text, keywords highlighted in purple, line height 10.8% (about 207px)"
+      },
+      {
+        "id": "text_033",
+        "t0": 14.5,
+        "t1": 14.6,
+        "text": "the opening",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.5% (about 87px)"
+      },
+      {
+        "id": "text_034",
+        "t0": 15.0,
+        "t1": 15.1,
+        "text": "Sohe",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.3% (about 83px)"
+      },
+      {
+        "id": "text_035",
+        "t0": 15.4,
+        "t1": 16.2,
+        "text": "and",
+        "kind": "label",
+        "style": "white text, black outline, blue box, line height 3.5% (about 68px)"
+      },
+      {
+        "id": "text_036",
+        "t0": 16.4,
+        "t1": 16.7,
+        "text": "the bottom",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.8% (about 74px)"
+      },
+      {
+        "id": "text_037",
+        "t0": 16.9,
+        "t1": 17.2,
+        "text": "into a",
+        "kind": "label",
+        "style": "black text, white outline, orange box, keywords highlighted in orange, line height 5.1% (about 98px)"
+      },
+      {
+        "id": "text_038",
+        "t0": 17.5,
+        "t1": 18.0,
+        "text": "Iong,",
+        "kind": "label",
+        "style": "white text, black outline, line height 5.4% (about 103px)"
+      },
+      {
+        "id": "text_039",
+        "t0": 18.0,
+        "t1": 18.1,
+        "text": "lazy",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.9% (about 94px)"
+      },
+      {
+        "id": "text_040",
+        "t0": 18.5,
+        "t1": 18.6,
+        "text": "curve.",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.6% (about 69px)"
+      },
+      {
+        "id": "text_041",
+        "t0": 19.0,
+        "t1": 19.1,
+        "text": "he know",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.1% (about 78px)"
+      },
+      {
+        "id": "text_042",
+        "t0": 19.5,
+        "t1": 19.6,
+        "text": "带",
+        "kind": "label",
+        "style": "red text, white outline, line height 2.4% (about 46px)"
+      },
+      {
+        "id": "text_043",
+        "t0": 19.5,
+        "t1": 19.6,
+        "text": "doing?",
+        "kind": "label",
+        "style": "white text, black outline, blue box, line height 4.8% (about 92px)"
+      },
+      {
+        "id": "text_044",
+        "t0": 20.0,
+        "t1": 20.9,
+        "text": "Not really.",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.4% (about 84px)"
+      },
+      {
+        "id": "text_045",
+        "t0": 21.0,
+        "t1": 21.1,
+        "text": "rival",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.2% (about 81px)"
+      },
+      {
+        "id": "text_046",
+        "t0": 21.5,
+        "t1": 21.6,
+        "text": "laughs,",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.8% (about 92px)"
+      },
+      {
+        "id": "text_047",
+        "t0": 22.0,
+        "t1": 22.1,
+        "text": "sneaks",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.7% (about 70px)"
+      },
+      {
+        "id": "text_048",
+        "t0": 22.5,
+        "t1": 22.6,
+        "text": "in and",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.7% (about 70px)"
+      },
+      {
+        "id": "text_049",
+        "t0": 23.0,
+        "t1": 23.1,
+        "text": "cranks",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.7% (about 70px)"
+      },
+      {
+        "id": "text_050",
+        "t0": 23.5,
+        "t1": 23.6,
+        "text": "the sides",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.8% (about 74px)"
+      },
+      {
+        "id": "text_051",
+        "t0": 24.0,
+        "t1": 24.1,
+        "text": "cuntil",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.7% (about 90px)"
+      },
+      {
+        "id": "text_052",
+        "t0": 24.5,
+        "t1": 24.6,
+        "text": "loop",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.9% (about 94px)"
+      },
+      {
+        "id": "text_053",
+        "t0": 25.0,
+        "t1": 25.2,
+        "text": "is tall",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.2% (about 81px)"
+      },
+      {
+        "id": "text_054",
+        "t0": 25.3,
+        "t1": 25.8,
+        "text": "and skinny.",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.8% (about 92px)"
+      },
+      {
+        "id": "text_055",
+        "t0": 25.9,
+        "t1": 26.1,
+        "text": "SO7",
+        "kind": "label",
+        "style": "white text, black outline, line height 5.2% (about 99px)"
+      },
+      {
+        "id": "text_056",
+        "t0": 26.4,
+        "t1": 26.7,
+        "text": "the first cart",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.8% (about 74px)"
+      },
+      {
+        "id": "text_057",
+        "t0": 27.0,
+        "t1": 27.1,
+        "text": "snap",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.2% (about 81px)"
+      },
+      {
+        "id": "text_058",
+        "t0": 27.5,
+        "t1": 27.6,
+        "text": "twig.",
+        "kind": "label",
+        "style": "white text, black outline, line height 5.7% (about 109px)"
+      },
+      {
+        "id": "text_059",
+        "t0": 28.0,
+        "t1": 28.2,
+        "text": "The next",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.3% (about 83px)"
+      },
+      {
+        "id": "text_060",
+        "t0": 28.5,
+        "t1": 28.6,
+        "text": "OTTONCANDY",
+        "kind": "huazi",
+        "style": "white text, red outline, keywords highlighted in orange, line height 6.2% (about 120px)"
+      },
+      {
+        "id": "text_061",
+        "t0": 28.5,
+        "t1": 29.6,
+        "text": "PENING",
+        "kind": "huazi",
+        "style": "red text, white outline, grey box, bold, line height 1.6% (about 30px)"
+      },
+      {
+        "id": "text_062",
+        "t0": 28.5,
+        "t1": 28.6,
+        "text": "morning,",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.7% (about 90px)"
+      },
+      {
+        "id": "text_063",
+        "t0": 29.0,
+        "t1": 29.1,
+        "text": "ANDY-",
+        "kind": "label",
+        "style": "white text, red outline, line height 3.8% (about 74px)"
+      },
+      {
+        "id": "text_064",
+        "t0": 28.9,
+        "t1": 29.1,
+        "text": "town",
+        "kind": "label",
+        "style": "white text, black outline, bold, line height 3.6% (about 69px)"
+      },
+      {
+        "id": "text_065",
+        "t0": 29.5,
+        "t1": 29.6,
+        "text": "lines",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.0% (about 76px)"
+      },
+      {
+        "id": "text_066",
+        "t0": 30.0,
+        "t1": 31.4,
+        "text": "GRANDOPENING",
+        "kind": "label",
+        "style": "red text, orange outline, bold, line height 2.1% (about 41px)"
+      },
+      {
+        "id": "text_067",
+        "t0": 30.0,
+        "t1": 30.1,
+        "text": "rivals",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.8% (about 72px)"
+      },
+      {
+        "id": "text_068",
+        "t0": 30.0,
+        "t1": 30.1,
+        "text": "IIIIN",
+        "kind": "huazi",
+        "style": "brown text, brown outline, line height 1.9% (about 37px)"
+      },
+      {
+        "id": "text_069",
+        "t0": 30.5,
+        "t1": 30.6,
+        "text": "perfect",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.5% (about 87px)"
+      },
+      {
+        "id": "text_070",
+        "t0": 30.7,
+        "t1": 31.2,
+        "text": "circle.",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.7% (about 70px)"
+      },
+      {
+        "id": "text_071",
+        "t0": 31.5,
+        "t1": 32.2,
+        "text": "FIRST!",
+        "kind": "huazi",
+        "style": "red text, keywords highlighted in brown, line height 3.5% (about 67px)"
+      },
+      {
+        "id": "text_072",
+        "t0": 31.3,
+        "t1": 31.6,
+        "text": "and the",
+        "kind": "label",
+        "style": "white text, black outline, yellow box, bold, line height 3.7% (about 70px)"
+      },
+      {
+        "id": "text_073",
+        "t0": 31.8,
+        "t1": 32.2,
+        "text": "climbs",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.3% (about 83px)"
+      },
+      {
+        "id": "text_074",
+        "t0": 32.5,
+        "t1": 32.6,
+        "text": "FIRST!·front",
+        "kind": "label",
+        "style": "white text, black outline, keywords highlighted in red, line height 4.7% (about 90px)"
+      },
+      {
+        "id": "text_075",
+        "t0": 33.0,
+        "t1": 33.1,
+        "text": "oto",
+        "kind": "label",
+        "style": "white text, keywords highlighted in grey, line height 1.1% (about 21px)"
+      },
+      {
+        "id": "text_076",
+        "t0": 33.0,
+        "t1": 33.2,
+        "text": "toshow",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.1% (about 79px)"
+      },
+      {
+        "id": "text_077",
+        "t0": 33.0,
+        "t1": 33.1,
+        "text": "FIRST!",
+        "kind": "label",
+        "style": "red text, line height 4.5% (about 85px)"
+      },
+      {
+        "id": "text_078",
+        "t0": 33.3,
+        "t1": 33.9,
+        "text": "The",
+        "kind": "label",
+        "style": "white text, black outline, line height 4.8% (about 92px)"
+      },
+      {
+        "id": "text_079",
+        "t0": 33.5,
+        "t1": 33.6,
+        "text": "FTDCTI",
+        "kind": "huazi",
+        "style": "red text, keywords highlighted in orange, bold, line height 2.6% (about 50px)"
+      },
+      {
+        "id": "text_080",
+        "t0": 33.9,
+        "t1": 34.1,
+        "text": "climbs",
+        "kind": "label",
+        "style": "white text, black outline, line height 3.7% (about 70px)"
+      }
+    ]
+  }
+}

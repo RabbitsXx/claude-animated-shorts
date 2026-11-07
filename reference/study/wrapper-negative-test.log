@@ -1,0 +1,4 @@
+usage: rea-video [-h] [-v] [--env-file ENV_FILE]
+                 {decompose,stems,probe,eval,capsule,remake-plan,remake-run,capsule-draft,assemble,tiles,summary,review,apply-review,correct,prefs,memory}
+                 ...
+rea-video: error: argument cmd: invalid choice: 'not-a-command' (choose from 'decompose', 'stems', 'probe', 'eval', 'capsule', 'remake-plan', 'remake-run', 'capsule-draft', 'assemble', 'tiles', 'summary', 'review', 'apply-review', 'correct', 'prefs', 'memory')

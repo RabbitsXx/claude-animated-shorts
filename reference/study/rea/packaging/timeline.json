@@ -1,0 +1,4995 @@
+{
+  "text": [
+    {
+      "id": "text_001",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 0.0,
+      "t1": 0.2,
+      "text": "bent",
+      "bbox": [
+        0.4153,
+        0.6844,
+        0.1764,
+        0.0406
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8fbfa",
+        "stroke_name": "black",
+        "stroke": "#030406",
+        "stroke_ratio": 0.047,
+        "weight": 0.184
+      },
+      "style_zh": "white text, black outline, line height 4.1% (about 78px)",
+      "anim_in": null,
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_002",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 0.5,
+      "t1": 0.6,
+      "text": "roller",
+      "bbox": [
+        0.4028,
+        0.6883,
+        0.1972,
+        0.0367
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8faf7",
+        "stroke_name": "black",
+        "stroke": "#030406",
+        "stroke_ratio": 0.054,
+        "weight": 0.175
+      },
+      "style_zh": "white text, black outline, line height 3.7% (about 70px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_003",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 1.0,
+      "t1": 1.1,
+      "text": "loop",
+      "bbox": [
+        0.4194,
+        0.6859,
+        0.1639,
+        0.043
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafcfc",
+        "stroke_name": "black",
+        "stroke": "#050608",
+        "stroke_ratio": 0.043,
+        "weight": 0.154
+      },
+      "style_zh": "white text, black outline, line height 4.3% (about 83px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_004",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 1.5,
+      "t1": 1.6,
+      "text": "out of",
+      "bbox": [
+        0.3958,
+        0.6852,
+        0.2167,
+        0.0375
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8fbfa",
+        "stroke_name": "black",
+        "stroke": "#060306",
+        "stroke_ratio": 0.055,
+        "weight": 0.194
+      },
+      "style_zh": "white text, black outline, line height 3.8% (about 72px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_005",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 2.0,
+      "t1": 2.1,
+      "text": "shape.",
+      "bbox": [
+        0.375,
+        0.6828,
+        0.25,
+        0.0477
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#080506",
+        "stroke_ratio": 0.034,
+        "weight": 0.135
+      },
+      "style_zh": "white text, black outline, line height 4.8% (about 92px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_006",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 2.4,
+      "t1": 2.8,
+      "text": "see,",
+      "bbox": [
+        0.4167,
+        0.6859,
+        0.1611,
+        0.0438
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#09060a",
+        "stroke_ratio": 0.04,
+        "weight": 0.136
+      },
+      "style_zh": "white text, black outline, line height 4.4% (about 84px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_007",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 3.0,
+      "t1": 3.1,
+      "text": "filrst",
+      "bbox": [
+        0.4181,
+        0.682,
+        0.1667,
+        0.0438
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8f8f8",
+        "stroke_name": "black",
+        "stroke": "#020504",
+        "stroke_ratio": 0.042,
+        "weight": 0.151
+      },
+      "style_zh": "white text, black outline, line height 4.4% (about 84px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_008",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 3.5,
+      "t1": 3.6,
+      "text": "ever",
+      "bbox": [
+        0.4222,
+        0.6883,
+        0.1653,
+        0.0375
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fbfcfd",
+        "stroke_name": "black",
+        "stroke": "#0b0a07",
+        "stroke_ratio": 0.047,
+        "box": true,
+        "box_name": "yellow",
+        "box_color": "#dcbb76",
+        "weight": 0.159
+      },
+      "style_zh": "white text, black outline, yellow box, line height 3.8% (about 72px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_009",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 4.0,
+      "t1": 4.1,
+      "text": "to go",
+      "bbox": [
+        0.4,
+        0.6812,
+        0.1972,
+        0.0508
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8fbfa",
+        "stroke_name": "black",
+        "stroke": "#030c07",
+        "stroke_ratio": 0.031,
+        "weight": 0.118
+      },
+      "style_zh": "white text, black outline, line height 5.1% (about 98px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_010",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 4.3,
+      "t1": 4.6,
+      "text": "psdn",
+      "bbox": [
+        0.3736,
+        0.6836,
+        0.2514,
+        0.0461
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f7fbfc",
+        "stroke_name": "black",
+        "stroke": "#010706",
+        "stroke_ratio": 0.034,
+        "weight": 0.139
+      },
+      "style_zh": "white text, black outline, line height 4.6% (about 89px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_011",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 5.0,
+      "t1": 5.1,
+      "text": "and",
+      "bbox": [
+        0.425,
+        0.6828,
+        0.1514,
+        0.043
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafcfc",
+        "stroke_name": "black",
+        "stroke": "#01050b",
+        "stroke_ratio": 0.039,
+        "weight": 0.154
+      },
+      "style_zh": "white text, black outline, line height 4.3% (about 83px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_012",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 5.5,
+      "t1": 5.7,
+      "text": "it cost him",
+      "bbox": [
+        0.3125,
+        0.6812,
+        0.3736,
+        0.0445
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fcfcfc",
+        "stroke_name": "black",
+        "stroke": "#060304",
+        "stroke_ratio": 0.041,
+        "weight": 0.144
+      },
+      "style_zh": "white text, black outline, line height 4.5% (about 85px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": null,
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_013",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 6.0,
+      "t1": 6.6,
+      "text": "everything.",
+      "bbox": [
+        0.3014,
+        0.682,
+        0.3945,
+        0.0469
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fcfdff",
+        "stroke_name": "black",
+        "stroke": "#060304",
+        "stroke_ratio": 0.038,
+        "box": true,
+        "box_name": "brown",
+        "box_color": "#968b79",
+        "weight": 0.131
+      },
+      "style_zh": "white text, black outline, brown box, line height 4.6% (about 88px)",
+      "anim_in": null,
+      "anim_out": {
+        "kind": "fade_out",
+        "kind_zh": "fade out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_014",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 6.9,
+      "t1": 7.1,
+      "text": "course,",
+      "bbox": [
+        0.3625,
+        0.6859,
+        0.275,
+        0.0445
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f7f6f4",
+        "stroke_name": "black",
+        "stroke": "#020703",
+        "stroke_ratio": 0.039,
+        "weight": 0.134
+      },
+      "style_zh": "white text, black outline, line height 4.5% (about 85px)",
+      "anim_in": {
+        "kind": "slide",
+        "kind_zh": "slide in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_015",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 7.2,
+      "t1": 7.6,
+      "text": "his",
+      "bbox": [
+        0.4389,
+        0.6789,
+        0.1306,
+        0.0492
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8f7f5",
+        "stroke_name": "black",
+        "stroke": "#020608",
+        "stroke_ratio": 0.035,
+        "weight": 0.121
+      },
+      "style_zh": "white text, black outline, line height 4.9% (about 94px)",
+      "anim_in": null,
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_017",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 8.0,
+      "t1": 8.1,
+      "text": "copies it",
+      "bbox": [
+        0.3458,
+        0.6844,
+        0.3139,
+        0.0422
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8f6f2",
+        "stroke_name": "black",
+        "stroke": "#030406",
+        "stroke_ratio": 0.037,
+        "weight": 0.152
+      },
+      "style_zh": "white text, black outline, line height 4.2% (about 81px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_019",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 8.1,
+      "t1": 9.1,
+      "text": "bolt",
+      "bbox": [
+        0.4125,
+        0.6852,
+        0.1736,
+        0.0391
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8f8f8",
+        "stroke_name": "black",
+        "stroke": "#040404",
+        "stroke_ratio": 0.052,
+        "weight": 0.191
+      },
+      "style_zh": "white text, black outline, line height 3.9% (about 74px)",
+      "anim_in": null,
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_020",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 9.1,
+      "t1": 9.9,
+      "text": "But",
+      "bbox": [
+        0.4403,
+        0.6867,
+        0.1292,
+        0.0367
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafafa",
+        "stroke_name": "black",
+        "stroke": "#040404",
+        "stroke_ratio": 0.053,
+        "weight": 0.198
+      },
+      "style_zh": "white text, black outline, line height 3.7% (about 70px)",
+      "anim_in": null,
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_022",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 9.9,
+      "t1": 10.2,
+      "text": "before",
+      "bbox": [
+        0.3806,
+        0.6844,
+        0.2417,
+        0.0391
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#05050d",
+        "stroke_ratio": 0.049,
+        "weight": 0.164
+      },
+      "style_zh": "white text, black outline, line height 3.9% (about 75px)",
+      "anim_in": null,
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_023",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 10.3,
+      "t1": 10.6,
+      "text": "opening,",
+      "bbox": [
+        0.3472,
+        0.6898,
+        0.3069,
+        0.0383
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fbfcfd",
+        "stroke_name": "black",
+        "stroke": "#03040b",
+        "stroke_ratio": 0.046,
+        "weight": 0.156
+      },
+      "style_zh": "white text, black outline, line height 3.8% (about 74px)",
+      "anim_in": {
+        "kind": "fade",
+        "kind_zh": "fade in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_024",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 11.0,
+      "t1": 11.5,
+      "text": "test",
+      "bbox": [
+        0.4264,
+        0.6867,
+        0.1514,
+        0.0359
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#040409",
+        "stroke_ratio": 0.05,
+        "box": true,
+        "box_name": "red",
+        "box_color": "#7d3b33",
+        "weight": 0.179
+      },
+      "style_zh": "white text, black outline, red box, line height 3.6% (about 69px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": null,
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_025",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 11.5,
+      "t1": 11.7,
+      "text": "dummy",
+      "bbox": [
+        0.3722,
+        0.6844,
+        0.2583,
+        0.0438
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f9f9f9",
+        "stroke_name": "black",
+        "stroke": "#030208",
+        "stroke_ratio": 0.044,
+        "weight": 0.171
+      },
+      "style_zh": "white text, black outline, line height 4.4% (about 84px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_026",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 12.0,
+      "t1": 12.1,
+      "text": "back",
+      "bbox": [
+        0.4111,
+        0.6852,
+        0.1861,
+        0.0391
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fbfcfd",
+        "stroke_name": "black",
+        "stroke": "#020106",
+        "stroke_ratio": 0.048,
+        "box": true,
+        "box_name": "purple",
+        "box_color": "#b1a1c3",
+        "weight": 0.164
+      },
+      "style_zh": "white text, black outline, purple box, line height 3.9% (about 75px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_028",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 12.5,
+      "t1": 12.6,
+      "text": "crushed",
+      "bbox": [
+        0.3597,
+        0.6859,
+        0.2819,
+        0.0367
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fbfcfd",
+        "stroke_name": "black",
+        "stroke": "#020106",
+        "stroke_ratio": 0.049,
+        "weight": 0.175
+      },
+      "style_zh": "white text, black outline, line height 3.7% (about 70px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_029",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 13.0,
+      "t1": 13.1,
+      "text": "a soda can.",
+      "bbox": [
+        0.3,
+        0.6922,
+        0.3889,
+        0.0305
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafafa",
+        "weight": 0.196
+      },
+      "style_zh": "white text, line height 3.0% (about 59px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_030",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 13.5,
+      "t1": 13.6,
+      "text": "But",
+      "bbox": [
+        0.4389,
+        0.6844,
+        0.1347,
+        0.0398
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fcfcfc",
+        "stroke_name": "black",
+        "stroke": "#080203",
+        "stroke_ratio": 0.046,
+        "weight": 0.166
+      },
+      "style_zh": "white text, black outline, line height 4.0% (about 76px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_031",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 14.0,
+      "t1": 14.1,
+      "text": "he can't",
+      "bbox": [
+        0.3597,
+        0.6859,
+        0.2847,
+        0.0367
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f7fbfc",
+        "stroke_name": "black",
+        "stroke": "#060304",
+        "stroke_ratio": 0.052,
+        "weight": 0.175
+      },
+      "style_zh": "white text, black outline, line height 3.7% (about 70px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_033",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 14.5,
+      "t1": 14.6,
+      "text": "the opening",
+      "bbox": [
+        0.2778,
+        0.6828,
+        0.4319,
+        0.0453
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f7f7f7",
+        "stroke_name": "black",
+        "stroke": "#03060a",
+        "stroke_ratio": 0.041,
+        "weight": 0.16
+      },
+      "style_zh": "white text, black outline, line height 4.5% (about 87px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_034",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 15.0,
+      "t1": 15.1,
+      "text": "Sohe",
+      "bbox": [
+        0.3944,
+        0.6828,
+        0.2153,
+        0.043
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafafa",
+        "stroke_name": "black",
+        "stroke": "#02060d",
+        "stroke_ratio": 0.043,
+        "weight": 0.154
+      },
+      "style_zh": "white text, black outline, line height 4.3% (about 83px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_035",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 15.4,
+      "t1": 16.2,
+      "text": "and",
+      "bbox": [
+        0.4278,
+        0.6859,
+        0.1486,
+        0.0383
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f9f9f9",
+        "stroke_name": "black",
+        "stroke": "#070508",
+        "stroke_ratio": 0.048,
+        "box": true,
+        "box_name": "blue",
+        "box_color": "#88a6d1",
+        "weight": 0.186
+      },
+      "style_zh": "white text, black outline, blue box, line height 3.5% (about 68px)",
+      "anim_in": {
+        "kind": "reveal",
+        "kind_zh": "type-on"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_036",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 16.4,
+      "t1": 16.7,
+      "text": "the bottom",
+      "bbox": [
+        0.3042,
+        0.6852,
+        0.3931,
+        0.0383
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8f9fb",
+        "stroke_name": "black",
+        "stroke": "#060304",
+        "stroke_ratio": 0.045,
+        "weight": 0.19
+      },
+      "style_zh": "white text, black outline, line height 3.8% (about 74px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": null,
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_037",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 16.9,
+      "t1": 17.2,
+      "text": "into a",
+      "bbox": [
+        0.3917,
+        0.6789,
+        0.2264,
+        0.0508
+      ],
+      "style": {
+        "fill_name": "black",
+        "fill": "#060606",
+        "stroke_name": "white",
+        "stroke": "#f7f7f7",
+        "stroke_ratio": 0.025,
+        "box": true,
+        "box_name": "orange",
+        "box_color": "#edd6b3",
+        "multicolor": true,
+        "highlight_name": "orange",
+        "weight": 0.072
+      },
+      "style_zh": "black text, white outline, orange box, keywords highlighted in orange, line height 5.1% (about 98px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_038",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 17.5,
+      "t1": 18.0,
+      "text": "Iong,",
+      "bbox": [
+        0.4,
+        0.6789,
+        0.1986,
+        0.0539
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8fbfa",
+        "stroke_name": "black",
+        "stroke": "#020409",
+        "stroke_ratio": 0.032,
+        "weight": 0.111
+      },
+      "style_zh": "white text, black outline, line height 5.4% (about 103px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": null,
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_039",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 18.0,
+      "t1": 18.1,
+      "text": "lazy",
+      "bbox": [
+        0.4208,
+        0.6828,
+        0.1583,
+        0.0492
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8fbfa",
+        "stroke_name": "black",
+        "stroke": "#010308",
+        "stroke_ratio": 0.039,
+        "weight": 0.13
+      },
+      "style_zh": "white text, black outline, line height 4.9% (about 94px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_040",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 18.5,
+      "t1": 18.6,
+      "text": "curve.",
+      "bbox": [
+        0.3903,
+        0.6883,
+        0.2208,
+        0.0359
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fbfcfd",
+        "stroke_name": "black",
+        "stroke": "#010308",
+        "stroke_ratio": 0.051,
+        "weight": 0.166
+      },
+      "style_zh": "white text, black outline, line height 3.6% (about 69px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_041",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 19.0,
+      "t1": 19.1,
+      "text": "he know",
+      "bbox": [
+        0.3486,
+        0.6844,
+        0.3014,
+        0.0406
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafafa",
+        "stroke_name": "black",
+        "stroke": "#020305",
+        "stroke_ratio": 0.04,
+        "weight": 0.158
+      },
+      "style_zh": "white text, black outline, line height 4.1% (about 78px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_043",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 19.5,
+      "t1": 19.6,
+      "text": "doing?",
+      "bbox": [
+        0.375,
+        0.682,
+        0.2486,
+        0.0477
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8fbfa",
+        "stroke_name": "black",
+        "stroke": "#07060c",
+        "stroke_ratio": 0.038,
+        "box": true,
+        "box_name": "blue",
+        "box_color": "#2f3c74",
+        "weight": 0.125
+      },
+      "style_zh": "white text, black outline, blue box, line height 4.8% (about 92px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_044",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 20.0,
+      "t1": 20.9,
+      "text": "Not really.",
+      "bbox": [
+        0.3167,
+        0.6828,
+        0.3639,
+        0.0438
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafafa",
+        "stroke_name": "black",
+        "stroke": "#01050b",
+        "stroke_ratio": 0.046,
+        "weight": 0.166
+      },
+      "style_zh": "white text, black outline, line height 4.4% (about 84px)",
+      "anim_in": {
+        "kind": "fade",
+        "kind_zh": "fade in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_045",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 21.0,
+      "t1": 21.1,
+      "text": "rival",
+      "bbox": [
+        0.4181,
+        0.6836,
+        0.1653,
+        0.0422
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#01050b",
+        "stroke_ratio": 0.045,
+        "weight": 0.157
+      },
+      "style_zh": "white text, black outline, line height 4.2% (about 81px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_046",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 21.5,
+      "t1": 21.6,
+      "text": "laughs,",
+      "bbox": [
+        0.3681,
+        0.682,
+        0.2597,
+        0.0477
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fbfcfd",
+        "stroke_name": "black",
+        "stroke": "#03040b",
+        "stroke_ratio": 0.035,
+        "weight": 0.125
+      },
+      "style_zh": "white text, black outline, line height 4.8% (about 92px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_047",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 22.0,
+      "t1": 22.1,
+      "text": "sneaks",
+      "bbox": [
+        0.3694,
+        0.6867,
+        0.2625,
+        0.0367
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fbfcfd",
+        "stroke_name": "black",
+        "stroke": "#01050b",
+        "stroke_ratio": 0.045,
+        "weight": 0.163
+      },
+      "style_zh": "white text, black outline, line height 3.7% (about 70px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_048",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 22.5,
+      "t1": 22.6,
+      "text": "in and",
+      "bbox": [
+        0.3889,
+        0.6867,
+        0.225,
+        0.0367
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#00050d",
+        "stroke_ratio": 0.052,
+        "weight": 0.198
+      },
+      "style_zh": "white text, black outline, line height 3.7% (about 70px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_049",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 23.0,
+      "t1": 23.1,
+      "text": "cranks",
+      "bbox": [
+        0.3806,
+        0.6867,
+        0.2431,
+        0.0367
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fbfcfd",
+        "stroke_name": "black",
+        "stroke": "#01050b",
+        "stroke_ratio": 0.048,
+        "weight": 0.163
+      },
+      "style_zh": "white text, black outline, line height 3.7% (about 70px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_050",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 23.5,
+      "t1": 23.6,
+      "text": "the sides",
+      "bbox": [
+        0.3333,
+        0.6844,
+        0.3319,
+        0.0383
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f7f8fa",
+        "stroke_name": "black",
+        "stroke": "#01060f",
+        "stroke_ratio": 0.044,
+        "weight": 0.168
+      },
+      "style_zh": "white text, black outline, line height 3.8% (about 74px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_051",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 24.0,
+      "t1": 24.1,
+      "text": "cuntil",
+      "bbox": [
+        0.3722,
+        0.6828,
+        0.2125,
+        0.0469
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#030208",
+        "stroke_ratio": 0.044,
+        "weight": 0.159
+      },
+      "style_zh": "white text, black outline, line height 4.7% (about 90px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_052",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 24.5,
+      "t1": 24.6,
+      "text": "loop",
+      "bbox": [
+        0.4139,
+        0.6836,
+        0.1806,
+        0.0492
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#050510",
+        "stroke_ratio": 0.036,
+        "weight": 0.13
+      },
+      "style_zh": "white text, black outline, line height 4.9% (about 94px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_053",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 25.0,
+      "t1": 25.2,
+      "text": "is tall",
+      "bbox": [
+        0.3958,
+        0.6828,
+        0.2111,
+        0.0422
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#03040b",
+        "stroke_ratio": 0.044,
+        "weight": 0.141
+      },
+      "style_zh": "white text, black outline, line height 4.2% (about 81px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_054",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 25.3,
+      "t1": 25.8,
+      "text": "and skinny.",
+      "bbox": [
+        0.2958,
+        0.6828,
+        0.4042,
+        0.0477
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#02040d",
+        "stroke_ratio": 0.04,
+        "weight": 0.135
+      },
+      "style_zh": "white text, black outline, line height 4.8% (about 92px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_055",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 25.9,
+      "t1": 26.1,
+      "text": "SO7",
+      "bbox": [
+        0.4403,
+        0.6805,
+        0.1583,
+        0.0516
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8fbfa",
+        "stroke_name": "black",
+        "stroke": "#090711",
+        "stroke_ratio": 0.033,
+        "weight": 0.124
+      },
+      "style_zh": "white text, black outline, line height 5.2% (about 99px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_056",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 26.4,
+      "t1": 26.7,
+      "text": "the first cart",
+      "bbox": [
+        0.2778,
+        0.6852,
+        0.4472,
+        0.0383
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8f9fb",
+        "stroke_name": "black",
+        "stroke": "#03060f",
+        "stroke_ratio": 0.048,
+        "weight": 0.168
+      },
+      "style_zh": "white text, black outline, line height 3.8% (about 74px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_057",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 27.0,
+      "t1": 27.1,
+      "text": "snap",
+      "bbox": [
+        0.4056,
+        0.6867,
+        0.1861,
+        0.0422
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#03080e",
+        "stroke_ratio": 0.04,
+        "weight": 0.141
+      },
+      "style_zh": "white text, black outline, line height 4.2% (about 81px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_058",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 27.5,
+      "t1": 27.6,
+      "text": "twig.",
+      "bbox": [
+        0.4,
+        0.6766,
+        0.1903,
+        0.057
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f6f9f8",
+        "stroke_name": "black",
+        "stroke": "#02040d",
+        "stroke_ratio": 0.032,
+        "weight": 0.105
+      },
+      "style_zh": "white text, black outline, line height 5.7% (about 109px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_059",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 28.0,
+      "t1": 28.2,
+      "text": "The next",
+      "bbox": [
+        0.3431,
+        0.6836,
+        0.3153,
+        0.043
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafcfc",
+        "stroke_name": "black",
+        "stroke": "#030406",
+        "stroke_ratio": 0.041,
+        "weight": 0.149
+      },
+      "style_zh": "white text, black outline, line height 4.3% (about 83px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_062",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 28.5,
+      "t1": 28.6,
+      "text": "morning,",
+      "bbox": [
+        0.3417,
+        0.682,
+        0.3153,
+        0.0469
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f7faf9",
+        "stroke_name": "black",
+        "stroke": "#080203",
+        "stroke_ratio": 0.038,
+        "weight": 0.137
+      },
+      "style_zh": "white text, black outline, line height 4.7% (about 90px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_064",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 28.9,
+      "t1": 29.1,
+      "text": "town",
+      "bbox": [
+        0.4097,
+        0.6875,
+        0.1806,
+        0.0359
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8faf7",
+        "stroke_name": "black",
+        "stroke": "#0a0406",
+        "stroke_ratio": 0.056,
+        "weight": 0.202
+      },
+      "style_zh": "white text, black outline, bold, line height 3.6% (about 69px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_065",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 29.5,
+      "t1": 29.6,
+      "text": "lines",
+      "bbox": [
+        0.4111,
+        0.6844,
+        0.1806,
+        0.0398
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f9fbf8",
+        "stroke_name": "black",
+        "stroke": "#0a0406",
+        "stroke_ratio": 0.043,
+        "weight": 0.15
+      },
+      "style_zh": "white text, black outline, line height 4.0% (about 76px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_067",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 30.0,
+      "t1": 30.1,
+      "text": "rivals",
+      "bbox": [
+        0.4042,
+        0.6844,
+        0.1972,
+        0.0375
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#060306",
+        "stroke_ratio": 0.048,
+        "weight": 0.159
+      },
+      "style_zh": "white text, black outline, line height 3.8% (about 72px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_068",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 30.0,
+      "t1": 30.1,
+      "text": "IIIIN",
+      "bbox": [
+        0.4042,
+        0.7406,
+        0.0875,
+        0.0195
+      ],
+      "style": {
+        "fill_name": "brown",
+        "fill": "#7d6351",
+        "stroke_name": "brown",
+        "stroke": "#4d3323",
+        "stroke_ratio": 0.058,
+        "weight": 0.153
+      },
+      "style_zh": "brown text, brown outline, line height 1.9% (about 37px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_069",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 30.5,
+      "t1": 30.6,
+      "text": "perfect",
+      "bbox": [
+        0.3667,
+        0.6828,
+        0.2764,
+        0.0453
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#060306",
+        "stroke_ratio": 0.04,
+        "weight": 0.142
+      },
+      "style_zh": "white text, black outline, line height 4.5% (about 87px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_070",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 30.7,
+      "t1": 31.2,
+      "text": "circle.",
+      "bbox": [
+        0.4028,
+        0.6859,
+        0.2097,
+        0.0367
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fbfcfd",
+        "stroke_name": "black",
+        "stroke": "#060306",
+        "stroke_ratio": 0.049,
+        "weight": 0.163
+      },
+      "style_zh": "white text, black outline, line height 3.7% (about 70px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_071",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 31.5,
+      "t1": 32.2,
+      "text": "FIRST!",
+      "bbox": [
+        0.3167,
+        0.6227,
+        0.1389,
+        0.0391
+      ],
+      "style": {
+        "fill_name": "red",
+        "fill": "#ea5337",
+        "multicolor": true,
+        "highlight_name": "brown",
+        "weight": 0.123
+      },
+      "style_zh": "red text, keywords highlighted in brown, line height 3.5% (about 67px)",
+      "anim_in": {
+        "kind": "fade",
+        "kind_zh": "fade in"
+      },
+      "anim_out": {
+        "kind": "fade_out",
+        "kind_zh": "fade out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_072",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 31.3,
+      "t1": 31.6,
+      "text": "and the",
+      "bbox": [
+        0.3639,
+        0.6867,
+        0.2778,
+        0.0367
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f6f7f9",
+        "stroke_name": "black",
+        "stroke": "#06070a",
+        "stroke_ratio": 0.051,
+        "box": true,
+        "box_name": "yellow",
+        "box_color": "#969f4d",
+        "weight": 0.203
+      },
+      "style_zh": "white text, black outline, yellow box, bold, line height 3.7% (about 70px)",
+      "anim_in": {
+        "kind": "fade",
+        "kind_zh": "fade in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_073",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 31.8,
+      "t1": 32.2,
+      "text": "climbs",
+      "bbox": [
+        0.3819,
+        0.6836,
+        0.2444,
+        0.043
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f5f8f7",
+        "stroke_name": "black",
+        "stroke": "#050608",
+        "stroke_ratio": 0.042,
+        "weight": 0.169
+      },
+      "style_zh": "white text, black outline, line height 4.3% (about 83px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_074",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 32.5,
+      "t1": 32.6,
+      "text": "FIRST!·front",
+      "bbox": [
+        0.2167,
+        0.6789,
+        0.3833,
+        0.0469
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#09060a",
+        "stroke_ratio": 0.043,
+        "multicolor": true,
+        "highlight_name": "red",
+        "weight": 0.155
+      },
+      "style_zh": "white text, black outline, keywords highlighted in red, line height 4.7% (about 90px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_076",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 33.0,
+      "t1": 33.2,
+      "text": "toshow",
+      "bbox": [
+        0.3597,
+        0.6844,
+        0.2861,
+        0.0414
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#060707",
+        "stroke_ratio": 0.045,
+        "weight": 0.16
+      },
+      "style_zh": "white text, black outline, line height 4.1% (about 79px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "fade_out",
+        "kind_zh": "fade out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_078",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 33.3,
+      "t1": 33.9,
+      "text": "The",
+      "bbox": [
+        0.4236,
+        0.6812,
+        0.1528,
+        0.0477
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafafa",
+        "stroke_name": "black",
+        "stroke": "#030406",
+        "stroke_ratio": 0.037,
+        "weight": 0.135
+      },
+      "style_zh": "white text, black outline, line height 4.8% (about 92px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": null,
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_080",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 33.9,
+      "t1": 34.1,
+      "text": "climbs",
+      "bbox": [
+        0.3819,
+        0.6859,
+        0.2375,
+        0.0367
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#060306",
+        "stroke_ratio": 0.049,
+        "weight": 0.175
+      },
+      "style_zh": "white text, black outline, line height 3.7% (about 70px)",
+      "anim_in": null,
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_081",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 34.5,
+      "t1": 34.6,
+      "text": "into his,",
+      "bbox": [
+        0.3514,
+        0.6789,
+        0.2931,
+        0.0508
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8f9fb",
+        "stroke_name": "black",
+        "stroke": "#0d0709",
+        "stroke_ratio": 0.037,
+        "weight": 0.13
+      },
+      "style_zh": "white text, black outline, line height 5.1% (about 98px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_082",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 34.9,
+      "t1": 35.1,
+      "text": "as his",
+      "bbox": [
+        0.3889,
+        0.6812,
+        0.2236,
+        0.0438
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#010308",
+        "stroke_ratio": 0.038,
+        "weight": 0.136
+      },
+      "style_zh": "white text, black outline, line height 4.4% (about 84px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_083",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 35.5,
+      "t1": 35.6,
+      "text": "UPSTR",
+      "bbox": [
+        0.2847,
+        0.668,
+        0.1681,
+        0.0672
+      ],
+      "style": {
+        "fill_name": "grey",
+        "fill": "#614a46",
+        "multicolor": true,
+        "highlight_name": "white",
+        "weight": 0.089
+      },
+      "style_zh": "grey text, keywords highlighted in white, line height 6.7% (about 129px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_084",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 35.5,
+      "t1": 35.6,
+      "text": "cart",
+      "bbox": [
+        0.4181,
+        0.6844,
+        0.1639,
+        0.0445
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#faf4ef",
+        "stroke_name": "black",
+        "stroke": "#070508",
+        "stroke_ratio": 0.042,
+        "box": true,
+        "box_name": "blue",
+        "box_color": "#2b5b90",
+        "weight": 0.149
+      },
+      "style_zh": "white text, black outline, blue box, line height 4.5% (about 85px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_086",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 36.0,
+      "t1": 37.1,
+      "text": "over",
+      "bbox": [
+        0.3306,
+        0.6797,
+        0.3361,
+        0.0499
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8fbfa",
+        "stroke_name": "black",
+        "stroke": "#00030a",
+        "stroke_ratio": 0.042,
+        "weight": 0.154
+      },
+      "style_zh": "white text, black outline, line height 4.8% (about 93px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": true,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_088",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 37.5,
+      "t1": 37.6,
+      "text": "sees",
+      "bbox": [
+        0.4139,
+        0.6914,
+        0.1764,
+        0.0312
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafafa",
+        "stroke_name": "black",
+        "stroke": "#0a0607",
+        "stroke_ratio": 0.048,
+        "weight": 0.191
+      },
+      "style_zh": "white text, black outline, line height 3.1% (about 60px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_089",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 38.0,
+      "t1": 38.1,
+      "text": "tall",
+      "bbox": [
+        0.4264,
+        0.6852,
+        0.1292,
+        0.0391
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#050608",
+        "stroke_ratio": 0.05,
+        "weight": 0.186
+      },
+      "style_zh": "white text, black outline, line height 3.9% (about 75px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_090",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 38.4,
+      "t1": 38.6,
+      "text": "skinny",
+      "bbox": [
+        0.3792,
+        0.6836,
+        0.2361,
+        0.0445
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f7f8fa",
+        "stroke_name": "black",
+        "stroke": "#03080a",
+        "stroke_ratio": 0.044,
+        "weight": 0.163
+      },
+      "style_zh": "white text, black outline, line height 4.5% (about 85px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_091",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 38.7,
+      "t1": 39.2,
+      "text": "loop",
+      "bbox": [
+        0.4125,
+        0.6867,
+        0.1722,
+        0.043
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f7f8fa",
+        "stroke_name": "black",
+        "stroke": "#020608",
+        "stroke_ratio": 0.045,
+        "box": true,
+        "box_name": "black",
+        "box_color": "#1a282c",
+        "weight": 0.174
+      },
+      "style_zh": "white text, black outline, black box, line height 4.3% (about 83px)",
+      "anim_in": {
+        "kind": "fade",
+        "kind_zh": "fade in"
+      },
+      "anim_out": {
+        "kind": "fade_out",
+        "kind_zh": "fade out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_092",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 39.5,
+      "t1": 39.6,
+      "text": "ahead.",
+      "bbox": [
+        0.3764,
+        0.6883,
+        0.2458,
+        0.0336
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#060304",
+        "stroke_ratio": 0.049,
+        "weight": 0.191
+      },
+      "style_zh": "white text, black outline, line height 3.4% (about 65px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_093",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 40.0,
+      "t1": 40.1,
+      "text": "it's",
+      "bbox": [
+        0.4375,
+        0.6812,
+        0.1278,
+        0.0453
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8f9fb",
+        "stroke_name": "black",
+        "stroke": "#050608",
+        "stroke_ratio": 0.043,
+        "weight": 0.132
+      },
+      "style_zh": "white text, black outline, line height 4.5% (about 87px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_094",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 40.5,
+      "t1": 40.7,
+      "text": "late.",
+      "bbox": [
+        0.425,
+        0.6859,
+        0.1611,
+        0.0375
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fbfcfd",
+        "stroke_name": "black",
+        "stroke": "#070508",
+        "stroke_ratio": 0.05,
+        "weight": 0.159
+      },
+      "style_zh": "white text, black outline, line height 3.8% (about 72px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_095",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 41.0,
+      "t1": 41.1,
+      "text": "see,",
+      "bbox": [
+        0.4194,
+        0.6867,
+        0.1514,
+        0.0391
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f7fbfc",
+        "stroke_name": "black",
+        "stroke": "#07090b",
+        "stroke_ratio": 0.044,
+        "weight": 0.153
+      },
+      "style_zh": "white text, black outline, line height 3.9% (about 75px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_099",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 41.4,
+      "t1": 41.8,
+      "text": "a car",
+      "bbox": [
+        0.4042,
+        0.6875,
+        0.1958,
+        0.0383
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f7fbfc",
+        "stroke_name": "black",
+        "stroke": "#010308",
+        "stroke_ratio": 0.044,
+        "weight": 0.156
+      },
+      "style_zh": "white text, black outline, line height 3.8% (about 74px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_101",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 42.0,
+      "t1": 42.3,
+      "text": "creep",
+      "bbox": [
+        0.3917,
+        0.6859,
+        0.2181,
+        0.0453
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fbfcfd",
+        "stroke_name": "black",
+        "stroke": "#010308",
+        "stroke_ratio": 0.036,
+        "weight": 0.132
+      },
+      "style_zh": "white text, black outline, line height 4.5% (about 87px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_102",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 42.5,
+      "t1": 42.6,
+      "text": "hairpin",
+      "bbox": [
+        0.3694,
+        0.6797,
+        0.2625,
+        0.05
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#010308",
+        "stroke_ratio": 0.035,
+        "weight": 0.149
+      },
+      "style_zh": "white text, black outline, line height 5.0% (about 96px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_103",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 43.0,
+      "t1": 43.8,
+      "text": "at five,",
+      "bbox": [
+        0.3708,
+        0.6805,
+        0.2611,
+        0.0516
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fbfcfd",
+        "stroke_name": "black",
+        "stroke": "#05070c",
+        "stroke_ratio": 0.037,
+        "weight": 0.123
+      },
+      "style_zh": "white text, black outline, line height 5.0% (about 96px)",
+      "anim_in": null,
+      "anim_out": {
+        "kind": "fade_out",
+        "kind_zh": "fade out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_104",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 44.0,
+      "t1": 44.2,
+      "text": "take it at",
+      "bbox": [
+        0.3403,
+        0.6852,
+        0.3236,
+        0.0383
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f7fbfc",
+        "stroke_name": "black",
+        "stroke": "#01050b",
+        "stroke_ratio": 0.048,
+        "weight": 0.168
+      },
+      "style_zh": "white text, black outline, line height 3.8% (about 74px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_105",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 44.4,
+      "t1": 45.6,
+      "text": "flips.",
+      "bbox": [
+        0.3792,
+        0.6797,
+        0.2486,
+        0.0539
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#020409",
+        "stroke_ratio": 0.035,
+        "weight": 0.135
+      },
+      "style_zh": "white text, black outline, line height 5.1% (about 98px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": true,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_106",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 46.0,
+      "t1": 46.1,
+      "text": "Acart",
+      "bbox": [
+        0.3889,
+        0.682,
+        0.2278,
+        0.0453
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f7faf9",
+        "stroke_name": "black",
+        "stroke": "#020b06",
+        "stroke_ratio": 0.041,
+        "weight": 0.146
+      },
+      "style_zh": "white text, black outline, line height 4.5% (about 87px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_107",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 46.5,
+      "t1": 46.6,
+      "text": "fastest",
+      "bbox": [
+        0.3653,
+        0.6805,
+        0.2736,
+        0.0461
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f7faf9",
+        "stroke_name": "black",
+        "stroke": "#020703",
+        "stroke_ratio": 0.037,
+        "weight": 0.129
+      },
+      "style_zh": "white text, black outline, line height 4.6% (about 89px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_108",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 46.6,
+      "t1": 47.1,
+      "text": "bottom",
+      "bbox": [
+        0.3694,
+        0.6812,
+        0.2653,
+        0.0453
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#010602",
+        "stroke_ratio": 0.041,
+        "weight": 0.15
+      },
+      "style_zh": "white text, black outline, line height 4.5% (about 87px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_109",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 47.2,
+      "t1": 47.6,
+      "text": "a loop",
+      "bbox": [
+        0.3819,
+        0.6789,
+        0.2375,
+        0.0539
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8f9fb",
+        "stroke_name": "black",
+        "stroke": "#010602",
+        "stroke_ratio": 0.032,
+        "weight": 0.135
+      },
+      "style_zh": "white text, black outline, line height 5.4% (about 103px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_110",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 47.9,
+      "t1": 48.1,
+      "text": "anda",
+      "bbox": [
+        0.3931,
+        0.6828,
+        0.2181,
+        0.0445
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f5f9fa",
+        "stroke_name": "black",
+        "stroke": "#000a05",
+        "stroke_ratio": 0.036,
+        "weight": 0.145
+      },
+      "style_zh": "white text, black outline, line height 4.5% (about 85px)",
+      "anim_in": null,
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_111",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 48.5,
+      "t1": 48.6,
+      "text": "circle",
+      "bbox": [
+        0.3986,
+        0.6812,
+        0.2069,
+        0.0453
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f6f7f9",
+        "stroke_name": "black",
+        "stroke": "#040807",
+        "stroke_ratio": 0.041,
+        "weight": 0.132
+      },
+      "style_zh": "white text, black outline, line height 4.5% (about 87px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_112",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 49.0,
+      "t1": 49.2,
+      "text": "puts",
+      "bbox": [
+        0.4111,
+        0.6812,
+        0.1792,
+        0.0516
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f2f6f7",
+        "stroke_name": "black",
+        "stroke": "#000a05",
+        "stroke_ratio": 0.036,
+        "weight": 0.141
+      },
+      "style_zh": "white text, black outline, line height 5.2% (about 99px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_113",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 49.4,
+      "t1": 49.7,
+      "text": "a hairpin",
+      "bbox": [
+        0.3403,
+        0.6836,
+        0.3222,
+        0.0438
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f9f7f3",
+        "stroke_name": "black",
+        "stroke": "#060a08",
+        "stroke_ratio": 0.04,
+        "weight": 0.136
+      },
+      "style_zh": "white text, black outline, line height 4.4% (about 84px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_114",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 50.0,
+      "t1": 50.1,
+      "text": "there,",
+      "bbox": [
+        0.3903,
+        0.6812,
+        0.2222,
+        0.05
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#eff0f2",
+        "stroke_name": "black",
+        "stroke": "#040807",
+        "stroke_ratio": 0.032,
+        "weight": 0.128
+      },
+      "style_zh": "white text, black outline, line height 5.0% (about 96px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_115",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 50.5,
+      "t1": 50.6,
+      "text": "which is",
+      "bbox": [
+        0.3528,
+        0.6836,
+        0.2972,
+        0.0414
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8f9fb",
+        "stroke_name": "black",
+        "stroke": "#030905",
+        "stroke_ratio": 0.046,
+        "weight": 0.16
+      },
+      "style_zh": "white text, black outline, line height 4.1% (about 79px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_116",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 50.9,
+      "t1": 51.4,
+      "text": "crushed",
+      "bbox": [
+        0.3528,
+        0.6812,
+        0.2986,
+        0.0461
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#020907",
+        "stroke_ratio": 0.038,
+        "weight": 0.144
+      },
+      "style_zh": "white text, black outline, line height 4.6% (about 89px)",
+      "anim_in": null,
+      "anim_out": null,
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_117",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 51.4,
+      "t1": 51.8,
+      "text": "the dummy.",
+      "bbox": [
+        0.2958,
+        0.682,
+        0.4097,
+        0.0477
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f7faf9",
+        "stroke_name": "black",
+        "stroke": "#010706",
+        "stroke_ratio": 0.04,
+        "weight": 0.139
+      },
+      "style_zh": "white text, black outline, line height 4.8% (about 92px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "fade_out",
+        "kind_zh": "fade out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_118",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 51.9,
+      "t1": 52.1,
+      "text": "his hammer",
+      "bbox": [
+        0.2903,
+        0.682,
+        0.4264,
+        0.0438
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#030606",
+        "stroke_ratio": 0.04,
+        "weight": 0.136
+      },
+      "style_zh": "white text, black outline, line height 4.4% (about 84px)",
+      "anim_in": null,
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_119",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 52.4,
+      "t1": 52.6,
+      "text": "made",
+      "bbox": [
+        0.3986,
+        0.6836,
+        0.2083,
+        0.0422
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8f9fb",
+        "stroke_name": "black",
+        "stroke": "#0a0406",
+        "stroke_ratio": 0.038,
+        "multicolor": true,
+        "highlight_name": "orange",
+        "weight": 0.152
+      },
+      "style_zh": "white text, black outline, keywords highlighted in orange, line height 4.2% (about 81px)",
+      "anim_in": {
+        "kind": "fade",
+        "kind_zh": "fade in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_120",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 53.0,
+      "t1": 53.1,
+      "text": "bottom",
+      "bbox": [
+        0.3736,
+        0.6859,
+        0.2528,
+        0.0398
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafafa",
+        "stroke_name": "black",
+        "stroke": "#030303",
+        "stroke_ratio": 0.043,
+        "weight": 0.166
+      },
+      "style_zh": "white text, black outline, line height 4.0% (about 76px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_121",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 53.5,
+      "t1": 53.6,
+      "text": "gentle",
+      "bbox": [
+        0.3847,
+        0.6805,
+        0.2333,
+        0.05
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8f9fb",
+        "stroke_name": "black",
+        "stroke": "#000302",
+        "stroke_ratio": 0.033,
+        "box": true,
+        "box_name": "brown",
+        "box_color": "#391315",
+        "weight": 0.128
+      },
+      "style_zh": "white text, black outline, brown box, line height 5.0% (about 96px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_122",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 54.0,
+      "t1": 54.4,
+      "text": "rival's",
+      "bbox": [
+        0.3889,
+        0.6797,
+        0.2292,
+        0.0484
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#030606",
+        "stroke_ratio": 0.039,
+        "weight": 0.123
+      },
+      "style_zh": "white text, black outline, line height 4.8% (about 93px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": null,
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_123",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 54.4,
+      "t1": 54.7,
+      "text": "squeeze",
+      "bbox": [
+        0.3486,
+        0.6906,
+        0.3056,
+        0.0359
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f6f7f9",
+        "stroke_name": "black",
+        "stroke": "#020504",
+        "stroke_ratio": 0.046,
+        "weight": 0.179
+      },
+      "style_zh": "white text, black outline, line height 3.6% (about 69px)",
+      "anim_in": null,
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_124",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 55.0,
+      "t1": 56.1,
+      "text": "up top",
+      "bbox": [
+        0.3792,
+        0.6781,
+        0.2403,
+        0.0532
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fbfcfd",
+        "stroke_name": "black",
+        "stroke": "#030606",
+        "stroke_ratio": 0.042,
+        "weight": 0.152
+      },
+      "style_zh": "white text, black outline, line height 4.6% (about 89px)",
+      "anim_in": {
+        "kind": "fade",
+        "kind_zh": "fade in"
+      },
+      "anim_out": {
+        "kind": "fade_out",
+        "kind_zh": "fade out"
+      },
+      "mid_motion": true,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_127",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 56.5,
+      "t1": 56.6,
+      "text": "the cart",
+      "bbox": [
+        0.3556,
+        0.682,
+        0.2917,
+        0.0445
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f6f7f9",
+        "stroke_name": "black",
+        "stroke": "#020504",
+        "stroke_ratio": 0.039,
+        "weight": 0.157
+      },
+      "style_zh": "white text, black outline, line height 4.5% (about 85px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_128",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 57.0,
+      "t1": 57.1,
+      "text": "crawling.",
+      "bbox": [
+        0.3361,
+        0.6805,
+        0.3292,
+        0.05
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbfc",
+        "stroke_name": "black",
+        "stroke": "#010706",
+        "stroke_ratio": 0.035,
+        "weight": 0.119
+      },
+      "style_zh": "white text, black outline, line height 5.0% (about 96px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_129",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 57.1,
+      "t1": 57.6,
+      "text": "So",
+      "bbox": [
+        0.4403,
+        0.6789,
+        0.1194,
+        0.0516
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8f8f8",
+        "stroke_name": "black",
+        "stroke": "#020703",
+        "stroke_ratio": 0.033,
+        "weight": 0.141
+      },
+      "style_zh": "white text, black outline, line height 5.2% (about 99px)",
+      "anim_in": null,
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_130",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 58.0,
+      "t1": 58.1,
+      "text": "he floats",
+      "bbox": [
+        0.3361,
+        0.6836,
+        0.325,
+        0.0414
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f6f9f8",
+        "stroke_name": "black",
+        "stroke": "#040807",
+        "stroke_ratio": 0.043,
+        "box": true,
+        "box_name": "red",
+        "box_color": "#a13026",
+        "weight": 0.16
+      },
+      "style_zh": "white text, black outline, red box, line height 4.1% (about 79px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_131",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 58.5,
+      "t1": 58.6,
+      "text": "without",
+      "bbox": [
+        0.3681,
+        0.6859,
+        0.2722,
+        0.0383
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f9f9f9",
+        "stroke_name": "black",
+        "stroke": "#050608",
+        "stroke_ratio": 0.051,
+        "weight": 0.19
+      },
+      "style_zh": "white text, black outline, line height 3.8% (about 74px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_132",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 59.0,
+      "t1": 59.1,
+      "text": "scratch.",
+      "bbox": [
+        0.35,
+        0.6812,
+        0.2931,
+        0.0453
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fbfcfd",
+        "stroke_name": "black",
+        "stroke": "#020504",
+        "stroke_ratio": 0.04,
+        "weight": 0.132
+      },
+      "style_zh": "white text, black outline, line height 4.5% (about 87px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_133",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 59.5,
+      "t1": 59.6,
+      "text": "Justas",
+      "bbox": [
+        0.3736,
+        0.6828,
+        0.2583,
+        0.0422
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fbfcfd",
+        "stroke_name": "black",
+        "stroke": "#020504",
+        "stroke_ratio": 0.042,
+        "weight": 0.141
+      },
+      "style_zh": "white text, black outline, line height 4.2% (about 81px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_134",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 59.8,
+      "t1": 60.1,
+      "text": "rival's",
+      "bbox": [
+        0.3889,
+        0.682,
+        0.2264,
+        0.0414
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f4f5f7",
+        "stroke_name": "black",
+        "stroke": "#000407",
+        "stroke_ratio": 0.039,
+        "weight": 0.155
+      },
+      "style_zh": "white text, black outline, line height 4.1% (about 79px)",
+      "anim_in": {
+        "kind": "slide",
+        "kind_zh": "slide in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_135",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 60.5,
+      "t1": 60.6,
+      "text": "cart",
+      "bbox": [
+        0.4236,
+        0.6836,
+        0.1597,
+        0.0414
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f8f9fb",
+        "stroke_name": "black",
+        "stroke": "#020305",
+        "stroke_ratio": 0.041,
+        "weight": 0.155
+      },
+      "style_zh": "white text, black outline, line height 4.1% (about 79px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_136",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 61.0,
+      "t1": 61.8,
+      "text": "the bottom",
+      "bbox": [
+        0.3,
+        0.6828,
+        0.3986,
+        0.0438
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#fafbf7",
+        "stroke_name": "black",
+        "stroke": "#040404",
+        "stroke_ratio": 0.042,
+        "box": true,
+        "box_name": "orange",
+        "box_color": "#ecaa7d",
+        "weight": 0.167
+      },
+      "style_zh": "white text, black outline, orange box, line height 4.1% (about 79px)",
+      "anim_in": {
+        "kind": "fade",
+        "kind_zh": "fade in"
+      },
+      "anim_out": null,
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_137",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 62.0,
+      "t1": 62.1,
+      "text": "perfect",
+      "bbox": [
+        0.3583,
+        0.6797,
+        0.2833,
+        0.0516
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#faf5f2",
+        "stroke_name": "black",
+        "stroke": "#040404",
+        "stroke_ratio": 0.033,
+        "weight": 0.128
+      },
+      "style_zh": "white text, black outline, line height 5.2% (about 99px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "cut_out",
+        "kind_zh": "hard out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    },
+    {
+      "id": "text_138",
+      "kind": "subtitle",
+      "kind_zh": "subtitle",
+      "t0": 62.5,
+      "t1": 62.8,
+      "text": "circle.",
+      "bbox": [
+        0.3889,
+        0.6797,
+        0.2306,
+        0.0492
+      ],
+      "style": {
+        "fill_name": "white",
+        "fill": "#f9f8f6",
+        "stroke_name": "black",
+        "stroke": "#030303",
+        "stroke_ratio": 0.035,
+        "weight": 0.121
+      },
+      "style_zh": "white text, black outline, line height 4.9% (about 94px)",
+      "anim_in": {
+        "kind": "cut",
+        "kind_zh": "hard in"
+      },
+      "anim_out": {
+        "kind": "fade_out",
+        "kind_zh": "fade out"
+      },
+      "mid_motion": null,
+      "follows": null,
+      "part_of_picture": false
+    }
+  ],
+  "stickers": [
+    {
+      "id": "sticker_agent_01",
+      "kind": "static_sticker",
+      "kind_zh": "Tiny fly at the worker face/wallet gag; visible graphic/object, whether 2D overlay or scene geometry unverified",
+      "t0": 6.2,
+      "t1": 6.8,
+      "bbox": null,
+      "where": "Near center of extreme face closeup",
+      "confidence": "confirmed",
+      "source": "agent"
+    },
+    {
+      "id": "sticker_agent_02",
+      "kind": "animated_sticker",
+      "kind_zh": "Golden rail glow/sparks synchronized visually with hammering and curvature change; animated explanatory effect",
+      "t0": 16.3,
+      "t1": 18.7,
+      "bbox": null,
+      "where": "Along lower coaster curve",
+      "confidence": "confirmed",
+      "source": "agent"
+    },
+    {
+      "id": "sticker_agent_03",
+      "kind": "static_sticker",
+      "kind_zh": "Comic explosion behind the owner; volumetric simulation versus billboard/stock element unverified",
+      "t0": 61.1,
+      "t1": 63.17,
+      "bbox": null,
+      "where": "Background rival ride, then large upper image",
+      "confidence": "confirmed",
+      "source": "agent"
+    }
+  ],
+  "sfx": [
+    {
+      "t": 0.511,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"roller\" appears",
+        "dt": -0.011,
+        "ref": "text_002"
+      }
+    },
+    {
+      "t": 1.057,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"loop\" appears",
+        "dt": -0.057,
+        "ref": "text_003"
+      }
+    },
+    {
+      "t": 1.544,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"out of\" appears",
+        "dt": -0.044,
+        "ref": "text_004"
+      }
+    },
+    {
+      "t": 3.007,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"filrst\" appears",
+        "dt": -0.007,
+        "ref": "text_007"
+      }
+    },
+    {
+      "t": 4.122,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"to go\" appears",
+        "dt": -0.122,
+        "ref": "text_009"
+      }
+    },
+    {
+      "t": 4.423,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"psdn\" appears",
+        "dt": -0.123,
+        "ref": "text_010"
+      }
+    },
+    {
+      "t": 5.526,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"it cost him\" appears",
+        "dt": -0.026,
+        "ref": "text_012"
+      }
+    },
+    {
+      "t": 6.13,
+      "type": "pop",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "sticker_in",
+        "what": "Tiny fly at the worker face/wallet gag; visible graphic/object, whether 2D overlay or scene geometry unverified appears",
+        "dt": 0.07,
+        "ref": "sticker_agent_01"
+      }
+    },
+    {
+      "t": 6.687,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic",
+      "confidence": "low",
+      "on": null
+    },
+    {
+      "t": 6.815,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"course,\" appears",
+        "dt": 0.085,
+        "ref": "text_014"
+      }
+    },
+    {
+      "t": 7.268,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"his\" appears",
+        "dt": -0.068,
+        "ref": "text_015"
+      }
+    },
+    {
+      "t": 8.011,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"copies it\" appears",
+        "dt": -0.011,
+        "ref": "text_017"
+      }
+    },
+    {
+      "t": 8.139,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"bolt\" appears",
+        "dt": -0.039,
+        "ref": "text_019"
+      }
+    },
+    {
+      "t": 8.394,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic",
+      "confidence": "low",
+      "on": {
+        "type": "label_in",
+        "what": "text label \"LOOP\" appears",
+        "dt": 0.106,
+        "ref": "text_018"
+      }
+    },
+    {
+      "t": 9.125,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"But\" appears",
+        "dt": -0.025,
+        "ref": "text_020"
+      }
+    },
+    {
+      "t": 9.81,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"before\" appears",
+        "dt": 0.09,
+        "ref": "text_022"
+      }
+    },
+    {
+      "t": 9.996,
+      "type": "pop",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"before\" appears",
+        "dt": -0.096,
+        "ref": "text_022"
+      }
+    },
+    {
+      "t": 10.286,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"opening,\" appears",
+        "dt": 0.014,
+        "ref": "text_023"
+      }
+    },
+    {
+      "t": 11.564,
+      "type": "pop",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"dummy\" appears",
+        "dt": -0.064,
+        "ref": "text_025"
+      }
+    },
+    {
+      "t": 12.121,
+      "type": "pop",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"back\" appears",
+        "dt": -0.121,
+        "ref": "text_026"
+      }
+    },
+    {
+      "t": 12.318,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"crushed\" appears",
+        "dt": 0.182,
+        "ref": "text_028"
+      }
+    },
+    {
+      "t": 12.945,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"a soda can.\" appears",
+        "dt": 0.055,
+        "ref": "text_029"
+      }
+    },
+    {
+      "t": 13.421,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"But\" appears",
+        "dt": 0.079,
+        "ref": "text_030"
+      }
+    },
+    {
+      "t": 14.002,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"he can't\" appears",
+        "dt": -0.002,
+        "ref": "text_031"
+      }
+    },
+    {
+      "t": 15.406,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"and\" appears",
+        "dt": -0.006,
+        "ref": "text_035"
+      }
+    },
+    {
+      "t": 16.475,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"the bottom\" appears",
+        "dt": -0.075,
+        "ref": "text_036"
+      }
+    },
+    {
+      "t": 16.858,
+      "type": "pop",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"into a\" appears",
+        "dt": 0.042,
+        "ref": "text_037"
+      }
+    },
+    {
+      "t": 18.576,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"curve.\" appears",
+        "dt": -0.076,
+        "ref": "text_040"
+      }
+    },
+    {
+      "t": 20.933,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"rival\" appears",
+        "dt": 0.067,
+        "ref": "text_045"
+      }
+    },
+    {
+      "t": 22.036,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"sneaks\" appears",
+        "dt": -0.036,
+        "ref": "text_047"
+      }
+    },
+    {
+      "t": 22.5,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"in and\" appears",
+        "dt": 0.0,
+        "ref": "text_048"
+      }
+    },
+    {
+      "t": 23.011,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"cranks\" appears",
+        "dt": -0.011,
+        "ref": "text_049"
+      }
+    },
+    {
+      "t": 23.429,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"the sides\" appears",
+        "dt": 0.071,
+        "ref": "text_050"
+      }
+    },
+    {
+      "t": 25.078,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"is tall\" appears",
+        "dt": -0.078,
+        "ref": "text_053"
+      }
+    },
+    {
+      "t": 25.821,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"SO7\" appears",
+        "dt": 0.079,
+        "ref": "text_055"
+      }
+    },
+    {
+      "t": 26.32,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"the first cart\" appears",
+        "dt": 0.08,
+        "ref": "text_056"
+      }
+    },
+    {
+      "t": 27.527,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"twig.\" appears",
+        "dt": -0.027,
+        "ref": "text_058"
+      }
+    },
+    {
+      "t": 28.537,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"morning,\" appears",
+        "dt": -0.037,
+        "ref": "text_062"
+      }
+    },
+    {
+      "t": 29.129,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": null
+    },
+    {
+      "t": 29.977,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"rivals\" appears",
+        "dt": 0.023,
+        "ref": "text_067"
+      }
+    },
+    {
+      "t": 30.476,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"perfect\" appears",
+        "dt": 0.024,
+        "ref": "text_069"
+      }
+    },
+    {
+      "t": 30.755,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"circle.\" appears",
+        "dt": -0.055,
+        "ref": "text_070"
+      }
+    },
+    {
+      "t": 31.475,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"FIRST!\" appears",
+        "dt": 0.025,
+        "ref": "text_071"
+      }
+    },
+    {
+      "t": 31.916,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"climbs\" appears",
+        "dt": -0.116,
+        "ref": "text_073"
+      }
+    },
+    {
+      "t": 32.566,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"FIRST!·front\" appears",
+        "dt": -0.066,
+        "ref": "text_074"
+      }
+    },
+    {
+      "t": 33.019,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"toshow\" appears",
+        "dt": -0.019,
+        "ref": "text_076"
+      }
+    },
+    {
+      "t": 33.994,
+      "type": "pop",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"climbs\" appears",
+        "dt": -0.094,
+        "ref": "text_080"
+      }
+    },
+    {
+      "t": 34.575,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"into his,\" appears",
+        "dt": -0.075,
+        "ref": "text_081"
+      }
+    },
+    {
+      "t": 35.573,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"UPSTR\" appears",
+        "dt": -0.073,
+        "ref": "text_083"
+      }
+    },
+    {
+      "t": 36.026,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"over\" appears",
+        "dt": -0.026,
+        "ref": "text_086"
+      }
+    },
+    {
+      "t": 37.616,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"sees\" appears",
+        "dt": -0.116,
+        "ref": "text_088"
+      }
+    },
+    {
+      "t": 38.092,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"tall\" appears",
+        "dt": -0.092,
+        "ref": "text_089"
+      }
+    },
+    {
+      "t": 38.232,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"skinny\" appears",
+        "dt": 0.168,
+        "ref": "text_090"
+      }
+    },
+    {
+      "t": 38.87,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"loop\" appears",
+        "dt": -0.17,
+        "ref": "text_091"
+      }
+    },
+    {
+      "t": 40.832,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"see,\" appears",
+        "dt": 0.168,
+        "ref": "text_095"
+      }
+    },
+    {
+      "t": 41.006,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"see,\" appears",
+        "dt": -0.006,
+        "ref": "text_095"
+      }
+    },
+    {
+      "t": 41.471,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"a car\" appears",
+        "dt": -0.071,
+        "ref": "text_099"
+      }
+    },
+    {
+      "t": 42.527,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"hairpin\" appears",
+        "dt": -0.027,
+        "ref": "text_102"
+      }
+    },
+    {
+      "t": 43.027,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"at five,\" appears",
+        "dt": -0.027,
+        "ref": "text_103"
+      }
+    },
+    {
+      "t": 43.944,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"take it at\" appears",
+        "dt": 0.056,
+        "ref": "text_104"
+      }
+    },
+    {
+      "t": 45.999,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"Acart\" appears",
+        "dt": 0.001,
+        "ref": "text_106"
+      }
+    },
+    {
+      "t": 47.171,
+      "type": "pop",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"a loop\" appears",
+        "dt": 0.029,
+        "ref": "text_109"
+      }
+    },
+    {
+      "t": 49.017,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"puts\" appears",
+        "dt": -0.017,
+        "ref": "text_112"
+      }
+    },
+    {
+      "t": 49.319,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"a hairpin\" appears",
+        "dt": 0.081,
+        "ref": "text_113"
+      }
+    },
+    {
+      "t": 50.608,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"which is\" appears",
+        "dt": -0.108,
+        "ref": "text_115"
+      }
+    },
+    {
+      "t": 51.49,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"the dummy.\" appears",
+        "dt": -0.09,
+        "ref": "text_117"
+      }
+    },
+    {
+      "t": 52.013,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"his hammer\" appears",
+        "dt": -0.113,
+        "ref": "text_118"
+      }
+    },
+    {
+      "t": 52.976,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"bottom\" appears",
+        "dt": 0.024,
+        "ref": "text_120"
+      }
+    },
+    {
+      "t": 53.568,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"gentle\" appears",
+        "dt": -0.068,
+        "ref": "text_121"
+      }
+    },
+    {
+      "t": 54.079,
+      "type": "pop",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"rival's\" appears",
+        "dt": -0.079,
+        "ref": "text_122"
+      }
+    },
+    {
+      "t": 55.531,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": null
+    },
+    {
+      "t": 56.622,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"the cart\" appears",
+        "dt": -0.122,
+        "ref": "text_127"
+      }
+    },
+    {
+      "t": 57.063,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"So\" appears",
+        "dt": 0.037,
+        "ref": "text_129"
+      }
+    },
+    {
+      "t": 59.455,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"Justas\" appears",
+        "dt": 0.045,
+        "ref": "text_133"
+      }
+    },
+    {
+      "t": 60.627,
+      "type": "ding",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"cart\" appears",
+        "dt": -0.127,
+        "ref": "text_135"
+      }
+    },
+    {
+      "t": 61.127,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "sticker_in",
+        "what": "Comic explosion behind the owner; volumetric simulation versus billboard/stock element unverified appears",
+        "dt": -0.027,
+        "ref": "sticker_agent_03"
+      }
+    },
+    {
+      "t": 61.916,
+      "type": "pop",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"perfect\" appears",
+        "dt": 0.084,
+        "ref": "text_137"
+      }
+    },
+    {
+      "t": 62.52,
+      "type": "whoosh",
+      "description": null,
+      "source": "deterministic_anchored",
+      "confidence": "low",
+      "on": {
+        "type": "subtitle_in",
+        "what": "subtitle \"circle.\" appears",
+        "dt": -0.02,
+        "ref": "text_138"
+      }
+    }
+  ]
+}

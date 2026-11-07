@@ -1,0 +1,46 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:/Users/LoliR/Downloads/QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf59.27.100
+  Duration: 00:01:03.18, start: 0.000000, bitrate: 4146 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920 [SAR 1:1 DAR 9:16], 4006 kb/s, 30 fps, 30 tbr, 90k tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+  Stream #0:1[0x2](eng): Audio: opus (Opus / 0x7375704F), 48000 Hz, stereo, fltp, 134 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+  Stream #0:1 -> #0:1 (opus (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Video: wrapped_avframe, yuv420p(tv, bt709, progressive), 1080x1920 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)
+    Metadata:
+      encoder         : Lavc63.1.101 wrapped_avframe
+      handler_name    : VideoHandler
+  Stream #0:1(eng): Audio: pcm_s16le, 192000 Hz, stereo, s16, 6144 kb/s (default)
+    Metadata:
+      encoder         : Lavc63.1.101 pcm_s16le
+      handler_name    : SoundHandler
+[Parsed_loudnorm_0 @ 000001c4d91bce00] 
+{
+	"input_i" : "-14.06",
+	"input_tp" : "-1.99",
+	"input_lra" : "1.80",
+	"input_thresh" : "-24.06",
+	"output_i" : "-16.05",
+	"output_tp" : "-3.88",
+	"output_lra" : "1.70",
+	"output_thresh" : "-26.05",
+	"normalization_type" : "dynamic",
+	"target_offset" : "0.05"
+}
+[out#0/null @ 000001c4d7032100] video:785KiB audio:47380KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame= 1895 fps=913 q=-0.0 Lsize=N/A time=00:01:03.20 bitrate=N/A speed=30.5x elapsed=0:00:02.07    

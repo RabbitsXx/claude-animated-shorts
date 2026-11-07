@@ -1,0 +1,4 @@
+10 个镜头待看图复核，其中 10 个优先：shot_001(置信度低（39%）; 次选 AI-generated video 接近（26%）), shot_002(置信度低（62%）), shot_003(置信度低（56%）), shot_004(置信度低（56%）), shot_005(置信度低（54%）), shot_006(置信度低（50%）), shot_007(置信度低（46%）; 次选 AI-generated video 接近（33%）), shot_008(置信度低（56%）), shot_009(置信度低（56%）), shot_010(置信度低（57%）)
+说明和图片路径：pipeline\quality\reference-study\rea\review_tasks.json
+把答案填进：pipeline\quality\reference-study\rea\review_answers.json
+然后运行：rea-video apply-review pipeline\quality\reference-study\rea --by <你的名字>

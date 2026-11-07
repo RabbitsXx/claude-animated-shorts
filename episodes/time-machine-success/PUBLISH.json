@@ -1,0 +1,22 @@
+{
+ "title": "What If A Time Machine Actually Worked?",
+ "description": "An inventor spends everything on a time machine - then discovers that going back one hour lands you 107,000 km from Earth, because our planet never sits still (about 29.78 km/s around the Sun). Fiction for fun; the orbital numbers are real. Original 3D+2D animation.",
+ "keywords": [
+  "time machine",
+  "what if",
+  "physics",
+  "earth orbit speed",
+  "animated explainer",
+  "inventor",
+  "science comedy",
+  "shorts"
+ ],
+ "coverPromise": "A smug inventor in front of a glowing time-machine ring, a tiny bow-tie man floating in deep space inside it, and a rewinding clock icon.",
+ "first15Seconds": "Opens on the hammer strike that finishes the machine, pulls back to reveal its scale, then the empty wallet gag and the rival; by 15 s the first test has already sent a dummy away.",
+ "coverText": false,
+ "imageGeneration": false,
+ "provenance": {
+  "cover": "Staged original actor/props from the film scene, code-drawn flat clock icon, not an actual video frame.",
+  "audio": "Narration, score and 7 effects generated with ElevenLabs on 2026-11-07 with the user chat authorisation; three library effects reused; mix measured only, not listened to by the agent."
+ }
+}

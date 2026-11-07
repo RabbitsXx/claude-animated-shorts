@@ -1,0 +1,26 @@
+{
+  "selected": "time-machine-success",
+  "candidates": [
+    {
+      "id": "time-machine-success",
+      "title": "What If A Time Machine Actually Worked?",
+      "hook": "He travels back one hour and arrives in empty space.",
+      "visualPromise": "An inventor spends everything on a time machine; the test dummy returns with a surprise, a rival tries a bigger one, and the Earth's motion makes every jump land somewhere unexpected.",
+      "whyItWorks": "A real physical fact (the Earth moves about 30 km/s around the Sun) turns a familiar sci-fi dream into a visible, funny, escalating consequence told through one inventor's want, cost, test, fix and payoff."
+    },
+    {
+      "id": "pumpkin-trebuchet",
+      "title": "The Giant Pumpkin Launcher",
+      "hook": "He builds the biggest launcher in the festival, then hits his own barn.",
+      "visualPromise": "Release angle and counterweight decide where a pumpkin lands; a rival's launcher returns it to its owner.",
+      "whyItWorks": "Clear anticipation, contact and consequence, with a POV from the projectile."
+    },
+    {
+      "id": "wobbling-bridge",
+      "title": "Why The Bridge Wobbled",
+      "hook": "Opening day: everyone steps in time and the bridge starts to sway.",
+      "visualPromise": "A builder fixes synchronized sway with dampers while the rival's stiff bridge fails the same test.",
+      "whyItWorks": "A real engineering story (London Millennium Bridge, 2000) with a visible mechanism and a rival payoff."
+    }
+  ]
+}

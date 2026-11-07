@@ -1,0 +1,15 @@
+Found existing installation: opencv-python 5.0.0.93
+Uninstalling opencv-python-5.0.0.93:
+  Successfully uninstalled opencv-python-5.0.0.93
+Collecting opencv-python-headless<5,>=4.8
+  Using cached opencv_python_headless-4.14.0.94-cp37-abi3-win_amd64.whl.metadata (20 kB)
+Using cached opencv_python_headless-4.14.0.94-cp37-abi3-win_amd64.whl (41.0 MB)
+Installing collected packages: opencv-python-headless
+  Attempting uninstall: opencv-python-headless
+    Found existing installation: opencv-python-headless 4.14.0.94
+    Uninstalling opencv-python-headless-4.14.0.94:
+      Successfully uninstalled opencv-python-headless-4.14.0.94
+Successfully installed opencv-python-headless-4.14.0.94
+
+[notice] A new release of pip is available: 24.0 -> 26.3
+[notice] To update, run: F:\Create Cartoon\claude-animated-shorts\tools\rea-video\.venv\Scripts\python.exe -m pip install --upgrade pip

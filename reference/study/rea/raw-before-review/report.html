@@ -1,0 +1,342 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Breakdown: QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4</title><style>
+:root{--bg:#fafaf9;--fg:#1c1917;--muted:#78716c;--card:#fff;--line:#e7e5e4;--accent:#0d9488}
+@media (prefers-color-scheme:dark){:root{--bg:#1c1917;--fg:#f5f5f4;--muted:#a8a29e;--card:#292524;--line:#44403c}}
+body{margin:0;padding:24px 16px;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,"PingFang SC","Noto Sans CJK SC",sans-serif}
+main{max-width:1100px;margin:auto} h1{font-size:22px} h2{font-size:18px;margin:4px 0 10px} h3{font-size:15px;margin:16px 0 6px} h4{font-size:13px;color:var(--muted);margin:10px 0 2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0}
+.mix{display:flex;height:30px;border-radius:6px;overflow:hidden;margin:12px 0} .bar{color:#fff;font-size:12px;padding:6px;white-space:nowrap;overflow:hidden}
+img{max-width:100%;border-radius:6px} img.sb{display:block;margin:8px 0}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0;display:block;overflow-x:auto} th,td{border-bottom:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top} th{color:var(--muted);font-weight:600}
+td img{max-height:70px}
+ul,ol{margin:4px 0;padding-left:20px} li{margin:2px 0} p{margin:6px 0}
+pre.prompt{background:var(--bg);padding:10px;border-radius:6px;font-size:13px;white-space:pre-wrap;word-break:break-word}
+code{background:var(--bg);padding:1px 4px;border-radius:4px;font-size:13px}
+details{margin:8px 0;border:1px solid var(--line);border-radius:8px;padding:6px 12px} summary{cursor:pointer;color:var(--accent);font-weight:600}
+.stems div{margin:4px 0} audio{vertical-align:middle;max-width:100%}
+</style></head><body><main>
+<h1>Video breakdown: QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4</h1>
+<p><b>Verdict</b>: Mixed production: live action 93% + AI-generated video 7%; overlays: styled text, text labels, subtitles (composited in code / an editor); real material used: live footage (59.0s); audio: voice + 78 sound effects; packaging: styled text ×8, text labels ×126, 77 sound effects land on text / sticker pops</p>
+<ul>
+<li>63.167s · 1080×1920 · 30.0fps · 9:16; 10 shots, 6.32s average; transitions: cut×3, dissolve×6</li>
+<li>Confidence (duration-weighted) 53%; decided by: deterministic forensics only; No VLM; live action / AI / 3D are told apart from pixel statistics only, so confidence is limited. An agent that can see images: run rea-video review, look at each shot and merge with apply-review; otherwise configure a VLM (any OpenAI-compatible multimodal model, e.g. Gemini / GPT-4o / Doubao / Qwen-VL): set REA_VLM_BASE_URL, REA_VLM_API_KEY and REA_VLM_MODEL (several models comma-separated as fallbacks), then rerun with --vlm</li>
+<li>Remake: 2 AI video shots → 2 generation units, 2 Seedance 2.5 calls; live action 8 shots → 3 scenes, 5 camera setups (see “Remake plan”)</li>
+<li>⚠️ 9 open questions, see “Open questions” first: Shot #1 (0.0–7.0s): live action at only 39% confidence, runner-up ai_video</li>
+</ul>
+<div class='mix'><div class='bar' style='flex:0.934;background:rgb(46,160,67)' title='live action'>live action 93%</div><div class='bar' style='flex:0.066;background:rgb(217,70,239)' title='AI-generated video'>AI-generated video 7%</div></div>
+<img class='sb' src="storyboard.jpg" alt="storyboard" loading="lazy">
+<section class='card'><h2>Content and structure</h2>
+<ul>
+<li>No whole-video summary (needs the VLM or an agent watching the full video); subtitle text is under “Packaging layer”</li>
+</ul>
+</section>
+<section class='card'><h2>Cast, scenes and props</h2>
+<ul>
+<li>No cast extracted (needs the VLM whole-video pass, or an agent filling top-level <code>cast</code> in <code>review_answers.json</code>); shots where the face detector saw a face (person or character): #5</li>
+</ul>
+</section>
+<section class='card'><h2>Sound</h2>
+<img class='sb' src="audio.png" alt="audio" loading="lazy">
+<ul>
+<li>loudness -16.8 dBFS, peak -2.1 dBFS; sound runs across cuts, laid in post as one bed (background changes 6.3dB at cuts vs 6.1dB within shots)</li>
+<li>Sources: Video type: live footage (location sound + music added in post) → voice: human recording; SFX: location sound</li>
+</ul>
+<p><b>Voice</b></p>
+<ul>
+<li>77% of the duration; pitch about 193.4Hz (gender unclear); sung</li>
+<li>Source: human recording (human_recording 73%, tts 20%, ai_video_native 7%)</li>
+<ul>
+<li>93% of the picture is live footage: the voice is most likely location sound or a human voice-over</li>
+</ul>
+<li>Remake: capsule-cinema DoubaoTTSTool / UniversalTTSTool (or a MiniMax cloned voice); use duration-controlled TTS when it must fit the original time window</li>
+</ul>
+<p><b>Music</b></p>
+<ul>
+<li>No sustained music bed detected</li>
+</ul>
+<p><b>Sound effects</b> (78)</p>
+<details><summary>all 60 sound effects</summary>
+<table><thead><tr><th>Time</th><th>Type</th><th>Description</th><th>On screen</th><th>Basis</th></tr></thead><tbody><tr><td>0.51s</td><td>ding</td><td>text label &quot;roller&quot; appears</td><td>text label &quot;roller&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>1.06s</td><td>whoosh</td><td>text label &quot;loop&quot; appears</td><td>text label &quot;loop&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>1.54s</td><td>ding</td><td>text label &quot;out of&quot; appears</td><td>text label &quot;out of&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>3.01s</td><td>ding</td><td>text label &quot;filrst&quot; appears</td><td>text label &quot;filrst&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>4.12s</td><td>whoosh</td><td>text label &quot;to go&quot; appears</td><td>text label &quot;to go&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>4.42s</td><td>ding</td><td>text label &quot;psdn&quot; appears</td><td>text label &quot;psdn&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>5.53s</td><td>whoosh</td><td>text label &quot;it cost him&quot; appears</td><td>text label &quot;it cost him&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>6.13s</td><td>pop</td><td>text label &quot;everything.&quot; appears</td><td>text label &quot;everything.&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>6.69s</td><td>whoosh</td><td>—</td><td>—</td><td>signal candidate (low confidence)</td></tr><tr><td>6.82s</td><td>whoosh</td><td>text label &quot;course,&quot; appears</td><td>text label &quot;course,&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>7.27s</td><td>whoosh</td><td>—</td><td>text label &quot;his&quot; appears</td><td>signal candidate (low confidence)</td></tr><tr><td>8.01s</td><td>ding</td><td>text label &quot;TNIVS LOOP&quot; appears</td><td>text label &quot;TNIVS LOOP&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>8.14s</td><td>whoosh</td><td>text label &quot;bolt&quot; appears</td><td>text label &quot;bolt&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>8.39s</td><td>whoosh</td><td>—</td><td>text label &quot;LOOP&quot; appears</td><td>signal candidate (low confidence)</td></tr><tr><td>9.12s</td><td>ding</td><td>text label &quot;But&quot; appears</td><td>text label &quot;But&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>9.81s</td><td>whoosh</td><td>text label &quot;before&quot; appears</td><td>text label &quot;before&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>10.00s</td><td>pop</td><td>text label &quot;OPENING TOMOR&quot; appears</td><td>text label &quot;OPENING TOMOR&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>10.29s</td><td>whoosh</td><td>—</td><td>text label &quot;opening,&quot; appears</td><td>signal candidate (low confidence)</td></tr><tr><td>11.56s</td><td>pop</td><td>text label &quot;dummy&quot; appears</td><td>text label &quot;dummy&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>12.12s</td><td>pop</td><td>text label &quot;back&quot; appears</td><td>text label &quot;OPENING TOMOR&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>12.32s</td><td>whoosh</td><td>text label &quot;OPENING TOMOR&quot; appears</td><td>text label &quot;OPENING TOMOR&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>12.95s</td><td>whoosh</td><td>text label &quot;a soda can.&quot; appears</td><td>text label &quot;a soda can.&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>13.42s</td><td>whoosh</td><td>text label &quot;But&quot; appears</td><td>text label &quot;But&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>14.00s</td><td>whoosh</td><td>text label &quot;he can&#x27;t&quot; appears</td><td>text label &quot;he can&#x27;t&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>15.41s</td><td>ding</td><td>text label &quot;and&quot; appears</td><td>text label &quot;and&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>16.48s</td><td>ding</td><td>text label &quot;the bottom&quot; appears</td><td>text label &quot;the bottom&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>16.86s</td><td>pop</td><td>text label &quot;into a&quot; appears</td><td>text label &quot;into a&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>18.58s</td><td>ding</td><td>—</td><td>text label &quot;curve.&quot; appears</td><td>signal candidate (low confidence)</td></tr><tr><td>20.93s</td><td>whoosh</td><td>text label &quot;rival&quot; appears</td><td>text label &quot;rival&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>22.04s</td><td>ding</td><td>text label &quot;sneaks&quot; appears</td><td>text label &quot;sneaks&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>22.50s</td><td>whoosh</td><td>text label &quot;in and&quot; appears</td><td>text label &quot;in and&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>23.01s</td><td>whoosh</td><td>text label &quot;cranks&quot; appears</td><td>text label &quot;cranks&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>23.43s</td><td>whoosh</td><td>text label &quot;the sides&quot; appears</td><td>text label &quot;the sides&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>25.08s</td><td>whoosh</td><td>—</td><td>text label &quot;is tall&quot; appears</td><td>signal candidate (low confidence)</td></tr><tr><td>25.82s</td><td>ding</td><td>text label &quot;SO7&quot; appears</td><td>text label &quot;SO7&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>26.32s</td><td>ding</td><td>text label &quot;the first cart&quot; appears</td><td>text label &quot;the first cart&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>27.53s</td><td>ding</td><td>text label &quot;twig.&quot; appears</td><td>text label &quot;twig.&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>28.54s</td><td>whoosh</td><td>styled text &quot;OTTONCANDY&quot; appears</td><td>styled text &quot;OTTONCANDY&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>29.13s</td><td>whoosh</td><td>text label &quot;ANDY-&quot; appears</td><td>text label &quot;ANDY-&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>29.98s</td><td>ding</td><td>text label &quot;GRANDOPENING&quot; appears</td><td>text label &quot;GRANDOPENING&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>30.48s</td><td>ding</td><td>text label &quot;perfect&quot; appears</td><td>text label &quot;perfect&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>30.75s</td><td>whoosh</td><td>text label &quot;circle.&quot; appears</td><td>text label &quot;circle.&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>31.48s</td><td>ding</td><td>styled text &quot;FIRST!&quot; appears</td><td>styled text &quot;FIRST!&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>31.92s</td><td>whoosh</td><td>text label &quot;climbs&quot; appears</td><td>text label &quot;climbs&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>32.57s</td><td>ding</td><td>text label &quot;FIRST!·front&quot; appears</td><td>text label &quot;FIRST!·front&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>33.02s</td><td>whoosh</td><td>—</td><td>text label &quot;oto&quot; appears</td><td>signal candidate (low confidence)</td></tr><tr><td>33.99s</td><td>pop</td><td>text label &quot;climbs&quot; appears</td><td>text label &quot;climbs&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>34.58s</td><td>ding</td><td>text label &quot;into his,&quot; appears</td><td>text label &quot;into his,&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>35.57s</td><td>ding</td><td>text label &quot;UPSTR&quot; appears</td><td>text label &quot;UPSTR&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>36.03s</td><td>whoosh</td><td>styled text &quot;SIDE-DOV&quot; appears</td><td>styled text &quot;SIDE-DOV&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>37.62s</td><td>whoosh</td><td>text label &quot;sees&quot; appears</td><td>text label &quot;sees&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>38.09s</td><td>ding</td><td>—</td><td>text label &quot;tall&quot; appears</td><td>signal candidate (low confidence)</td></tr><tr><td>38.23s</td><td>whoosh</td><td>—</td><td>text label &quot;skinny&quot; appears</td><td>signal candidate (low confidence)</td></tr><tr><td>38.87s</td><td>whoosh</td><td>—</td><td>text label &quot;loop&quot; appears</td><td>signal candidate (low confidence)</td></tr><tr><td>40.83s</td><td>whoosh</td><td>—</td><td>text label &quot;see,&quot; appears</td><td>signal candidate (low confidence)</td></tr><tr><td>41.01s</td><td>whoosh</td><td>text label &quot;see,&quot; appears</td><td>text label &quot;see,&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>41.47s</td><td>ding</td><td>—</td><td>text label &quot;n&quot; appears</td><td>signal candidate (low confidence)</td></tr><tr><td>42.53s</td><td>ding</td><td>text label &quot;hairpin&quot; appears</td><td>text label &quot;hairpin&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>43.03s</td><td>whoosh</td><td>text label &quot;at five,&quot; appears</td><td>text label &quot;at five,&quot; appears</td><td>deterministic_anchored</td></tr><tr><td>43.94s</td><td>whoosh</td><td>text label &quot;take it at&quot; appears</td><td>text label &quot;take it at&quot; appears</td><td>deterministic_anchored</td></tr></tbody></table>
+</details>
+<ul>
+<li>Source: location sound (live_sync 65%, library_editor 24%, ai_native 12%)</li>
+<ul>
+<li>The picture is mostly live footage: the ambience is most likely location sound</li>
+</ul>
+<li>Remake: Place by timestamp: capsule-cinema SoundEffectsTool / an SFX library, or synthesise procedurally like the plush recipe (pitched to the music key)</li>
+</ul>
+<ul>
+<li>Separated stems: <code>stems/original.wav</code> (original), <code>stems/vocals.wav</code> (dry voice; transient sound effects land here too), <code>stems/music.wav</code> (music + ambience)</li>
+</ul>
+<div class='stems'><div>original: <audio controls preload='none' src='stems/original.wav'></audio></div><div>dry voice: <audio controls preload='none' src='stems/vocals.wav'></audio></div><div>music + ambience: <audio controls preload='none' src='stems/music.wav'></audio></div></div>
+</section>
+<section class='card'><h2>Camera, lighting and editing</h2>
+<ul>
+<li>Framing: shot size medium close-up 76%, close-up 12%, medium shot 12%; subject is the in-focus region (no face; shot size is an estimate)</li>
+<li>Camera: moving camera (gimbal / handheld pan) 100%; typical move push-in</li>
+<li>Lighting: soft frontal light (flat light). Key light frontal (from the camera side; both sides of the subject about equally bright), from above (ceiling light / street lamp / high source); lighting ratio about 1.2:1 (0.3 stops); medium-soft; colour temperature neutral (about 5000K); subject and background differ in colour temperature: mixed sources (e.g. warm lamp + cool window light / screen); background clearly blurred (shallow depth of field / portrait mode)</li>
+<li>Grade: natural (close to the original colours); high saturation, normal contrast, normal blacks, overall cool</li>
+<li>Editing: 8.5 cuts per minute, 7.37s average live-action shot; 6 camera set-up(s) / location(s); 0 jump cut(s) and 0 punch-in(s) within the same set-up; inserts (screenshots / screen recordings / cards / stock) take 7%; 0% of cuts land in pauses of the speech</li>
+<li>Format: handheld product shots (unboxing / selling / POV) (face as subject 0%, objects / hands as subject 100%, handheld 100%)</li>
+</ul>
+<p><b>Shooting plan for the remake</b></p>
+<ol>
+<li>Format: handheld product shots</li>
+<li>Framing: mostly medium close-up</li>
+<li>Camera: moving camera (gimbal / handheld pan) 100%; typical move push-in</li>
+<li>Lighting: soft frontal light (flat light) — a large source from the camera side, almost no shadow on the subject: facing a window, a ring light, or a big softbox behind the camera</li>
+<li>Editing: 8.5 cuts per minute, 7.37s average live-action shot; 6 camera set-up(s) / location(s); 0 jump cut(s) and 0 punch-in(s) within the same set-up; inserts (screenshots / screen recordings / cards / stock) take 7%; 0% of cuts land in pauses of the speech</li>
+</ol>
+<p>Gear:</p>
+<ul>
+<li>one large soft light straight above the desk / behind the camera (or two, symmetrical at 45°)</li>
+<li>white desk or white cards to bounce; shadows go lighter</li>
+<li>Note: subject and background differ in colour temperature: mixed sources (e.g. warm lamp + cool window light / screen)</li>
+<li>Note: background clearly blurred (shallow depth of field / portrait mode)</li>
+</ul>
+<details><summary>Per-item measurements and image readings (6)</summary>
+<table><thead><tr><th>Aspect</th><th>Item</th><th>Verdict</th><th>Sources</th></tr></thead><tbody><tr><td>Framing</td><td>shot size</td><td>medium close-up</td><td>measured</td></tr><tr><td>Camera</td><td>camera support</td><td>moving camera (gimbal / handheld pan)</td><td>measured</td></tr><tr><td>Lighting</td><td>soft / hard</td><td>medium-soft</td><td>measured</td></tr><tr><td>Lighting</td><td>colour temperature</td><td>neutral (about 5000K)</td><td>measured</td></tr><tr><td>Grade</td><td>colour grade</td><td>natural (close to the original colours)</td><td>measured</td></tr><tr><td>Format</td><td>video format</td><td>handheld product shots (unboxing / selling / POV)</td><td>measured</td></tr></tbody></table>
+</details>
+<ul>
+<li>Note: lighting ratio, soft / hard, colour temperature and shot size are measured on the subject&#x27;s pixels (the face when there is one, otherwise the in-focus region, which is an estimate); platform transcodes crush the shadows, so hardness and fill read conservative; camera angle, light source, catchlight and rim light follow the image readers. Where measurement and readers disagree, both are listed.</li>
+</ul>
+</section>
+<section class='card'><h2>Packaging layer (subtitles / styled text / stickers / sound-effect hits)</h2>
+<ul>
+<li>styled text ×8 (large size, tilted, multi-colour / gradient, red fill, thick outline, brown fill, orange fill): &quot;OTTONCANDY&quot;, &quot;PENING&quot;, &quot;IIIIN&quot;, &quot;FIRST!&quot;, &quot;FTDCTI&quot;, &quot;NNER&quot; …</li>
+<li>text label ×126 (2 of them follow an object): &quot;bent&quot;, &quot;roller&quot;, &quot;loop&quot;, &quot;out of&quot;, &quot;shape.&quot;, &quot;see,&quot; …</li>
+<li>SFX hits on: text label in ×73, styled text in ×4</li>
+<li>Exports: <code>packaging/overlays.ass</code>, <code>packaging/timeline.json</code> (SRT is the subtitle timeline; ASS carries colour, outline, position and entrance animation, swap in the original font; timeline.json is the full timeline)</li>
+</ul>
+<details><summary>text timeline (120 rows)</summary>
+<table><thead><tr><th>Time</th><th>Kind</th><th>Text</th><th>Style</th><th>In / out</th><th>SFX</th></tr></thead><tbody><tr><td>0.00–0.20s</td><td>text label</td><td>bent</td><td>white text, black outline, line height 4.1% (about 78px)</td><td>hard out</td><td>—</td></tr><tr><td>0.50–0.60s</td><td>text label</td><td>roller</td><td>white text, black outline, line height 3.7% (about 70px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>1.00–1.10s</td><td>text label</td><td>loop</td><td>white text, black outline, line height 4.3% (about 83px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>1.50–1.60s</td><td>text label</td><td>out of</td><td>white text, black outline, line height 3.8% (about 72px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>2.00–2.10s</td><td>text label</td><td>shape.</td><td>white text, black outline, line height 4.8% (about 92px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>2.40–2.80s</td><td>text label</td><td>see,</td><td>white text, black outline, line height 4.4% (about 84px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>3.00–3.10s</td><td>text label</td><td>filrst</td><td>white text, black outline, line height 4.4% (about 84px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>3.50–3.60s</td><td>text label</td><td>ever</td><td>white text, black outline, yellow box, line height 3.8% (about 72px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>4.00–4.10s</td><td>text label</td><td>to go</td><td>white text, black outline, line height 5.1% (about 98px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>4.30–4.60s</td><td>text label</td><td>psdn</td><td>white text, black outline, line height 4.6% (about 89px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>5.00–5.10s</td><td>text label</td><td>and</td><td>white text, black outline, line height 4.3% (about 83px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>5.50–5.70s</td><td>text label</td><td>it cost him</td><td>white text, black outline, line height 4.5% (about 85px)</td><td>hard in</td><td>whoosh</td></tr><tr><td>6.00–6.60s</td><td>text label</td><td>everything.</td><td>white text, black outline, brown box, line height 4.6% (about 88px)</td><td>fade out</td><td>pop</td></tr><tr><td>6.90–7.10s</td><td>text label</td><td>course,</td><td>white text, black outline, line height 4.5% (about 85px)</td><td>slide in / hard out</td><td>whoosh</td></tr><tr><td>7.20–7.60s</td><td>text label</td><td>his</td><td>white text, black outline, line height 4.9% (about 94px)</td><td>hard out</td><td>whoosh</td></tr><tr><td>8.00–9.60s</td><td>text label</td><td>TNIVS ⏎ LOOP</td><td>grey text, line height 1.6% (about 31px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>8.00–8.10s</td><td>text label</td><td>copies it</td><td>white text, black outline, line height 4.2% (about 81px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>8.10–9.10s</td><td>text label</td><td>bolt</td><td>white text, black outline, line height 3.9% (about 74px)</td><td>hard out</td><td>whoosh</td></tr><tr><td>8.50–9.10s</td><td>text label</td><td>LOOP</td><td>black text, grey outline, line height 1.6% (about 31px)</td><td>—</td><td>whoosh</td></tr><tr><td>9.10–9.90s</td><td>text label</td><td>But</td><td>white text, black outline, line height 3.7% (about 70px)</td><td>hard out</td><td>ding</td></tr><tr><td>9.90–10.20s</td><td>text label</td><td>before</td><td>white text, black outline, line height 3.9% (about 75px)</td><td>hard out</td><td>whoosh</td></tr><tr><td>10.00–12.10s</td><td>text label · follows an object</td><td>OPENING TOMOR</td><td>brown text, purple outline, keywords highlighted in blue, line height 7.3% (about 140px)</td><td>hard in / hard out</td><td>pop</td></tr><tr><td>10.30–10.60s</td><td>text label</td><td>opening,</td><td>white text, black outline, line height 3.8% (about 74px)</td><td>fade in / hard out</td><td>whoosh</td></tr><tr><td>11.00–11.50s</td><td>text label</td><td>test</td><td>white text, black outline, red box, line height 3.6% (about 69px)</td><td>hard in</td><td>—</td></tr><tr><td>11.50–11.70s</td><td>text label</td><td>dummy</td><td>white text, black outline, line height 4.4% (about 84px)</td><td>hard in / hard out</td><td>pop</td></tr><tr><td>12.00–12.10s</td><td>text label</td><td>back</td><td>white text, black outline, purple box, line height 3.9% (about 75px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>12.20–14.10s</td><td>text label · follows an object</td><td>OPENING TOMOR</td><td>blue text, purple outline, keywords highlighted in brown, line height 9.4% (about 181px)</td><td>fade out (bounces / changes colour midway)</td><td>pop, whoosh</td></tr><tr><td>12.50–12.60s</td><td>text label</td><td>crushed</td><td>white text, black outline, line height 3.7% (about 70px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>13.00–13.10s</td><td>text label</td><td>a soda can.</td><td>white text, line height 3.0% (about 59px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>13.50–13.60s</td><td>text label</td><td>But</td><td>white text, black outline, line height 4.0% (about 76px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>14.00–14.10s</td><td>text label</td><td>he can&#x27;t</td><td>white text, black outline, line height 3.7% (about 70px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>14.50–16.10s</td><td>text label</td><td>DOPENING</td><td>brown text, keywords highlighted in purple, line height 10.8% (about 207px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>14.50–14.60s</td><td>text label</td><td>the opening</td><td>white text, black outline, line height 4.5% (about 87px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>15.00–15.10s</td><td>text label</td><td>Sohe</td><td>white text, black outline, line height 4.3% (about 83px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>15.40–16.20s</td><td>text label</td><td>and</td><td>white text, black outline, blue box, line height 3.5% (about 68px)</td><td>type-on / hard out</td><td>ding</td></tr><tr><td>16.40–16.70s</td><td>text label</td><td>the bottom</td><td>white text, black outline, line height 3.8% (about 74px)</td><td>hard in</td><td>ding</td></tr><tr><td>16.90–17.20s</td><td>text label</td><td>into a</td><td>black text, white outline, orange box, keywords highlighted in orange, line height 5.1% (about 98px)</td><td>hard in / hard out</td><td>pop</td></tr><tr><td>17.50–18.00s</td><td>text label</td><td>Iong,</td><td>white text, black outline, line height 5.4% (about 103px)</td><td>hard in</td><td>—</td></tr><tr><td>18.00–18.10s</td><td>text label</td><td>lazy</td><td>white text, black outline, line height 4.9% (about 94px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>18.50–18.60s</td><td>text label</td><td>curve.</td><td>white text, black outline, line height 3.6% (about 69px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>19.00–19.10s</td><td>text label</td><td>he know</td><td>white text, black outline, line height 4.1% (about 78px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>19.50–19.60s</td><td>text label</td><td>带</td><td>red text, white outline, line height 2.4% (about 46px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>19.50–19.60s</td><td>text label</td><td>doing?</td><td>white text, black outline, blue box, line height 4.8% (about 92px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>20.00–20.90s</td><td>text label</td><td>Not really.</td><td>white text, black outline, line height 4.4% (about 84px)</td><td>fade in / hard out</td><td>—</td></tr><tr><td>21.00–21.10s</td><td>text label</td><td>rival</td><td>white text, black outline, line height 4.2% (about 81px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>21.50–21.60s</td><td>text label</td><td>laughs,</td><td>white text, black outline, line height 4.8% (about 92px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>22.00–22.10s</td><td>text label</td><td>sneaks</td><td>white text, black outline, line height 3.7% (about 70px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>22.50–22.60s</td><td>text label</td><td>in and</td><td>white text, black outline, line height 3.7% (about 70px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>23.00–23.10s</td><td>text label</td><td>cranks</td><td>white text, black outline, line height 3.7% (about 70px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>23.50–23.60s</td><td>text label</td><td>the sides</td><td>white text, black outline, line height 3.8% (about 74px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>24.00–24.10s</td><td>text label</td><td>cuntil</td><td>white text, black outline, line height 4.7% (about 90px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>24.50–24.60s</td><td>text label</td><td>loop</td><td>white text, black outline, line height 4.9% (about 94px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>25.00–25.20s</td><td>text label</td><td>is tall</td><td>white text, black outline, line height 4.2% (about 81px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>25.30–25.80s</td><td>text label</td><td>and skinny.</td><td>white text, black outline, line height 4.8% (about 92px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>25.90–26.10s</td><td>text label</td><td>SO7</td><td>white text, black outline, line height 5.2% (about 99px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>26.40–26.70s</td><td>text label</td><td>the first cart</td><td>white text, black outline, line height 3.8% (about 74px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>27.00–27.10s</td><td>text label</td><td>snap</td><td>white text, black outline, line height 4.2% (about 81px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>27.50–27.60s</td><td>text label</td><td>twig.</td><td>white text, black outline, line height 5.7% (about 109px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>28.00–28.20s</td><td>text label</td><td>The next</td><td>white text, black outline, line height 4.3% (about 83px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>28.50–28.60s</td><td>styled text</td><td>OTTONCANDY</td><td>white text, red outline, keywords highlighted in orange, line height 6.2% (about 120px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>28.50–29.60s</td><td>styled text</td><td>PENING</td><td>red text, white outline, grey box, bold, line height 1.6% (about 30px)</td><td>hard in / fade out (bounces / changes colour midway)</td><td>—</td></tr><tr><td>28.50–28.60s</td><td>text label</td><td>morning,</td><td>white text, black outline, line height 4.7% (about 90px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>28.90–29.10s</td><td>text label</td><td>town</td><td>white text, black outline, bold, line height 3.6% (about 69px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>29.00–29.10s</td><td>text label</td><td>ANDY-</td><td>white text, red outline, line height 3.8% (about 74px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>29.50–29.60s</td><td>text label</td><td>lines</td><td>white text, black outline, line height 4.0% (about 76px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>30.00–31.40s</td><td>text label</td><td>GRANDOPENING</td><td>red text, orange outline, bold, line height 2.1% (about 41px)</td><td>hard in / fade out</td><td>ding</td></tr><tr><td>30.00–30.10s</td><td>text label</td><td>rivals</td><td>white text, black outline, line height 3.8% (about 72px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>30.00–30.10s</td><td>styled text</td><td>IIIIN</td><td>brown text, brown outline, line height 1.9% (about 37px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>30.50–30.60s</td><td>text label</td><td>perfect</td><td>white text, black outline, line height 4.5% (about 87px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>30.70–31.20s</td><td>text label</td><td>circle.</td><td>white text, black outline, line height 3.7% (about 70px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>31.30–31.60s</td><td>text label</td><td>and the</td><td>white text, black outline, yellow box, bold, line height 3.7% (about 70px)</td><td>fade in / hard out</td><td>—</td></tr><tr><td>31.50–32.20s</td><td>styled text</td><td>FIRST!</td><td>red text, keywords highlighted in brown, line height 3.5% (about 67px)</td><td>fade in / fade out</td><td>ding</td></tr><tr><td>31.80–32.20s</td><td>text label</td><td>climbs</td><td>white text, black outline, line height 4.3% (about 83px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>32.50–32.60s</td><td>text label</td><td>FIRST!·front</td><td>white text, black outline, keywords highlighted in red, line height 4.7% (about 90px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>33.00–33.10s</td><td>text label</td><td>oto</td><td>white text, keywords highlighted in grey, line height 1.1% (about 21px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>33.00–33.20s</td><td>text label</td><td>toshow</td><td>white text, black outline, line height 4.1% (about 79px)</td><td>hard in / fade out</td><td>—</td></tr><tr><td>33.00–33.10s</td><td>text label</td><td>FIRST!</td><td>red text, line height 4.5% (about 85px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>33.30–33.90s</td><td>text label</td><td>The</td><td>white text, black outline, line height 4.8% (about 92px)</td><td>hard in</td><td>—</td></tr><tr><td>33.50–33.60s</td><td>styled text</td><td>FTDCTI</td><td>red text, keywords highlighted in orange, bold, line height 2.6% (about 50px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>33.90–34.10s</td><td>text label</td><td>climbs</td><td>white text, black outline, line height 3.7% (about 70px)</td><td>hard out</td><td>pop</td></tr><tr><td>34.50–34.60s</td><td>text label</td><td>into his,</td><td>white text, black outline, line height 5.1% (about 98px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>34.90–35.10s</td><td>text label</td><td>as his</td><td>white text, black outline, line height 4.4% (about 84px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>35.50–35.60s</td><td>text label</td><td>UPSTR</td><td>grey text, keywords highlighted in white, line height 6.7% (about 129px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>35.50–35.60s</td><td>text label</td><td>cart</td><td>white text, black outline, blue box, line height 4.5% (about 85px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>35.50–35.60s</td><td>styled text</td><td>NNER</td><td>white text, red outline, line height 13.1% (about 252px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>36.00–36.10s</td><td>styled text</td><td>SIDE-DOV</td><td>white text, red outline, line height 21.2% (about 408px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>36.00–37.10s</td><td>text label</td><td>over</td><td>white text, black outline, line height 4.8% (about 93px)</td><td>hard in / hard out (bounces / changes colour midway)</td><td>—</td></tr><tr><td>37.50–37.60s</td><td>text label</td><td>sees</td><td>white text, black outline, line height 3.1% (about 60px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>38.00–38.10s</td><td>text label</td><td>tall</td><td>white text, black outline, line height 3.9% (about 75px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>38.40–38.60s</td><td>text label</td><td>skinny</td><td>white text, black outline, line height 4.5% (about 85px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>38.70–39.20s</td><td>text label</td><td>loop</td><td>white text, black outline, black box, line height 4.3% (about 83px)</td><td>fade in / fade out</td><td>whoosh</td></tr><tr><td>39.50–39.60s</td><td>text label</td><td>ahead.</td><td>white text, black outline, line height 3.4% (about 65px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>40.00–40.10s</td><td>text label</td><td>it&#x27;s</td><td>white text, black outline, line height 4.5% (about 87px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>40.50–40.70s</td><td>text label</td><td>late.</td><td>white text, black outline, line height 3.8% (about 72px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>41.00–41.10s</td><td>text label</td><td>see,</td><td>white text, black outline, line height 3.9% (about 75px)</td><td>hard in / hard out</td><td>whoosh, whoosh</td></tr><tr><td>41.40–41.80s</td><td>text label</td><td>a car</td><td>white text, black outline, line height 3.8% (about 74px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>41.50–41.60s</td><td>text label</td><td>n</td><td>yellow text, line height 3.1% (about 60px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>42.00–42.30s</td><td>text label</td><td>creep</td><td>white text, black outline, line height 4.5% (about 87px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>42.50–42.60s</td><td>text label</td><td>hairpin</td><td>white text, black outline, line height 5.0% (about 96px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>43.00–43.80s</td><td>text label</td><td>at five,</td><td>white text, black outline, line height 5.0% (about 96px)</td><td>fade out</td><td>whoosh</td></tr><tr><td>44.00–44.20s</td><td>text label</td><td>take it at</td><td>white text, black outline, line height 3.8% (about 74px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>44.40–45.60s</td><td>text label</td><td>flips.</td><td>white text, black outline, line height 5.1% (about 98px)</td><td>hard in / hard out (bounces / changes colour midway)</td><td>—</td></tr><tr><td>46.00–46.10s</td><td>text label</td><td>Acart</td><td>white text, black outline, line height 4.5% (about 87px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>46.50–46.60s</td><td>text label</td><td>fastest</td><td>white text, black outline, line height 4.6% (about 89px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>46.60–47.10s</td><td>text label</td><td>bottom</td><td>white text, black outline, line height 4.5% (about 87px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>47.20–47.60s</td><td>text label</td><td>a loop</td><td>white text, black outline, line height 5.4% (about 103px)</td><td>hard in / hard out</td><td>pop</td></tr><tr><td>47.90–48.10s</td><td>text label</td><td>anda</td><td>white text, black outline, line height 4.5% (about 85px)</td><td>hard out</td><td>—</td></tr><tr><td>48.50–48.60s</td><td>text label</td><td>circle</td><td>white text, black outline, line height 4.5% (about 87px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>49.00–49.20s</td><td>text label</td><td>puts</td><td>white text, black outline, line height 5.2% (about 99px)</td><td>hard in / hard out</td><td>ding</td></tr><tr><td>49.40–49.70s</td><td>text label</td><td>a hairpin</td><td>white text, black outline, line height 4.4% (about 84px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>50.00–50.10s</td><td>text label</td><td>there,</td><td>white text, black outline, line height 5.0% (about 96px)</td><td>hard in / hard out</td><td>—</td></tr><tr><td>50.50–50.60s</td><td>text label</td><td>which is</td><td>white text, black outline, line height 4.1% (about 79px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>50.90–51.40s</td><td>text label</td><td>crushed</td><td>white text, black outline, line height 4.6% (about 89px)</td><td>—</td><td>—</td></tr><tr><td>51.40–51.80s</td><td>text label</td><td>the dummy.</td><td>white text, black outline, line height 4.8% (about 92px)</td><td>hard in / fade out</td><td>ding</td></tr><tr><td>51.90–52.10s</td><td>text label</td><td>his hammer</td><td>white text, black outline, line height 4.4% (about 84px)</td><td>hard out</td><td>ding</td></tr><tr><td>52.40–52.60s</td><td>text label</td><td>made</td><td>white text, black outline, keywords highlighted in orange, line height 4.2% (about 81px)</td><td>fade in / hard out</td><td>—</td></tr><tr><td>53.00–53.10s</td><td>text label</td><td>bottom</td><td>white text, black outline, line height 4.0% (about 76px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>53.50–53.60s</td><td>text label</td><td>gentle</td><td>white text, black outline, brown box, line height 5.0% (about 96px)</td><td>hard in / hard out</td><td>whoosh</td></tr><tr><td>54.00–54.40s</td><td>text label</td><td>rival&#x27;s</td><td>white text, black outline, line height 4.8% (about 93px)</td><td>hard in</td><td>pop</td></tr><tr><td>54.40–54.70s</td><td>text label</td><td>squeeze</td><td>white text, black outline, line height 3.6% (about 69px)</td><td>hard out</td><td>—</td></tr></tbody></table>
+</details>
+<p>Remake: burn subtitles and styled text in with <code>packaging/overlays.ass</code> (ffmpeg -vf ass=overlays.ass), or rebuild them from timeline.json in CapCut / Remotion; stickers and GIFs need matching assets (meme / GIF libraries), crops are under packaging/.</p>
+</section>
+<section class='card'><h2>Remake plan</h2>
+<p><b>2 AI video shots → 2 generation units, 2 Seedance 2.5 calls; live action 8 shots → 3 scenes, 5 camera setups</b></p>
+<ul>
+<li>The default engine Seedance 2.0（含 Mini / Fast） cannot generate several shots in one call; with it you would generate shot by shot, 2 times. This plan is for Seedance 2.5 (≤30s per call, multi-shot in one call), 2 calls in total</li>
+<li>Grouping: AI shots in the same scene joined by hard cuts are generated in one call; ≤30s per call; consecutive hard cuts inside a unit preferably ≤8s, at most 10s; split at dissolves / fades and scene changes</li>
+<li>Audio: the model can generate action sound effects and ambience along with the picture; voice-over is better done as separate TTS and mixed in, so copy and timing stay editable</li>
+</ul>
+<h3>Generation units</h3>
+<table><thead><tr><th>Unit</th><th>Shots</th><th>Time</th><th>Duration</th><th>Mode</th><th>Continuity</th></tr></thead><tbody><tr><td>G1</td><td>#2</td><td>7.0–10.0s</td><td>3.0s</td><td>single shot</td><td>first frame: generate an image matching the composition of source shot 2&#x27;s first frame (shots/shot_002_first.jpg)</td></tr><tr><td>G2</td><td>#5</td><td>21.0–22.2s</td><td>1.2s</td><td>single shot</td><td>first frame: generate an image matching the composition of source shot 5&#x27;s first frame (shots/shot_005_first.jpg)</td></tr></tbody></table>
+<p><b>G1 · AI-generated video · shots #2 · 3.0s</b></p>
+<ul>
+<li>References: <code>@图片1</code> character reference images (one frontal face + one half-body per character) so the look stays consistent across shots; <code>@视频1</code> source clip 7.0–10.0s: reference for action, camera movement and cutting rhythm (reference only, do not copy the picture)</li>
+<li>Generate 4s and trim to 3.0s (very short shots are unstable when generated on their own)</li>
+<li>Shots #2 have no prompt</li>
+</ul>
+<pre class='prompt'>
+Vertical 9:16; coloured ambient light (RGB lights / neon), soft light (almost no lit / shadow edge), cool (daylight / cool-white LED), background clearly blurred (shallow depth of field / portrait mode). Characters follow @图片1. Follow the action, camera movement and cutting rhythm of @视频1.
+(prompt missing: run --vlm or have the agent write one from the frames)
+</pre>
+<p><b>G2 · AI-generated video · shots #5 · 1.2s</b></p>
+<ul>
+<li>References: <code>@图片1</code> character reference images (one frontal face + one half-body per character) so the look stays consistent across shots; <code>@视频1</code> source clip 21.0–22.2s: reference for action, camera movement and cutting rhythm (reference only, do not copy the picture)</li>
+<li>Generate 4s and trim to 1.2s (very short shots are unstable when generated on their own)</li>
+<li>Shots #5 have no prompt</li>
+</ul>
+<pre class='prompt'>
+Vertical 9:16; coloured ambient light (RGB lights / neon), soft light (almost no lit / shadow edge), cool (daylight / cool-white LED), background clearly blurred (shallow depth of field / portrait mode). Characters follow @图片1. Follow the action, camera movement and cutting rhythm of @视频1.
+(prompt missing: run --vlm or have the agent write one from the frames)
+</pre>
+<h3>Shooting scenes</h3>
+<p>Shoot every shot of one scene before moving to the next; within a scene, shoot the wider sizes first and the close-ups last so the lighting is set only once. Leave about 1s of handle at both ends of every take.</p>
+<p><b>S1</b>: shots #1 (6.97s on screen)</p>
+<ul>
+<li>Lighting: soft frontal light (flat light), frontal (from the camera side; both sides of the subject about equally bright), about 1.1:1 (0.2 stops), cool (daylight / cool-white LED)</li>
+<li>Setup close-up · moving camera (gimbal / handheld pan) · push-in: shots #1, 6.97s on screen, shoot about 9.0s</li>
+</ul>
+<p><b>S2</b>: shots #3, #4, #6, #7, #8 (33.13s on screen)</p>
+<ul>
+<li>Lighting: soft frontal light (flat light), frontal (from the camera side; both sides of the subject about equally bright), about 1.2:1 (0.3 stops), cool (daylight / cool-white LED)</li>
+<li>Setup medium shot · moving camera (gimbal / handheld pan) · push-in: shots #3, 6.2s on screen, shoot about 8.2s</li>
+<li>Setup medium close-up · moving camera (gimbal / handheld pan) · push-in: shots #4, #6, #7, #8, 26.93s on screen, shoot about 34.9s</li>
+</ul>
+<p><b>S3</b>: shots #9, #10 (18.87s on screen)</p>
+<ul>
+<li>Lighting: soft frontal light (flat light), frontal (from the camera side; both sides of the subject about equally bright), about 1.1:1 (0.1 stops), cool (daylight / cool-white LED)</li>
+<li>Setup medium shot · moving camera (gimbal / handheld pan) · push-in: shots #9, 0.7s on screen, shoot about 2.7s</li>
+<li>Setup medium close-up · moving camera (gimbal / handheld pan) · push-in: shots #10, 18.17s on screen, shoot about 20.2s</li>
+</ul>
+<h3>Real material in the picture (the original files are needed)</h3>
+<p>8 shots, 58.97s (93%) contain real material (screen recordings, screenshots, photos, embedded video); a model cannot stand in for them:</p>
+<ul>
+<li>Shot #1 (00:00.000): live footage, whole frame</li>
+<li>Shot #3 (00:09.967): live footage, whole frame</li>
+<li>Shot #4 (00:16.167): live footage, whole frame</li>
+<li>Shot #6 (00:22.200): live footage, whole frame</li>
+<li>Shot #7 (00:31.633): live footage, whole frame</li>
+<li>Shot #8 (00:34.067): live footage, whole frame</li>
+<li>Shot #9 (00:44.300): live footage, whole frame</li>
+<li>Shot #10 (00:45.000): live footage, whole frame</li>
+</ul>
+</section>
+<section class='card'><h2>Shot list</h2>
+<table><thead><tr><th>#</th><th>Time</th><th>Length</th><th>Base picture</th><th>Material</th><th>Overlays</th><th>Camera</th><th>Picture</th><th>Remake</th></tr></thead><tbody><tr><td>1</td><td>00:00.000</td><td>6.97s</td><td>live action 39%</td><td>the user&#x27;s real material: live footage</td><td>subtitle</td><td>smooth move</td><td>—</td><td>reshoot · S1</td></tr><tr><td>2</td><td>00:06.967</td><td>3.00s</td><td>AI-generated video 62%</td><td>AI-generated</td><td>subtitle, text</td><td>smooth move</td><td>—</td><td>AI generation (first / last frame) · G1</td></tr><tr><td>3</td><td>00:09.967</td><td>6.20s</td><td>live action 56%</td><td>the user&#x27;s real material: live footage</td><td>subtitle</td><td>smooth move</td><td>—</td><td>reshoot · S2</td></tr><tr><td>4</td><td>00:16.167</td><td>4.83s</td><td>live action 56%</td><td>the user&#x27;s real material: live footage</td><td>subtitle</td><td>smooth move</td><td>—</td><td>reshoot · S2</td></tr><tr><td>5</td><td>00:21.000</td><td>1.20s</td><td>AI-generated video 54%</td><td>AI-generated</td><td>subtitle</td><td>smooth move</td><td>—</td><td>AI generation (first / last frame) · G2</td></tr><tr><td>6</td><td>00:22.200</td><td>9.43s</td><td>live action 50%</td><td>the user&#x27;s real material: live footage</td><td>subtitle, styled text</td><td>smooth move</td><td>—</td><td>reshoot · S2</td></tr><tr><td>7</td><td>00:31.633</td><td>2.43s</td><td>live action 46%</td><td>the user&#x27;s real material: live footage</td><td>subtitle, text, styled text</td><td>smooth move</td><td>—</td><td>reshoot · S2</td></tr><tr><td>8</td><td>00:34.067</td><td>10.23s</td><td>live action 56%</td><td>the user&#x27;s real material: live footage</td><td>subtitle, styled text</td><td>smooth move</td><td>—</td><td>reshoot · S2</td></tr><tr><td>9</td><td>00:44.300</td><td>0.70s</td><td>live action 56%</td><td>the user&#x27;s real material: live footage</td><td>subtitle</td><td>smooth move</td><td>—</td><td>reshoot · S3</td></tr><tr><td>10</td><td>00:45.000</td><td>18.17s</td><td>live action 57%</td><td>the user&#x27;s real material: live footage</td><td>subtitle, styled text</td><td>smooth move</td><td>—</td><td>reshoot · S3</td></tr></tbody></table>
+</section>
+<section class='card'><h2>Open questions</h2>
+<ul>
+<li>Shot #1 (0.0–7.0s): live action at only 39% confidence, runner-up ai_video</li>
+<li>Shot #3 (10.0–16.2s): live action at only 56% confidence, runner-up ai_video</li>
+<li>Shot #4 (16.2–21.0s): live action at only 56% confidence, runner-up ai_video</li>
+<li>Shot #5 (21.0–22.2s): AI or live action, to confirm: only a sharpness rhythm, no duplicate frames (re-encodes leave it too) and no AIGC label, needs an image reader</li>
+<li>Shot #6 (22.2–31.6s): live action at only 50% confidence, runner-up ai_video</li>
+<li>Shot #7 (31.6–34.1s): live action at only 46% confidence, runner-up ai_video</li>
+<li>Shot #8 (34.1–44.3s): live action at only 56% confidence, runner-up ai_video</li>
+<li>Shot #9 (44.3–45.0s): live action at only 56% confidence, runner-up ai_video</li>
+<li>Shot #10 (45.0–63.2s): live action at only 57% confidence, runner-up ai_video</li>
+</ul>
+</section>
+<section class='card'><h2>Appendix</h2>
+<h3>Shot by shot</h3>
+<p>Evidence, probabilities, text tracks and prompts per shot. Folded by default.</p>
+<details><summary>#1 00:00.000–00:06.967 · live action + code / editor overlays (subtitles); brings in real material (live footage)</summary>
+<img class='sb' src="shots/shot_001.jpg" alt="shot_001" loading="lazy">
+<ul>
+<li>Probabilities: live action 39%, AI-generated video 26%, 3D render 23%（deterministic）</li>
+<li>Material: the user&#x27;s real material: live footage</li>
+<li>Photographic texture: noise σ=0.16, 352 colours, 20% flat blocks</li>
+<li>The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps</li>
+<li>Temporal noise 0.94, 43% of pixels unchanged frame to frame: sensor noise is present, consistent with live action</li>
+<li>Camera / lighting: close-up; moving camera (gimbal / handheld pan); soft frontal light (flat light); key light frontal (from the camera side; both sides of the subject about equally bright); lighting ratio about 1.1:1 (0.2 stops); soft light (almost no lit / shadow edge)</li>
+<li>Text track (subtitle/bottom): He / You / upside / So, of</li>
+<li>Remake: Source is live action: reshoot per the shooting plan (shot size / camera setup / lighting); only fall back to AI image-to-video (first frame as reference) when a shoot is not possible; real material the user must supply: live footage (whole frame)</li>
+</ul>
+</details>
+<details><summary>#2 00:06.967–00:09.967 · AI-generated video + code / editor overlays (subtitles, text labels)</summary>
+<img class='sb' src="shots/shot_002.jpg" alt="shot_002" loading="lazy">
+<ul>
+<li>Probabilities: AI-generated video 62%, 3D render 21%, code / template render 8%（deterministic）</li>
+<li>Material: AI-generated</li>
+<li>Photographic texture: noise σ=0.15, 364 colours, 21% flat blocks</li>
+<li>Camera / lighting: medium close-up; moving camera (gimbal / handheld pan); coloured ambient light (RGB lights / neon); key light frontal (from the camera side; both sides of the subject about equally bright); lighting ratio about 1.2:1 (0.2 stops); soft light (almost no lit / shadow edge)</li>
+<li>Text track (subtitle/bottom): So, of / rlval / for / the night</li>
+<li>Text track (subtitle/middle): HNV&#x27;S / LOOP / TNIVS / TANNG</li>
+<li>Text track (text/middle): OPENING TO</li>
+<li>Remake: Source is AI-generated: use the shot&#x27;s first and last frames for first/last-frame generation to closely match composition and motion; to change the subject, edit the first frame with an image model first</li>
+</ul>
+</details>
+<details><summary>#3 00:09.967–00:16.167 · live action + code / editor overlays (subtitles); brings in real material (live footage)</summary>
+<img class='sb' src="shots/shot_003.jpg" alt="shot_003" loading="lazy">
+<ul>
+<li>Probabilities: live action 56%, AI-generated video 22%, 3D render 12%（deterministic）</li>
+<li>Text on objects in the scene (not subtitles): OPENING TOMOR, OPENING TOM, PENTNG</li>
+<li>Material: the user&#x27;s real material: live footage</li>
+<li>Photographic texture: noise σ=0.47, 223 colours, 7% flat blocks</li>
+<li>The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps</li>
+<li>Temporal noise 1.50, 19% of pixels unchanged frame to frame: sensor noise is present, consistent with live action</li>
+<li>Camera / lighting: medium shot; moving camera (gimbal / handheld pan); soft frontal light (flat light); key light frontal (from the camera side; both sides of the subject about equally bright); lighting ratio about 1.2:1 (0.3 stops); soft light (wide lit-to-shadow ramp)</li>
+<li>Text track (subtitle/bottom): the night / back / he can&#x27;t / hammer</li>
+<li>Text track (subtitle/middle): OPENING TOMOR / OPENING TOM / PENTNG</li>
+<li>Remake: Source is live action: reshoot per the shooting plan (shot size / camera setup / lighting); only fall back to AI image-to-video (first frame as reference) when a shoot is not possible; real material the user must supply: live footage (whole frame)</li>
+</ul>
+</details>
+<details><summary>#4 00:16.167–00:21.000 · live action + code / editor overlays (subtitles); brings in real material (live footage)</summary>
+<img class='sb' src="shots/shot_004.jpg" alt="shot_004" loading="lazy">
+<ul>
+<li>Probabilities: live action 56%, AI-generated video 26%, 3D render 8%（deterministic）</li>
+<li>Material: the user&#x27;s real material: live footage</li>
+<li>Photographic texture: noise σ=0.24, 189 colours, 11% flat blocks</li>
+<li>The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps</li>
+<li>Temporal noise 1.35, 30% of pixels unchanged frame to frame: sensor noise is present, consistent with live action</li>
+<li>Camera / lighting: medium close-up; moving camera (gimbal / handheld pan); three-quarter key + fill (standard set-up); key light frame left, three-quarter front; lighting ratio about 1.4:1 (0.5 stops); medium-soft</li>
+<li>Text track (subtitle/bottom): and / long, / he know / His</li>
+<li>Remake: Source is live action: reshoot per the shooting plan (shot size / camera setup / lighting); only fall back to AI image-to-video (first frame as reference) when a shoot is not possible; real material the user must supply: live footage (whole frame)</li>
+</ul>
+</details>
+<details><summary>#5 00:21.000–00:22.200 · AI-generated video + code / editor overlays (subtitles)</summary>
+<img class='sb' src="shots/shot_005.jpg" alt="shot_005" loading="lazy">
+<ul>
+<li>Probabilities: AI-generated video 54%, live action 22%, 3D render 13%（deterministic）</li>
+<li>⚠️ To confirm: AI or live action, to confirm: only a sharpness rhythm, no duplicate frames (re-encodes leave it too) and no AIGC label, needs an image reader</li>
+<li>Material: AI-generated</li>
+<li>Photographic texture: noise σ=0.40, 224 colours, 14% flat blocks</li>
+<li>Per-frame sharpness oscillates periodically (period 2 frames, correlation 0.62) with no duplicate frames: frame interpolation / rate conversion, or just the rhythm of a re-encode (transcodes whose platform tags were stripped show it too); not enough on its own to call AI</li>
+<li>Camera / lighting: medium close-up; moving camera (gimbal / handheld pan); soft frontal light (flat light); key light frontal (from the camera side; both sides of the subject about equally bright); lighting ratio about 1.1:1 (0.2 stops); soft light (almost no lit / shadow edge)</li>
+<li>Text track (subtitle/bottom): rival / laughs, / then</li>
+<li>Remake: Source is AI-generated: use the shot&#x27;s first and last frames for first/last-frame generation to closely match composition and motion; to change the subject, edit the first frame with an image model first</li>
+</ul>
+</details>
+<details><summary>#6 00:22.200–00:31.633 · live action + code / editor overlays (subtitles, styled text); brings in real material (live footage)</summary>
+<img class='sb' src="shots/shot_006.jpg" alt="shot_006" loading="lazy">
+<ul>
+<li>Probabilities: live action 50%, AI-generated video 25%, 3D render 13%（deterministic）</li>
+<li>Material: the user&#x27;s real material: live footage</li>
+<li>Photographic texture: noise σ=0.25, 159 colours, 15% flat blocks</li>
+<li>The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps</li>
+<li>Temporal noise 1.17, 33% of pixels unchanged frame to frame: sensor noise is present, consistent with live action</li>
+<li>Camera / lighting: medium close-up; moving camera (gimbal / handheld pan); soft frontal light (flat light); key light frontal (from the camera side; both sides of the subject about equally bright); lighting ratio about 1.3:1 (0.4 stops); medium-soft</li>
+<li>Text track (subtitle/bottom): sneaks / is tall / The next / circle</li>
+<li>Text track (text/middle): GRAND OPENING</li>
+<li>Remake: Source is live action: reshoot per the shooting plan (shot size / camera setup / lighting); only fall back to AI image-to-video (first frame as reference) when a shoot is not possible; real material the user must supply: live footage (whole frame)</li>
+</ul>
+</details>
+<details><summary>#7 00:31.633–00:34.067 · live action + code / editor overlays (subtitles, text labels, styled text); brings in real material (live footage)</summary>
+<img class='sb' src="shots/shot_007.jpg" alt="shot_007" loading="lazy">
+<ul>
+<li>Probabilities: live action 46%, AI-generated video 33%, 3D render 11%（deterministic）</li>
+<li>Material: the user&#x27;s real material: live footage</li>
+<li>Photographic texture: noise σ=0.23, 523 colours, 13% flat blocks</li>
+<li>The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps</li>
+<li>Camera / lighting: medium close-up; moving camera (gimbal / handheld pan); soft frontal light (flat light); key light frontal (from the camera side; both sides of the subject about equally bright); lighting ratio about 1.3:1 (0.3 stops); hard light (sharp shadow edge)</li>
+<li>Text track (subtitle/bottom): and the / climbs / to show / owner</li>
+<li>Text track (text/bottom): FIRST!</li>
+<li>Text track (text/middle): FIRST!</li>
+<li>Text track (text/middle): oto</li>
+<li>Remake: Source is live action: reshoot per the shooting plan (shot size / camera setup / lighting); only fall back to AI image-to-video (first frame as reference) when a shoot is not possible; real material the user must supply: live footage (whole frame)</li>
+</ul>
+</details>
+<details><summary>#8 00:34.067–00:44.300 · live action + code / editor overlays (subtitles, styled text); brings in real material (live footage)</summary>
+<img class='sb' src="shots/shot_008.jpg" alt="shot_008" loading="lazy">
+<ul>
+<li>Probabilities: live action 56%, AI-generated video 25%, 3D render 9%（deterministic）</li>
+<li>Material: the user&#x27;s real material: live footage</li>
+<li>Photographic texture: noise σ=0.22, 247 colours, 10% flat blocks</li>
+<li>The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps</li>
+<li>Temporal noise 1.60, 21% of pixels unchanged frame to frame: sensor noise is present, consistent with live action</li>
+<li>Camera / lighting: medium close-up; moving camera (gimbal / handheld pan); three-quarter key + fill (standard set-up); key light frame right, three-quarter front; lighting ratio about 1.5:1 (0.6 stops); soft light (wide lit-to-shadow ramp)</li>
+<li>Text track (subtitle/bottom): climbs / he finally / late. / take it at</li>
+<li>Remake: Source is live action: reshoot per the shooting plan (shot size / camera setup / lighting); only fall back to AI image-to-video (first frame as reference) when a shoot is not possible; real material the user must supply: live footage (whole frame)</li>
+</ul>
+</details>
+<details><summary>#9 00:44.300–00:45.000 · live action + code / editor overlays (subtitles); brings in real material (live footage)</summary>
+<img class='sb' src="shots/shot_009.jpg" alt="shot_009" loading="lazy">
+<ul>
+<li>Probabilities: live action 56%, AI-generated video 27%, 3D render 7%（deterministic）</li>
+<li>Material: the user&#x27;s real material: live footage</li>
+<li>Photographic texture: noise σ=0.13, 148 colours, 10% flat blocks</li>
+<li>The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps</li>
+<li>Temporal noise 1.27, 31% of pixels unchanged frame to frame: sensor noise is present, consistent with live action</li>
+<li>Camera / lighting: medium shot; moving camera (gimbal / handheld pan); soft frontal light (flat light); key light frontal (from the camera side; both sides of the subject about equally bright); lighting ratio about 1.1:1 (0.1 stops); soft light (almost no lit / shadow edge)</li>
+<li>Text track (subtitle/bottom): take it at / 60 and</li>
+<li>Remake: Source is live action: reshoot per the shooting plan (shot size / camera setup / lighting); only fall back to AI image-to-video (first frame as reference) when a shoot is not possible; real material the user must supply: live footage (whole frame)</li>
+</ul>
+</details>
+<details><summary>#10 00:45.000–01:03.167 · live action + code / editor overlays (subtitles, styled text); brings in real material (live footage)</summary>
+<img class='sb' src="shots/shot_010.jpg" alt="shot_010" loading="lazy">
+<ul>
+<li>Probabilities: live action 57%, AI-generated video 27%, 3D render 7%（deterministic）</li>
+<li>Material: the user&#x27;s real material: live footage</li>
+<li>Photographic texture: noise σ=0.19, 261 colours, 10% flat blocks</li>
+<li>The whole file is native 30fps and photographic shots carry no 24fps-source duplicate frames (98% of the duration): typical of straight-from-phone footage, generators mostly output 24fps</li>
+<li>Temporal noise 1.32, 28% of pixels unchanged frame to frame: sensor noise is present, consistent with live action</li>
+<li>Camera / lighting: medium close-up; moving camera (gimbal / handheld pan); soft frontal light (flat light); key light frontal (from the camera side; both sides of the subject about equally bright); lighting ratio about 1.0:1 (0.1 stops); soft light (almost no lit / shadow edge)</li>
+<li>Text track (subtitle/bottom): 60 and / crushed / crawling. / circle.</li>
+<li>Text track (text/middle): UPSIDE-DOWNER</li>
+<li>Remake: Source is live action: reshoot per the shooting plan (shot size / camera setup / lighting); only fall back to AI image-to-video (first frame as reference) when a shoot is not possible; real material the user must supply: live footage (whole frame)</li>
+</ul>
+</details>
+<h3>Metadata clues</h3>
+<ul>
+<li>Encoder: <code>Lavf59.27.100</code></li>
+</ul>
+<h3>Notes</h3>
+<ul>
+<li>Deterministic forensics is reliable on motion, whole-frame pan/zoom, rendered texture and 24→30 fps conversion; telling live action from AI from 3D relies on the VLM and human review.</li>
+<li>Platform transcoding usually strips metadata; missing metadata proves nothing.</li>
+<li>The full data is in <code>breakdown.json</code>; agents read the compact view with <code>rea-video summary</code>.</li>
+</ul>
+</section>
+</main></body></html>

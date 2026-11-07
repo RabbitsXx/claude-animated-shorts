@@ -1,0 +1,3 @@
+已并入 10/10 个镜头；改判 2 个：shot_001 live_action→cg_3d, shot_002 ai_video→cg_3d
+结论: Mixed production: live action 82% + 3D render 16% + AI-generated video 2%; overlays: animated sticker / GIF, text labels, static sticker, subtitles (composited in code / an editor); real material used: live footage (52.0s); audio: voice + 78 sound effects; packaging: 117 subtitle lines, stickers / GIFs ×3, 74 sound effects land on text / sticker pops
+VLM: Codex-visual-review reviewed 10/10 shots by eye; merged into the verdict
