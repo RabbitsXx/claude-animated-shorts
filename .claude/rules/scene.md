@@ -24,7 +24,7 @@ paths:
 - **Re-check only the changed seconds**: `collide.mjs --ranges a-b,c-d --workers 4` (merges into the passing full report; add 0.5 s after a changed segment because the next dissolve uses its camera), `render-parallel.mjs --from S --to S`, `flicker-check.mjs --from S --to S`. `finish.mjs` skips every step whose inputs are byte-identical to its last PASS.
 - **Run the picture gates on frames you already have** instead of a new preflight render: copy one frame per second of `renders/full` to a folder and run the official sky check (`lib/framecheck.mjs` skyRuns), `detail-check.py check` and `parity.py check` on it (20 s, not 6 min).
 - Measure a failing gate per frame first, look at the worst frames, fix, check the range. The full `preflight` (about 15 min) is for before the first full render only; `--fast` for iteration.
-- Before long work: free disk 8 GB+ (a full disk fails every tool with ENOSPC) and no stray background jobs. Render and collide always split over 4 browsers (GPU sat at 16% with one).
+- Before long work: free disk 8 GB+ and no stray background jobs. A full disk fails every tool with ENOSPC and slows everything 10x. The hidden eater was `studio2/.runs/b-*`: one Chrome profile (about 100 MB) per render run, never deleted; 1,400 of them took 150 GB. `render.mjs` now removes its own profile; if the disk fills anyway, look there first. Render and collide always split over 4 browsers (GPU sat at 16% with one).
 - Edit scene code with a script or the Edit tool, never `sed` that appends a `//` comment to a line of code (it silently swallowed the rest of the line once and a gate "passed" with the hero never posed). After any edit run `node --check` and probe one frame.
 
 ## Determinism and tracking

@@ -56,7 +56,8 @@ const server=http.createServer((req,res)=>{
 });
 const port=await new Promise(r=>server.listen(0,'127.0.0.1',()=>r(server.address().port)));
 const logs=path.join(ROOT,'studio2/.runs');fs.mkdirSync(logs,{recursive:true});
-const child=spawn(browser,['--headless=new','--use-angle=d3d11','--ignore-gpu-blocklist','--no-first-run','--disable-extensions','--disable-background-timer-throttling','--disable-renderer-backgrounding',`--user-data-dir=${path.join(logs,'b-'+Date.now())}`,`http://127.0.0.1:${port}/`],{stdio:['ignore','ignore','pipe']});
+const prof=path.join(logs,'b-'+Date.now()+'-'+process.pid); // one browser profile per run; removed in the finally block (about 80 MB each, 1,400 of them once filled a disk)
+const child=spawn(browser,['--headless=new','--use-angle=d3d11','--ignore-gpu-blocklist','--no-first-run','--disable-extensions','--disable-background-timer-throttling','--disable-renderer-backgrounding',`--user-data-dir=${prof}`,`http://127.0.0.1:${port}/`],{stdio:['ignore','ignore','pipe']});
 child.stderr.on('data',b=>fs.appendFileSync(path.join(logs,'browser.log'),b));child.on('error',reject);child.on('exit',c=>reject(Error('browser exited '+c)));
 const timer=setTimeout(()=>reject(Error('render timeout')),Number(args.timeout||1800)*1000);
 try{const r=await done;
@@ -77,4 +78,4 @@ if(!collideMode&&args.from!==undefined){ // full renders are logged next to the 
  try{fs.appendFileSync(path.join(path.dirname(path.resolve(args.out)),'render-history.jsonl'),JSON.stringify({at:new Date().toISOString(),frames:count,from:Number(args.from),to:Number(args.to),quality:Number(args.quality||0)})+String.fromCharCode(10));}catch{}}
 for(const m of r.meta)if(m.reach>.03)console.log('reach',m.t.toFixed(2),m.reach.toFixed(3),m.note);console.log(`PASS ${count} frames; gpu=${r.gpu}; max reach err=${Math.max(0,...r.meta.map(m=>m.reach)).toFixed(4)}`);}
 catch(e){console.error('FAIL',e.message||e);process.exitCode=1;}
-finally{clearTimeout(timer);if(child.pid)spawnSync('taskkill',['/pid',String(child.pid),'/T','/F'],{stdio:'ignore'});server.close();}
+finally{clearTimeout(timer);if(child.pid)spawnSync('taskkill',['/pid',String(child.pid),'/T','/F'],{stdio:'ignore'});server.close();try{fs.rmSync(prof,{recursive:true,force:true,maxRetries:8,retryDelay:250});}catch{}}
