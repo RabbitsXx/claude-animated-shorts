@@ -1,0 +1,149 @@
+{
+ "about": "One panel per story beat; the owner approves REAL frames rendered from the built scene (storyboard-frames.mjs).",
+ "panels": [
+  {
+   "beat": 1,
+   "time": "0-3.2 s",
+   "scene": "site",
+   "face": "effort",
+   "camera": "low at the crane hook, tilt up with the ball",
+   "action": "Pete winches a giant golden ball up the skinny tower's side on a groaning crane; it swings and bonks the wall; a window pops out and a pigeon faints off the ledge; the ball keeps rocking",
+   "narration": "Pete just hung a giant golden ball inside his skyscraper."
+  },
+  {
+   "beat": 2,
+   "time": "3.2-6.4 s",
+   "scene": "site",
+   "face": "joy",
+   "camera": "continuous pull-back and rise to show the tower scale",
+   "action": "the camera pulls back: the tower is tall and skinny, Pete tiny; the banner OPENING TOMORROW flaps; next door Rex's crew builds a bigger copy and Rex waves sarcastically; the ball hangs through the top floors; Rex mimes a tiny violin",
+   "narration": "You see, the tower is tall and skinny, and it opens tomorrow."
+  },
+  {
+   "beat": 3,
+   "time": "6.4-9.4 s",
+   "scene": "site",
+   "face": "sad",
+   "camera": "slow push-in on Pete and the empty wallet",
+   "action": "Pete opens his empty wallet at the foot of the tower; the ball has taken the whole top floor where a TOP FLOOR FOR SALE sign hangs crossed out; a fly buzzes out of the wallet; the ball swings and its shadow crosses the crossed-out sign",
+   "narration": "But the ball ate the penthouse that was going to pay for it."
+  },
+  {
+   "beat": 4,
+   "time": "9.4-13.2 s",
+   "scene": "site",
+   "face": "smug",
+   "camera": "slow orbit round Rex tower then follow the dive",
+   "action": "Rex's sleek tower rises on the next plot with a rooftop pool and no ball; a crane drops the last glass panel; Rex dives off a diving board into the pool just to show off",
+   "narration": "So, of course, his rival builds a sleek copy, minus the silly ball."
+  },
+  {
+   "beat": 5,
+   "time": "13.2-17 s",
+   "scene": "top floor (night)",
+   "face": "shock",
+   "camera": "dissolve to night; side-on push inside the top floor, then wide exterior lean",
+   "action": "night wind test: a gale hits, the tower leans, the too-short rope makes the ball bang about out of step, the dummy in the top-floor chair is flung; the dummy comes back wrapped in a curtain, dizzy, a window frame around its neck",
+   "narration": "But the night before opening, a gale sends his test dummy flying."
+  },
+  {
+   "beat": 6,
+   "time": "17-21 s",
+   "scene": "top floor (night)",
+   "face": "determined",
+   "camera": "camera under the drilled hole looking up, orbit",
+   "action": "at night Pete drills a hole through the floor and lets the rope out; the ball sinks floor by floor, then he stops after three floors, afraid to cut more; plaster rains on him; the ball hangs three floors lower, still a bit short",
+   "narration": "And he can't miss the opening, so he drills through every floor and lowers the ball."
+  },
+  {
+   "beat": 7,
+   "time": "21-23.5 s",
+   "scene": "top floor (night)",
+   "face": "worried",
+   "camera": "same shot pushes in on the I THINK sign",
+   "action": "Pete peeks through the drilled hole at the ball, shrugs and holds up a hand-lettered sign: I THINK; the ball sways a little and the sign flips upside down",
+   "narration": "Does he know what he's doing? Not really."
+  },
+  {
+   "beat": 8,
+   "time": "23.5-29 s",
+   "scene": "night yard",
+   "face": "smug",
+   "camera": "low follow of Rex with a torch, then moonlit wide of the long ball",
+   "action": "Rex laughs, sneaks into Pete's tower with a torch and cranks the winch until the ball sinks deep to smash the floor; he grins and tiptoes off; the ball now hangs exactly long: it swings slow and wide in the moonlight and touches nothing",
+   "narration": "His rival laughs, then sneaks in and cranks the winch until the ball hangs deep, so it will smash the floor."
+  },
+  {
+   "beat": 9,
+   "time": "29-32 s",
+   "scene": "queue street",
+   "face": "joy",
+   "camera": "dissolve to morning; high crane shot down the queue",
+   "action": "bright morning: the town queues around Rex's tower under a GRAND OPENING banner; kids point at its rooftop pool; the pool sloshes as a diver bounces; Pete's tower stands almost empty with one sad balloon",
+   "narration": "The next morning, the whole town queues for the rival's rooftop pool."
+  },
+  {
+   "beat": 10,
+   "time": "32-36.4 s",
+   "scene": "elevators",
+   "face": "smirk",
+   "camera": "side track up the glass elevators",
+   "action": "Rex rides his elevator up first and waves from the roof; Pete steps into his elevator; a flag stands straight out with the first gust; Rex's elevator door shuts on his tie; Pete's doors close with a gust whistling in",
+   "narration": "Rex rides up first to show off, while Pete steps into his, and the wind arrives."
+  },
+  {
+   "beat": 11,
+   "time": "36.4-40.6 s",
+   "scene": "elevator POV",
+   "face": "scared",
+   "camera": "POV from inside the elevator, push to the ball",
+   "action": "in Pete's elevator the floor trembles; through a glass wall he sees the ball hanging deep, swinging slow as the tower begins to lean; his coffee cup slides and he braces: dread on his face",
+   "narration": "As the tower leans, he sees the ball hanging deep. But it's too late."
+  },
+  {
+   "beat": 12,
+   "time": "40.6-46.4 s",
+   "scene": "playground and tower",
+   "face": "joy",
+   "camera": "orbit the swing, whip-pan up to the tower",
+   "action": "a girl on a playground swing by the tower: her dad pushes in time and she flies, then pushes back against her and she stops dead; the camera swings up to the tower and the golden ball moving against it; the swing freezes mid-air with her cheerful face and the tower stops leaning",
+   "narration": "You see, a tall tower sways like a slow swing, and pushing back against a swing stops it."
+  },
+  {
+   "beat": 13,
+   "time": "46.4-52 s",
+   "scene": "top floor (ghost replay)",
+   "face": "thinking",
+   "camera": "parallel to the rope, pull back (ghost replay with blue glow)",
+   "action": "a ghost replay of the night test: the short rope's ball swings fast out of step and flings the dummy, then the long rope's ball swings slowly against the sway; a glow runs along the rope; the replayed dummy lands gently in its chair",
+   "narration": "A ball on a long rope swings slowly, against the tower, which is why the short rope threw the dummy."
+  },
+  {
+   "beat": 14,
+   "time": "52-56 s",
+   "scene": "top floor and street",
+   "face": "relief",
+   "camera": "push on the coffee on the desk, then wide",
+   "action": "Pete's tower stands still in the gust while the ball swings against it; the coffee on his desk stays flat; Pete floats out of the elevator without a spill and sips; the crowd gasps",
+   "narration": "So his coffee never spills, because the ball soaks up every sway."
+  },
+  {
+   "beat": 15,
+   "time": "56-60 s",
+   "scene": "queue street",
+   "face": "laugh",
+   "camera": "wide from the crowd, shake with the sway",
+   "action": "Rex's tower with no ball sways more and more; the rooftop pool sloshes higher with each swing and slops over the edge; the whole pool dumps over the roof edge in a wave onto the crowd's side and onto the entrance where Rex has just stepped out",
+   "narration": "And the rival's tower, with no ball, sways until its pool slops over the roof."
+  },
+  {
+   "beat": 16,
+   "time": "60-63.5 s",
+   "scene": "queue street",
+   "face": "seasick",
+   "camera": "push in on Rex, Pete winks behind",
+   "action": "close on Rex, soaked, green and seasick with a floating pool noodle round his neck; Pete in the background winks, mug raised; Rex wobbles and sits down in a puddle; a rubber duck floats past",
+   "narration": "Just as Rex steps out, soaked and seasick."
+  }
+ ]
+}

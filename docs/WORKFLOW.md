@@ -1,62 +1,57 @@
-# Workflow: from nothing to a delivered local package
+# Workflow: topic to delivered package
 
-This is exactly how `episodes/time-machine-success/` was made. Every command runs from the repository root. Nothing here publishes anything.
+Rules live in `AGENTS.md` (short, always loaded) and `.claude/rules/*.md` (story, models, scene; loaded only when you touch those files). The procedure is the `make-film` skill. This file is only the commands, in order. Replace `<id>` with the episode folder (`episodes/<id>`).
 
-## 0. Check the machine
+## 0. Start
 ```
-node --version            # 24.x
-ffmpeg -version           # and ffprobe
-node --test studio2/tests/tracks.test.mjs studio2/tests/face.test.mjs studio2/tests/scaffold.test.mjs
+node studio2/briefing.mjs                                  # active episode, open to-dos, library parts, defects without a check
+node studio2/next-step.mjs --episode episodes/<id>         # the first undone step of the order of work
+node studio2/new-episode.mjs <id> --channel <channel-id>   # a new film (record the topic quote in approvals.json)
 ```
-Three.js must exist at `F:\Create Cartoon\bridge-test\node_modules\three` (or set `STAGE_THREE`). Edge/Chrome with a GPU is used headless by `render.mjs`.
+Before step 1 the owner approves the design doc `docs/specs/<date>-<id>-design.md` (intent, the one fact, beats, light plan, models list, work split); copy it into the episode folder as `DESIGN.md` when the episode is created.
 
-## 1. Topic (user decision)
-Propose 2-3 topics (a real fact plus a visible, funny, escalating consequence) and **wait for the user to choose**. Record the user's real words in `episodes/<id>/approvals.json` (`topic.quote`, `source`, date). Never invent an approval.
+## 1. Story
+`SCRIPT.md`, `SPEC-BEATS.md`, `STORY.json`, `HOOK.md`, `STORYBOARD.json`, then `node studio2/story-audit.mjs --episode episodes/<id>` (includes the FUN GATE) until PASS. Never model or voice a story that fails. Shape: `reference/REF-FORMULA.md`.
 
-## 2. New episode
+## 2. Models, one by one, all in Blender (independent models may be built in parallel by workers; the orchestrator passes each)
 ```
-node studio2/new-episode.mjs <id> [--from time-machine-success]
+node studio2/models.mjs --episode episodes/<id> --status
+node studio2/blender-build.mjs --episode episodes/<id> --model <modelId>      # headless: blender/<modelId>.py -> scene2/models/glb/<modelId>.glb
+node studio2/models.mjs --episode episodes/<id> --sheet <modelId>             # engine sheet, textured like the film, 1.8 m figure
+python studio2/shrink.py episodes/<id>/out/models/<modelId>.jpg               # look at the small copy
+node studio2/models.mjs --episode episodes/<id> --pass <modelId> --by claude --checks "a|b|c"
+blender -b --python studio2/blender/check-hair.py                             # after any character-part change
 ```
-This copies the working scene code (`scene2/`) and `film.json`; it never copies media or approvals. Then:
-- Write `SCRIPT.md`: facts with sources (mark fiction as fiction), then `## Narration` as lines starting with `> `, 55-70 s in total (about 170-190 words at the voice's pace). Every spoken action needs something to see.
-- Write `SPEC-BEATS.md`: the 16-beat skeleton from `reference/TARGET.md`, one row per beat (reference beat -> your beat, narration anchor, acting/camera/consequence).
-- Set `film.json` (`voiceId`, `targetSeconds`).
+Fill `reference`, `realDetails`, `interaction` in MODELS.json before building. The scene (`scene2/main.mjs`) awaits every model's `load()` at the top of `build`.
 
-## 3. Voice, score, effects (needs the user's explicit OK to spend)
+## 3. Gates on the assembled scene
 ```
-node studio2/eleven.mjs dry   --episode episodes/<id>   # prints what would be requested, 0 API calls
-node studio2/eleven.mjs voice --episode episodes/<id>   # one narration take with word timestamps
-node studio2/eleven.mjs sfx   --episode episodes/<id>   # effects + one score
+node studio2/collide.mjs --episode episodes/<id>           # overlaps, hidden subject, camera inside a solid (also measures dressing)
+node studio2/probe.mjs --episode episodes/<id> --times 1.0,2.4 --sky   # look at a few frames first: sheet + collision + intents + sky share (15 s)
+node studio2/collide.mjs --episode episodes/<id> --ranges 52-56   # after a fix: re-check ONLY those seconds and merge into the passing full report (a change that reaches other beats needs --workers 4)
+node studio2/scene-quality.mjs --episode episodes/<id>     # every beat dressed to the Ref level
+python studio2/intent-sheet.py --episode episodes/<id>     # after collide: out/intent-sheet-N.jpg, 3 frames per key moment with green/red markers; look at it against the storyboard camera line
+node studio2/camera-plan.mjs --episode episodes/<id>       # every shot travels
+node studio2/preflight.mjs --episode episodes/<id>         # tests, story, collide, quality, sample render, colour, detail, parity; must PASS before a full render
+node studio2/preflight.mjs --episode episodes/<id> --fast  # iteration only: collision every 3rd frame, no tests; never replaces the full preflight
+node studio2/storyboard-frames.mjs --episode episodes/<id> # 15 real frames -> out/storyboard-frames.jpg; the owner quotes approval into approvals.json
 ```
-Outputs: `voice/voice.wav`, `voice/words.json` (word start/end times), `voice/meta.json`, `audio/*.wav`. All requests are cached by hash, so re-running costs nothing. Edit the `EFFECTS` list in `studio2/eleven.mjs` for a different film. Shared library effects live in `assets/sfx/`.
 
-## 4. Author the scene
-Read `docs/AUTHORING.md`. Edit `episodes/<id>/scene2/` (`main.mjs` opening and wiring, `beats.mjs` the remaining beats, `props*.mjs`, `set.mjs`, `cast.mjs`). Timing comes from the voice words: `T('two word phrase', n)` returns the start time of that phrase, so the picture follows the narration.
+## 4. Sound (paid: only with the owner's OK for this spend)
+`node studio2/eleven.mjs dry` first. Voice, effects and score are cached by content hash. `node studio2/mix.mjs`, `node studio2/mixcheck.mjs` (score 10-13 dB under the voice). Without real voice, render silent and without captions.
+Listening to the Ref or our cut: `python studio2/ref-audio.py <clip.mp4>`.
 
-## 5. Fast review loop (repeat until clean)
+## 5. Render, assemble, deliver
 ```
-node studio2/review.mjs --episode episodes/<id>            # every 0.4 s at lower quality
-node studio2/render.mjs --scene episodes/<id>/scene2/main.mjs --words episodes/<id>/voice/words.json --times 12.4,12.8 --out studio2/.tmp/t --captions --quality 0.9
-python studio2/sheet.py studio2/.tmp/t studio2/.tmp/t.jpg --cols 5 --width 360
+node studio2/render.mjs --scene episodes/<id>/scene2/main.mjs --words episodes/<id>/voice/words.json --from 0 --to <seconds> --out episodes/<id>/renders/full --quality 0.96 --timeout 3600   # add --captions only with real voice words
+node studio2/render-smart.mjs --episode episodes/<id>      # later: re-render only what changed
+node studio2/assemble.mjs --episode episodes/<id>          # refuses without a passing, current collide.json
+node studio2/finish.mjs --episode episodes/<id>            # tests, gate, assemble, frame check, retro
+node studio2/flicker-check.mjs --episode episodes/<id>     # 12 s on the rendered frames: a patch that flips for one frame (z-fight); --contact writes out/flicker-worst.jpg
+node studio2/motion-check.mjs --episode episodes/<id>      # still share, windows, dissolves, hard cuts vs the Ref
+node studio2/package.mjs --episode episodes/<id>           # out/publish, post.txt with channel footer and AI disclosure; never uploads
 ```
-Open the sheets and look at each frame. `review.mjs` prints a `reach` line for every frame where a hand or foot could not reach its target; fix the blocking, never stretch a limb. Use the checklist in `docs/AUTHORING.md` on every sheet. Zoom into any shot with contact, feet, or overlapping objects.
+Fast path (measured on pendulum-tower, RTX 4060): `node studio2/render-parallel.mjs --episode episodes/<id> --workers 4` renders 1905 frames in 2.0 min with frames byte-identical to a single render (md5 of all 1905 checked); it moves the old `renders/full` to `renders/previous` itself. The same split for the gate: `node studio2/collide.mjs --episode episodes/<id> --workers 4` (5.5 min vs about 9 single). After a fix re-render only the stretch: `--from 52 --to 56` (0.3 min for 4 s; every other frame is untouched), and `flicker-check.mjs --from 52 --to 56`. A single-process render takes 15-25 minutes; use it only when a worker fails. Move the previous `renders/full` aside first. The disk is nearly full: check free space before a render (about 5 GB of frames). `voice/words.json` is made by the sound step; `SCRIPT.md` must exist (eleven.mjs, voicegaps.mjs and render.mjs read it).
 
-## 6. Mix
-```
-node studio2/mix.mjs --episode episodes/<id>
-```
-Voice on top, score ducked under it, word-anchored effects (edit the `cues` list in `studio2/mix.mjs` for the new film), ambience, loudnorm to about -14 LUFS. No API calls.
-
-## 7. Full render and assemble
-```
-node studio2/render.mjs --scene episodes/<id>/scene2/main.mjs --words episodes/<id>/voice/words.json --from 0 --to <seconds> --out episodes/<id>/renders/full --captions --quality 0.96 --timeout 3600
-node studio2/assemble.mjs --episode episodes/<id>
-```
-About 15 minutes for 1938 frames. Move the previous `renders/full` aside first (or into `archive/`). `assemble.mjs` writes `out/final.mp4` and `out/qa.json` (decode, black/freeze segments, loudness, peak). These are measurements only.
-
-## 8. Cover and package
-- Cover: a staged still from our own scene, **no text, no image generation**. `scene2/cover.mjs` is the example; render it with `render.mjs --scene episodes/<id>/scene2/cover.mjs --times 0 --out episodes/<id>/out/publish`.
-- Package in `episodes/<id>/out/publish/`: `final.mp4` (copy), `cover.png`, `cover-small.jpg`, `title.txt`, `description.txt`, `keywords.txt`, `metadata.json`. See `episodes/time-machine-success/PUBLISH.json` for the fields.
-
-## 9. Report honestly
-Tell the user (in Thai): what is delivered and where, the measured numbers, and what nobody has judged (nobody has watched or listened continuously; equality with the reference is the user's call). Update `episodes/<id>/HANDOFF.md`. Do not publish.
+## 6. After a film
+`node studio2/retro.mjs --episode episodes/<id>`, log new defects in `docs/DEFECTS.json`, promote proven parts into `studio2/library/INDEX.json`, refresh `HANDOFF.md` with measured numbers, run all tests.

@@ -1,0 +1,2052 @@
+{
+ "frames": 254,
+ "limits": {
+  "empty": 0.55638,
+  "detail": 1.0453000000000001,
+  "hues": 4.0,
+  "minband": 0.3221,
+  "contrast": 0.32604
+ },
+ "selfPassShare": 0.843,
+ "median": {
+  "empty": 0.3409,
+  "detail": 1.876,
+  "hues": 6.0,
+  "minband": 0.967,
+  "contrast": 0.5627500000000001
+ },
+ "samples": [
+  {
+   "empty": 0.6463,
+   "detail": 1.14,
+   "hues": 6,
+   "minband": 0.132,
+   "contrast": 0.5668,
+   "file": "f00000.jpg"
+  },
+  {
+   "empty": 0.625,
+   "detail": 1.153,
+   "hues": 6,
+   "minband": 0.23,
+   "contrast": 0.5691,
+   "file": "f00008.jpg"
+  },
+  {
+   "empty": 0.5952,
+   "detail": 1.2,
+   "hues": 6,
+   "minband": 0.109,
+   "contrast": 0.5671,
+   "file": "f00015.jpg"
+  },
+  {
+   "empty": 0.6094,
+   "detail": 1.26,
+   "hues": 7,
+   "minband": 0.123,
+   "contrast": 0.569,
+   "file": "f00023.jpg"
+  },
+  {
+   "empty": 0.6477,
+   "detail": 0.984,
+   "hues": 5,
+   "minband": 0.114,
+   "contrast": 0.5222,
+   "file": "f00030.jpg"
+  },
+  {
+   "empty": 0.7386,
+   "detail": 0.544,
+   "hues": 5,
+   "minband": 0.137,
+   "contrast": 0.3219,
+   "file": "f00038.jpg"
+  },
+  {
+   "empty": 0.5696,
+   "detail": 1.115,
+   "hues": 4,
+   "minband": 0.777,
+   "contrast": 0.3084,
+   "file": "f00045.jpg"
+  },
+  {
+   "empty": 0.5781,
+   "detail": 1.108,
+   "hues": 3,
+   "minband": 0.651,
+   "contrast": 0.3027,
+   "file": "f00053.jpg"
+  },
+  {
+   "empty": 0.5455,
+   "detail": 1.123,
+   "hues": 3,
+   "minband": 0.718,
+   "contrast": 0.3033,
+   "file": "f00060.jpg"
+  },
+  {
+   "empty": 0.5554,
+   "detail": 1.136,
+   "hues": 3,
+   "minband": 0.629,
+   "contrast": 0.3025,
+   "file": "f00068.jpg"
+  },
+  {
+   "empty": 0.5455,
+   "detail": 1.147,
+   "hues": 3,
+   "minband": 0.608,
+   "contrast": 0.3025,
+   "file": "f00075.jpg"
+  },
+  {
+   "empty": 0.4034,
+   "detail": 1.589,
+   "hues": 6,
+   "minband": 0.995,
+   "contrast": 0.3162,
+   "file": "f00083.jpg"
+  },
+  {
+   "empty": 0.3509,
+   "detail": 2.318,
+   "hues": 7,
+   "minband": 1.382,
+   "contrast": 0.4847,
+   "file": "f00090.jpg"
+  },
+  {
+   "empty": 0.3196,
+   "detail": 2.703,
+   "hues": 7,
+   "minband": 1.605,
+   "contrast": 0.5311,
+   "file": "f00098.jpg"
+  },
+  {
+   "empty": 0.3182,
+   "detail": 2.293,
+   "hues": 7,
+   "minband": 1.296,
+   "contrast": 0.5571,
+   "file": "f00105.jpg"
+  },
+  {
+   "empty": 0.4801,
+   "detail": 1.63,
+   "hues": 6,
+   "minband": 0.632,
+   "contrast": 0.6006,
+   "file": "f00113.jpg"
+  },
+  {
+   "empty": 0.5185,
+   "detail": 1.343,
+   "hues": 8,
+   "minband": 0.483,
+   "contrast": 0.6165,
+   "file": "f00120.jpg"
+  },
+  {
+   "empty": 0.554,
+   "detail": 1.282,
+   "hues": 7,
+   "minband": 0.446,
+   "contrast": 0.5818,
+   "file": "f00128.jpg"
+  },
+  {
+   "empty": 0.5455,
+   "detail": 1.367,
+   "hues": 7,
+   "minband": 0.435,
+   "contrast": 0.5917,
+   "file": "f00135.jpg"
+  },
+  {
+   "empty": 0.5241,
+   "detail": 1.411,
+   "hues": 7,
+   "minband": 0.641,
+   "contrast": 0.591,
+   "file": "f00143.jpg"
+  },
+  {
+   "empty": 0.4588,
+   "detail": 1.63,
+   "hues": 8,
+   "minband": 0.685,
+   "contrast": 0.6375,
+   "file": "f00150.jpg"
+  },
+  {
+   "empty": 0.3395,
+   "detail": 2.375,
+   "hues": 9,
+   "minband": 1.406,
+   "contrast": 0.8015,
+   "file": "f00158.jpg"
+  },
+  {
+   "empty": 0.2884,
+   "detail": 2.261,
+   "hues": 9,
+   "minband": 1.617,
+   "contrast": 0.8037,
+   "file": "f00165.jpg"
+  },
+  {
+   "empty": 0.2912,
+   "detail": 2.198,
+   "hues": 9,
+   "minband": 1.579,
+   "contrast": 0.8036,
+   "file": "f00173.jpg"
+  },
+  {
+   "empty": 0.2969,
+   "detail": 2.219,
+   "hues": 9,
+   "minband": 1.583,
+   "contrast": 0.8065,
+   "file": "f00180.jpg"
+  },
+  {
+   "empty": 0.2358,
+   "detail": 2.257,
+   "hues": 9,
+   "minband": 1.621,
+   "contrast": 0.8068,
+   "file": "f00188.jpg"
+  },
+  {
+   "empty": 0.2472,
+   "detail": 2.177,
+   "hues": 9,
+   "minband": 1.649,
+   "contrast": 0.8112,
+   "file": "f00195.jpg"
+  },
+  {
+   "empty": 0.2528,
+   "detail": 2.187,
+   "hues": 10,
+   "minband": 1.697,
+   "contrast": 0.7859,
+   "file": "f00203.jpg"
+  },
+  {
+   "empty": 0.2884,
+   "detail": 1.484,
+   "hues": 7,
+   "minband": 0.812,
+   "contrast": 0.4205,
+   "file": "f00210.jpg"
+  },
+  {
+   "empty": 0.4759,
+   "detail": 1.374,
+   "hues": 4,
+   "minband": 0.26,
+   "contrast": 0.4377,
+   "file": "f00218.jpg"
+  },
+  {
+   "empty": 0.4957,
+   "detail": 1.589,
+   "hues": 5,
+   "minband": 0.272,
+   "contrast": 0.4707,
+   "file": "f00225.jpg"
+  },
+  {
+   "empty": 0.5043,
+   "detail": 1.738,
+   "hues": 5,
+   "minband": 0.699,
+   "contrast": 0.5012,
+   "file": "f00233.jpg"
+  },
+  {
+   "empty": 0.4929,
+   "detail": 1.749,
+   "hues": 5,
+   "minband": 0.886,
+   "contrast": 0.5917,
+   "file": "f00240.jpg"
+  },
+  {
+   "empty": 0.4943,
+   "detail": 1.775,
+   "hues": 5,
+   "minband": 0.887,
+   "contrast": 0.6102,
+   "file": "f00248.jpg"
+  },
+  {
+   "empty": 0.4943,
+   "detail": 1.777,
+   "hues": 5,
+   "minband": 0.879,
+   "contrast": 0.6071,
+   "file": "f00255.jpg"
+  },
+  {
+   "empty": 0.4929,
+   "detail": 1.782,
+   "hues": 5,
+   "minband": 0.889,
+   "contrast": 0.6081,
+   "file": "f00263.jpg"
+  },
+  {
+   "empty": 0.4972,
+   "detail": 1.781,
+   "hues": 5,
+   "minband": 0.896,
+   "contrast": 0.6058,
+   "file": "f00270.jpg"
+  },
+  {
+   "empty": 0.4986,
+   "detail": 1.779,
+   "hues": 5,
+   "minband": 0.895,
+   "contrast": 0.6039,
+   "file": "f00278.jpg"
+  },
+  {
+   "empty": 0.4986,
+   "detail": 1.777,
+   "hues": 5,
+   "minband": 0.9,
+   "contrast": 0.6016,
+   "file": "f00285.jpg"
+  },
+  {
+   "empty": 0.5,
+   "detail": 1.774,
+   "hues": 5,
+   "minband": 0.896,
+   "contrast": 0.5983,
+   "file": "f00293.jpg"
+  },
+  {
+   "empty": 0.196,
+   "detail": 2.229,
+   "hues": 6,
+   "minband": 1.682,
+   "contrast": 0.3636,
+   "file": "f00300.jpg"
+  },
+  {
+   "empty": 0.1832,
+   "detail": 3.267,
+   "hues": 6,
+   "minband": 1.871,
+   "contrast": 0.5527,
+   "file": "f00308.jpg"
+  },
+  {
+   "empty": 0.1719,
+   "detail": 3.389,
+   "hues": 6,
+   "minband": 1.86,
+   "contrast": 0.5604,
+   "file": "f00315.jpg"
+  },
+  {
+   "empty": 0.1548,
+   "detail": 3.519,
+   "hues": 7,
+   "minband": 1.86,
+   "contrast": 0.5658,
+   "file": "f00323.jpg"
+  },
+  {
+   "empty": 0.1477,
+   "detail": 3.582,
+   "hues": 7,
+   "minband": 1.865,
+   "contrast": 0.5682,
+   "file": "f00330.jpg"
+  },
+  {
+   "empty": 0.1463,
+   "detail": 3.607,
+   "hues": 7,
+   "minband": 1.867,
+   "contrast": 0.5692,
+   "file": "f00338.jpg"
+  },
+  {
+   "empty": 0.1321,
+   "detail": 3.655,
+   "hues": 7,
+   "minband": 1.853,
+   "contrast": 0.5704,
+   "file": "f00345.jpg"
+  },
+  {
+   "empty": 0.1094,
+   "detail": 3.852,
+   "hues": 7,
+   "minband": 1.883,
+   "contrast": 0.5859,
+   "file": "f00353.jpg"
+  },
+  {
+   "empty": 0.0938,
+   "detail": 3.704,
+   "hues": 8,
+   "minband": 1.931,
+   "contrast": 0.6217,
+   "file": "f00360.jpg"
+  },
+  {
+   "empty": 0.1321,
+   "detail": 3.252,
+   "hues": 8,
+   "minband": 1.987,
+   "contrast": 0.6809,
+   "file": "f00368.jpg"
+  },
+  {
+   "empty": 0.1548,
+   "detail": 2.994,
+   "hues": 8,
+   "minband": 2.034,
+   "contrast": 0.6958,
+   "file": "f00375.jpg"
+  },
+  {
+   "empty": 0.1321,
+   "detail": 3.083,
+   "hues": 9,
+   "minband": 2.068,
+   "contrast": 0.7006,
+   "file": "f00383.jpg"
+  },
+  {
+   "empty": 0.1335,
+   "detail": 3.202,
+   "hues": 8,
+   "minband": 2.109,
+   "contrast": 0.7154,
+   "file": "f00390.jpg"
+  },
+  {
+   "empty": 0.1165,
+   "detail": 3.335,
+   "hues": 8,
+   "minband": 2.035,
+   "contrast": 0.7598,
+   "file": "f00398.jpg"
+  },
+  {
+   "empty": 0.1321,
+   "detail": 3.322,
+   "hues": 8,
+   "minband": 2.102,
+   "contrast": 0.7976,
+   "file": "f00405.jpg"
+  },
+  {
+   "empty": 0.1477,
+   "detail": 2.748,
+   "hues": 8,
+   "minband": 1.73,
+   "contrast": 0.826,
+   "file": "f00413.jpg"
+  },
+  {
+   "empty": 0.1051,
+   "detail": 2.655,
+   "hues": 6,
+   "minband": 1.979,
+   "contrast": 0.7881,
+   "file": "f00420.jpg"
+  },
+  {
+   "empty": 0.0767,
+   "detail": 2.551,
+   "hues": 6,
+   "minband": 1.837,
+   "contrast": 0.5839,
+   "file": "f00428.jpg"
+  },
+  {
+   "empty": 0.0909,
+   "detail": 2.769,
+   "hues": 7,
+   "minband": 1.712,
+   "contrast": 0.4565,
+   "file": "f00435.jpg"
+  },
+  {
+   "empty": 0.0895,
+   "detail": 2.89,
+   "hues": 8,
+   "minband": 1.421,
+   "contrast": 0.459,
+   "file": "f00443.jpg"
+  },
+  {
+   "empty": 0.0724,
+   "detail": 2.848,
+   "hues": 8,
+   "minband": 1.342,
+   "contrast": 0.4517,
+   "file": "f00450.jpg"
+  },
+  {
+   "empty": 0.0838,
+   "detail": 2.941,
+   "hues": 8,
+   "minband": 1.377,
+   "contrast": 0.4452,
+   "file": "f00458.jpg"
+  },
+  {
+   "empty": 0.0923,
+   "detail": 2.958,
+   "hues": 8,
+   "minband": 1.337,
+   "contrast": 0.447,
+   "file": "f00465.jpg"
+  },
+  {
+   "empty": 0.0923,
+   "detail": 2.839,
+   "hues": 8,
+   "minband": 1.326,
+   "contrast": 0.448,
+   "file": "f00473.jpg"
+  },
+  {
+   "empty": 0.0597,
+   "detail": 2.572,
+   "hues": 7,
+   "minband": 1.094,
+   "contrast": 0.3599,
+   "file": "f00480.jpg"
+  },
+  {
+   "empty": 0.3267,
+   "detail": 1.025,
+   "hues": 4,
+   "minband": 0.338,
+   "contrast": 0.638,
+   "file": "f00488.jpg"
+  },
+  {
+   "empty": 0.3281,
+   "detail": 1.116,
+   "hues": 3,
+   "minband": 0.343,
+   "contrast": 0.6828,
+   "file": "f00495.jpg"
+  },
+  {
+   "empty": 0.3423,
+   "detail": 1.111,
+   "hues": 4,
+   "minband": 0.356,
+   "contrast": 0.6129,
+   "file": "f00503.jpg"
+  },
+  {
+   "empty": 0.4148,
+   "detail": 1.067,
+   "hues": 3,
+   "minband": 0.343,
+   "contrast": 0.4528,
+   "file": "f00510.jpg"
+  },
+  {
+   "empty": 0.4631,
+   "detail": 1.004,
+   "hues": 3,
+   "minband": 0.337,
+   "contrast": 0.2968,
+   "file": "f00518.jpg"
+  },
+  {
+   "empty": 0.392,
+   "detail": 1.139,
+   "hues": 6,
+   "minband": 0.342,
+   "contrast": 0.461,
+   "file": "f00525.jpg"
+  },
+  {
+   "empty": 0.3054,
+   "detail": 1.246,
+   "hues": 5,
+   "minband": 0.773,
+   "contrast": 0.4171,
+   "file": "f00533.jpg"
+  },
+  {
+   "empty": 0.2983,
+   "detail": 1.358,
+   "hues": 5,
+   "minband": 0.773,
+   "contrast": 0.4146,
+   "file": "f00540.jpg"
+  },
+  {
+   "empty": 0.3139,
+   "detail": 1.371,
+   "hues": 3,
+   "minband": 0.752,
+   "contrast": 0.3456,
+   "file": "f00548.jpg"
+  },
+  {
+   "empty": 0.2997,
+   "detail": 1.373,
+   "hues": 4,
+   "minband": 0.8,
+   "contrast": 0.3357,
+   "file": "f00555.jpg"
+  },
+  {
+   "empty": 0.3011,
+   "detail": 1.226,
+   "hues": 5,
+   "minband": 0.674,
+   "contrast": 0.3115,
+   "file": "f00563.jpg"
+  },
+  {
+   "empty": 0.3736,
+   "detail": 1.165,
+   "hues": 4,
+   "minband": 0.42,
+   "contrast": 0.3141,
+   "file": "f00570.jpg"
+  },
+  {
+   "empty": 0.3849,
+   "detail": 1.106,
+   "hues": 4,
+   "minband": 0.487,
+   "contrast": 0.5258,
+   "file": "f00578.jpg"
+  },
+  {
+   "empty": 0.2812,
+   "detail": 1.516,
+   "hues": 6,
+   "minband": 0.761,
+   "contrast": 0.6352,
+   "file": "f00585.jpg"
+  },
+  {
+   "empty": 0.2642,
+   "detail": 1.772,
+   "hues": 7,
+   "minband": 1.068,
+   "contrast": 0.5945,
+   "file": "f00593.jpg"
+  },
+  {
+   "empty": 0.2116,
+   "detail": 1.854,
+   "hues": 6,
+   "minband": 1.234,
+   "contrast": 0.6437,
+   "file": "f00600.jpg"
+  },
+  {
+   "empty": 0.2273,
+   "detail": 1.841,
+   "hues": 5,
+   "minband": 1.322,
+   "contrast": 0.6496,
+   "file": "f00608.jpg"
+  },
+  {
+   "empty": 0.2259,
+   "detail": 1.851,
+   "hues": 6,
+   "minband": 1.324,
+   "contrast": 0.6526,
+   "file": "f00615.jpg"
+  },
+  {
+   "empty": 0.2344,
+   "detail": 1.864,
+   "hues": 5,
+   "minband": 1.334,
+   "contrast": 0.6547,
+   "file": "f00623.jpg"
+  },
+  {
+   "empty": 0.2372,
+   "detail": 2.551,
+   "hues": 7,
+   "minband": 0.967,
+   "contrast": 0.5632,
+   "file": "f00630.jpg"
+  },
+  {
+   "empty": 0.2358,
+   "detail": 2.598,
+   "hues": 8,
+   "minband": 1.018,
+   "contrast": 0.6153,
+   "file": "f00638.jpg"
+  },
+  {
+   "empty": 0.2614,
+   "detail": 2.459,
+   "hues": 10,
+   "minband": 1.028,
+   "contrast": 0.6452,
+   "file": "f00645.jpg"
+  },
+  {
+   "empty": 0.2386,
+   "detail": 2.459,
+   "hues": 10,
+   "minband": 1.041,
+   "contrast": 0.6727,
+   "file": "f00653.jpg"
+  },
+  {
+   "empty": 0.2628,
+   "detail": 2.405,
+   "hues": 10,
+   "minband": 1.064,
+   "contrast": 0.6834,
+   "file": "f00660.jpg"
+  },
+  {
+   "empty": 0.2486,
+   "detail": 1.375,
+   "hues": 4,
+   "minband": 0.436,
+   "contrast": 0.3132,
+   "file": "f00668.jpg"
+  },
+  {
+   "empty": 0.3438,
+   "detail": 1.444,
+   "hues": 3,
+   "minband": 0.293,
+   "contrast": 0.2768,
+   "file": "f00675.jpg"
+  },
+  {
+   "empty": 0.321,
+   "detail": 1.471,
+   "hues": 3,
+   "minband": 0.32,
+   "contrast": 0.249,
+   "file": "f00683.jpg"
+  },
+  {
+   "empty": 0.348,
+   "detail": 1.4,
+   "hues": 3,
+   "minband": 0.337,
+   "contrast": 0.2408,
+   "file": "f00690.jpg"
+  },
+  {
+   "empty": 0.3523,
+   "detail": 1.33,
+   "hues": 3,
+   "minband": 0.356,
+   "contrast": 0.2147,
+   "file": "f00698.jpg"
+  },
+  {
+   "empty": 0.3594,
+   "detail": 1.274,
+   "hues": 3,
+   "minband": 0.371,
+   "contrast": 0.2279,
+   "file": "f00705.jpg"
+  },
+  {
+   "empty": 0.3693,
+   "detail": 1.187,
+   "hues": 3,
+   "minband": 0.389,
+   "contrast": 0.2301,
+   "file": "f00713.jpg"
+  },
+  {
+   "empty": 0.358,
+   "detail": 1.265,
+   "hues": 3,
+   "minband": 0.758,
+   "contrast": 0.229,
+   "file": "f00720.jpg"
+  },
+  {
+   "empty": 0.3821,
+   "detail": 1.4,
+   "hues": 3,
+   "minband": 0.811,
+   "contrast": 0.2377,
+   "file": "f00728.jpg"
+  },
+  {
+   "empty": 0.3722,
+   "detail": 1.6,
+   "hues": 3,
+   "minband": 0.927,
+   "contrast": 0.2451,
+   "file": "f00735.jpg"
+  },
+  {
+   "empty": 0.3935,
+   "detail": 1.608,
+   "hues": 3,
+   "minband": 0.958,
+   "contrast": 0.2629,
+   "file": "f00743.jpg"
+  },
+  {
+   "empty": 0.3977,
+   "detail": 1.438,
+   "hues": 4,
+   "minband": 0.998,
+   "contrast": 0.2649,
+   "file": "f00750.jpg"
+  },
+  {
+   "empty": 0.3991,
+   "detail": 1.296,
+   "hues": 4,
+   "minband": 1.015,
+   "contrast": 0.2657,
+   "file": "f00758.jpg"
+  },
+  {
+   "empty": 0.4091,
+   "detail": 1.294,
+   "hues": 4,
+   "minband": 1.036,
+   "contrast": 0.27,
+   "file": "f00765.jpg"
+  },
+  {
+   "empty": 0.375,
+   "detail": 1.355,
+   "hues": 4,
+   "minband": 0.992,
+   "contrast": 0.2803,
+   "file": "f00773.jpg"
+  },
+  {
+   "empty": 0.3608,
+   "detail": 1.496,
+   "hues": 4,
+   "minband": 1.068,
+   "contrast": 0.3203,
+   "file": "f00780.jpg"
+  },
+  {
+   "empty": 0.3253,
+   "detail": 1.702,
+   "hues": 4,
+   "minband": 1.2,
+   "contrast": 0.4037,
+   "file": "f00788.jpg"
+  },
+  {
+   "empty": 0.2528,
+   "detail": 1.973,
+   "hues": 4,
+   "minband": 1.478,
+   "contrast": 0.4801,
+   "file": "f00795.jpg"
+  },
+  {
+   "empty": 0.2486,
+   "detail": 1.901,
+   "hues": 6,
+   "minband": 1.521,
+   "contrast": 0.4836,
+   "file": "f00803.jpg"
+  },
+  {
+   "empty": 0.2585,
+   "detail": 1.888,
+   "hues": 5,
+   "minband": 1.406,
+   "contrast": 0.5445,
+   "file": "f00810.jpg"
+  },
+  {
+   "empty": 0.2812,
+   "detail": 1.998,
+   "hues": 5,
+   "minband": 1.22,
+   "contrast": 0.6019,
+   "file": "f00818.jpg"
+  },
+  {
+   "empty": 0.2727,
+   "detail": 2.005,
+   "hues": 5,
+   "minband": 1.262,
+   "contrast": 0.5978,
+   "file": "f00825.jpg"
+  },
+  {
+   "empty": 0.2614,
+   "detail": 2.124,
+   "hues": 4,
+   "minband": 1.46,
+   "contrast": 0.5785,
+   "file": "f00833.jpg"
+  },
+  {
+   "empty": 0.2244,
+   "detail": 2.228,
+   "hues": 3,
+   "minband": 1.523,
+   "contrast": 0.6038,
+   "file": "f00840.jpg"
+  },
+  {
+   "empty": 0.1875,
+   "detail": 2.17,
+   "hues": 5,
+   "minband": 1.481,
+   "contrast": 0.5453,
+   "file": "f00848.jpg"
+  },
+  {
+   "empty": 0.169,
+   "detail": 1.792,
+   "hues": 5,
+   "minband": 1.024,
+   "contrast": 0.4853,
+   "file": "f00855.jpg"
+  },
+  {
+   "empty": 0.4489,
+   "detail": 2.203,
+   "hues": 5,
+   "minband": 0.85,
+   "contrast": 0.6173,
+   "file": "f00863.jpg"
+  },
+  {
+   "empty": 0.5185,
+   "detail": 2.315,
+   "hues": 5,
+   "minband": 0.91,
+   "contrast": 0.6801,
+   "file": "f00870.jpg"
+  },
+  {
+   "empty": 0.5,
+   "detail": 2.311,
+   "hues": 5,
+   "minband": 0.967,
+   "contrast": 0.6666,
+   "file": "f00878.jpg"
+  },
+  {
+   "empty": 0.4957,
+   "detail": 2.353,
+   "hues": 5,
+   "minband": 1.064,
+   "contrast": 0.6811,
+   "file": "f00885.jpg"
+  },
+  {
+   "empty": 0.4389,
+   "detail": 2.426,
+   "hues": 6,
+   "minband": 1.204,
+   "contrast": 0.6695,
+   "file": "f00893.jpg"
+  },
+  {
+   "empty": 0.3665,
+   "detail": 3.003,
+   "hues": 8,
+   "minband": 1.258,
+   "contrast": 0.6409,
+   "file": "f00900.jpg"
+  },
+  {
+   "empty": 0.331,
+   "detail": 3.086,
+   "hues": 8,
+   "minband": 1.227,
+   "contrast": 0.7091,
+   "file": "f00908.jpg"
+  },
+  {
+   "empty": 0.3622,
+   "detail": 2.711,
+   "hues": 8,
+   "minband": 1.145,
+   "contrast": 0.6712,
+   "file": "f00915.jpg"
+  },
+  {
+   "empty": 0.3906,
+   "detail": 2.685,
+   "hues": 8,
+   "minband": 1.143,
+   "contrast": 0.6785,
+   "file": "f00923.jpg"
+  },
+  {
+   "empty": 0.3722,
+   "detail": 2.693,
+   "hues": 8,
+   "minband": 1.143,
+   "contrast": 0.6812,
+   "file": "f00930.jpg"
+  },
+  {
+   "empty": 0.3693,
+   "detail": 2.664,
+   "hues": 8,
+   "minband": 1.129,
+   "contrast": 0.6924,
+   "file": "f00938.jpg"
+  },
+  {
+   "empty": 0.3054,
+   "detail": 2.44,
+   "hues": 11,
+   "minband": 1.051,
+   "contrast": 0.6044,
+   "file": "f00945.jpg"
+  },
+  {
+   "empty": 0.2571,
+   "detail": 2.541,
+   "hues": 9,
+   "minband": 0.725,
+   "contrast": 0.6774,
+   "file": "f00953.jpg"
+  },
+  {
+   "empty": 0.2585,
+   "detail": 2.549,
+   "hues": 9,
+   "minband": 0.726,
+   "contrast": 0.6906,
+   "file": "f00960.jpg"
+  },
+  {
+   "empty": 0.2486,
+   "detail": 2.538,
+   "hues": 9,
+   "minband": 0.732,
+   "contrast": 0.6774,
+   "file": "f00968.jpg"
+  },
+  {
+   "empty": 0.2486,
+   "detail": 2.46,
+   "hues": 9,
+   "minband": 0.803,
+   "contrast": 0.6732,
+   "file": "f00975.jpg"
+  },
+  {
+   "empty": 0.2713,
+   "detail": 2.591,
+   "hues": 9,
+   "minband": 0.974,
+   "contrast": 0.7125,
+   "file": "f00983.jpg"
+  },
+  {
+   "empty": 0.3125,
+   "detail": 2.447,
+   "hues": 9,
+   "minband": 1.017,
+   "contrast": 0.7456,
+   "file": "f00990.jpg"
+  },
+  {
+   "empty": 0.3153,
+   "detail": 2.586,
+   "hues": 8,
+   "minband": 1.143,
+   "contrast": 0.7229,
+   "file": "f00998.jpg"
+  },
+  {
+   "empty": 0.331,
+   "detail": 2.567,
+   "hues": 8,
+   "minband": 1.055,
+   "contrast": 0.73,
+   "file": "f01005.jpg"
+  },
+  {
+   "empty": 0.3366,
+   "detail": 2.509,
+   "hues": 8,
+   "minband": 1.052,
+   "contrast": 0.743,
+   "file": "f01013.jpg"
+  },
+  {
+   "empty": 0.1023,
+   "detail": 2.436,
+   "hues": 9,
+   "minband": 1.733,
+   "contrast": 0.5623,
+   "file": "f01020.jpg"
+  },
+  {
+   "empty": 0.0668,
+   "detail": 2.985,
+   "hues": 8,
+   "minband": 1.852,
+   "contrast": 0.4787,
+   "file": "f01028.jpg"
+  },
+  {
+   "empty": 0.0781,
+   "detail": 3.032,
+   "hues": 8,
+   "minband": 1.761,
+   "contrast": 0.4932,
+   "file": "f01035.jpg"
+  },
+  {
+   "empty": 0.206,
+   "detail": 2.86,
+   "hues": 7,
+   "minband": 0.683,
+   "contrast": 0.4771,
+   "file": "f01043.jpg"
+  },
+  {
+   "empty": 0.2088,
+   "detail": 2.751,
+   "hues": 9,
+   "minband": 0.475,
+   "contrast": 0.4875,
+   "file": "f01050.jpg"
+  },
+  {
+   "empty": 0.2926,
+   "detail": 1.42,
+   "hues": 6,
+   "minband": 0.343,
+   "contrast": 0.4175,
+   "file": "f01058.jpg"
+  },
+  {
+   "empty": 0.2486,
+   "detail": 1.766,
+   "hues": 6,
+   "minband": 0.512,
+   "contrast": 0.5371,
+   "file": "f01065.jpg"
+  },
+  {
+   "empty": 0.0781,
+   "detail": 3.105,
+   "hues": 8,
+   "minband": 2.293,
+   "contrast": 0.6091,
+   "file": "f01073.jpg"
+  },
+  {
+   "empty": 0.3168,
+   "detail": 2.163,
+   "hues": 7,
+   "minband": 0.779,
+   "contrast": 0.6786,
+   "file": "f01080.jpg"
+  },
+  {
+   "empty": 0.4176,
+   "detail": 1.633,
+   "hues": 8,
+   "minband": 0.327,
+   "contrast": 0.6648,
+   "file": "f01088.jpg"
+  },
+  {
+   "empty": 0.6634,
+   "detail": 0.839,
+   "hues": 7,
+   "minband": 0.351,
+   "contrast": 0.7554,
+   "file": "f01095.jpg"
+  },
+  {
+   "empty": 0.6449,
+   "detail": 1.068,
+   "hues": 8,
+   "minband": 0.282,
+   "contrast": 0.8403,
+   "file": "f01103.jpg"
+  },
+  {
+   "empty": 0.6065,
+   "detail": 1.199,
+   "hues": 8,
+   "minband": 0.232,
+   "contrast": 0.8313,
+   "file": "f01110.jpg"
+  },
+  {
+   "empty": 0.5298,
+   "detail": 1.375,
+   "hues": 7,
+   "minband": 0.528,
+   "contrast": 0.7607,
+   "file": "f01118.jpg"
+  },
+  {
+   "empty": 0.4304,
+   "detail": 1.688,
+   "hues": 9,
+   "minband": 1.019,
+   "contrast": 0.6976,
+   "file": "f01125.jpg"
+  },
+  {
+   "empty": 0.3082,
+   "detail": 1.953,
+   "hues": 9,
+   "minband": 1.414,
+   "contrast": 0.5622,
+   "file": "f01133.jpg"
+  },
+  {
+   "empty": 0.3196,
+   "detail": 2.08,
+   "hues": 7,
+   "minband": 1.238,
+   "contrast": 0.4953,
+   "file": "f01140.jpg"
+  },
+  {
+   "empty": 0.2216,
+   "detail": 2.381,
+   "hues": 7,
+   "minband": 1.553,
+   "contrast": 0.492,
+   "file": "f01148.jpg"
+  },
+  {
+   "empty": 0.1577,
+   "detail": 2.547,
+   "hues": 7,
+   "minband": 1.743,
+   "contrast": 0.5081,
+   "file": "f01155.jpg"
+  },
+  {
+   "empty": 0.1619,
+   "detail": 2.625,
+   "hues": 7,
+   "minband": 1.764,
+   "contrast": 0.5159,
+   "file": "f01163.jpg"
+  },
+  {
+   "empty": 0.1491,
+   "detail": 2.627,
+   "hues": 7,
+   "minband": 1.744,
+   "contrast": 0.5146,
+   "file": "f01170.jpg"
+  },
+  {
+   "empty": 0.125,
+   "detail": 2.706,
+   "hues": 7,
+   "minband": 1.778,
+   "contrast": 0.52,
+   "file": "f01178.jpg"
+  },
+  {
+   "empty": 0.152,
+   "detail": 2.661,
+   "hues": 7,
+   "minband": 1.612,
+   "contrast": 0.507,
+   "file": "f01185.jpg"
+  },
+  {
+   "empty": 0.223,
+   "detail": 2.141,
+   "hues": 8,
+   "minband": 1.226,
+   "contrast": 0.4592,
+   "file": "f01193.jpg"
+  },
+  {
+   "empty": 0.2415,
+   "detail": 1.854,
+   "hues": 8,
+   "minband": 0.931,
+   "contrast": 0.4958,
+   "file": "f01200.jpg"
+  },
+  {
+   "empty": 0.196,
+   "detail": 2.434,
+   "hues": 8,
+   "minband": 1.494,
+   "contrast": 0.4727,
+   "file": "f01208.jpg"
+  },
+  {
+   "empty": 0.2102,
+   "detail": 2.448,
+   "hues": 6,
+   "minband": 2.039,
+   "contrast": 0.4985,
+   "file": "f01215.jpg"
+  },
+  {
+   "empty": 0.1776,
+   "detail": 2.557,
+   "hues": 6,
+   "minband": 1.98,
+   "contrast": 0.5405,
+   "file": "f01223.jpg"
+  },
+  {
+   "empty": 0.2145,
+   "detail": 2.6,
+   "hues": 6,
+   "minband": 1.825,
+   "contrast": 0.6002,
+   "file": "f01230.jpg"
+  },
+  {
+   "empty": 0.3381,
+   "detail": 2.111,
+   "hues": 8,
+   "minband": 1.415,
+   "contrast": 0.5272,
+   "file": "f01238.jpg"
+  },
+  {
+   "empty": 0.4801,
+   "detail": 0.952,
+   "hues": 8,
+   "minband": 0.433,
+   "contrast": 0.3692,
+   "file": "f01245.jpg"
+  },
+  {
+   "empty": 0.571,
+   "detail": 0.947,
+   "hues": 7,
+   "minband": 0.287,
+   "contrast": 0.3769,
+   "file": "f01253.jpg"
+  },
+  {
+   "empty": 0.6193,
+   "detail": 0.939,
+   "hues": 7,
+   "minband": 0.307,
+   "contrast": 0.3759,
+   "file": "f01260.jpg"
+  },
+  {
+   "empty": 0.6136,
+   "detail": 0.953,
+   "hues": 7,
+   "minband": 0.327,
+   "contrast": 0.3721,
+   "file": "f01268.jpg"
+  },
+  {
+   "empty": 0.5938,
+   "detail": 0.963,
+   "hues": 7,
+   "minband": 0.346,
+   "contrast": 0.3717,
+   "file": "f01275.jpg"
+  },
+  {
+   "empty": 0.6122,
+   "detail": 0.969,
+   "hues": 7,
+   "minband": 0.362,
+   "contrast": 0.3697,
+   "file": "f01283.jpg"
+  },
+  {
+   "empty": 0.625,
+   "detail": 0.97,
+   "hues": 7,
+   "minband": 0.361,
+   "contrast": 0.3668,
+   "file": "f01290.jpg"
+  },
+  {
+   "empty": 0.642,
+   "detail": 0.962,
+   "hues": 6,
+   "minband": 0.228,
+   "contrast": 0.4636,
+   "file": "f01298.jpg"
+  },
+  {
+   "empty": 0.5568,
+   "detail": 1.174,
+   "hues": 6,
+   "minband": 0.553,
+   "contrast": 0.4666,
+   "file": "f01305.jpg"
+  },
+  {
+   "empty": 0.5185,
+   "detail": 1.279,
+   "hues": 6,
+   "minband": 0.527,
+   "contrast": 0.4631,
+   "file": "f01313.jpg"
+  },
+  {
+   "empty": 0.5128,
+   "detail": 1.302,
+   "hues": 6,
+   "minband": 0.52,
+   "contrast": 0.4686,
+   "file": "f01320.jpg"
+  },
+  {
+   "empty": 0.4134,
+   "detail": 1.187,
+   "hues": 7,
+   "minband": 0.549,
+   "contrast": 0.3669,
+   "file": "f01328.jpg"
+  },
+  {
+   "empty": 0.5554,
+   "detail": 1.305,
+   "hues": 9,
+   "minband": 0.446,
+   "contrast": 0.71,
+   "file": "f01335.jpg"
+  },
+  {
+   "empty": 0.5014,
+   "detail": 1.416,
+   "hues": 11,
+   "minband": 0.776,
+   "contrast": 0.7145,
+   "file": "f01343.jpg"
+  },
+  {
+   "empty": 0.4048,
+   "detail": 1.407,
+   "hues": 9,
+   "minband": 0.781,
+   "contrast": 0.6162,
+   "file": "f01350.jpg"
+  },
+  {
+   "empty": 0.3878,
+   "detail": 1.96,
+   "hues": 8,
+   "minband": 0.609,
+   "contrast": 0.7275,
+   "file": "f01358.jpg"
+  },
+  {
+   "empty": 0.4105,
+   "detail": 2.139,
+   "hues": 8,
+   "minband": 0.319,
+   "contrast": 0.6344,
+   "file": "f01365.jpg"
+  },
+  {
+   "empty": 0.3565,
+   "detail": 2.337,
+   "hues": 8,
+   "minband": 1.232,
+   "contrast": 0.6432,
+   "file": "f01373.jpg"
+  },
+  {
+   "empty": 0.294,
+   "detail": 2.53,
+   "hues": 8,
+   "minband": 1.868,
+   "contrast": 0.5844,
+   "file": "f01380.jpg"
+  },
+  {
+   "empty": 0.2131,
+   "detail": 1.332,
+   "hues": 4,
+   "minband": 0.604,
+   "contrast": 0.4024,
+   "file": "f01388.jpg"
+  },
+  {
+   "empty": 0.4517,
+   "detail": 1.49,
+   "hues": 4,
+   "minband": 0.354,
+   "contrast": 0.4972,
+   "file": "f01395.jpg"
+  },
+  {
+   "empty": 0.392,
+   "detail": 1.564,
+   "hues": 5,
+   "minband": 0.358,
+   "contrast": 0.5033,
+   "file": "f01403.jpg"
+  },
+  {
+   "empty": 0.3991,
+   "detail": 1.545,
+   "hues": 5,
+   "minband": 0.359,
+   "contrast": 0.5023,
+   "file": "f01410.jpg"
+  },
+  {
+   "empty": 0.3977,
+   "detail": 1.516,
+   "hues": 5,
+   "minband": 0.353,
+   "contrast": 0.4976,
+   "file": "f01418.jpg"
+  },
+  {
+   "empty": 0.4261,
+   "detail": 1.439,
+   "hues": 5,
+   "minband": 0.355,
+   "contrast": 0.4872,
+   "file": "f01425.jpg"
+  },
+  {
+   "empty": 0.4062,
+   "detail": 1.342,
+   "hues": 4,
+   "minband": 0.358,
+   "contrast": 0.4553,
+   "file": "f01433.jpg"
+  },
+  {
+   "empty": 0.4034,
+   "detail": 1.295,
+   "hues": 5,
+   "minband": 0.366,
+   "contrast": 0.4407,
+   "file": "f01440.jpg"
+  },
+  {
+   "empty": 0.4233,
+   "detail": 1.332,
+   "hues": 4,
+   "minband": 0.44,
+   "contrast": 0.4447,
+   "file": "f01448.jpg"
+  },
+  {
+   "empty": 0.3977,
+   "detail": 1.376,
+   "hues": 5,
+   "minband": 0.572,
+   "contrast": 0.4545,
+   "file": "f01455.jpg"
+  },
+  {
+   "empty": 0.375,
+   "detail": 1.524,
+   "hues": 5,
+   "minband": 0.677,
+   "contrast": 0.4706,
+   "file": "f01463.jpg"
+  },
+  {
+   "empty": 0.3466,
+   "detail": 2.016,
+   "hues": 5,
+   "minband": 0.92,
+   "contrast": 0.4705,
+   "file": "f01470.jpg"
+  },
+  {
+   "empty": 0.2884,
+   "detail": 2.512,
+   "hues": 6,
+   "minband": 1.623,
+   "contrast": 0.488,
+   "file": "f01478.jpg"
+  },
+  {
+   "empty": 0.2756,
+   "detail": 2.73,
+   "hues": 6,
+   "minband": 2.056,
+   "contrast": 0.4673,
+   "file": "f01485.jpg"
+  },
+  {
+   "empty": 0.2997,
+   "detail": 2.382,
+   "hues": 6,
+   "minband": 1.149,
+   "contrast": 0.4692,
+   "file": "f01493.jpg"
+  },
+  {
+   "empty": 0.304,
+   "detail": 2.29,
+   "hues": 6,
+   "minband": 0.95,
+   "contrast": 0.4599,
+   "file": "f01500.jpg"
+  },
+  {
+   "empty": 0.2429,
+   "detail": 2.404,
+   "hues": 6,
+   "minband": 0.867,
+   "contrast": 0.4456,
+   "file": "f01508.jpg"
+  },
+  {
+   "empty": 0.2116,
+   "detail": 2.659,
+   "hues": 7,
+   "minband": 1.06,
+   "contrast": 0.4684,
+   "file": "f01515.jpg"
+  },
+  {
+   "empty": 0.2188,
+   "detail": 2.825,
+   "hues": 7,
+   "minband": 1.259,
+   "contrast": 0.4737,
+   "file": "f01523.jpg"
+  },
+  {
+   "empty": 0.2159,
+   "detail": 2.932,
+   "hues": 8,
+   "minband": 1.299,
+   "contrast": 0.4673,
+   "file": "f01530.jpg"
+  },
+  {
+   "empty": 0.2145,
+   "detail": 2.928,
+   "hues": 8,
+   "minband": 1.293,
+   "contrast": 0.4677,
+   "file": "f01538.jpg"
+  },
+  {
+   "empty": 0.2145,
+   "detail": 2.93,
+   "hues": 8,
+   "minband": 1.292,
+   "contrast": 0.4727,
+   "file": "f01545.jpg"
+  },
+  {
+   "empty": 0.2145,
+   "detail": 2.924,
+   "hues": 8,
+   "minband": 1.289,
+   "contrast": 0.4742,
+   "file": "f01553.jpg"
+  },
+  {
+   "empty": 0.2145,
+   "detail": 2.933,
+   "hues": 8,
+   "minband": 1.291,
+   "contrast": 0.4753,
+   "file": "f01560.jpg"
+  },
+  {
+   "empty": 0.1463,
+   "detail": 2.693,
+   "hues": 8,
+   "minband": 1.384,
+   "contrast": 0.3952,
+   "file": "f01568.jpg"
+  },
+  {
+   "empty": 0.233,
+   "detail": 2.086,
+   "hues": 8,
+   "minband": 0.768,
+   "contrast": 0.4917,
+   "file": "f01575.jpg"
+  },
+  {
+   "empty": 0.2642,
+   "detail": 2.118,
+   "hues": 7,
+   "minband": 0.901,
+   "contrast": 0.5216,
+   "file": "f01583.jpg"
+  },
+  {
+   "empty": 0.3097,
+   "detail": 1.993,
+   "hues": 7,
+   "minband": 1.021,
+   "contrast": 0.5327,
+   "file": "f01590.jpg"
+  },
+  {
+   "empty": 0.3111,
+   "detail": 2.129,
+   "hues": 8,
+   "minband": 1.325,
+   "contrast": 0.5522,
+   "file": "f01598.jpg"
+  },
+  {
+   "empty": 0.3324,
+   "detail": 2.168,
+   "hues": 8,
+   "minband": 1.239,
+   "contrast": 0.554,
+   "file": "f01605.jpg"
+  },
+  {
+   "empty": 0.348,
+   "detail": 2.143,
+   "hues": 8,
+   "minband": 1.266,
+   "contrast": 0.5607,
+   "file": "f01613.jpg"
+  },
+  {
+   "empty": 0.3679,
+   "detail": 1.97,
+   "hues": 7,
+   "minband": 1.387,
+   "contrast": 0.5703,
+   "file": "f01620.jpg"
+  },
+  {
+   "empty": 0.3963,
+   "detail": 1.738,
+   "hues": 6,
+   "minband": 1.433,
+   "contrast": 0.5725,
+   "file": "f01628.jpg"
+  },
+  {
+   "empty": 0.3935,
+   "detail": 1.703,
+   "hues": 6,
+   "minband": 1.533,
+   "contrast": 0.5973,
+   "file": "f01635.jpg"
+  },
+  {
+   "empty": 0.4702,
+   "detail": 1.389,
+   "hues": 5,
+   "minband": 1.227,
+   "contrast": 0.5986,
+   "file": "f01643.jpg"
+  },
+  {
+   "empty": 0.5,
+   "detail": 1.312,
+   "hues": 4,
+   "minband": 0.962,
+   "contrast": 0.5825,
+   "file": "f01650.jpg"
+  },
+  {
+   "empty": 0.5241,
+   "detail": 1.269,
+   "hues": 4,
+   "minband": 0.603,
+   "contrast": 0.6414,
+   "file": "f01658.jpg"
+  },
+  {
+   "empty": 0.5398,
+   "detail": 1.238,
+   "hues": 4,
+   "minband": 0.289,
+   "contrast": 0.6571,
+   "file": "f01665.jpg"
+  },
+  {
+   "empty": 0.5611,
+   "detail": 1.306,
+   "hues": 4,
+   "minband": 0.253,
+   "contrast": 0.5897,
+   "file": "f01673.jpg"
+  },
+  {
+   "empty": 0.581,
+   "detail": 1.159,
+   "hues": 4,
+   "minband": 0.249,
+   "contrast": 0.5834,
+   "file": "f01680.jpg"
+  },
+  {
+   "empty": 0.5043,
+   "detail": 1.338,
+   "hues": 7,
+   "minband": 0.861,
+   "contrast": 0.5815,
+   "file": "f01688.jpg"
+  },
+  {
+   "empty": 0.4673,
+   "detail": 1.548,
+   "hues": 7,
+   "minband": 0.944,
+   "contrast": 0.5779,
+   "file": "f01695.jpg"
+  },
+  {
+   "empty": 0.4318,
+   "detail": 1.989,
+   "hues": 7,
+   "minband": 1.189,
+   "contrast": 0.6081,
+   "file": "f01703.jpg"
+  },
+  {
+   "empty": 0.3523,
+   "detail": 2.272,
+   "hues": 8,
+   "minband": 1.132,
+   "contrast": 0.6234,
+   "file": "f01710.jpg"
+  },
+  {
+   "empty": 0.2557,
+   "detail": 2.482,
+   "hues": 8,
+   "minband": 1.111,
+   "contrast": 0.6445,
+   "file": "f01718.jpg"
+  },
+  {
+   "empty": 0.233,
+   "detail": 2.551,
+   "hues": 8,
+   "minband": 1.201,
+   "contrast": 0.6333,
+   "file": "f01725.jpg"
+  },
+  {
+   "empty": 0.2031,
+   "detail": 2.65,
+   "hues": 8,
+   "minband": 1.338,
+   "contrast": 0.6517,
+   "file": "f01733.jpg"
+  },
+  {
+   "empty": 0.2841,
+   "detail": 2.644,
+   "hues": 7,
+   "minband": 1.432,
+   "contrast": 0.6685,
+   "file": "f01740.jpg"
+  },
+  {
+   "empty": 0.3565,
+   "detail": 2.719,
+   "hues": 7,
+   "minband": 2.217,
+   "contrast": 0.6798,
+   "file": "f01748.jpg"
+  },
+  {
+   "empty": 0.3239,
+   "detail": 2.876,
+   "hues": 7,
+   "minband": 2.276,
+   "contrast": 0.7183,
+   "file": "f01755.jpg"
+  },
+  {
+   "empty": 0.3196,
+   "detail": 3.161,
+   "hues": 7,
+   "minband": 1.571,
+   "contrast": 0.7179,
+   "file": "f01763.jpg"
+  },
+  {
+   "empty": 0.2486,
+   "detail": 3.205,
+   "hues": 7,
+   "minband": 2.219,
+   "contrast": 0.6926,
+   "file": "f01770.jpg"
+  },
+  {
+   "empty": 0.3991,
+   "detail": 2.166,
+   "hues": 5,
+   "minband": 1.704,
+   "contrast": 0.607,
+   "file": "f01778.jpg"
+  },
+  {
+   "empty": 0.3864,
+   "detail": 2.081,
+   "hues": 5,
+   "minband": 1.439,
+   "contrast": 0.6186,
+   "file": "f01785.jpg"
+  },
+  {
+   "empty": 0.4886,
+   "detail": 1.628,
+   "hues": 5,
+   "minband": 0.387,
+   "contrast": 0.4774,
+   "file": "f01793.jpg"
+  },
+  {
+   "empty": 0.5384,
+   "detail": 1.393,
+   "hues": 4,
+   "minband": 0.176,
+   "contrast": 0.4835,
+   "file": "f01800.jpg"
+  },
+  {
+   "empty": 0.625,
+   "detail": 0.945,
+   "hues": 3,
+   "minband": 0.182,
+   "contrast": 0.4699,
+   "file": "f01808.jpg"
+  },
+  {
+   "empty": 0.6619,
+   "detail": 0.758,
+   "hues": 4,
+   "minband": 0.162,
+   "contrast": 0.4356,
+   "file": "f01815.jpg"
+  },
+  {
+   "empty": 0.6477,
+   "detail": 0.709,
+   "hues": 3,
+   "minband": 0.158,
+   "contrast": 0.4275,
+   "file": "f01823.jpg"
+  },
+  {
+   "empty": 0.6364,
+   "detail": 0.73,
+   "hues": 3,
+   "minband": 0.161,
+   "contrast": 0.4466,
+   "file": "f01830.jpg"
+  },
+  {
+   "empty": 0.652,
+   "detail": 0.781,
+   "hues": 5,
+   "minband": 0.16,
+   "contrast": 0.6097,
+   "file": "f01838.jpg"
+  },
+  {
+   "empty": 0.5526,
+   "detail": 1.036,
+   "hues": 6,
+   "minband": 0.231,
+   "contrast": 0.7197,
+   "file": "f01845.jpg"
+  },
+  {
+   "empty": 0.4091,
+   "detail": 1.036,
+   "hues": 6,
+   "minband": 0.411,
+   "contrast": 0.7157,
+   "file": "f01853.jpg"
+  },
+  {
+   "empty": 0.5057,
+   "detail": 0.707,
+   "hues": 5,
+   "minband": 0.439,
+   "contrast": 0.7526,
+   "file": "f01860.jpg"
+  },
+  {
+   "empty": 0.5142,
+   "detail": 0.722,
+   "hues": 5,
+   "minband": 0.452,
+   "contrast": 0.7706,
+   "file": "f01868.jpg"
+  },
+  {
+   "empty": 0.5028,
+   "detail": 0.786,
+   "hues": 5,
+   "minband": 0.477,
+   "contrast": 0.7751,
+   "file": "f01875.jpg"
+  },
+  {
+   "empty": 0.5128,
+   "detail": 0.849,
+   "hues": 6,
+   "minband": 0.498,
+   "contrast": 0.7714,
+   "file": "f01883.jpg"
+  },
+  {
+   "empty": 0.4986,
+   "detail": 0.905,
+   "hues": 6,
+   "minband": 0.518,
+   "contrast": 0.7658,
+   "file": "f01890.jpg"
+  },
+  {
+   "empty": 0.5028,
+   "detail": 0.937,
+   "hues": 6,
+   "minband": 0.532,
+   "contrast": 0.7619,
+   "file": "f01894.jpg"
+  }
+ ]
+}

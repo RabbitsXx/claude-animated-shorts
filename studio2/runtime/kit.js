@@ -1,6 +1,7 @@
 // Prop-building kit: rounded/bevelled primitives, tubes, lathes, in-world signs. Original geometry, all code.
 // Flags set on mesh.userData are honoured by finish(): glass, emissive(+emissiveIntensity), basic, noOutline.
 import {RoundedBoxGeometry} from 'three/addons/geometries/RoundedBoxGeometry.js';
+import {fitText} from '/repo/studio2/lib/textfit.mjs'; // signs never crop their own text (tested in studio2/tests/textfit.test.mjs)
 export function makeKit(ctx){
  const {THREE,scene,style}=ctx;
  const mats=new Map();
@@ -33,8 +34,11 @@ export function makeKit(ctx){
   const cv=document.createElement('canvas');cv.width=w;cv.height=h;const g=cv.getContext('2d');
   g.fillStyle=bg;g.fillRect(0,0,w,h);if(border){g.strokeStyle=border;g.lineWidth=h*.035;g.strokeRect(g.lineWidth/2,g.lineWidth/2,w-g.lineWidth,h-g.lineWidth);}
   g.fillStyle=fg;g.textAlign='center';g.textBaseline='middle';
-  const arr=Array.isArray(lines)?lines:[lines];const fs=size||Math.min(h/(arr.length+.6),w/Math.max(...arr.map(s=>s.length))*1.5);g.font=(mono?'bold ':'bold ')+Math.round(fs)+'px '+(mono?'Consolas, monospace':'Arial');
-  arr.forEach((t,i)=>g.fillText(t,w/2,h/2+(i-(arr.length-1)/2)*fs*1.15));
+  const arr=Array.isArray(lines)?lines:[lines];const family=mono?'Consolas, monospace':'Arial';
+  const base=size||Math.min(h/(arr.length+.6),w/Math.max(...arr.map(s=>s.length))*1.5);
+  const fit=fitText({lines:arr,width:w,height:h,size:base,measure:(text,px)=>{g.font='bold '+Math.round(px)+'px '+family;return g.measureText(text).width;}});
+  const fs=fit.size;g.font='bold '+Math.round(fs)+'px '+family;
+  fit.lines.forEach((t,i)=>g.fillText(t,w/2,h/2+(i-(fit.lines.length-1)/2)*fs*1.15));
   const t=new THREE.CanvasTexture(cv);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=8;return t;
  }
  function sign(parent,name,p,size,lines,opts={},rot){

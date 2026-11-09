@@ -1,0 +1,205 @@
+{
+ "about": "Baseline sounds every studio clip needs, generated once with ElevenLabs and stored in assets/sfx (loudness-normalised mono wav). Authorised by the user on 2026-11-08. Each film adds its own list in episodes/<id>/audio/effects.json. Loops are for ambience beds. The survival kit (cart, toy, crash, zombie, drone, jeep, dawn sounds) was added 2026-11-08 at the owner request (\"generate effects so we can reuse them\").",
+ "effects": [
+  {
+   "id": "whoosh-soft",
+   "seconds": 1,
+   "prompt": "A soft airy whoosh passing quickly from left to right, clean, no voices"
+  },
+  {
+   "id": "whoosh-fast",
+   "seconds": 0.8,
+   "prompt": "A fast sharp swoosh of something zipping past, cartoon, no voices"
+  },
+  {
+   "id": "transition-swish",
+   "seconds": 1.5,
+   "prompt": "A smooth rising swish with a soft air tail, used as a scene transition, no voices"
+  },
+  {
+   "id": "thud-soft",
+   "seconds": 0.8,
+   "prompt": "A soft low thud of a heavy object landing on the ground, no voices"
+  },
+  {
+   "id": "impact-heavy",
+   "seconds": 1.5,
+   "prompt": "A heavy deep impact boom with a short rumble tail, no voices"
+  },
+  {
+   "id": "wood-clunk",
+   "seconds": 0.8,
+   "prompt": "A hollow wooden clunk, a heavy wooden object knocking on stone, no voices"
+  },
+  {
+   "id": "metal-clank",
+   "seconds": 1,
+   "prompt": "A metal tool clanking against metal with a short ring, no voices"
+  },
+  {
+   "id": "glass-clink",
+   "seconds": 1,
+   "prompt": "A small glass clink with a tiny tinkle, no voices"
+  },
+  {
+   "id": "pop-cartoon",
+   "seconds": 0.6,
+   "prompt": "A short cute cartoon pop, no voices"
+  },
+  {
+   "id": "boing",
+   "seconds": 1.2,
+   "prompt": "A cartoon spring boing with a springy wobble, no voices"
+  },
+  {
+   "id": "splat-wet",
+   "seconds": 1,
+   "prompt": "A wet squishy splat of something soft hitting a surface, cartoon, no voices"
+  },
+  {
+   "id": "chime-reveal",
+   "seconds": 2,
+   "prompt": "A soft magical chime sparkle, a gentle reveal sound, no voices"
+  },
+  {
+   "id": "bell-ding",
+   "seconds": 1.5,
+   "prompt": "A single clear bell ding with a natural ring, no voices"
+  },
+  {
+   "id": "sad-wah",
+   "seconds": 2,
+   "prompt": "A short comedic sad slide down on a muted brass instrument, cartoon fail sound, no voices"
+  },
+  {
+   "id": "crowd-laugh",
+   "seconds": 4,
+   "prompt": "A group of villagers laughing together outdoors, warm, no intelligible words"
+  },
+  {
+   "id": "crowd-cheer",
+   "seconds": 4,
+   "prompt": "A crowd cheering and applauding happily outdoors, no intelligible words"
+  },
+  {
+   "id": "crowd-gasp",
+   "seconds": 2.5,
+   "prompt": "A crowd collectively gasping in surprise, then a short silence, no intelligible words"
+  },
+  {
+   "id": "footsteps-stone",
+   "seconds": 3,
+   "prompt": "Slow footsteps on cobblestones, a few steps, no voices"
+  },
+  {
+   "id": "crowd-murmur-loop",
+   "seconds": 12,
+   "loop": true,
+   "prompt": "Quiet outdoor market crowd murmur and distant chatter, steady and loopable, no intelligible words"
+  },
+  {
+   "id": "ambience-day-loop",
+   "seconds": 12,
+   "loop": true,
+   "prompt": "Gentle daytime countryside ambience with a soft breeze and distant birds, calm and loopable, no voices"
+  },
+  {
+   "id": "ambience-night-loop",
+   "seconds": 12,
+   "loop": true,
+   "prompt": "Quiet night ambience with crickets and a faint breeze, calm and loopable, no voices"
+  },
+  {
+   "id": "cart-squeak",
+   "seconds": 1.2,
+   "prompt": "A shopping cart wheel giving one sharp high squeak on a hard tile floor, no voices"
+  },
+  {
+   "id": "cart-roll",
+   "seconds": 3,
+   "prompt": "A shopping cart rolling steadily over tile with a soft rattle, fading slowly, no voices"
+  },
+  {
+   "id": "toy-cymbals-clash",
+   "seconds": 1.2,
+   "prompt": "A wind-up toy monkey clashing small tin cymbals twice, bright and tinny, no voices"
+  },
+  {
+   "id": "windup-ticks",
+   "seconds": 2.5,
+   "prompt": "A clockwork toy key being wound with slow ratchet clicks, close and clear, no voices"
+  },
+  {
+   "id": "windup-slowing",
+   "seconds": 3,
+   "prompt": "A wind-up toy slowing down, clicks and tinny clashes getting weaker and slower until it stops, no voices"
+  },
+  {
+   "id": "pans-crash",
+   "seconds": 2,
+   "prompt": "A tall stack of metal cooking pans and pots crashing to a tile floor, loud clattering, no voices"
+  },
+  {
+   "id": "can-clatter",
+   "seconds": 1.5,
+   "prompt": "A metal tin can dropped onto a tile floor and rolling with a clattering, no voices"
+  },
+  {
+   "id": "phone-buzz",
+   "seconds": 1.2,
+   "prompt": "A mobile phone vibrating loudly on a hard surface with a buzzing rattle, no voices"
+  },
+  {
+   "id": "door-bar-clack",
+   "seconds": 1,
+   "prompt": "A heavy push bar on a metal exit door clacking open with a click and a short creak, no voices"
+  },
+  {
+   "id": "car-horn-beep",
+   "seconds": 1,
+   "prompt": "A single small old car horn beep, cheerful and loud, no voices"
+  },
+  {
+   "id": "zombie-groan-low",
+   "seconds": 2.5,
+   "prompt": "A low distant hollow moaning drone of undead creatures far away in a big empty building, no intelligible words"
+  },
+  {
+   "id": "zombie-shuffle",
+   "seconds": 3,
+   "prompt": "Slow dragging shuffling footsteps of several heavy feet on tile floor, creepy, no voices"
+  },
+  {
+   "id": "dark-store-drone",
+   "seconds": 12,
+   "prompt": "Low tense dark drone with a faint electrical hum and a distant dripping, empty supermarket at night, steady and loopable, no voices",
+   "loop": true
+  },
+  {
+   "id": "heartbeat-slow",
+   "seconds": 4,
+   "prompt": "A slow tense heartbeat thumping softly, suspense, no voices"
+  },
+  {
+   "id": "sock-steps-soft",
+   "seconds": 2.5,
+   "prompt": "Very soft quiet stocking-footed tiptoe steps on a tile floor, close, no voices"
+  },
+  {
+   "id": "jeep-idle-start",
+   "seconds": 3,
+   "prompt": "An old jeep engine starting up and idling roughly, outdoors, no voices"
+  },
+  {
+   "id": "dawn-birds-calm",
+   "seconds": 10,
+   "prompt": "Calm early morning birdsong at sunrise with a light breeze, steady and loopable, no voices",
+   "loop": true
+  },
+  {
+   "id": "cereal-box-wobble",
+   "seconds": 1,
+   "prompt": "A cardboard cereal box tower wobbling and a box being caught with a soft papery rustle, no voices"
+  }
+ ]
+}

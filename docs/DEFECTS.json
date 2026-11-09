@@ -1,0 +1,915 @@
+{
+ "about": "Append-only log of defects that cost a retry. Read it before writing scene code. Add an entry whenever a gate, a review sheet or the user finds something a second time or after a render; say how it is now caught. A defect with check.kind none is a to-do for the next retro, not a closed case.",
+ "defects": [
+  {
+   "id": "sign-text-cropped",
+   "symptom": "Letters of an in-world sign cut off at the sign edge (ROUND WHEELS, WHEELWRIGHT, MARKET RACE TOMORROW).",
+   "cause": "The author passed a font size to the sign helper and nothing checked it against the sign width.",
+   "rule": "Never hand-size sign text: kit.sign() now fits and wraps it with studio2/lib/textfit.mjs.",
+   "seenIn": [
+    "reaction-time-10x",
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "test",
+    "path": "studio2/tests/textfit.test.mjs"
+   }
+  },
+  {
+   "id": "sign-cropped-by-frame",
+   "symptom": "A sign is whole in the world but cut by the frame edge because the camera is too close (the 9:16 frame is only about 36 degrees wide).",
+   "cause": "Camera placed by feel; horizontal field of view of the vertical frame is much narrower than expected.",
+   "rule": "Place the camera at signDistance(width, vfov) or farther (studio2/lib/textfit.mjs) or split the text into two lines; beats.mjs of square-wheel uses it for the ROUND WHEELS shop sign.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "No gate yet measures how much of a named sign is visible per frame; add a signWarnings report to collide.js in a later retro."
+   }
+  },
+  {
+   "id": "camera-inside-solid",
+   "symptom": "Black or one-colour frame (inside a villager, a hat, a hill slab, a wheel).",
+   "cause": "Camera positions chosen by hand without checking the world around them; tilted terrain rises above camera heights chosen on flat ground.",
+   "rule": "The gate now fails a camera inside any solid, decor volume or actor body; on tilted ground add the ground height at the camera x. studio2/preflight.mjs and studio2/framecheck.mjs also catch the flat or black frames it causes.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "gate",
+    "path": "studio2/runtime/collide.js"
+   }
+  },
+  {
+   "id": "subject-in-own-head",
+   "symptom": "Gate says the shot subject is hidden by a Head, Cap crown or Hair back.",
+   "cause": "The subject point was placed at or behind a head centre, or on the side of the head facing away from the camera.",
+   "rule": "Aim at a point in front of the face on the camera side, or at a prop; never at a head centre. Put the camera on the face side of the person it features.",
+   "seenIn": [
+    "reaction-time-10x",
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "gate",
+    "path": "studio2/runtime/collide.js"
+   }
+  },
+  {
+   "id": "crowd-overlap",
+   "symptom": "Villagers' hats or bodies overlap each other or a well, a post or a fence rail.",
+   "cause": "Evenly spaced lines with random jitter produced gaps under 0.5 m; lines were placed within 0.2 m of fixed props.",
+   "rule": "Spacing at least 0.7 m for hatted people, jitter no larger than 0.1 m, at least 0.5 m clearance from fixed props.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "gate",
+    "path": "studio2/collide.mjs"
+   }
+  },
+  {
+   "id": "egg-launch-pose-time",
+   "symptom": "Projectiles launched from a moving cart start from the wrong place or never seem to fly.",
+   "cause": "The re-pose callback ignored the launch time argument and posed the cart at the current time.",
+   "rule": "poseAt must use its own time parameter: poseAt:(tt)=>poseCart(cart,u(tt),z).",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "review",
+    "path": "episodes/square-wheel/scene2/rig.mjs"
+   }
+  },
+  {
+   "id": "splat-edge-on",
+   "symptom": "An egg splat on a face is invisible (seen edge-on).",
+   "cause": "A flat disc was rotated about the wrong axis relative to the camera side.",
+   "rule": "Face splats toward the camera side explicitly and check one frame close up before the gate.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "A visual property; only a close-up review frame shows it."
+   }
+  },
+  {
+   "id": "night-too-bright",
+   "symptom": "Day-night-day colour script flattens: night frames as bright as day (swing 0.10 against the reference 0.28).",
+   "cause": "The engine's fixed night exposure and the film's own lamps added up to a daylight-level image.",
+   "rule": "Pass camera.exposure for night shots and measure the luminance swing on a one-frame-per-second pass before the full render.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "The measurement is a script in studio2/.tmp (lumcheck.py); promote it to studio2/ and gate on it in a later retro."
+   }
+  },
+  {
+   "id": "seat-pov-in-cap",
+   "symptom": "Point-of-view shot from a seated hero shows only the inside of his cap or the ground.",
+   "cause": "Camera at the head centre; the cargo is lower than the eyes so a steep pitch is needed.",
+   "rule": "Use an over-the-shoulder camera (behind and above, offset sideways so the head is not in the line of sight) rather than a true POV.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "gate",
+    "path": "studio2/runtime/collide.js"
+   }
+  },
+  {
+   "id": "render-log-path-missing",
+   "symptom": "Background render exits at once with code 1 and no frames.",
+   "cause": "The log file was redirected into a folder that did not exist yet.",
+   "rule": "Use render-smart.mjs or finish.mjs; if you redirect a log by hand, mkdir -p the folder first.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "render-smart.mjs and finish.mjs create their own folders and never redirect to a shell log; only a hand-typed redirect can still hit it."
+   }
+  },
+  {
+   "id": "delivered-film-older-than-code",
+   "symptom": "The delivered film still shows a bug the code no longer has (square-wheel: the MARKET RACE banner text clipped by the sign edge in the first full render, fixed afterwards in kit.sign).",
+   "cause": "A runtime or kit fix was made after the full render, and nothing compares the render with the current code.",
+   "rule": "After any change to studio2/runtime, studio2/lib or the scene run node studio2/render-smart.mjs --episode episodes/<id>: it renders a 2 fps sample, compares it with renders/full and re-renders only the stretches that differ (audio-only changes need no render).",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "test",
+    "path": "studio2/tests/dirty-ranges.test.mjs"
+   }
+  },
+  {
+   "id": "music-inaudible-and-odd-transition-sound",
+   "symptom": "Music could not be heard at all (the user asked for it twice) and an unidentified sound was annoying at the day-to-night change.",
+   "cause": "Music sat 23.6 dB under the voice after ducking (volume .4, ratio 8); a generated riser swish and a cricket bed were added at the dissolve without anyone auditioning them.",
+   "rule": "mix.mjs duck settings come from cues.mjs; measure the music level after ducking (aim about 12 dB under the voice) and keep generated risers and ambience beds quiet, or leave them out where the dissolve already carries the change. node studio2/mixcheck.mjs measures the ducked score against the voice (preflight fails outside 8.5-15 dB); whether a sound is annoying is still a person's call.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "test",
+    "path": "studio2/tests/mixlevels.test.mjs"
+   }
+  },
+  {
+   "id": "captions-split-phrases",
+   "symptom": "Two-word captions that split a phrase (\"So he\", \"on a\" / \"cart\") read badly.",
+   "cause": "Fixed grouping of every two words ignores meaning and timing.",
+   "rule": "Use film.json captionWords \"auto\": articles pair with their noun, linking words stand apart, long or slow words and words before a pause stand alone.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "test",
+    "path": "studio2/tests/captions.test.mjs"
+   }
+  },
+  {
+   "id": "qa-by-eye-only",
+   "symptom": "Black or flat frames, a flat day-night script and cropped signs were found only by reading contact sheets, after renders.",
+   "cause": "No single command ran the cheap checks before the full render.",
+   "rule": "Run node studio2/preflight.mjs before every full render and node studio2/framecheck.mjs on the assembled film.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "test",
+    "path": "studio2/tests/framecheck.test.mjs"
+   }
+  },
+  {
+   "id": "sky-only-shot",
+   "symptom": "For almost a second the frame was sky and a villager's hat (camera below a face, aimed upward).",
+   "cause": "A close camera below a standing person's face; the follow-up shot kept the old camera height.",
+   "rule": "Keep the camera at the eye height of the face it features and at least 1.4 m away; after a close-up, move the camera to the next subject explicitly.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "test",
+    "path": "studio2/tests/framecheck.test.mjs"
+   }
+  },
+  {
+   "id": "opening-frame-crops-hero",
+   "symptom": "The first frames cut off the hero's head at the top edge.",
+   "cause": "The opening subject was the wheel, so the camera never framed the face above it.",
+   "rule": "For an opening shot the subject point sits between the key object and the face, then moves to the object.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "Needs a face detector or a per-shot required-in-frame list; a person checks frame 1."
+   }
+  },
+  {
+   "id": "carrier-change-unreadable",
+   "symptom": "The dig scene showed the humps rising only as thin stripes from a high camera.",
+   "cause": "A change in the shape of the carrier object was filmed from above and far away.",
+   "rule": "Film shape changes from a low side camera so the profile shows (silhouette against sky), and give the changed part light and colour contrast.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "Visual judgement; a silhouette-contrast measure could be added later."
+   }
+  },
+  {
+   "id": "landmark-sign-dominates",
+   "symptom": "A big FINISH sign behind the hero dominated three shots of the dig and measuring scene.",
+   "cause": "The camera looked toward the finish arch from a short distance with a wide lens.",
+   "rule": "Check what large text sits behind the subject; use a narrower lens, a different side, or move the landmark.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "Needs per-shot knowledge of which signs are meant to be read."
+   }
+  },
+  {
+   "id": "dissolve-first-frame-flash",
+   "symptom": "One frame of the incoming night shot at full strength just before a day-to-night dissolve started (found only by the automatic frame check, not by eye).",
+   "cause": "bootstrap treated a dissolve as in progress only for 0<k<1, so the very first frame (k=0) showed the incoming shot instead of the outgoing one.",
+   "rule": "A dissolve is in progress from k=0 (studio2/runtime/tracks.js dissolving()); studio2/framecheck.mjs fails any one-frame flash (a hard brightness jump immediately undone).",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "test",
+    "path": "studio2/tests/tracks.test.mjs"
+   }
+  },
+  {
+   "id": "camera-whip-pan-through-empty-space",
+   "symptom": "The camera swept past sky and a gate in three frames while turning from one subject to the next.",
+   "cause": "A 0.5 s camera and target lerp between two subjects almost 100 degrees apart.",
+   "rule": "Between subjects that far apart, hold the first shot until the cut or use the cut itself; never lerp the aim across empty space. studio2/preflight.mjs now fails any run of fast frames that turns the view 45 degrees or more (the gate records the camera path).",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "test",
+    "path": "studio2/tests/camera-motion.test.mjs"
+   }
+  },
+  {
+   "id": "cover-unreadable-at-small-size",
+   "symptom": "Covers whose subject is a detail (a wheel hub, a half-hidden face) are unreadable at 120 px.",
+   "cause": "Covers were composed at full size and judged only at full size.",
+   "rule": "Check every cover at 120 px in colour and greyscale before choosing; prefer one big simple shape (a face filled by one object).",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "Visual judgement; the strip is made by hand with PIL."
+   }
+  },
+  {
+   "id": "partial-change-full-rerender",
+   "symptom": "Five full renders of about 9 minutes each, although each later change touched only seconds of the film (square-wheel).",
+   "cause": "No tool knew which frames a change affects, so every fix re-rendered all 1782 frames.",
+   "rule": "Render in full once, then use render-smart.mjs; sound-only changes go straight to assemble.mjs; run preflight.mjs (2 minutes) and look at its one-image sheet BEFORE the first full render.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "test",
+    "path": "studio2/tests/dirty-ranges.test.mjs"
+   }
+  },
+  {
+   "id": "images-read-full-size",
+   "symptom": "74 images were opened at full size in one session (70 of them single frames or covers); each costs tokens and stays in the conversation.",
+   "cause": "Frames were checked one by one at 1080x1920 instead of on one contact sheet or a shrunk copy.",
+   "rule": "Use the preflight sheet (one image, whole film) or studio2/sheet.py for many frames, studio2/shrink.py for a single frame while iterating, full size only for the final check.",
+   "seenIn": [
+    "square-wheel"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "A working habit; the skill self-improve and the briefing state it, no tool can stop an image read."
+   }
+  },
+  {
+   "id": "aerial-shot-clipped-by-camera-planes",
+   "symptom": "From 100+ m up the picture showed plain sky and the thin ground layers flickered into each other (a bird's-eye hook).",
+   "cause": "The engine camera had a fixed far plane of 160 m and near plane of 0.05 m; layers a few millimetres apart fight in depth at height.",
+   "rule": "For an aerial shot pass the camera options far (up to about 600) and near (about 3 percent of the height, never below 0.05) per frame; the engine accepts both (engine2.js frame()). Fly in from the side that keeps palms and the subject out of the path.",
+   "seenIn": [
+    "stranded-island"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "The sky-only and flat-frame checks of preflight catch the symptom on the 1 fps sample, not the cause."
+   }
+  },
+  {
+   "id": "pose-called-several-times-per-frame",
+   "symptom": "The determinism check failed (Non-deterministic seek) after a helper called actor.pose several times in one frame to find a reachable pose.",
+   "cause": "Repeated pose calls on the visible actor leave state behind (strokes, face texture) so two renders of the same time differ.",
+   "rule": "Search reach with an unseen probe actor (a second createActor that is hidden after the search) and call the real actor's pose exactly once per frame.",
+   "seenIn": [
+    "stranded-island"
+   ],
+   "check": {
+    "kind": "gate",
+    "path": "studio2/runtime/bootstrap.js"
+   }
+  },
+  {
+   "id": "filled-water-layers-cover-land",
+   "symptom": "The whole island floor looked white or turquoise after the terrain was added.",
+   "cause": "Water, foam and shallows were filled shapes a few millimetres above y = 0, so they covered flat land that sits exactly at 0.",
+   "rule": "Make every water layer a ring (a shape with a hole) that stops at the shore, never a filled blob; keep land layers above or the water layers out of them.",
+   "seenIn": [
+    "stranded-island"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "A visual property; the one-image preflight sheet and a ground-level frame show it at once."
+   }
+  },
+  {
+   "id": "engine-recolours-world-ground-names",
+   "symptom": "A sand plane turned into green grass.",
+   "cause": "engine2.js style() recolours any mesh whose name matches continuous world ground, grass, vegetation or world ground.",
+   "rule": "Name sand, snow or rock ground 'sand ground', 'snow ground', etc.; never use the words continuous world ground, grass or vegetation for a surface that must keep its own colour.",
+   "seenIn": [
+    "stranded-island"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "Naming rule inside the engine; a render shows it."
+   }
+  },
+  {
+   "id": "camera-lands-behind-the-roof",
+   "symptom": "Several shots showed a wall of leaf panels with the castaway behind or under the lean-to.",
+   "cause": "The camera was placed on the land side of a shelter whose open side faces the sea.",
+   "rule": "Put the camera on the open side of any shelter or cover prop, and aim a little below the subject (the gate wants the subject in the upper part of the frame).",
+   "seenIn": [
+    "stranded-island"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "Per-shot knowledge of which side of a prop is open; the sheet shows it."
+   }
+  },
+  {
+   "id": "scaled-actor-hair-thin-limbs",
+   "symptom": "A giant castaway (actor scale 12) on a cover looked like a ball on hair-thin lines.",
+   "cause": "The stick limbs are drawn with a fixed stroke width, so they do not grow with the actor scale.",
+   "rule": "Do not scale an actor for a cover; get the 'big person' by camera distance and angle instead, or keep the scale under about 2.",
+   "seenIn": [
+    "stranded-island"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "A visual property of the stroke renderer; a cover frame shows it at once."
+   }
+  },
+  {
+   "id": "cover-scenes-inside-scene-hash",
+   "symptom": "Adding a cover scene to scene2 made the collision report stale, so assemble refused until the gate ran again.",
+   "cause": "studio2/lib/source-hash.mjs hashes every file in scene2/ (and the runtime and the voice timing), so a cover file there changes the hash.",
+   "rule": "Keep cover scenes in episodes/<id>/covers/ (import ../scene2/main.mjs); do not add files to scene2/ between the gate and assemble.",
+   "seenIn": [
+    "stranded-island"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "A working rule; the assemble guard already refuses a stale hash, which is the safety net."
+   }
+  },
+  {
+   "id": "film-length-is-voice-end-plus-0.6",
+   "symptom": "The last beats of the plan (a drive-off after the narration) were beyond the rendered film: render, gate and mix all stop at the last voiced word + 0.6 s.",
+   "cause": "The story timeline was written for 72.8 s but studio2 tools derive duration from voice/words.json.",
+   "rule": "Write the last beat to end at voice end + 0.6 s (or pad the voice take on purpose); check the beat times against words.json before building.",
+   "seenIn": [
+    "sound-rule"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "No tool compares STORY.json length to the voice length."
+   }
+  },
+  {
+   "id": "reach-spike-when-hands-stay-on-floor-targets",
+   "symptom": "Limb reach error jumps to 0.3-0.5 m for a few frames when the body rises or the target moves while the hands are still pinned to a low or moving target.",
+   "cause": "A hand target kept for the whole ramp of a crouch, lean or a moving prop.",
+   "rule": "Pin a hand to a target only on the plateau of the pose; free the arms while the body ramps; scan reach per frame (collide.mjs prints reach lines) and look for values above 0.05.",
+   "seenIn": [
+    "sound-rule"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "Reach lines are printed but no gate fails on them."
+   }
+  },
+  {
+   "id": "camera-inside-shelf-end-or-prop",
+   "symptom": "A follow camera computed from an offset ended inside a shelf unit or a tower and rendered a dark red frame.",
+   "cause": "Camera offsets relative to a character ignore the set layout.",
+   "rule": "Check every follow camera against the set footprints (shelf unit ends, pallets, towers) at the start, middle and end of the beat; the preflight sample only catches it if a sampled second lands there.",
+   "seenIn": [
+    "sound-rule"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "Preflight samples one frame per second; short passes can be missed. The collision gate catches a camera inside a prop but not every dark frame."
+   }
+  },
+  {
+   "id": "thrown-prop-leaves-the-room",
+   "symptom": "A ballistic throw with a long flight time had its apex above the ceiling.",
+   "cause": "Release time was set early and the landing time was fixed by the story.",
+   "rule": "Pick the release time from the landing time: flight of about 1 s keeps the apex under 3 m.",
+   "seenIn": [
+    "sound-rule"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "No check of prop height against the ceiling."
+   }
+  },
+  {
+   "id": "parity-gate-needs-surface-detail-for-night-films",
+   "symptom": "Parity with the reference failed (5.6 percent) for a dark interior: flat floor and walls count as empty and low-detail.",
+   "cause": "The reference is a bright daylight village; a night film has lower gradients.",
+   "rule": "Give floors, walls and ceilings texture detail (tile grout, grime, panels), ducts, hanging signs and litter decals before the first preflight; do not lower the gate.",
+   "seenIn": [
+    "sound-rule"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "The gate itself is the check (passed at 85.9 percent after the dressing pass)."
+   }
+  },
+  {
+   "id": "ink-hull-grey",
+   "symptom": "Character outlines came out dark grey-teal instead of black when the outline hull was a ShaderMaterial; the open-mouth outline also stroked the tongue as a black ring; the hair sheet also let the head outline show through and left white z-fight specks (studio2/tests/hair.test.mjs hairZ)",
+   "cause": "the haze/depth passes lifted the shader hull colour; the mouth stroke ran after the tongue path was started",
+   "rule": "World-space outlines are CPU-inflated geometry in a MeshBasicMaterial (engine2 style outlineWorld); stroke the mouth from its own path function",
+   "seenIn": [
+    "ten-million"
+   ],
+   "check": {
+    "kind": "test",
+    "path": "studio2/tests/outline.test.mjs"
+   }
+  },
+  {
+   "id": "restyled-outline-hulls",
+   "symptom": "Props inside a group that was styled twice (a mountain inside the demo table) turned white and blue: the outline hulls were restyled into white shells",
+   "cause": "style() traversed the outline hull meshes of an earlier style() call and replaced their ShaderMaterial with a standard material",
+   "rule": "style() skips meshes with userData.outline; build a group once, style it once",
+   "seenIn": [
+    "ten-million"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "engine2.js now skips outline hulls; only a render shows it, so look for white or blue ghost shapes on prop sheets"
+   }
+  },
+  {
+   "id": "model-sheet-before-scene",
+   "symptom": "Models judged only inside the finished scene hide their flaws (sheared bar, dark core, floating chains, detached hammock cloth, sloppy truck all found on single model sheets)",
+   "cause": "details are invisible at scene distance and in one angle",
+   "rule": "Every model passes its own four-view sheet before the scene is assembled (studio2/models.mjs); the owner can reject any model and later ones are re-checked",
+   "seenIn": [
+    "ten-million"
+   ],
+   "check": {
+    "kind": "test",
+    "path": "studio2/tests/models.test.mjs"
+   }
+  },
+  {
+   "id": "engine-recolours-parts-named-leaf",
+   "symptom": "A door whose parts were named 'door leaf' rendered bright green",
+   "cause": "engine2 style() recolours meshes by name and treats the word leaf as foliage",
+   "rule": "never put leaf, grass, vegetation or ground in the name of a part that must keep its own colour; use slab, panel, wing",
+   "seenIn": [
+    "spend-ten-million"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "only visible in a render; look at every coloured part on its model sheet"
+   }
+  },
+  {
+   "id": "prop-blocks-doorway",
+   "symptom": "Portico columns stood in front of the mansion door and a fountain stood on the only path from the gate, so the hero could not walk to the door; the door itself was buried inside the wall and its lower part was under the porch floor.",
+   "cause": "Each part was placed from its own coordinates and the model sheet only showed the door already open; nobody checked that a character can walk the whole route (gate -> path -> steps -> door).",
+   "rule": "For every model a character must enter, use or pass, keep a clear walking lane at least 1 m wider than the character from the approach to the opening, and put the opening's real thickness and floor height in the numbers (door plane inside the wall depth, sill at the floor height). Show the CLOSED state and the route on the sheet.",
+   "seenIn": [
+    "spend-ten-million"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "Add a walk-lane check to collide.mjs (sweep a character-sized capsule along a declared route) in the next retro; for now the sheet must show the closed door from the approach."
+   }
+  },
+  {
+   "id": "estate-too-small",
+   "symptom": "A mansion's fence and gate stood 5 m from the front steps and were lower than the hero, so the house read as a suburban villa, not a rich person's estate.",
+   "cause": "Fence, gate and fountain were placed by feel around the house footprint; no real-world distance or human-height check.",
+   "rule": "Check a model's scale against the hero (about 2 m) and against the real thing it stands for: an estate gate is 15-30 m from the house, gates and pillars are taller than a person, bars at least 2.2 m.",
+   "seenIn": [
+    "spend-ten-million"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "Judgement check on the model sheet: always show the approach view from the gate with the hero in frame."
+   }
+  },
+  {
+   "id": "prop-scale-vs-hero",
+   "symptom": "The private jet was as tall as the hero (fuselage 1.84 m wide, door 1.5 m, hero 1.8 m): he stood on the airstairs with his head above the roof; the stairs rose 0.5 m above the door sill.",
+   "cause": "Props were modelled at their own 'cute' size with no real-world dimension and no figure of the hero beside them; the sheets never showed a person.",
+   "rule": "Every prop a character uses gets its real dimensions written in the model comment (jet: fuselage 2.6-2.8 m, door 1.2 x 2 m, stairs end at the sill, 0.2-0.26 m risers) and every model sheet shows a 1.8 m scale figure. Scale a whole prop in the scene with root.scale and re-check wings, stairs and neighbours (hangar, apron, cones).",
+   "seenIn": [
+    "spend-ten-million"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "Add a scale-figure option to library/modelsheet.mjs so every sheet gets it for free; a per-prop real-size table is a next-retro item."
+   }
+  },
+  {
+   "id": "sky-box-fixed-at-origin",
+   "symptom": "A pale grey-white block with a straight vertical edge covered the upper right of the frame in the town square and home beats (zones at x=500 and 600).",
+   "cause": "The Sky mesh is a 1000 m box at the world origin; a film that places its zones 100 m apart puts the camera on or outside the box edge from x=500.",
+   "rule": "In a multi-zone scene move the sky with the camera every frame: ctx.atmosphere.position.set(...camera.position) in update(). Never rely on one fixed sky box for a camera that travels more than ~300 m from the origin.",
+   "seenIn": [
+    "spend-ten-million"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "Add the sky-follows-camera line to studio2/runtime/engine2.js frame() in the next retro (shared engine: owner OK first); framecheck cannot tell this block from a wall."
+   }
+  },
+  {
+   "id": "zone-child-double-offset",
+   "symptom": "Pizzas and the pizza box were not in the picture at all in the pizza beat.",
+   "cause": "Props that are children of a zone group were positioned with zp() (which adds the zone offset) so they ended up 500 m away; actors and the camera are scene children and DO need zp(), zone children do not.",
+   "rule": "Position children of a zone group in zone-local coordinates; use zp() only for actors, the camera and objects added to ctx.scene directly.",
+   "seenIn": [
+    "spend-ten-million"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "A scene-level check that every visible prop is within 40 m of the camera target would catch it; add to preflight."
+   }
+  },
+  {
+   "id": "gate-and-mix-stop-at-last-word",
+   "symptom": "With the real voice the mix was 54.7 s and the collision gate checked only 1640 frames of a 59.6 s film: both stop at the last spoken word + 0.6 s, but the film ends with a silent beat.",
+   "cause": "mix.mjs and collide.mjs derive the length from voice/words.json; the earlier runs used a placeholder voice that was as long as the film, so nothing showed it.",
+   "rule": "Set film.json mixSeconds for any film whose picture runs past its last word. mix.mjs and collide.mjs now honour it; check that the gate frame count equals about seconds x 30. render-smart.mjs now honours mixSeconds too (it rendered 55.7 s of a 59.6 s film).",
+   "seenIn": [
+    "spend-ten-million",
+    "stop-time-hour"
+   ],
+   "check": {
+    "kind": "none",
+    "why": "preflight could compare the gate frame count with the render length; add in the next retro."
+   }
+  },
+  {
+   "id": "flat-middle-story",
+   "symptom": "A story that passed every shape limit was flat: the want was met at 40%, the middle was a list of low-stakes pranks, the rival appeared at 53% and the ending was sad; the owner had to ask whether it was fun enough.",
+   "cause": "story-audit.mjs checks shape (events, cuts, gags, clarity), not tension or comedy, and I did not red-team the story before showing it.",
+   "rule": "Run the FUN GATE (studio2/lib/story-fun.mjs, inside story-audit.mjs for funGate films), write the world rule and make every gag obey it, rewrite the weakest beat, and show the owner the pressure curve and the funny line per beat. A failing story is never shown.",
+   "seenIn": [
+    "stop-time-hour"
+   ],
+   "check": {
+    "kind": "test",
+    "path": "studio2/tests/story-fun.test.mjs"
+   }
+  },
+  {
+   "id": "cartoon-size-at-touch-point",
+   "symptom": "Props the character touches were far from real size: a jet as tall as the hero, a remote button twice a thumb, a watch case twice a wrist, a pigeon twice its real length, a coffee drop of 10 cm.",
+   "cause": "Models were sized by feel for readability with no written real-world reference and nothing checked the numbers at the interaction points.",
+   "rule": "Write reference, realDetails and interaction (real range, modelled value, unit, source, sheet view) in MODELS.json before building; models.mjs --pass refuses a modelled value outside its real range; exaggeration needs the owner's quoted approval.",
+   "seenIn": [
+    "spend-ten-million",
+    "stop-time-hour"
+   ],
+   "check": {
+    "kind": "test",
+    "path": "studio2/tests/model-fidelity.test.mjs"
+   }
+  },
+  {
+   "id": "office-chair-inside-desk",
+   "symptom": "stop-time-hour office-floor: pods put two desk rows 0.9 m apart with each chair on the INNER side, so every chair sat inside the other row's desk; a seated hero hit the desk (321 frames)",
+   "cause": "desk rows were placed 0.9 m apart with every chair on the inner side, so each chair stood inside the opposite desk; found by collide.mjs during scene assembly instead of on the model sheet",
+   "rule": "on a model sheet, view a chair from the user's side and from the aisle; give furniture rows back-to-back with chairs on the outer sides",
+   "seenIn": [
+    "stop-time-hour"
+   ],
+   "check": {
+    "kind": "gate",
+    "path": "studio2/collide.mjs"
+   }
+  },
+  {
+   "id": "scene-too-sparse-for-ref",
+   "symptom": "real frames of a finished scene had bare meadows, a street canyon with nothing behind the hero and offices with few parts; the owner had to point it out (spend-ten-million beats 2,3,4,7,12,13; stop-time-hour 10 of 15 beats)",
+   "cause": "props were added per story need only; nothing measured how dressed each beat was against the reference, which always layers foreground, props at the hero, a middle landmark and a horizon",
+   "rule": "run collide.mjs --step 0.2 then scene-quality.mjs before showing real frames; fix a failing beat by modelling the missing props one by one and re-aiming the camera, never by lowering LIMITS",
+   "seenIn": [
+    "spend-ten-million",
+    "stop-time-hour"
+   ],
+   "check": {
+    "kind": "gate",
+    "path": "studio2/scene-quality.mjs"
+   }
+  },
+  {
+   "id": "measure-mutates-shared-materials",
+   "symptom": "an interior test that set material.side to DoubleSide for raycasting left materials double-sided because several meshes shared one material and the second mesh recorded the already changed side",
+   "cause": "saving the original side per mesh instead of per material",
+   "rule": "when a measurement temporarily changes a material, record each material once in a Map and restore every entry",
+   "seenIn": [
+    "spend-ten-million"
+   ],
+   "check": {
+    "kind": "test",
+    "path": "studio2/tests/scene-quality.test.mjs"
+   }
+  },
+  {
+   "id": "silent-end-beat-static-freeze",
+   "symptom": "the last silent beat and the promotion close-up were still pictures for over 1.2 s, so package.mjs failed the freeze check (stop-time-hour, 49.97 s and 56 s)",
+   "cause": "static camera and almost no motion in a beat the picture alone has to carry",
+   "rule": "give every silent or held beat a slow camera push or a clear action; do not waive the freeze check",
+   "seenIn": [
+    "stop-time-hour"
+   ],
+   "check": {
+    "kind": "gate",
+    "path": "studio2/lib/package-check.mjs"
+   }
+  },
+  {
+   "id": "static-and-chopped-editing",
+   "symptom": "stop-time-hour take 1 had 60% near-still frames, 4 s windows with a median pixel delta of 0.0, 19 hard cuts and 1 soft transition; the reference has 9% near-still, windows of 3.6-19, about 16 soft transitions and 2 hard cuts (at 21 s and 61 s, measured 2026-11-09). The owner judged the film far from the reference.",
+   "cause": "beats were built as separate fixed shots joined by cuts; the motion of the reference was never measured, only its look",
+   "rule": "plan the camera per shot from the start (eased push, orbit, crane or track, net travel about 10% of the frame width per second), dissolve between beats and keep hard cuts for the strongest breaks, give unfrozen characters idle acting",
+   "seenIn": [
+    "stop-time-hour"
+   ],
+   "check": {
+    "kind": "gate",
+    "path": "studio2/lib/camera-plan.mjs"
+   }
+  },
+  {
+   "id": "motion-measured-only-after-full-render",
+   "symptom": "the motion gate ran only on the finished video, so a static film cost a 15-minute render before the problem showed",
+   "cause": "the only measure was pixel deltas of out/final.mp4",
+   "rule": "check the camera path before rendering: preflight runs the camera plan gate on out/collide.json (every shot must travel); motion-check still judges the final video",
+   "seenIn": [
+    "stop-time-hour"
+   ],
+   "check": {
+    "kind": "gate",
+    "path": "studio2/camera-plan.mjs"
+   }
+  },
+  {
+   "id": "rules-depend-on-owner-reminding",
+   "symptom": "the owner had to repeat quality rules for each new film and found what was missing (fun, scale, detail, scene quality, editing)",
+   "cause": "rules lived in prose and chat; a new film could start without a gate and nothing said what comes next",
+   "rule": "one Ref contract: studio2/lib/ref-contract.mjs lists every gate (scaffold turns them all on, preflight fails a film that dropped one) and the ordered steps; node studio2/next-step.mjs and the session briefing print the next undone step",
+   "seenIn": [
+    "stop-time-hour",
+    "double-weight-hourly"
+   ],
+   "check": {
+    "kind": "gate",
+    "path": "studio2/lib/ref-contract.mjs"
+   }
+  },
+  {
+   "id": "scaffold-copied-old-voice-timing",
+   "symptom": "a new episode inherited voiceGaps, mixSeconds and voiceTargetSeconds of the old film in film.json",
+   "cause": "scaffold copied film.json whole",
+   "rule": "film-specific voice timing is dropped when an episode is scaffolded",
+   "seenIn": [
+    "double-weight-hourly"
+   ],
+   "check": {
+    "kind": "test",
+    "path": "studio2/tests/scaffold.test.mjs"
+   }
+  },
+  {
+   "id": "hero-too-small-vs-ref",
+   "symptom": "in stop-time-hour take 1 the hero's head was about 6% of the frame height (median), the reference hero's about 20%; most shots were wide and the face could not act",
+   "cause": "cameras were framed to show the set; no gate measured hero size",
+   "rule": "frame the hero close: head 12% or more of the frame height in at least 40% of the frames, median at least 9%; keep wide shots for establishing beats",
+   "seenIn": [
+    "stop-time-hour"
+   ],
+   "check": {
+    "kind": "gate",
+    "path": "studio2/lib/camera-plan.mjs"
+   }
+  },
+  {
+   "id": "washed-out-colour-vs-ref",
+   "symptom": "median saturation .29 and 25% strongly coloured pixels in take 1, against .47 and 47% in the reference; a pilot with the grade raised to 1.5 only reached about .29, so grading does not fix it",
+   "cause": "cream, grey and pale sets; parity.py passed (83.9%) because it does not gate saturation",
+   "rule": "build the set in bold colour (blue sky, green, saturated props and costumes), then grade; preflight fails median saturation under .38",
+   "seenIn": [
+    "stop-time-hour"
+   ],
+   "check": {
+    "kind": "gate",
+    "path": "studio2/lib/look-stats.mjs"
+   }
+  },
+  {
+   "id": "zone-child-placed-with-zone-offset-again",
+   "symptom": "cars, bus, barge and pier were invisible for several renders: they are children of a zone group but were placed with zp(), which adds the zone offset a second time (500 m away)",
+   "cause": "place() takes world coordinates for scene children but local coordinates for children of a zone group; the same mistake as zone-child-double-offset",
+   "rule": "children of a zone group take LOCAL coordinates, scene-level actors and props take zp(); if a prop is missing from a frame, check this first",
+   "seenIn": [
+    "double-weight-hourly"
+   ],
+   "check": {
+    "kind": "review"
+   }
+  },
+  {
+   "id": "model-wall-hides-its-own-opening",
+   "symptom": "the lift doors were painted on a solid wall slab and a solid frame plate, so the hero walked into the lift and vanished; found only by looking at the real frame",
+   "cause": "a model sheet showed the closed lift from outside; nobody tested the open state with the actor inside",
+   "rule": "for every model the hero enters, test it with the actor inside in the real scene before passing; walls and frames need real openings",
+   "seenIn": [
+    "double-weight-hourly"
+   ],
+   "check": {
+    "kind": "review"
+   }
+  },
+  {
+   "id": "sky-coloured-set-trips-sky-check",
+   "symptom": "preflight failed 'mostly sky' on the lobby frames at 4 s and 8 s: saturated blue walls under a pale ceiling read as sky",
+   "cause": "the sky check counts blue pixels",
+   "rule": "do not paint large interior surfaces sky blue; use warm or other bold colours indoors",
+   "seenIn": [
+    "double-weight-hourly"
+   ],
+   "check": {
+    "kind": "gate",
+    "path": "studio2/lib/framecheck.mjs"
+   }
+  },
+  {
+   "id": "flat-colour-props-vs-realistic-ref-world",
+   "symptom": "props were smooth flat-colour boxes: fine detail energy 808 and strong-edge share .20 against the reference's 1399 and .36; the owner said the reference models look like a realistic game with only the characters in the flat style",
+   "cause": "models were built from coloured primitives with no surface, only the shapes were detailed",
+   "rule": "every prop gets real materials through realism.mjs texturize (albedo + normal + roughness), plus vegetation, wear and light; keep actors flat",
+   "seenIn": [
+    "double-weight-hourly",
+    "stop-time-hour"
+   ],
+   "check": {
+    "kind": "gate",
+    "path": "studio2/detail-check.py"
+   }
+  },
+  {
+   "id": "tuft-cones-read-as-party-hats",
+   "symptom": "instanced grass tufts 0.45 m tall in pink, yellow and green looked like candy cones on the bridge banks",
+   "cause": "tuft size and flower colours too big and bright for a ground cover",
+   "rule": "ground cover is thousands of tufts under 0.3 m in several greens; flowers are rare and tiny",
+   "seenIn": [
+    "double-weight-hourly"
+   ],
+   "check": {
+    "kind": "review"
+   }
+  },
+  {
+   "id": "render-segment-near-boundary-nondeterministic",
+   "symptom": "render.mjs --from X failed with 'Non-deterministic seek at t=X' for segments that start within 1 s before a beat boundary",
+   "cause": "the determinism check renders t, t+.5, t, t+1, t; crossing a boundary changes actor pose state that carries into the next render",
+   "rule": "start partial renders at least 1 s clear of a beat boundary (or at a boundary); never copy frames into a render folder without the manifest check, a copied manifest.json overwrote frame files once",
+   "seenIn": [
+    "double-weight-hourly"
+   ],
+   "check": {
+    "kind": "review"
+   }
+  },
+  {
+   "id": "kit-finish-replaces-effect-materials",
+   "symptom": "A hidden additive glow torus became a solid beige ring around the wedding arch on the model sheet",
+   "cause": "kit.finish(g,'prop') restyles every material under the group, including runtime effect meshes (opacity 0 halo) added before it",
+   "rule": "Add runtime effects (glow halos, point lights, particles) to the model AFTER kit.finish; only GLB geometry goes through finish",
+   "seenIn": [
+    "double-weight-hourly"
+   ],
+   "check": {
+    "kind": "review"
+   }
+  },
+  {
+   "id": "flat-text-standing-on-horizontal-board",
+   "symptom": "Lettering on a board lying on the ground stood up vertically (SEA CARGO, SLEEP IN!) instead of lying flat",
+   "cause": "stext() faces the scene +z; a horizontal surface needs lettering laid flat",
+   "rule": "Text on horizontal surfaces uses k.text(...rot=(0,0,0)) via a flat helper, never stext; look at the sheet from above",
+   "seenIn": [
+    "double-weight-hourly"
+   ],
+   "check": {
+    "kind": "review"
+   }
+  },
+  {
+   "id": "blender-reset-drops-materials",
+   "symptom": "Second model in one Blender script exported with broken or missing materials",
+   "cause": "k.reset() clears bpy.data, so materials created before it dangle",
+   "rule": "Create materials after every k.reset() (a mats() helper), never once at the top of a multi-export script",
+   "seenIn": [
+    "double-weight-hourly"
+   ],
+   "check": {
+    "kind": "review"
+   }
+  },
+  {
+   "id": "merged-landscape-mesh-misread-as-near-prop",
+   "symptom": "scene-quality failed 12/15 beats (no backdrop, 1 depth layer) after the horizon and vista became merged Blender meshes",
+   "cause": "dressing.js took a prop's distance from its box centre; a merged landscape mesh spans hundreds of metres around the camera so its centre sits at the camera",
+   "rule": "props wider than 60 m count as the far band and as a backdrop; merge big landscape models but keep the meter honest",
+   "seenIn": [
+    "double-weight-hourly"
+   ],
+   "check": {
+    "kind": "gate",
+    "name": "scene-quality"
+   }
+  },
+  {
+   "id": "character-part-collides-with-own-rig",
+   "symptom": "collision gate: milo shoe x Sneaker_upper at 0 s (66 problems)",
+   "cause": "Blender sneaker / hair / cap meshes attached to the rig were ordinary collidable meshes next to the rig's collision proxies",
+   "rule": "character parts from character-parts.mjs are noCollide; the rig's ellipsoid proxies stay the collision shapes",
+   "seenIn": [
+    "double-weight-hourly"
+   ],
+   "check": {
+    "kind": "gate",
+    "name": "collide"
+   }
+  },
+  {
+   "id": "hand-not-on-held-prop",
+   "symptom": "Pete stood 2.4 m from the hole he was drilling and Rex 1.9 m from the crank he was turning: the arm was clamped, the drill and the crank floated away from the hands, and nothing reported it (the scene returned reach:0 by hand).",
+   "cause": "hand targets were numbers typed into the scene next to the prop, not the prop's own grip; the actor's reach error was thrown away.",
+   "rule": "A held prop is gripped through HOLDN(id,actor,hand,model,/named grip node/) (or HOLD with a point in the prop's frame): the hand target is the model's own grip node, the actor's real reach error is returned in the frame state, and studio2/runtime/collide.js checkGrips fails the collision gate when the end of the arm is more than the limit (6 cm) from the grip. Place the prop first, then HOLD, then pose; call HOLD only while the prop is held; a circular handle needs the body to follow it (step to its side, crouch to its height).",
+   "seenIn": [
+    "pendulum-tower"
+   ],
+   "check": {
+    "kind": "gate",
+    "name": "collide"
+   }
+  },
+  {
+   "id": "shot-does-not-show-intended-subject",
+   "symptom": "A key moment of the story could be framed so the carrier object or hero is small, off the middle, behind a wall or not in the picture while every other gate passed.",
+   "cause": "the gates measured the frame as a whole (sky, edges, head size), none asked whether THIS moment shows what the storyboard says it shows.",
+   "rule": "The scene declares INTENTS (time window, primary thing, things to show) and tracks those things per frame; the collision pass measures each one (visible, inside the frame, title-safe middle for the primary, minimum size, nothing solid in front) and python studio2/intent-sheet.py draws green/red markers on three frames per moment for the agent to look at against the storyboard camera line. Measured: visibility, position, size, occlusion; a person or agent still judges whether the composition is good.",
+   "seenIn": [
+    "pendulum-tower"
+   ],
+   "check": {
+    "kind": "gate",
+    "name": "collide"
+   }
+  }
+ ]
+}

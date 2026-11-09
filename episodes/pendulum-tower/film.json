@@ -1,0 +1,43 @@
+{
+ "schemaVersion": 1,
+ "id": "pendulum-tower",
+ "language": "en",
+ "width": 1080,
+ "height": 1920,
+ "fps": 30,
+ "targetSeconds": [
+  55,
+  70
+ ],
+ "voiceId": "BTEPH6wbWkb66Dys0ry6",
+ "style": "original-hybrid-3d2d",
+ "imageGeneration": false,
+ "captionWords": "auto",
+ "channel": "explainer-shorts",
+ "funGate": true,
+ "fidelityGate": true,
+ "sceneGate": true,
+ "detailGate": true,
+ "motionGate": true,
+ "cameraGate": true,
+ "voiceTargetSeconds": 56,
+ "mixSeconds": 63.5,
+ "voiceGaps": [
+  0.0,
+  0.0,
+  0.281,
+  0.0,
+  0.445,
+  0.263,
+  0.161,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.324,
+  0.572,
+  0.57,
+  0.0,
+  0.495
+ ]
+}

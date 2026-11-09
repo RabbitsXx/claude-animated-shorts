@@ -19,3 +19,16 @@ episodes/*/voice/*.mp3
 reference/study/audio*.wav
 reference/study/rea/stems/
 reference/study/rea/**/*.wav
+
+# Private, regenerable or side projects: never in the public repo
+episodes/*/approvals.json
+episodes/*/scene2/models/glb/
+assets/sfx/
+freebuff/
+episodes/double-weight-hourly/
+episodes/reaction-time-10x/
+episodes/spend-ten-million/
+episodes/square-wheel/
+episodes/stop-time-hour/
+episodes/ten-million/
+reference/study/deep/

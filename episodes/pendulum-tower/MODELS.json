@@ -1,0 +1,617 @@
+{
+ "about": "Models are sculpted and checked one by one (studio2/models.mjs); the scene is assembled only when every model has passed, then the REAL-frame storyboard is shown. Scale rule: every sheet shows a 1.8 m figure.",
+ "models": [
+  {
+   "status": "passed",
+   "id": "golden-ball-rig",
+   "name": "Golden pendulum ball: sphere, cable bundle, ceiling mount and four side dampers (the carrier)",
+   "detailWaiver": null,
+   "reference": "the steel damper sphere of Taipei 101, about 5.5 m across, hung on a cable bundle between the 87th and 92nd floors with hydraulic dampers (Guinness World Records, Taipei 101 pages)",
+   "realDetails": [
+    "a polished gold sphere with seam rings and a bolted lifting lug on top",
+    "a bundle of steel cables on a ceiling mount ring with clamps and shackles",
+    "four hydraulic piston dampers with brackets and a bumper ring round the ball"
+   ],
+   "interaction": [
+    {
+     "source": "Taipei 101 damper sphere about 5.5 m (Guinness World Records, retrieved via search 2026-11-09)",
+     "sheetView": 1,
+     "point": "ball diameter",
+     "action": "hangs between the top floors and swings against the sway",
+     "realRange": [
+      4.5,
+      6.5
+     ],
+     "modeled": 5.5,
+     "unit": "m"
+    },
+    {
+     "source": "pendulum period 2 pi sqrt(L/g): a 6-7 s swing needs about 9-12 m (standard physics)",
+     "sheetView": 2,
+     "point": "long rope length",
+     "action": "hangs on a rope long enough to swing as slowly as the tower",
+     "realRange": [
+      9,
+      13
+     ],
+     "modeled": 11.5,
+     "unit": "m"
+    },
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 3,
+     "point": "damper piston length",
+     "action": "pushes against the swinging ball",
+     "realRange": [
+      2,
+      3.5
+     ],
+     "modeled": 2.8,
+     "unit": "m"
+    }
+   ],
+   "meshes": 666,
+   "names": 106,
+   "sheet": "out/models/golden-ball-rig.jpg",
+   "passedBy": "claude",
+   "checks": [
+    "four-view sheet: gold sphere with riveted seam rings, red equator band, lifting lug and porthole reads at a glance next to the 1.8 m figure",
+    "cable bundle with clamps runs up to a ceiling mount plate and the four bracketed red dampers stand on base plates, all readable in views 1, 3 and 4",
+    "ball is 5.5 m and the long rope is 11.5 m so the scene can show a short and a long rope; known note: ball centre hangs ropeLength plus 4.3 m below the Pivot"
+   ],
+   "passedAt": "2026-11-09T06:16:46.314Z"
+  },
+  {
+   "status": "passed",
+   "id": "tower-pete",
+   "name": "Pete's skinny tower: 18 floors, cutaway top floors, lobby door, glass elevator shaft, drilled floor holes",
+   "detailWaiver": null,
+   "reference": "a super-slender residential tower of about 72 m on a 12 m by 12 m footprint (slenderness 6:1; real slender towers such as 432 Park Avenue reach 15:1), floors 4 m apart",
+   "realDetails": [
+    "a glazed facade with mullions, spandrel bands and window cleaning rails",
+    "a lobby with a double glass door, canopy, house number and door handles",
+    "floor slabs with round drill holes for the rope, edge beams and a rooftop mechanical box with a lightning rod"
+   ],
+   "interaction": [
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 1,
+     "point": "entrance door height",
+     "action": "Pete walks through the lobby door",
+     "realRange": [
+      2,
+      2.4
+     ],
+     "modeled": 2.2,
+     "unit": "m"
+    },
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 2,
+     "point": "floor to floor height",
+     "action": "Pete stands inside one storey and the rope runs through floors",
+     "realRange": [
+      3.6,
+      4.4
+     ],
+     "modeled": 4,
+     "unit": "m"
+    },
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 3,
+     "point": "elevator cab inner width",
+     "action": "Pete stands inside the elevator holding his coffee",
+     "realRange": [
+      1.4,
+      2
+     ],
+     "modeled": 1.6,
+     "unit": "m"
+    }
+   ],
+   "meshes": 748,
+   "names": 177,
+   "sheet": "out/models/tower-pete.jpg",
+   "passedBy": "claude",
+   "checks": [
+    "full-height view reads as a tall skinny glazed tower (72 m on 12 m) with a lobby, mullions and a rooftop box",
+    "top floors 15-18 open as a cutaway with floors and the glass elevator shaft visible; round 6.4 m slab holes and removable plugs are in the model per the build notes",
+    "lobby view puts the 1.8 m figure beside the 2.2 m glass door under the canopy and the elevator view shows the glass cab and a LIFT sign; known limit: interior service core sits back-left so the top-floor set must avoid it"
+   ],
+   "passedAt": "2026-11-09T06:17:03.753Z"
+  },
+  {
+   "status": "passed",
+   "id": "test-dummy",
+   "name": "Crash-test dummy: yellow and black, jointed, with a chest harness",
+   "detailWaiver": null,
+   "reference": "an adult crash-test dummy about 1.75 m tall (the Hybrid III 50th percentile male is about 1.75 m), jointed at neck, shoulders, hips and knees",
+   "realDetails": [
+    "yellow and black target discs on head and chest and a segmented rubber neck",
+    "a chest harness with buckle straps and a hip joint cylinder",
+    "round limb segments with visible joint pins and bolted shoulder plates"
+   ],
+   "interaction": [
+    {
+     "source": "Hybrid III 50th percentile male about 1.75 m",
+     "sheetView": 1,
+     "point": "standing height",
+     "action": "sits in a chair and is flung when the tower sways",
+     "realRange": [
+      1.6,
+      1.9
+     ],
+     "modeled": 1.75,
+     "unit": "m"
+    },
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 2,
+     "point": "seated hip height",
+     "action": "sits on the office chair seat",
+     "realRange": [
+      0.4,
+      0.5
+     ],
+     "modeled": 0.46,
+     "unit": "m"
+    }
+   ],
+   "meshes": 1340,
+   "names": 113,
+   "sheet": "out/models/test-dummy.jpg",
+   "passedBy": "claude",
+   "checks": [
+    "standing view reads as a yellow and black crash-test dummy with quartered target discs, segmented neck, red chest harness and bolted joints",
+    "seated view sits on a 0.46 m box with bent hips and knees so the pose helper works",
+    "head close view shows the face target and ears; limb joint close view shows pins and plates; known limit: face is plain by design so the scene adds the dizzy look with pose and motion"
+   ],
+   "passedAt": "2026-11-09T06:19:33.782Z"
+  },
+  {
+   "status": "passed",
+   "id": "top-floor-set",
+   "name": "Top floor cutaway: desk, chair, coffee mug, curtains, window frame, drilled hole, hand sign 'I THINK'",
+   "detailWaiver": null,
+   "reference": "an open-plan top-floor office with 3.2 m ceilings, a standard desk 0.74 m high, an office chair and a ceramic mug about 9.5 cm tall",
+   "realDetails": [
+    "a desk with drawers, monitor, keyboard and a coffee mug with a handle",
+    "an office chair with a gas lift, five-star base and casters",
+    "full-height window with frame, curtains on a rail and a drilled round hole through the floor slab"
+   ],
+   "interaction": [
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 1,
+     "point": "desk height",
+     "action": "Pete's coffee sits on it and he stands beside it",
+     "realRange": [
+      0.72,
+      0.76
+     ],
+     "modeled": 0.74,
+     "unit": "m"
+    },
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 2,
+     "point": "chair seat height",
+     "action": "the dummy sits on it",
+     "realRange": [
+      0.42,
+      0.5
+     ],
+     "modeled": 0.46,
+     "unit": "m"
+    },
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 3,
+     "point": "coffee mug height",
+     "action": "Pete holds it with one hand",
+     "realRange": [
+      0.08,
+      0.11
+     ],
+     "modeled": 0.095,
+     "unit": "m"
+    },
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 4,
+     "point": "hand sign width",
+     "action": "Pete holds the I THINK sign up",
+     "realRange": [
+      0.3,
+      0.7
+     ],
+     "modeled": 0.5,
+     "unit": "m"
+    }
+   ],
+   "meshes": 755,
+   "names": 154,
+   "sheet": "out/models/top-floor-set.jpg",
+   "passedBy": "claude",
+   "checks": [
+    "view 1 shows the desk with monitor, coffee mug and the I THINK sign next to the 1.8 m figure whose hip is level with the desk and the chair seat is below it",
+    "chair view shows gas lift, five-star base and red seat; window view shows the mullioned frame and teal curtain drawn aside; drill rig close view shows bit and orange body",
+    "known limits: the figure is cropped at the sheet edge in view 1 and the glass alpha is set after kit.finish in the scene; the curtain is scaled aside only for the sheet"
+   ],
+   "passedAt": "2026-11-09T06:20:20.688Z"
+  },
+  {
+   "status": "passed",
+   "id": "crane-winch",
+   "name": "Crawler crane with a ground control lever and a hand-crank winch with a drum",
+   "detailWaiver": null,
+   "reference": "a lattice-boom crawler crane (boom about 60 m for a 72 m tower, hook block rated for a multi-hundred-tonne lift) and a floor-mounted hand-crank winch with a 1 m drum",
+   "realDetails": [
+    "lattice boom with chord tubes, bracing and sheaves, a hook block with a safety latch",
+    "tracks with link pads, a rotating deck with counterweight blocks and a small cab",
+    "a hand-crank winch with a ratchet pawl, a drum with wound rope, a handle and a mounting frame"
+   ],
+   "interaction": [
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 1,
+     "point": "control lever height",
+     "action": "Pete grips and pulls it",
+     "realRange": [
+      0.9,
+      1.2
+     ],
+     "modeled": 1.05,
+     "unit": "m"
+    },
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 2,
+     "point": "winch crank handle height",
+     "action": "Rex turns it with both hands",
+     "realRange": [
+      0.9,
+      1.2
+     ],
+     "modeled": 1,
+     "unit": "m"
+    },
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 3,
+     "point": "crank handle length",
+     "action": "Rex pushes round the drum",
+     "realRange": [
+      0.3,
+      0.5
+     ],
+     "modeled": 0.4,
+     "unit": "m"
+    }
+   ],
+   "meshes": 861,
+   "names": 198,
+   "sheet": "out/models/crane-winch.jpg",
+   "passedBy": "claude",
+   "checks": [
+    "crawler crane with a lattice boom and hook block with safety latch reads clearly in views 1 and 2; hand-crank winch with wound rope drum, red frame, crank and pawl reads in view 4",
+    "control lever (1.05 m, red grip) stands on the yellow and black console with a handrail arch; the figure stands beside the platform but a few metres in front of it, so the lever height against the body is by the build number not by eye",
+    "known limits: lever view shows the figure at the left edge not touching the lever; crane boom luffs but the mast and pendants stay fixed"
+   ],
+   "passedAt": "2026-11-09T06:21:08.948Z"
+  },
+  {
+   "status": "passed",
+   "id": "tower-rex",
+   "name": "Rex's sleek glass tower: 20 floors, curved glass, glass elevator shafts on the facade, rooftop deck and lobby",
+   "detailWaiver": null,
+   "reference": "a sleek curved-glass residential tower of about 84 m on a 16 m by 16 m footprint with exterior glass elevators and a rooftop terrace, floors 4.2 m apart",
+   "realDetails": [
+    "curved glass panels with fritted bands, mullions and a stepped crown",
+    "two exterior glass elevator cars on guide rails with a machine room at the top",
+    "a grand lobby with revolving door, planters, a canopy and rooftop railings and lights"
+   ],
+   "interaction": [
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 3,
+     "point": "revolving door height",
+     "action": "Rex strides through it",
+     "realRange": [
+      2.1,
+      2.6
+     ],
+     "modeled": 2.3,
+     "unit": "m"
+    },
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 4,
+     "point": "glass elevator cab width",
+     "action": "Rex stands waving inside it",
+     "realRange": [
+      1.4,
+      2.2
+     ],
+     "modeled": 1.8,
+     "unit": "m"
+    },
+    {
+     "source": "building code guard height about 1.1 m",
+     "sheetView": 2,
+     "point": "rooftop railing height",
+     "action": "Rex leans on it and waves",
+     "realRange": [
+      1,
+      1.2
+     ],
+     "modeled": 1.1,
+     "unit": "m"
+    }
+   ],
+   "meshes": 1490,
+   "names": 155,
+   "sheet": "out/models/tower-rex.jpg",
+   "passedBy": "claude",
+   "checks": [
+    "full-height view reads as a sleek teal and plum glass tower much taller and showier than Pete's; crown view shows the stepped crown, roof deck, railing and lights",
+    "lobby view shows the 1.8 m figure at the revolving door with planters, canopy and a lit lobby; elevator view shows an elevator cab with white frame, guide rail and hoist cables",
+    "known limits: the elevator cab view has no figure beside it so its 1.8 m inner width is by the build number; glass alpha is set in the scene after kit.finish; roof slab overhangs the 16 m footprint to carry the 18 m pool deck"
+   ],
+   "passedAt": "2026-11-09T06:21:42.516Z"
+  },
+  {
+   "status": "passed",
+   "id": "rooftop-pool",
+   "name": "Rooftop pool: basin, diving board, deck, loungers, water surface and splash rim",
+   "detailWaiver": null,
+   "reference": "a hotel rooftop pool about 12 m by 5 m, 1.5 m deep, with a 1 m springboard (springboards are about 4.8 m long and 1 m above the deck)",
+   "realDetails": [
+    "tiled basin with a lane line, ladder and an overflow gutter rim",
+    "a springboard on a stand with non-slip tread and handrails",
+    "loungers, parasol, towels and a separate Water surface mesh the scene animates"
+   ],
+   "interaction": [
+    {
+     "source": "competition springboard 4.8 m (World Aquatics)",
+     "sheetView": 1,
+     "point": "diving board length",
+     "action": "Rex runs along it and dives",
+     "realRange": [
+      3.5,
+      5
+     ],
+     "modeled": 4.8,
+     "unit": "m"
+    },
+    {
+     "source": "1 m springboard (World Aquatics)",
+     "sheetView": 2,
+     "point": "diving board height",
+     "action": "Rex dives from it",
+     "realRange": [
+      0.8,
+      1.2
+     ],
+     "modeled": 1,
+     "unit": "m"
+    },
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 3,
+     "point": "pool depth",
+     "action": "Rex splashes in it",
+     "realRange": [
+      1.2,
+      2
+     ],
+     "modeled": 1.5,
+     "unit": "m"
+    }
+   ],
+   "meshes": 627,
+   "names": 122,
+   "sheet": "out/models/rooftop-pool.jpg",
+   "passedBy": "claude",
+   "checks": [
+    "panel 1 shows saturated turquoise water filling a blue-banded basin with a warm sand deck, lifebuoy, planters and the springboard end; panel 3 shows the ladder, gutter rim and tiled wall",
+    "panel 2 shows the 4.8 m springboard on its railed stand with the 1.8 m figure standing at board level, 1 m above the deck; loungers and parasol read in panel 4",
+    "known limits: the Water override is set after kit.finish in the scene (animated by the scene); the sheet's own ground disc is switched off (noGround) because it hid the water"
+   ],
+   "passedAt": "2026-11-09T06:28:26.041Z"
+  },
+  {
+   "status": "passed",
+   "id": "playground-swing",
+   "name": "Playground swing set: A-frame, two swings, chains, rubber seats and a sign",
+   "detailWaiver": null,
+   "reference": "a standard playground swing set with a top bar about 2.4 m high, chains about 1.8 m, seats about 0.45 m above the ground",
+   "realDetails": [
+    "a steel A-frame with cross braces and a top bar with swivel hangers",
+    "two rubber seats with link chains and chain grips",
+    "a safety surface, a fence post and a sign board"
+   ],
+   "interaction": [
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 1,
+     "point": "seat height",
+     "action": "the girl sits on it and her dad pushes",
+     "realRange": [
+      0.4,
+      0.6
+     ],
+     "modeled": 0.45,
+     "unit": "m"
+    },
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 1,
+     "point": "top bar height",
+     "action": "the chains hang from it",
+     "realRange": [
+      2.2,
+      3
+     ],
+     "modeled": 2.4,
+     "unit": "m"
+    },
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 2,
+     "point": "chain length",
+     "action": "the girl holds on to it",
+     "realRange": [
+      1.5,
+      2.2
+     ],
+     "modeled": 1.8,
+     "unit": "m"
+    }
+   ],
+   "meshes": 580,
+   "names": 64,
+   "sheet": "out/models/playground-swing.jpg",
+   "passedBy": "claude",
+   "checks": [
+    "panel 1 shows the blue A-frame with two chained swings, red rubber seats and surface, and the 1.8 m figure at the frame edge; seat and chain close view shows link chain, yellow grips and a red moulded seat",
+    "top-bar view shows swivel hangers on the blue bar; fence, bench and green sign read in panels 3 and 4",
+    "known limits: the figure is cropped at the sheet edge and the PLAYGROUND sign is cropped in panel 4, so the real size is by the build numbers"
+   ],
+   "passedAt": "2026-11-09T06:28:39.689Z"
+  },
+  {
+   "status": "passed",
+   "id": "town-dressing",
+   "name": "Town dressing: banners (OPENING TOMORROW, GRAND OPENING, TOP FLOOR FOR SALE), street lamps, queue barriers, balloons, windsock, hoarding",
+   "detailWaiver": null,
+   "reference": "ordinary street and building-site furniture: lamp posts about 4.5 m high, pedestrian barriers about 1.0 m high, hoarding panels about 2.4 m high",
+   "realDetails": [
+    "fabric banners on poles and rope ties with real lettering lying flat on the cloth",
+    "lamp posts with arms, glass and base plates, barriers with feet and rails",
+    "helium balloons on strings, a windsock on a pole and bunting flags"
+   ],
+   "interaction": [
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 1,
+     "point": "queue barrier height",
+     "action": "the crowd lines up behind it",
+     "realRange": [
+      0.9,
+      1.1
+     ],
+     "modeled": 1,
+     "unit": "m"
+    },
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 2,
+     "point": "street lamp height",
+     "action": "the crowd walks beneath it",
+     "realRange": [
+      3.5,
+      5.5
+     ],
+     "modeled": 4.5,
+     "unit": "m"
+    },
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 3,
+     "point": "hoarding height",
+     "action": "Pete walks along it",
+     "realRange": [
+      2,
+      2.6
+     ],
+     "modeled": 2.4,
+     "unit": "m"
+    }
+   ],
+   "meshes": 810,
+   "names": 178,
+   "sheet": "out/models/town-dressing.jpg",
+   "passedBy": "claude",
+   "checks": [
+    "view 2 shows the red OPENING TOMORROW banner and the blue and gold GRAND OPENING banner with readable lettering above the TOP FLOOR FOR SALE sign with its cross-out bar",
+    "view 3 shows the normal and the fainted pigeon and the leather wallet on a plinth; view 4 shows red-yellow bunting, a balloon bunch and a hoarding with posters and warning stripes; view 1 shows the whole strip with lamp, barrier, windsock and balloons",
+    "known limits: the figure is tiny in view 1 so real sizes are by the build numbers (barrier 1.0 m, lamp 4.5 m, hoarding 2.4 m); the 15 mm fly cannot be seen on the sheet and the hoarding is cut off in view 4; banner flapping is a scene job (no morph targets)"
+   ],
+   "passedAt": "2026-11-09T06:32:13.758Z"
+  },
+  {
+   "status": "passed",
+   "id": "hero-pete",
+   "name": "Pete the tower owner (red cap, cream shirt, blue overalls, red P emblem)",
+   "detailWaiver": "an actor rig with a new costume, the same rig as the passed heroes of earlier films",
+   "reference": "an adult builder about 1.77 m tall (adult height 1.6-1.95 m) in work overalls, built on the film actor rig",
+   "realDetails": [
+    "a red cap with a brim and button over plain hair",
+    "overall straps, bib pocket and a printed red P emblem on the chest",
+    "thick stick arms with round hands and thin leg sticks with white shoes"
+   ],
+   "interaction": [
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 1,
+     "point": "standing height",
+     "action": "stands at the winch lever, desk and elevator",
+     "realRange": [
+      1.6,
+      1.95
+     ],
+     "modeled": 1.77,
+     "unit": "m"
+    }
+   ],
+   "meshes": 383,
+   "names": 12,
+   "sheet": "out/models/hero-pete.jpg",
+   "passedBy": "claude",
+   "checks": [
+    "four-view sheet: red cap with white panels and brim, brown hair, cream shirt and blue overalls with a red P emblem pocket read at a glance on the flat ref look",
+    "same passed rig, round expressive face and outline as the earlier heroes: neutral, open mouth and a smile read in views 1, 2 and 4; side view shows the cap brim and hair clumps without poking through",
+    "about 1.77 m tall (scale 1.1) beside the film scale; known gap: the tool belt in the first plan was dropped because the rig has no belt part, the realDetails now list only what is built"
+   ],
+   "passedAt": "2026-11-09T06:32:26.472Z"
+  },
+  {
+   "status": "passed",
+   "id": "rival-rex",
+   "name": "Rex the rival (slick dark hair, plum jacket, pale opening-day suit)",
+   "detailWaiver": "an actor rig with a new costume, the same rig as the passed rivals of earlier films",
+   "reference": "an adult developer about 1.85 m tall (adult height 1.6-1.95 m) in a tailored jacket and tie, built on the film actor rig",
+   "realDetails": [
+    "smooth slicked dark hair and a smug brow on the round face",
+    "a plum jacket with lapels, cream shirt and a gold tie",
+    "a second pale suit with a red tie for opening day"
+   ],
+   "interaction": [
+    {
+     "source": "typical product or building sizes, estimate, verify",
+     "sheetView": 1,
+     "point": "standing height",
+     "action": "stands at the winch crank and elevator",
+     "realRange": [
+      1.6,
+      1.95
+     ],
+     "modeled": 1.85,
+     "unit": "m"
+    }
+   ],
+   "meshes": 416,
+   "names": 12,
+   "sheet": "out/models/rival-rex.jpg",
+   "passedBy": "claude",
+   "checks": [
+    "two-costume sheet: plum jacket with gold tie and cream shirt, and the pale opening-day suit with a red tie, both read at a glance on the flat ref look",
+    "same passed rig, round face and outline as earlier rivals: neutral and smug smile read in views 1 and 4; side view shows the slick dark hair without poking through",
+    "about 1.85 m tall (scale 1.16); known limits: the library slick hair reads as a solid dark helmet at this size and the moustache line in the first plan was not built"
+   ],
+   "passedAt": "2026-11-09T06:32:40.248Z"
+  }
+ ]
+}

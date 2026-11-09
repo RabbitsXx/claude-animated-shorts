@@ -1,0 +1,3072 @@
+{
+ "clip": "QlDPMzGmYac-bdeb1795a8623b99cb20b7bbb408c2be895-270.mp4",
+ "seconds": 63.17,
+ "voiceShare": 0.703,
+ "gaps": [
+  [
+   0.0,
+   0.26
+  ],
+  [
+   1.02,
+   1.36
+  ],
+  [
+   2.15,
+   2.55
+  ],
+  [
+   2.68,
+   3.07
+  ],
+  [
+   10.88,
+   11.19
+  ],
+  [
+   14.34,
+   14.65
+  ],
+  [
+   27.03,
+   27.34
+  ],
+  [
+   30.65,
+   30.91
+  ],
+  [
+   34.44,
+   34.75
+  ],
+  [
+   37.15,
+   38.03
+  ],
+  [
+   39.02,
+   39.3
+  ],
+  [
+   40.28,
+   40.6
+  ],
+  [
+   41.09,
+   41.45
+  ],
+  [
+   42.88,
+   43.47
+  ],
+  [
+   43.83,
+   44.11
+  ],
+  [
+   44.74,
+   45.43
+  ],
+  [
+   46.81,
+   47.07
+  ],
+  [
+   48.09,
+   48.49
+  ],
+  [
+   54.8,
+   55.08
+  ],
+  [
+   56.31,
+   56.6
+  ]
+ ],
+ "gapCount": 20,
+ "events": [
+  {
+   "t": 0.02,
+   "band": "low-thump",
+   "strength": 10.4,
+   "voice": false
+  },
+  {
+   "t": 0.02,
+   "band": "high-swish",
+   "strength": 7.7,
+   "voice": false
+  },
+  {
+   "t": 0.22,
+   "band": "high-swish",
+   "strength": 5.6,
+   "voice": false
+  },
+  {
+   "t": 0.23,
+   "band": "low-thump",
+   "strength": 3.5,
+   "voice": false
+  },
+  {
+   "t": 0.43,
+   "band": "high-swish",
+   "strength": 3.8,
+   "voice": true
+  },
+  {
+   "t": 0.53,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 0.7,
+   "band": "low-thump",
+   "strength": 1.1,
+   "voice": true
+  },
+  {
+   "t": 0.84,
+   "band": "high-swish",
+   "strength": 2.6,
+   "voice": true
+  },
+  {
+   "t": 0.89,
+   "band": "low-thump",
+   "strength": 2.9,
+   "voice": true
+  },
+  {
+   "t": 0.99,
+   "band": "high-swish",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 1.16,
+   "band": "high-swish",
+   "strength": 2.9,
+   "voice": false
+  },
+  {
+   "t": 1.24,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": false
+  },
+  {
+   "t": 1.38,
+   "band": "high-swish",
+   "strength": 1.4,
+   "voice": true
+  },
+  {
+   "t": 1.57,
+   "band": "high-swish",
+   "strength": 2.5,
+   "voice": false
+  },
+  {
+   "t": 1.58,
+   "band": "low-thump",
+   "strength": 3.6,
+   "voice": true
+  },
+  {
+   "t": 1.76,
+   "band": "high-swish",
+   "strength": 1.1,
+   "voice": false
+  },
+  {
+   "t": 1.87,
+   "band": "low-thump",
+   "strength": 2.2,
+   "voice": false
+  },
+  {
+   "t": 2.1,
+   "band": "low-thump",
+   "strength": 1.6,
+   "voice": true
+  },
+  {
+   "t": 2.24,
+   "band": "low-thump",
+   "strength": 1.1,
+   "voice": false
+  },
+  {
+   "t": 2.24,
+   "band": "high-swish",
+   "strength": 2.8,
+   "voice": false
+  },
+  {
+   "t": 2.4,
+   "band": "high-swish",
+   "strength": 2.0,
+   "voice": false
+  },
+  {
+   "t": 2.75,
+   "band": "low-thump",
+   "strength": 1.2,
+   "voice": false
+  },
+  {
+   "t": 2.9,
+   "band": "low-thump",
+   "strength": 3.2,
+   "voice": false
+  },
+  {
+   "t": 2.94,
+   "band": "high-swish",
+   "strength": 3.1,
+   "voice": false
+  },
+  {
+   "t": 3.07,
+   "band": "low-thump",
+   "strength": 2.8,
+   "voice": true
+  },
+  {
+   "t": 3.2,
+   "band": "high-swish",
+   "strength": 1.6,
+   "voice": true
+  },
+  {
+   "t": 3.29,
+   "band": "low-thump",
+   "strength": 4.0,
+   "voice": true
+  },
+  {
+   "t": 3.46,
+   "band": "high-swish",
+   "strength": 1.8,
+   "voice": true
+  },
+  {
+   "t": 3.63,
+   "band": "low-thump",
+   "strength": 1.9,
+   "voice": true
+  },
+  {
+   "t": 3.69,
+   "band": "high-swish",
+   "strength": 2.6,
+   "voice": true
+  },
+  {
+   "t": 3.8,
+   "band": "low-thump",
+   "strength": 2.3,
+   "voice": true
+  },
+  {
+   "t": 3.84,
+   "band": "high-swish",
+   "strength": 2.5,
+   "voice": true
+  },
+  {
+   "t": 3.96,
+   "band": "low-thump",
+   "strength": 3.3,
+   "voice": true
+  },
+  {
+   "t": 3.99,
+   "band": "high-swish",
+   "strength": 1.7,
+   "voice": true
+  },
+  {
+   "t": 4.16,
+   "band": "high-swish",
+   "strength": 4.6,
+   "voice": false
+  },
+  {
+   "t": 4.2,
+   "band": "low-thump",
+   "strength": 4.4,
+   "voice": false
+  },
+  {
+   "t": 4.35,
+   "band": "high-swish",
+   "strength": 1.2,
+   "voice": true
+  },
+  {
+   "t": 4.47,
+   "band": "low-thump",
+   "strength": 2.0,
+   "voice": true
+  },
+  {
+   "t": 4.57,
+   "band": "high-swish",
+   "strength": 3.7,
+   "voice": true
+  },
+  {
+   "t": 4.68,
+   "band": "low-thump",
+   "strength": 4.6,
+   "voice": true
+  },
+  {
+   "t": 4.9,
+   "band": "high-swish",
+   "strength": 4.5,
+   "voice": false
+  },
+  {
+   "t": 4.91,
+   "band": "low-thump",
+   "strength": 3.2,
+   "voice": false
+  },
+  {
+   "t": 5.13,
+   "band": "low-thump",
+   "strength": 1.4,
+   "voice": true
+  },
+  {
+   "t": 5.35,
+   "band": "low-thump",
+   "strength": 2.7,
+   "voice": false
+  },
+  {
+   "t": 5.56,
+   "band": "high-swish",
+   "strength": 3.1,
+   "voice": true
+  },
+  {
+   "t": 5.57,
+   "band": "low-thump",
+   "strength": 1.9,
+   "voice": true
+  },
+  {
+   "t": 5.76,
+   "band": "low-thump",
+   "strength": 2.4,
+   "voice": true
+  },
+  {
+   "t": 5.78,
+   "band": "high-swish",
+   "strength": 1.5,
+   "voice": true
+  },
+  {
+   "t": 5.9,
+   "band": "low-thump",
+   "strength": 4.2,
+   "voice": false
+  },
+  {
+   "t": 5.98,
+   "band": "high-swish",
+   "strength": 1.0,
+   "voice": false
+  },
+  {
+   "t": 6.16,
+   "band": "high-swish",
+   "strength": 3.7,
+   "voice": true
+  },
+  {
+   "t": 6.19,
+   "band": "low-thump",
+   "strength": 2.5,
+   "voice": true
+  },
+  {
+   "t": 6.57,
+   "band": "low-thump",
+   "strength": 2.1,
+   "voice": true
+  },
+  {
+   "t": 6.84,
+   "band": "low-thump",
+   "strength": 2.3,
+   "voice": true
+  },
+  {
+   "t": 6.84,
+   "band": "high-swish",
+   "strength": 3.3,
+   "voice": true
+  },
+  {
+   "t": 7.13,
+   "band": "high-swish",
+   "strength": 1.3,
+   "voice": true
+  },
+  {
+   "t": 7.19,
+   "band": "low-thump",
+   "strength": 4.5,
+   "voice": true
+  },
+  {
+   "t": 7.29,
+   "band": "high-swish",
+   "strength": 4.8,
+   "voice": true
+  },
+  {
+   "t": 7.36,
+   "band": "low-thump",
+   "strength": 2.7,
+   "voice": true
+  },
+  {
+   "t": 7.57,
+   "band": "high-swish",
+   "strength": 2.2,
+   "voice": true
+  },
+  {
+   "t": 7.65,
+   "band": "low-thump",
+   "strength": 4.8,
+   "voice": true
+  },
+  {
+   "t": 7.73,
+   "band": "high-swish",
+   "strength": 1.5,
+   "voice": true
+  },
+  {
+   "t": 7.89,
+   "band": "high-swish",
+   "strength": 1.8,
+   "voice": true
+  },
+  {
+   "t": 8.0,
+   "band": "low-thump",
+   "strength": 2.7,
+   "voice": true
+  },
+  {
+   "t": 8.03,
+   "band": "high-swish",
+   "strength": 1.9,
+   "voice": true
+  },
+  {
+   "t": 8.17,
+   "band": "high-swish",
+   "strength": 3.7,
+   "voice": true
+  },
+  {
+   "t": 8.19,
+   "band": "low-thump",
+   "strength": 1.1,
+   "voice": true
+  },
+  {
+   "t": 8.35,
+   "band": "low-thump",
+   "strength": 3.5,
+   "voice": true
+  },
+  {
+   "t": 8.42,
+   "band": "high-swish",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 8.58,
+   "band": "low-thump",
+   "strength": 1.5,
+   "voice": true
+  },
+  {
+   "t": 8.72,
+   "band": "high-swish",
+   "strength": 5.5,
+   "voice": true
+  },
+  {
+   "t": 8.78,
+   "band": "low-thump",
+   "strength": 3.6,
+   "voice": true
+  },
+  {
+   "t": 8.94,
+   "band": "high-swish",
+   "strength": 1.3,
+   "voice": true
+  },
+  {
+   "t": 9.03,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 9.16,
+   "band": "high-swish",
+   "strength": 2.6,
+   "voice": true
+  },
+  {
+   "t": 9.29,
+   "band": "low-thump",
+   "strength": 3.6,
+   "voice": true
+  },
+  {
+   "t": 9.43,
+   "band": "high-swish",
+   "strength": 2.4,
+   "voice": true
+  },
+  {
+   "t": 9.58,
+   "band": "low-thump",
+   "strength": 4.2,
+   "voice": false
+  },
+  {
+   "t": 9.62,
+   "band": "high-swish",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 9.72,
+   "band": "low-thump",
+   "strength": 2.8,
+   "voice": true
+  },
+  {
+   "t": 9.85,
+   "band": "high-swish",
+   "strength": 2.3,
+   "voice": true
+  },
+  {
+   "t": 10.02,
+   "band": "low-thump",
+   "strength": 3.6,
+   "voice": true
+  },
+  {
+   "t": 10.02,
+   "band": "high-swish",
+   "strength": 2.7,
+   "voice": true
+  },
+  {
+   "t": 10.31,
+   "band": "high-swish",
+   "strength": 5.3,
+   "voice": true
+  },
+  {
+   "t": 10.32,
+   "band": "low-thump",
+   "strength": 3.2,
+   "voice": true
+  },
+  {
+   "t": 10.61,
+   "band": "high-swish",
+   "strength": 1.8,
+   "voice": true
+  },
+  {
+   "t": 10.76,
+   "band": "high-swish",
+   "strength": 5.3,
+   "voice": true
+  },
+  {
+   "t": 10.77,
+   "band": "low-thump",
+   "strength": 3.8,
+   "voice": true
+  },
+  {
+   "t": 11.09,
+   "band": "low-thump",
+   "strength": 4.5,
+   "voice": false
+  },
+  {
+   "t": 11.15,
+   "band": "high-swish",
+   "strength": 1.6,
+   "voice": false
+  },
+  {
+   "t": 11.28,
+   "band": "high-swish",
+   "strength": 5.7,
+   "voice": true
+  },
+  {
+   "t": 11.3,
+   "band": "low-thump",
+   "strength": 1.5,
+   "voice": true
+  },
+  {
+   "t": 11.6,
+   "band": "high-swish",
+   "strength": 3.4,
+   "voice": true
+  },
+  {
+   "t": 11.61,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 11.85,
+   "band": "high-swish",
+   "strength": 2.8,
+   "voice": true
+  },
+  {
+   "t": 11.9,
+   "band": "low-thump",
+   "strength": 2.9,
+   "voice": true
+  },
+  {
+   "t": 11.99,
+   "band": "high-swish",
+   "strength": 1.7,
+   "voice": false
+  },
+  {
+   "t": 12.14,
+   "band": "high-swish",
+   "strength": 1.5,
+   "voice": true
+  },
+  {
+   "t": 12.16,
+   "band": "low-thump",
+   "strength": 3.6,
+   "voice": true
+  },
+  {
+   "t": 12.35,
+   "band": "low-thump",
+   "strength": 5.9,
+   "voice": true
+  },
+  {
+   "t": 12.35,
+   "band": "high-swish",
+   "strength": 5.9,
+   "voice": true
+  },
+  {
+   "t": 12.71,
+   "band": "high-swish",
+   "strength": 2.4,
+   "voice": true
+  },
+  {
+   "t": 12.84,
+   "band": "low-thump",
+   "strength": 3.7,
+   "voice": true
+  },
+  {
+   "t": 12.89,
+   "band": "high-swish",
+   "strength": 1.5,
+   "voice": false
+  },
+  {
+   "t": 12.99,
+   "band": "low-thump",
+   "strength": 3.4,
+   "voice": true
+  },
+  {
+   "t": 13.04,
+   "band": "high-swish",
+   "strength": 3.4,
+   "voice": true
+  },
+  {
+   "t": 13.2,
+   "band": "low-thump",
+   "strength": 1.5,
+   "voice": true
+  },
+  {
+   "t": 13.36,
+   "band": "low-thump",
+   "strength": 2.8,
+   "voice": true
+  },
+  {
+   "t": 13.44,
+   "band": "high-swish",
+   "strength": 1.6,
+   "voice": true
+  },
+  {
+   "t": 13.51,
+   "band": "low-thump",
+   "strength": 3.2,
+   "voice": true
+  },
+  {
+   "t": 13.68,
+   "band": "high-swish",
+   "strength": 1.0,
+   "voice": true
+  },
+  {
+   "t": 13.83,
+   "band": "low-thump",
+   "strength": 4.8,
+   "voice": true
+  },
+  {
+   "t": 13.85,
+   "band": "high-swish",
+   "strength": 1.8,
+   "voice": true
+  },
+  {
+   "t": 14.02,
+   "band": "high-swish",
+   "strength": 4.2,
+   "voice": true
+  },
+  {
+   "t": 14.16,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 14.23,
+   "band": "high-swish",
+   "strength": 1.2,
+   "voice": true
+  },
+  {
+   "t": 14.36,
+   "band": "low-thump",
+   "strength": 2.5,
+   "voice": false
+  },
+  {
+   "t": 14.43,
+   "band": "high-swish",
+   "strength": 2.7,
+   "voice": false
+  },
+  {
+   "t": 14.61,
+   "band": "low-thump",
+   "strength": 4.0,
+   "voice": false
+  },
+  {
+   "t": 14.62,
+   "band": "high-swish",
+   "strength": 1.6,
+   "voice": false
+  },
+  {
+   "t": 14.86,
+   "band": "high-swish",
+   "strength": 4.6,
+   "voice": true
+  },
+  {
+   "t": 14.88,
+   "band": "low-thump",
+   "strength": 4.2,
+   "voice": true
+  },
+  {
+   "t": 15.2,
+   "band": "high-swish",
+   "strength": 4.0,
+   "voice": true
+  },
+  {
+   "t": 15.27,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 15.34,
+   "band": "high-swish",
+   "strength": 3.2,
+   "voice": true
+  },
+  {
+   "t": 15.48,
+   "band": "low-thump",
+   "strength": 1.7,
+   "voice": true
+  },
+  {
+   "t": 15.55,
+   "band": "high-swish",
+   "strength": 1.1,
+   "voice": true
+  },
+  {
+   "t": 15.69,
+   "band": "low-thump",
+   "strength": 2.0,
+   "voice": true
+  },
+  {
+   "t": 15.69,
+   "band": "high-swish",
+   "strength": 3.6,
+   "voice": true
+  },
+  {
+   "t": 15.82,
+   "band": "low-thump",
+   "strength": 3.1,
+   "voice": true
+  },
+  {
+   "t": 16.25,
+   "band": "high-swish",
+   "strength": 2.4,
+   "voice": true
+  },
+  {
+   "t": 16.29,
+   "band": "low-thump",
+   "strength": 2.6,
+   "voice": true
+  },
+  {
+   "t": 16.51,
+   "band": "low-thump",
+   "strength": 2.2,
+   "voice": false
+  },
+  {
+   "t": 16.51,
+   "band": "high-swish",
+   "strength": 2.2,
+   "voice": false
+  },
+  {
+   "t": 16.66,
+   "band": "high-swish",
+   "strength": 3.1,
+   "voice": true
+  },
+  {
+   "t": 16.83,
+   "band": "low-thump",
+   "strength": 2.1,
+   "voice": true
+  },
+  {
+   "t": 16.88,
+   "band": "high-swish",
+   "strength": 5.6,
+   "voice": true
+  },
+  {
+   "t": 17.26,
+   "band": "low-thump",
+   "strength": 1.9,
+   "voice": true
+  },
+  {
+   "t": 17.36,
+   "band": "high-swish",
+   "strength": 1.5,
+   "voice": false
+  },
+  {
+   "t": 17.58,
+   "band": "low-thump",
+   "strength": 1.5,
+   "voice": false
+  },
+  {
+   "t": 17.68,
+   "band": "high-swish",
+   "strength": 1.7,
+   "voice": true
+  },
+  {
+   "t": 18.4,
+   "band": "high-swish",
+   "strength": 1.6,
+   "voice": false
+  },
+  {
+   "t": 18.48,
+   "band": "low-thump",
+   "strength": 1.9,
+   "voice": false
+  },
+  {
+   "t": 18.6,
+   "band": "high-swish",
+   "strength": 4.3,
+   "voice": true
+  },
+  {
+   "t": 18.67,
+   "band": "low-thump",
+   "strength": 4.9,
+   "voice": true
+  },
+  {
+   "t": 18.95,
+   "band": "high-swish",
+   "strength": 2.1,
+   "voice": true
+  },
+  {
+   "t": 18.99,
+   "band": "low-thump",
+   "strength": 1.7,
+   "voice": false
+  },
+  {
+   "t": 19.16,
+   "band": "high-swish",
+   "strength": 2.8,
+   "voice": false
+  },
+  {
+   "t": 19.26,
+   "band": "low-thump",
+   "strength": 2.1,
+   "voice": true
+  },
+  {
+   "t": 19.38,
+   "band": "high-swish",
+   "strength": 1.9,
+   "voice": true
+  },
+  {
+   "t": 19.49,
+   "band": "low-thump",
+   "strength": 3.4,
+   "voice": true
+  },
+  {
+   "t": 19.57,
+   "band": "high-swish",
+   "strength": 2.1,
+   "voice": true
+  },
+  {
+   "t": 19.63,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": false
+  },
+  {
+   "t": 19.77,
+   "band": "high-swish",
+   "strength": 3.8,
+   "voice": false
+  },
+  {
+   "t": 19.78,
+   "band": "low-thump",
+   "strength": 2.3,
+   "voice": false
+  },
+  {
+   "t": 19.99,
+   "band": "low-thump",
+   "strength": 1.7,
+   "voice": true
+  },
+  {
+   "t": 20.26,
+   "band": "low-thump",
+   "strength": 1.6,
+   "voice": true
+  },
+  {
+   "t": 20.31,
+   "band": "high-swish",
+   "strength": 2.4,
+   "voice": true
+  },
+  {
+   "t": 20.43,
+   "band": "low-thump",
+   "strength": 2.8,
+   "voice": true
+  },
+  {
+   "t": 20.97,
+   "band": "low-thump",
+   "strength": 6.4,
+   "voice": true
+  },
+  {
+   "t": 20.97,
+   "band": "high-swish",
+   "strength": 3.7,
+   "voice": true
+  },
+  {
+   "t": 21.2,
+   "band": "high-swish",
+   "strength": 1.5,
+   "voice": true
+  },
+  {
+   "t": 21.32,
+   "band": "low-thump",
+   "strength": 4.3,
+   "voice": true
+  },
+  {
+   "t": 21.34,
+   "band": "high-swish",
+   "strength": 2.3,
+   "voice": true
+  },
+  {
+   "t": 21.57,
+   "band": "high-swish",
+   "strength": 1.5,
+   "voice": true
+  },
+  {
+   "t": 21.82,
+   "band": "low-thump",
+   "strength": 1.0,
+   "voice": true
+  },
+  {
+   "t": 21.83,
+   "band": "high-swish",
+   "strength": 2.5,
+   "voice": true
+  },
+  {
+   "t": 22.02,
+   "band": "low-thump",
+   "strength": 3.2,
+   "voice": true
+  },
+  {
+   "t": 22.19,
+   "band": "high-swish",
+   "strength": 3.8,
+   "voice": false
+  },
+  {
+   "t": 22.36,
+   "band": "low-thump",
+   "strength": 5.2,
+   "voice": false
+  },
+  {
+   "t": 22.42,
+   "band": "high-swish",
+   "strength": 1.7,
+   "voice": true
+  },
+  {
+   "t": 22.52,
+   "band": "low-thump",
+   "strength": 2.3,
+   "voice": true
+  },
+  {
+   "t": 22.56,
+   "band": "high-swish",
+   "strength": 3.4,
+   "voice": true
+  },
+  {
+   "t": 22.89,
+   "band": "high-swish",
+   "strength": 3.2,
+   "voice": true
+  },
+  {
+   "t": 22.91,
+   "band": "low-thump",
+   "strength": 2.9,
+   "voice": true
+  },
+  {
+   "t": 23.03,
+   "band": "high-swish",
+   "strength": 4.9,
+   "voice": true
+  },
+  {
+   "t": 23.17,
+   "band": "low-thump",
+   "strength": 2.0,
+   "voice": true
+  },
+  {
+   "t": 23.32,
+   "band": "low-thump",
+   "strength": 1.1,
+   "voice": true
+  },
+  {
+   "t": 23.35,
+   "band": "high-swish",
+   "strength": 3.6,
+   "voice": true
+  },
+  {
+   "t": 23.5,
+   "band": "low-thump",
+   "strength": 4.1,
+   "voice": false
+  },
+  {
+   "t": 23.77,
+   "band": "low-thump",
+   "strength": 2.6,
+   "voice": true
+  },
+  {
+   "t": 23.8,
+   "band": "high-swish",
+   "strength": 2.5,
+   "voice": true
+  },
+  {
+   "t": 23.92,
+   "band": "low-thump",
+   "strength": 2.7,
+   "voice": false
+  },
+  {
+   "t": 24.0,
+   "band": "high-swish",
+   "strength": 2.6,
+   "voice": false
+  },
+  {
+   "t": 24.15,
+   "band": "low-thump",
+   "strength": 1.5,
+   "voice": true
+  },
+  {
+   "t": 24.21,
+   "band": "high-swish",
+   "strength": 2.0,
+   "voice": true
+  },
+  {
+   "t": 24.39,
+   "band": "high-swish",
+   "strength": 3.5,
+   "voice": true
+  },
+  {
+   "t": 24.44,
+   "band": "low-thump",
+   "strength": 2.9,
+   "voice": true
+  },
+  {
+   "t": 24.69,
+   "band": "high-swish",
+   "strength": 1.6,
+   "voice": true
+  },
+  {
+   "t": 24.9,
+   "band": "high-swish",
+   "strength": 1.6,
+   "voice": true
+  },
+  {
+   "t": 25.1,
+   "band": "high-swish",
+   "strength": 3.1,
+   "voice": false
+  },
+  {
+   "t": 25.19,
+   "band": "low-thump",
+   "strength": 1.7,
+   "voice": true
+  },
+  {
+   "t": 25.25,
+   "band": "high-swish",
+   "strength": 1.4,
+   "voice": true
+  },
+  {
+   "t": 25.55,
+   "band": "low-thump",
+   "strength": 2.3,
+   "voice": true
+  },
+  {
+   "t": 25.62,
+   "band": "high-swish",
+   "strength": 2.6,
+   "voice": false
+  },
+  {
+   "t": 25.86,
+   "band": "high-swish",
+   "strength": 4.3,
+   "voice": true
+  },
+  {
+   "t": 25.95,
+   "band": "low-thump",
+   "strength": 3.4,
+   "voice": false
+  },
+  {
+   "t": 26.2,
+   "band": "high-swish",
+   "strength": 3.3,
+   "voice": true
+  },
+  {
+   "t": 26.26,
+   "band": "low-thump",
+   "strength": 4.0,
+   "voice": false
+  },
+  {
+   "t": 26.34,
+   "band": "high-swish",
+   "strength": 1.6,
+   "voice": false
+  },
+  {
+   "t": 26.59,
+   "band": "low-thump",
+   "strength": 1.8,
+   "voice": true
+  },
+  {
+   "t": 26.66,
+   "band": "high-swish",
+   "strength": 2.2,
+   "voice": true
+  },
+  {
+   "t": 26.82,
+   "band": "low-thump",
+   "strength": 4.8,
+   "voice": true
+  },
+  {
+   "t": 27.03,
+   "band": "low-thump",
+   "strength": 1.6,
+   "voice": false
+  },
+  {
+   "t": 27.12,
+   "band": "high-swish",
+   "strength": 2.4,
+   "voice": false
+  },
+  {
+   "t": 27.32,
+   "band": "low-thump",
+   "strength": 3.8,
+   "voice": false
+  },
+  {
+   "t": 27.38,
+   "band": "high-swish",
+   "strength": 2.1,
+   "voice": true
+  },
+  {
+   "t": 27.55,
+   "band": "high-swish",
+   "strength": 2.2,
+   "voice": true
+  },
+  {
+   "t": 27.56,
+   "band": "low-thump",
+   "strength": 3.5,
+   "voice": true
+  },
+  {
+   "t": 27.82,
+   "band": "high-swish",
+   "strength": 5.2,
+   "voice": true
+  },
+  {
+   "t": 27.83,
+   "band": "low-thump",
+   "strength": 2.4,
+   "voice": true
+  },
+  {
+   "t": 27.98,
+   "band": "high-swish",
+   "strength": 2.0,
+   "voice": true
+  },
+  {
+   "t": 28.01,
+   "band": "low-thump",
+   "strength": 2.9,
+   "voice": true
+  },
+  {
+   "t": 28.2,
+   "band": "high-swish",
+   "strength": 2.4,
+   "voice": true
+  },
+  {
+   "t": 28.34,
+   "band": "low-thump",
+   "strength": 4.5,
+   "voice": true
+  },
+  {
+   "t": 28.34,
+   "band": "high-swish",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 28.57,
+   "band": "high-swish",
+   "strength": 2.9,
+   "voice": true
+  },
+  {
+   "t": 28.6,
+   "band": "low-thump",
+   "strength": 3.5,
+   "voice": true
+  },
+  {
+   "t": 28.84,
+   "band": "low-thump",
+   "strength": 3.2,
+   "voice": true
+  },
+  {
+   "t": 29.02,
+   "band": "high-swish",
+   "strength": 1.0,
+   "voice": false
+  },
+  {
+   "t": 29.15,
+   "band": "low-thump",
+   "strength": 3.4,
+   "voice": true
+  },
+  {
+   "t": 29.23,
+   "band": "high-swish",
+   "strength": 4.5,
+   "voice": false
+  },
+  {
+   "t": 29.33,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 29.38,
+   "band": "high-swish",
+   "strength": 1.2,
+   "voice": true
+  },
+  {
+   "t": 29.57,
+   "band": "high-swish",
+   "strength": 1.1,
+   "voice": true
+  },
+  {
+   "t": 29.62,
+   "band": "low-thump",
+   "strength": 1.9,
+   "voice": true
+  },
+  {
+   "t": 29.78,
+   "band": "high-swish",
+   "strength": 2.1,
+   "voice": false
+  },
+  {
+   "t": 29.84,
+   "band": "low-thump",
+   "strength": 2.8,
+   "voice": true
+  },
+  {
+   "t": 30.01,
+   "band": "low-thump",
+   "strength": 1.8,
+   "voice": true
+  },
+  {
+   "t": 30.01,
+   "band": "high-swish",
+   "strength": 2.0,
+   "voice": true
+  },
+  {
+   "t": 30.15,
+   "band": "high-swish",
+   "strength": 2.2,
+   "voice": true
+  },
+  {
+   "t": 30.16,
+   "band": "low-thump",
+   "strength": 4.1,
+   "voice": true
+  },
+  {
+   "t": 30.31,
+   "band": "high-swish",
+   "strength": 2.2,
+   "voice": true
+  },
+  {
+   "t": 30.6,
+   "band": "high-swish",
+   "strength": 2.5,
+   "voice": true
+  },
+  {
+   "t": 30.79,
+   "band": "high-swish",
+   "strength": 2.5,
+   "voice": false
+  },
+  {
+   "t": 30.8,
+   "band": "low-thump",
+   "strength": 1.6,
+   "voice": false
+  },
+  {
+   "t": 31.01,
+   "band": "low-thump",
+   "strength": 3.4,
+   "voice": true
+  },
+  {
+   "t": 31.02,
+   "band": "high-swish",
+   "strength": 1.2,
+   "voice": true
+  },
+  {
+   "t": 31.15,
+   "band": "low-thump",
+   "strength": 3.3,
+   "voice": true
+  },
+  {
+   "t": 31.21,
+   "band": "high-swish",
+   "strength": 4.1,
+   "voice": true
+  },
+  {
+   "t": 31.35,
+   "band": "low-thump",
+   "strength": 4.1,
+   "voice": true
+  },
+  {
+   "t": 31.51,
+   "band": "high-swish",
+   "strength": 3.4,
+   "voice": true
+  },
+  {
+   "t": 31.53,
+   "band": "low-thump",
+   "strength": 4.2,
+   "voice": true
+  },
+  {
+   "t": 31.75,
+   "band": "high-swish",
+   "strength": 2.1,
+   "voice": false
+  },
+  {
+   "t": 31.76,
+   "band": "low-thump",
+   "strength": 2.0,
+   "voice": false
+  },
+  {
+   "t": 31.96,
+   "band": "high-swish",
+   "strength": 2.6,
+   "voice": true
+  },
+  {
+   "t": 32.11,
+   "band": "low-thump",
+   "strength": 5.2,
+   "voice": true
+  },
+  {
+   "t": 32.15,
+   "band": "high-swish",
+   "strength": 2.1,
+   "voice": true
+  },
+  {
+   "t": 32.31,
+   "band": "high-swish",
+   "strength": 3.1,
+   "voice": true
+  },
+  {
+   "t": 32.4,
+   "band": "low-thump",
+   "strength": 1.9,
+   "voice": true
+  },
+  {
+   "t": 32.59,
+   "band": "low-thump",
+   "strength": 2.6,
+   "voice": false
+  },
+  {
+   "t": 32.6,
+   "band": "high-swish",
+   "strength": 2.0,
+   "voice": false
+  },
+  {
+   "t": 32.73,
+   "band": "low-thump",
+   "strength": 1.8,
+   "voice": false
+  },
+  {
+   "t": 32.75,
+   "band": "high-swish",
+   "strength": 1.0,
+   "voice": false
+  },
+  {
+   "t": 32.89,
+   "band": "high-swish",
+   "strength": 1.2,
+   "voice": true
+  },
+  {
+   "t": 32.93,
+   "band": "low-thump",
+   "strength": 2.6,
+   "voice": true
+  },
+  {
+   "t": 33.04,
+   "band": "high-swish",
+   "strength": 5.0,
+   "voice": false
+  },
+  {
+   "t": 33.07,
+   "band": "low-thump",
+   "strength": 3.8,
+   "voice": false
+  },
+  {
+   "t": 33.23,
+   "band": "low-thump",
+   "strength": 4.3,
+   "voice": true
+  },
+  {
+   "t": 33.46,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 33.67,
+   "band": "low-thump",
+   "strength": 3.1,
+   "voice": true
+  },
+  {
+   "t": 33.81,
+   "band": "low-thump",
+   "strength": 3.4,
+   "voice": true
+  },
+  {
+   "t": 33.82,
+   "band": "high-swish",
+   "strength": 1.5,
+   "voice": true
+  },
+  {
+   "t": 34.06,
+   "band": "low-thump",
+   "strength": 2.3,
+   "voice": true
+  },
+  {
+   "t": 34.19,
+   "band": "high-swish",
+   "strength": 2.3,
+   "voice": true
+  },
+  {
+   "t": 34.25,
+   "band": "low-thump",
+   "strength": 2.1,
+   "voice": true
+  },
+  {
+   "t": 34.39,
+   "band": "low-thump",
+   "strength": 1.8,
+   "voice": true
+  },
+  {
+   "t": 34.45,
+   "band": "high-swish",
+   "strength": 2.5,
+   "voice": false
+  },
+  {
+   "t": 34.6,
+   "band": "high-swish",
+   "strength": 4.3,
+   "voice": false
+  },
+  {
+   "t": 34.8,
+   "band": "high-swish",
+   "strength": 1.2,
+   "voice": true
+  },
+  {
+   "t": 34.81,
+   "band": "low-thump",
+   "strength": 3.4,
+   "voice": true
+  },
+  {
+   "t": 34.98,
+   "band": "high-swish",
+   "strength": 3.1,
+   "voice": false
+  },
+  {
+   "t": 35.21,
+   "band": "low-thump",
+   "strength": 2.6,
+   "voice": true
+  },
+  {
+   "t": 35.27,
+   "band": "high-swish",
+   "strength": 2.0,
+   "voice": true
+  },
+  {
+   "t": 35.61,
+   "band": "high-swish",
+   "strength": 4.1,
+   "voice": true
+  },
+  {
+   "t": 35.62,
+   "band": "low-thump",
+   "strength": 2.5,
+   "voice": true
+  },
+  {
+   "t": 35.76,
+   "band": "low-thump",
+   "strength": 1.2,
+   "voice": true
+  },
+  {
+   "t": 35.87,
+   "band": "high-swish",
+   "strength": 4.8,
+   "voice": true
+  },
+  {
+   "t": 35.94,
+   "band": "low-thump",
+   "strength": 4.7,
+   "voice": false
+  },
+  {
+   "t": 36.05,
+   "band": "high-swish",
+   "strength": 3.6,
+   "voice": false
+  },
+  {
+   "t": 36.2,
+   "band": "low-thump",
+   "strength": 2.7,
+   "voice": true
+  },
+  {
+   "t": 36.33,
+   "band": "high-swish",
+   "strength": 2.8,
+   "voice": false
+  },
+  {
+   "t": 36.34,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 36.5,
+   "band": "low-thump",
+   "strength": 1.1,
+   "voice": true
+  },
+  {
+   "t": 36.65,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 36.66,
+   "band": "high-swish",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 36.8,
+   "band": "low-thump",
+   "strength": 4.2,
+   "voice": false
+  },
+  {
+   "t": 37.08,
+   "band": "high-swish",
+   "strength": 3.2,
+   "voice": true
+  },
+  {
+   "t": 37.12,
+   "band": "low-thump",
+   "strength": 5.7,
+   "voice": true
+  },
+  {
+   "t": 37.37,
+   "band": "low-thump",
+   "strength": 1.8,
+   "voice": false
+  },
+  {
+   "t": 37.56,
+   "band": "high-swish",
+   "strength": 1.0,
+   "voice": false
+  },
+  {
+   "t": 37.71,
+   "band": "low-thump",
+   "strength": 3.5,
+   "voice": false
+  },
+  {
+   "t": 37.74,
+   "band": "high-swish",
+   "strength": 1.6,
+   "voice": false
+  },
+  {
+   "t": 37.91,
+   "band": "low-thump",
+   "strength": 3.4,
+   "voice": false
+  },
+  {
+   "t": 38.12,
+   "band": "low-thump",
+   "strength": 3.3,
+   "voice": true
+  },
+  {
+   "t": 38.12,
+   "band": "high-swish",
+   "strength": 1.8,
+   "voice": true
+  },
+  {
+   "t": 38.25,
+   "band": "high-swish",
+   "strength": 3.9,
+   "voice": false
+  },
+  {
+   "t": 38.39,
+   "band": "low-thump",
+   "strength": 1.5,
+   "voice": true
+  },
+  {
+   "t": 38.42,
+   "band": "high-swish",
+   "strength": 1.3,
+   "voice": true
+  },
+  {
+   "t": 38.65,
+   "band": "high-swish",
+   "strength": 2.2,
+   "voice": true
+  },
+  {
+   "t": 38.73,
+   "band": "low-thump",
+   "strength": 2.9,
+   "voice": false
+  },
+  {
+   "t": 38.91,
+   "band": "high-swish",
+   "strength": 4.5,
+   "voice": true
+  },
+  {
+   "t": 39.09,
+   "band": "low-thump",
+   "strength": 1.3,
+   "voice": false
+  },
+  {
+   "t": 39.32,
+   "band": "high-swish",
+   "strength": 3.8,
+   "voice": true
+  },
+  {
+   "t": 39.33,
+   "band": "low-thump",
+   "strength": 2.3,
+   "voice": true
+  },
+  {
+   "t": 39.5,
+   "band": "high-swish",
+   "strength": 1.6,
+   "voice": true
+  },
+  {
+   "t": 39.68,
+   "band": "high-swish",
+   "strength": 4.1,
+   "voice": true
+  },
+  {
+   "t": 39.83,
+   "band": "high-swish",
+   "strength": 2.5,
+   "voice": true
+  },
+  {
+   "t": 39.85,
+   "band": "low-thump",
+   "strength": 3.9,
+   "voice": true
+  },
+  {
+   "t": 40.09,
+   "band": "high-swish",
+   "strength": 1.3,
+   "voice": true
+  },
+  {
+   "t": 40.22,
+   "band": "low-thump",
+   "strength": 3.1,
+   "voice": true
+  },
+  {
+   "t": 40.3,
+   "band": "high-swish",
+   "strength": 3.7,
+   "voice": false
+  },
+  {
+   "t": 40.51,
+   "band": "low-thump",
+   "strength": 3.5,
+   "voice": false
+  },
+  {
+   "t": 40.54,
+   "band": "high-swish",
+   "strength": 2.8,
+   "voice": false
+  },
+  {
+   "t": 40.87,
+   "band": "high-swish",
+   "strength": 3.1,
+   "voice": false
+  },
+  {
+   "t": 41.04,
+   "band": "low-thump",
+   "strength": 2.6,
+   "voice": true
+  },
+  {
+   "t": 41.04,
+   "band": "high-swish",
+   "strength": 4.3,
+   "voice": true
+  },
+  {
+   "t": 41.29,
+   "band": "low-thump",
+   "strength": 1.9,
+   "voice": false
+  },
+  {
+   "t": 41.51,
+   "band": "high-swish",
+   "strength": 4.2,
+   "voice": true
+  },
+  {
+   "t": 41.52,
+   "band": "low-thump",
+   "strength": 3.3,
+   "voice": true
+  },
+  {
+   "t": 41.77,
+   "band": "low-thump",
+   "strength": 2.2,
+   "voice": true
+  },
+  {
+   "t": 41.89,
+   "band": "high-swish",
+   "strength": 3.7,
+   "voice": true
+  },
+  {
+   "t": 42.0,
+   "band": "low-thump",
+   "strength": 3.3,
+   "voice": true
+  },
+  {
+   "t": 42.04,
+   "band": "high-swish",
+   "strength": 2.8,
+   "voice": true
+  },
+  {
+   "t": 42.2,
+   "band": "low-thump",
+   "strength": 4.3,
+   "voice": false
+  },
+  {
+   "t": 42.26,
+   "band": "high-swish",
+   "strength": 5.2,
+   "voice": true
+  },
+  {
+   "t": 42.41,
+   "band": "high-swish",
+   "strength": 1.1,
+   "voice": true
+  },
+  {
+   "t": 42.55,
+   "band": "high-swish",
+   "strength": 3.1,
+   "voice": true
+  },
+  {
+   "t": 42.7,
+   "band": "low-thump",
+   "strength": 2.5,
+   "voice": true
+  },
+  {
+   "t": 42.88,
+   "band": "high-swish",
+   "strength": 2.8,
+   "voice": false
+  },
+  {
+   "t": 42.9,
+   "band": "low-thump",
+   "strength": 3.9,
+   "voice": false
+  },
+  {
+   "t": 43.06,
+   "band": "high-swish",
+   "strength": 4.0,
+   "voice": false
+  },
+  {
+   "t": 43.12,
+   "band": "low-thump",
+   "strength": 4.5,
+   "voice": false
+  },
+  {
+   "t": 43.36,
+   "band": "high-swish",
+   "strength": 1.7,
+   "voice": false
+  },
+  {
+   "t": 43.62,
+   "band": "low-thump",
+   "strength": 1.9,
+   "voice": true
+  },
+  {
+   "t": 43.79,
+   "band": "high-swish",
+   "strength": 1.6,
+   "voice": true
+  },
+  {
+   "t": 43.98,
+   "band": "low-thump",
+   "strength": 2.4,
+   "voice": false
+  },
+  {
+   "t": 44.07,
+   "band": "high-swish",
+   "strength": 3.4,
+   "voice": false
+  },
+  {
+   "t": 44.12,
+   "band": "low-thump",
+   "strength": 3.8,
+   "voice": true
+  },
+  {
+   "t": 44.29,
+   "band": "low-thump",
+   "strength": 1.1,
+   "voice": false
+  },
+  {
+   "t": 44.43,
+   "band": "high-swish",
+   "strength": 3.5,
+   "voice": false
+  },
+  {
+   "t": 44.7,
+   "band": "high-swish",
+   "strength": 3.6,
+   "voice": true
+  },
+  {
+   "t": 44.8,
+   "band": "low-thump",
+   "strength": 4.7,
+   "voice": false
+  },
+  {
+   "t": 44.94,
+   "band": "low-thump",
+   "strength": 1.3,
+   "voice": false
+  },
+  {
+   "t": 45.04,
+   "band": "high-swish",
+   "strength": 1.6,
+   "voice": false
+  },
+  {
+   "t": 45.12,
+   "band": "low-thump",
+   "strength": 1.9,
+   "voice": false
+  },
+  {
+   "t": 45.26,
+   "band": "high-swish",
+   "strength": 1.6,
+   "voice": false
+  },
+  {
+   "t": 45.33,
+   "band": "low-thump",
+   "strength": 1.6,
+   "voice": false
+  },
+  {
+   "t": 45.5,
+   "band": "low-thump",
+   "strength": 1.3,
+   "voice": true
+  },
+  {
+   "t": 45.65,
+   "band": "low-thump",
+   "strength": 1.1,
+   "voice": true
+  },
+  {
+   "t": 45.66,
+   "band": "high-swish",
+   "strength": 3.5,
+   "voice": true
+  },
+  {
+   "t": 45.88,
+   "band": "high-swish",
+   "strength": 1.3,
+   "voice": true
+  },
+  {
+   "t": 45.93,
+   "band": "low-thump",
+   "strength": 2.7,
+   "voice": true
+  },
+  {
+   "t": 46.03,
+   "band": "high-swish",
+   "strength": 4.0,
+   "voice": true
+  },
+  {
+   "t": 46.1,
+   "band": "low-thump",
+   "strength": 1.3,
+   "voice": true
+  },
+  {
+   "t": 46.29,
+   "band": "high-swish",
+   "strength": 2.4,
+   "voice": true
+  },
+  {
+   "t": 46.38,
+   "band": "low-thump",
+   "strength": 2.8,
+   "voice": true
+  },
+  {
+   "t": 46.61,
+   "band": "low-thump",
+   "strength": 2.5,
+   "voice": true
+  },
+  {
+   "t": 46.61,
+   "band": "high-swish",
+   "strength": 1.2,
+   "voice": true
+  },
+  {
+   "t": 46.76,
+   "band": "low-thump",
+   "strength": 1.9,
+   "voice": true
+  },
+  {
+   "t": 46.9,
+   "band": "high-swish",
+   "strength": 2.4,
+   "voice": false
+  },
+  {
+   "t": 46.92,
+   "band": "low-thump",
+   "strength": 3.1,
+   "voice": false
+  },
+  {
+   "t": 47.09,
+   "band": "high-swish",
+   "strength": 1.8,
+   "voice": true
+  },
+  {
+   "t": 47.22,
+   "band": "low-thump",
+   "strength": 4.7,
+   "voice": true
+  },
+  {
+   "t": 47.33,
+   "band": "high-swish",
+   "strength": 3.3,
+   "voice": true
+  },
+  {
+   "t": 47.38,
+   "band": "low-thump",
+   "strength": 2.7,
+   "voice": true
+  },
+  {
+   "t": 47.53,
+   "band": "low-thump",
+   "strength": 1.4,
+   "voice": true
+  },
+  {
+   "t": 47.73,
+   "band": "high-swish",
+   "strength": 1.9,
+   "voice": false
+  },
+  {
+   "t": 47.75,
+   "band": "low-thump",
+   "strength": 1.6,
+   "voice": false
+  },
+  {
+   "t": 48.08,
+   "band": "high-swish",
+   "strength": 4.2,
+   "voice": true
+  },
+  {
+   "t": 48.22,
+   "band": "low-thump",
+   "strength": 2.6,
+   "voice": false
+  },
+  {
+   "t": 48.22,
+   "band": "high-swish",
+   "strength": 3.1,
+   "voice": false
+  },
+  {
+   "t": 48.41,
+   "band": "low-thump",
+   "strength": 1.2,
+   "voice": false
+  },
+  {
+   "t": 48.43,
+   "band": "high-swish",
+   "strength": 3.2,
+   "voice": false
+  },
+  {
+   "t": 48.72,
+   "band": "low-thump",
+   "strength": 3.4,
+   "voice": true
+  },
+  {
+   "t": 48.77,
+   "band": "high-swish",
+   "strength": 4.6,
+   "voice": false
+  },
+  {
+   "t": 48.85,
+   "band": "low-thump",
+   "strength": 2.8,
+   "voice": true
+  },
+  {
+   "t": 49.05,
+   "band": "high-swish",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 49.06,
+   "band": "low-thump",
+   "strength": 3.3,
+   "voice": true
+  },
+  {
+   "t": 49.23,
+   "band": "high-swish",
+   "strength": 4.5,
+   "voice": false
+  },
+  {
+   "t": 49.24,
+   "band": "low-thump",
+   "strength": 3.1,
+   "voice": false
+  },
+  {
+   "t": 49.38,
+   "band": "low-thump",
+   "strength": 5.2,
+   "voice": true
+  },
+  {
+   "t": 49.54,
+   "band": "low-thump",
+   "strength": 3.2,
+   "voice": true
+  },
+  {
+   "t": 49.55,
+   "band": "high-swish",
+   "strength": 1.2,
+   "voice": true
+  },
+  {
+   "t": 49.73,
+   "band": "high-swish",
+   "strength": 2.2,
+   "voice": true
+  },
+  {
+   "t": 49.75,
+   "band": "low-thump",
+   "strength": 4.7,
+   "voice": true
+  },
+  {
+   "t": 50.13,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 50.25,
+   "band": "high-swish",
+   "strength": 2.1,
+   "voice": true
+  },
+  {
+   "t": 50.38,
+   "band": "low-thump",
+   "strength": 3.1,
+   "voice": true
+  },
+  {
+   "t": 50.49,
+   "band": "high-swish",
+   "strength": 2.9,
+   "voice": true
+  },
+  {
+   "t": 50.72,
+   "band": "high-swish",
+   "strength": 4.2,
+   "voice": false
+  },
+  {
+   "t": 50.75,
+   "band": "low-thump",
+   "strength": 4.0,
+   "voice": false
+  },
+  {
+   "t": 51.07,
+   "band": "high-swish",
+   "strength": 3.8,
+   "voice": true
+  },
+  {
+   "t": 51.08,
+   "band": "low-thump",
+   "strength": 2.1,
+   "voice": true
+  },
+  {
+   "t": 51.29,
+   "band": "low-thump",
+   "strength": 2.5,
+   "voice": true
+  },
+  {
+   "t": 51.37,
+   "band": "high-swish",
+   "strength": 2.4,
+   "voice": true
+  },
+  {
+   "t": 51.53,
+   "band": "low-thump",
+   "strength": 2.9,
+   "voice": false
+  },
+  {
+   "t": 51.63,
+   "band": "high-swish",
+   "strength": 6.1,
+   "voice": false
+  },
+  {
+   "t": 52.06,
+   "band": "low-thump",
+   "strength": 3.9,
+   "voice": true
+  },
+  {
+   "t": 52.13,
+   "band": "high-swish",
+   "strength": 2.4,
+   "voice": true
+  },
+  {
+   "t": 52.36,
+   "band": "low-thump",
+   "strength": 2.9,
+   "voice": true
+  },
+  {
+   "t": 52.55,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 52.74,
+   "band": "high-swish",
+   "strength": 2.2,
+   "voice": true
+  },
+  {
+   "t": 52.88,
+   "band": "high-swish",
+   "strength": 5.0,
+   "voice": false
+  },
+  {
+   "t": 53.01,
+   "band": "low-thump",
+   "strength": 2.0,
+   "voice": true
+  },
+  {
+   "t": 53.34,
+   "band": "high-swish",
+   "strength": 4.0,
+   "voice": false
+  },
+  {
+   "t": 53.42,
+   "band": "low-thump",
+   "strength": 2.6,
+   "voice": false
+  },
+  {
+   "t": 53.6,
+   "band": "high-swish",
+   "strength": 3.7,
+   "voice": false
+  },
+  {
+   "t": 53.66,
+   "band": "low-thump",
+   "strength": 4.2,
+   "voice": false
+  },
+  {
+   "t": 53.89,
+   "band": "low-thump",
+   "strength": 4.5,
+   "voice": true
+  },
+  {
+   "t": 53.99,
+   "band": "high-swish",
+   "strength": 2.0,
+   "voice": false
+  },
+  {
+   "t": 54.13,
+   "band": "high-swish",
+   "strength": 2.5,
+   "voice": true
+  },
+  {
+   "t": 54.31,
+   "band": "high-swish",
+   "strength": 2.1,
+   "voice": true
+  },
+  {
+   "t": 54.37,
+   "band": "low-thump",
+   "strength": 2.9,
+   "voice": true
+  },
+  {
+   "t": 54.68,
+   "band": "high-swish",
+   "strength": 1.9,
+   "voice": true
+  },
+  {
+   "t": 54.79,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 54.87,
+   "band": "high-swish",
+   "strength": 1.7,
+   "voice": false
+  },
+  {
+   "t": 54.95,
+   "band": "low-thump",
+   "strength": 2.1,
+   "voice": false
+  },
+  {
+   "t": 55.04,
+   "band": "high-swish",
+   "strength": 1.2,
+   "voice": false
+  },
+  {
+   "t": 55.25,
+   "band": "high-swish",
+   "strength": 2.2,
+   "voice": true
+  },
+  {
+   "t": 55.31,
+   "band": "low-thump",
+   "strength": 2.6,
+   "voice": true
+  },
+  {
+   "t": 55.57,
+   "band": "high-swish",
+   "strength": 3.1,
+   "voice": true
+  },
+  {
+   "t": 55.58,
+   "band": "low-thump",
+   "strength": 4.4,
+   "voice": true
+  },
+  {
+   "t": 55.77,
+   "band": "high-swish",
+   "strength": 3.7,
+   "voice": true
+  },
+  {
+   "t": 55.91,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": false
+  },
+  {
+   "t": 55.98,
+   "band": "high-swish",
+   "strength": 2.0,
+   "voice": true
+  },
+  {
+   "t": 56.16,
+   "band": "low-thump",
+   "strength": 2.8,
+   "voice": true
+  },
+  {
+   "t": 56.29,
+   "band": "high-swish",
+   "strength": 2.2,
+   "voice": true
+  },
+  {
+   "t": 56.44,
+   "band": "low-thump",
+   "strength": 5.5,
+   "voice": false
+  },
+  {
+   "t": 56.45,
+   "band": "high-swish",
+   "strength": 3.0,
+   "voice": false
+  },
+  {
+   "t": 56.65,
+   "band": "high-swish",
+   "strength": 5.1,
+   "voice": true
+  },
+  {
+   "t": 56.66,
+   "band": "low-thump",
+   "strength": 1.2,
+   "voice": true
+  },
+  {
+   "t": 56.95,
+   "band": "low-thump",
+   "strength": 4.0,
+   "voice": false
+  },
+  {
+   "t": 56.98,
+   "band": "high-swish",
+   "strength": 2.3,
+   "voice": false
+  },
+  {
+   "t": 57.12,
+   "band": "high-swish",
+   "strength": 1.2,
+   "voice": true
+  },
+  {
+   "t": 57.2,
+   "band": "low-thump",
+   "strength": 2.4,
+   "voice": true
+  },
+  {
+   "t": 57.28,
+   "band": "high-swish",
+   "strength": 1.2,
+   "voice": true
+  },
+  {
+   "t": 57.63,
+   "band": "high-swish",
+   "strength": 4.1,
+   "voice": false
+  },
+  {
+   "t": 57.74,
+   "band": "low-thump",
+   "strength": 5.3,
+   "voice": true
+  },
+  {
+   "t": 57.92,
+   "band": "low-thump",
+   "strength": 3.5,
+   "voice": true
+  },
+  {
+   "t": 58.19,
+   "band": "high-swish",
+   "strength": 1.2,
+   "voice": false
+  },
+  {
+   "t": 58.2,
+   "band": "low-thump",
+   "strength": 3.9,
+   "voice": true
+  },
+  {
+   "t": 58.4,
+   "band": "high-swish",
+   "strength": 3.2,
+   "voice": false
+  },
+  {
+   "t": 58.46,
+   "band": "low-thump",
+   "strength": 3.7,
+   "voice": true
+  },
+  {
+   "t": 58.63,
+   "band": "high-swish",
+   "strength": 1.2,
+   "voice": true
+  },
+  {
+   "t": 58.68,
+   "band": "low-thump",
+   "strength": 2.1,
+   "voice": true
+  },
+  {
+   "t": 58.79,
+   "band": "high-swish",
+   "strength": 1.6,
+   "voice": true
+  },
+  {
+   "t": 58.89,
+   "band": "low-thump",
+   "strength": 4.8,
+   "voice": true
+  },
+  {
+   "t": 59.06,
+   "band": "high-swish",
+   "strength": 1.8,
+   "voice": true
+  },
+  {
+   "t": 59.08,
+   "band": "low-thump",
+   "strength": 3.1,
+   "voice": true
+  },
+  {
+   "t": 59.22,
+   "band": "high-swish",
+   "strength": 1.2,
+   "voice": true
+  },
+  {
+   "t": 59.25,
+   "band": "low-thump",
+   "strength": 3.4,
+   "voice": true
+  },
+  {
+   "t": 59.49,
+   "band": "high-swish",
+   "strength": 4.3,
+   "voice": true
+  },
+  {
+   "t": 59.5,
+   "band": "low-thump",
+   "strength": 1.1,
+   "voice": true
+  },
+  {
+   "t": 59.72,
+   "band": "high-swish",
+   "strength": 3.5,
+   "voice": true
+  },
+  {
+   "t": 59.76,
+   "band": "low-thump",
+   "strength": 4.4,
+   "voice": true
+  },
+  {
+   "t": 59.91,
+   "band": "high-swish",
+   "strength": 2.0,
+   "voice": true
+  },
+  {
+   "t": 59.95,
+   "band": "low-thump",
+   "strength": 4.4,
+   "voice": true
+  },
+  {
+   "t": 60.1,
+   "band": "low-thump",
+   "strength": 2.9,
+   "voice": true
+  },
+  {
+   "t": 60.17,
+   "band": "high-swish",
+   "strength": 2.1,
+   "voice": true
+  },
+  {
+   "t": 60.35,
+   "band": "high-swish",
+   "strength": 1.3,
+   "voice": true
+  },
+  {
+   "t": 60.44,
+   "band": "low-thump",
+   "strength": 3.7,
+   "voice": true
+  },
+  {
+   "t": 60.66,
+   "band": "high-swish",
+   "strength": 2.2,
+   "voice": true
+  },
+  {
+   "t": 60.71,
+   "band": "low-thump",
+   "strength": 4.8,
+   "voice": true
+  },
+  {
+   "t": 60.91,
+   "band": "high-swish",
+   "strength": 2.5,
+   "voice": true
+  },
+  {
+   "t": 61.0,
+   "band": "low-thump",
+   "strength": 3.9,
+   "voice": true
+  },
+  {
+   "t": 61.15,
+   "band": "high-swish",
+   "strength": 3.7,
+   "voice": false
+  },
+  {
+   "t": 61.34,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 61.51,
+   "band": "low-thump",
+   "strength": 4.7,
+   "voice": true
+  },
+  {
+   "t": 61.51,
+   "band": "high-swish",
+   "strength": 3.9,
+   "voice": true
+  },
+  {
+   "t": 61.71,
+   "band": "high-swish",
+   "strength": 1.1,
+   "voice": true
+  },
+  {
+   "t": 61.95,
+   "band": "high-swish",
+   "strength": 1.8,
+   "voice": false
+  },
+  {
+   "t": 61.96,
+   "band": "low-thump",
+   "strength": 1.3,
+   "voice": false
+  },
+  {
+   "t": 62.18,
+   "band": "low-thump",
+   "strength": 2.7,
+   "voice": true
+  },
+  {
+   "t": 62.45,
+   "band": "low-thump",
+   "strength": 3.0,
+   "voice": true
+  },
+  {
+   "t": 62.53,
+   "band": "high-swish",
+   "strength": 4.5,
+   "voice": true
+  },
+  {
+   "t": 62.66,
+   "band": "low-thump",
+   "strength": 1.7,
+   "voice": true
+  },
+  {
+   "t": 62.82,
+   "band": "high-swish",
+   "strength": 3.6,
+   "voice": false
+  },
+  {
+   "t": 62.93,
+   "band": "low-thump",
+   "strength": 1.2,
+   "voice": false
+  }
+ ],
+ "eventCount": 479,
+ "eventsPerMin": 454.9,
+ "cuts": [
+  6.9,
+  21.0,
+  44.23,
+  46.13
+ ],
+ "cutsWithSound": 4,
+ "aligned": [
+  {
+   "cut": 6.9,
+   "events": [
+    [
+     6.84,
+     "low-thump"
+    ],
+    [
+     6.84,
+     "high-swish"
+    ],
+    [
+     7.13,
+     "high-swish"
+    ],
+    [
+     7.19,
+     "low-thump"
+    ]
+   ]
+  },
+  {
+   "cut": 21.0,
+   "events": [
+    [
+     20.97,
+     "low-thump"
+    ],
+    [
+     20.97,
+     "high-swish"
+    ],
+    [
+     21.2,
+     "high-swish"
+    ]
+   ]
+  },
+  {
+   "cut": 44.23,
+   "events": [
+    [
+     43.98,
+     "low-thump"
+    ],
+    [
+     44.07,
+     "high-swish"
+    ],
+    [
+     44.12,
+     "low-thump"
+    ],
+    [
+     44.29,
+     "low-thump"
+    ],
+    [
+     44.43,
+     "high-swish"
+    ]
+   ]
+  },
+  {
+   "cut": 46.13,
+   "events": [
+    [
+     45.88,
+     "high-swish"
+    ],
+    [
+     45.93,
+     "low-thump"
+    ],
+    [
+     46.03,
+     "high-swish"
+    ],
+    [
+     46.1,
+     "low-thump"
+    ],
+    [
+     46.29,
+     "high-swish"
+    ],
+    [
+     46.38,
+     "low-thump"
+    ]
+   ]
+  }
+ ],
+ "loudnessSpread": {
+  "p10": -23.1,
+  "p50": -9.5,
+  "p90": -3.9
+ }
+}

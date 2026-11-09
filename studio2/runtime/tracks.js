@@ -32,6 +32,10 @@ export const clamp01=x=>Math.max(0,Math.min(1,x));
 export const ramp=(t,a,b,e='io')=>ease[e](clamp01((t-a)/(b-a)));
 // bell: 0 -> 1 -> 0 (rise a..b, hold to c, fall c..d)
 export const bell=(t,a,b,c,d,e='io')=>ramp(t,a,b,e)*(1-ramp(t,c,d,e));
+// cross-fade weight of the incoming frame: 0 before start, 1 after start+dur, smoothstep between (scene update(t,{outgoing:true}) gives the other frame)
+// true from the very first frame of a dissolve (k=0 shows the outgoing shot at full strength) until k reaches 1; undefined means no dissolve
+export const dissolving=(k)=>k!==undefined&&k<1;
+export const dissolveK=(t,start,dur)=>{const x=clamp01((t-start)/dur);return x*x*(3-2*x);};
 // deterministic noise in [-1,1]
 export const noise=(t,seed=0)=>{const x=t*1.0+seed*17.31;return (Math.sin(x*12.9898+seed)*.5+Math.sin(x*7.233+seed*2.1)*.3+Math.sin(x*3.77+seed*.7)*.2);};
 export function rand(seed){let s=(seed>>>0)||1;return ()=>{s=(Math.imul(s,1664525)+1013904223)>>>0;return s/4294967296;};}

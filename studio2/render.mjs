@@ -33,7 +33,9 @@ if(args.times)times=String(args.times).split(',').map(Number);
 else{const from=Number(args.from??0),to=Number(args.to??duration);times=[];for(let f=Math.round(from*fps);f<Math.round(to*fps);f++)times.push(f/fps);}
 const out=path.resolve(args.out);fs.mkdirSync(out,{recursive:true});
 const token=randomBytes(24).toString('hex');
-const config={scene:args.scene,times,words,duration,captions:!!args.captions,token,indexBase:Number(args.indexBase||0),quality:Number(args.quality||.95)};
+const collideMode=args['collide-only']?'only':args.collide?'check':null;
+const filmJson=(()=>{const m=String(args.scene).match(/^(episodes\/[^/]+)\//),f=m&&path.join(ROOT,m[1],'film.json');return f&&fs.existsSync(f)?JSON.parse(fs.readFileSync(f,'utf8')):{};})();
+const config={collide:collideMode,scene:args.scene,times,words,duration,captions:!!args.captions,captionWords:filmJson.captionWords||3,token,indexBase:Number(args.indexBase||0),quality:Number(args.quality||.95)};
 let resolve,reject,count=0;const done=new Promise((a,b)=>{resolve=a;reject=b;});
 const types={'.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.glb':'model/gltf-binary','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml'};
 const roots=[['/vendor/',three],['/runtime/',path.join(ROOT,'studio2/runtime')],['/repo/',ROOT]];
@@ -57,6 +59,22 @@ const logs=path.join(ROOT,'studio2/.runs');fs.mkdirSync(logs,{recursive:true});
 const child=spawn(browser,['--headless=new','--use-angle=d3d11','--ignore-gpu-blocklist','--no-first-run','--disable-extensions','--disable-background-timer-throttling','--disable-renderer-backgrounding',`--user-data-dir=${path.join(logs,'b-'+Date.now())}`,`http://127.0.0.1:${port}/`],{stdio:['ignore','ignore','pipe']});
 child.stderr.on('data',b=>fs.appendFileSync(path.join(logs,'browser.log'),b));child.on('error',reject);child.on('exit',c=>reject(Error('browser exited '+c)));
 const timer=setTimeout(()=>reject(Error('render timeout')),Number(args.timeout||1800)*1000);
-try{const r=await done;for(const m of r.meta)if(m.reach>.03)console.log('reach',m.t.toFixed(2),m.reach.toFixed(3),m.note);console.log(`PASS ${count} frames; gpu=${r.gpu}; max reach err=${Math.max(0,...r.meta.map(m=>m.reach)).toFixed(4)}`);}
+try{const r=await done;
+ if(args['meta-out']){fs.mkdirSync(path.dirname(path.resolve(args['meta-out'])),{recursive:true});fs.writeFileSync(path.resolve(args['meta-out']),JSON.stringify(r.meta));}
+ if(collideMode){
+  const bad=r.meta.filter(m=>m.hits&&m.hits.length),groups=new Map();
+  for(const m of bad)for(const h of m.hits){const k=h.actor+' '+h.part+' x '+h.mesh,g=groups.get(k)||{n:0,t0:m.t,t1:m.t,max:0,at:h.at};g.n++;g.t1=m.t;g.max=Math.max(g.max,h.depth);groups.set(k,g);}
+  const rows=[...groups].map(([k,g])=>({what:k,from:+g.t0.toFixed(2),to:+g.t1.toFixed(2),frames:g.n,maxDepthM:g.max,at:g.at})).sort((a,b)=>a.from-b.from);
+  for(const r of rows)console.log('OVERLAP',r.what,`t=${r.from}-${r.to}s`,`frames=${r.frames}`,`depth<=${r.maxDepthM}m`,'at',JSON.stringify(r.at));
+  if(args['collide-out']){fs.mkdirSync(path.dirname(path.resolve(args['collide-out'])),{recursive:true});fs.writeFileSync(path.resolve(args['collide-out']),JSON.stringify({checkedFrames:r.meta.length,times:[times[0],times.at(-1)],step:times.length>1?+(times[1]-times[0]).toFixed(4):0,overlaps:rows,cameras:r.meta.map(m=>m.cam||null),dressing:r.meta.filter(m=>m.dress).map(m=>({t:m.t,dress:m.dress})),intent:r.meta.filter(m=>m.intent).map(m=>({t:m.t,...m.intent})),ok:rows.length===0,checkedAt:new Date().toISOString(),sourceHash:args['source-hash']||null},null,1));}
+  if(args['collide-out']){ // one line per gate run: studio2/retro.mjs turns these into "how many runs did this film need"
+   const kinds=rows.map(x=>x.what.replace(/crowd\d+/g,'crowd').replace(/ \d+(\.\d+)?$/,''));
+   fs.appendFileSync(path.join(path.dirname(path.resolve(args['collide-out'])),'gate-history.jsonl'),JSON.stringify({at:new Date().toISOString(),ok:rows.length===0,overlaps:rows.length,frames:r.meta.length,kinds})+String.fromCharCode(10));}
+  console.log(rows.length?`COLLIDE FAIL: ${rows.length} overlap(s) in ${bad.length}/${r.meta.length} frames`:`COLLIDE PASS: ${r.meta.length} frames, no overlaps`);
+  if(rows.length)process.exitCode=3;
+ }
+if(!collideMode&&args.from!==undefined){ // full renders are logged next to the frames folder
+ try{fs.appendFileSync(path.join(path.dirname(path.resolve(args.out)),'render-history.jsonl'),JSON.stringify({at:new Date().toISOString(),frames:count,from:Number(args.from),to:Number(args.to),quality:Number(args.quality||0)})+String.fromCharCode(10));}catch{}}
+for(const m of r.meta)if(m.reach>.03)console.log('reach',m.t.toFixed(2),m.reach.toFixed(3),m.note);console.log(`PASS ${count} frames; gpu=${r.gpu}; max reach err=${Math.max(0,...r.meta.map(m=>m.reach)).toFixed(4)}`);}
 catch(e){console.error('FAIL',e.message||e);process.exitCode=1;}
 finally{clearTimeout(timer);if(child.pid)spawnSync('taskkill',['/pid',String(child.pid),'/T','/F'],{stdio:'ignore'});server.close();}

@@ -1,12 +1,16 @@
 // ElevenLabs adapter for studio2. Authorised by the user in chat on 2026-11-07 ("ElevenLabs ครบ"):
 // one narration take, one instrumental score, and the missing sound effects. Every request is cached by content
 // hash, never retried automatically, and the API key is read from the parent .env and never printed.
-// usage: node studio2/eleven.mjs voice|sfx|dry [--episode episodes/time-machine-success]
+// 2026-11-08 ("ใช้ ElevenLabs เจนเสียงที่ต้องใช้สำหรับ Studio เราไว้เลย ..."): also the shared baseline sounds (assets/sfx) and each film's own
+// list (episodes/<id>/audio/effects.json: effects + one score). `dry` prints the plan with 0 API calls.
+// usage: node studio2/eleven.mjs voice|sfx|baseline|dry [--episode episodes/time-machine-success]
+import {voiceTempo} from './lib/voice-tempo.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
+import {requestBody,planSfx,validateList} from './lib/sfx-plan.mjs';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const args=process.argv.slice(2),cmd=args[0],ep=path.join(ROOT,args.includes('--episode')?args[args.indexOf('--episode')+1]:'episodes/time-machine-success');
 const sha=s=>createHash('sha256').update(s).digest('hex');
@@ -51,25 +55,42 @@ async function voice(){
  const words=wordsFrom(j.normalized_alignment||j.alignment),script=text.split(/\s+/);
  if(words.length!==script.length||words.some((w,i)=>norm(w.word)!==norm(script[i])))throw Error('Provider alignment differs from the script: '+words.length+' vs '+script.length);
  const raw=path.join(ep,'voice/source.mp3');fs.writeFileSync(raw,Buffer.from(j.audio_base64,'base64'));
- const rawDur=probe(raw),tempo=Math.min(1.18,Math.max(1,rawDur/64));words.forEach(w=>{w.start/=tempo;w.end/=tempo;});
+ const rawDur=probe(raw),tempo=voiceTempo(rawDur,film);words.forEach(w=>{w.start/=tempo;w.end/=tempo;});
  const out=path.join(ep,'voice/voice.wav');execFileSync('ffmpeg',['-y','-v','error','-i',raw,'-af','atempo='+tempo+',loudnorm=I=-16:TP=-1.5:LRA=9','-ar','48000','-ac','1','-c:a','pcm_s16le',out]);
  // timestamps are divided by the same tempo so they stay aligned
  fs.writeFileSync(path.join(ep,'voice/words.json'),JSON.stringify(words,null,1));
  fs.writeFileSync(path.join(ep,'voice/meta.json'),JSON.stringify({provider:'ElevenLabs',voiceId:film.voiceId,model:'eleven_v3',duration:probe(out),tempoCorrection:tempo,wordCount:count,listened:false},null,1));
  console.log('voice ok:',count,'words,',probe(out).toFixed(2),'s');
 }
+const BASE_DIR=path.join(ROOT,'assets/sfx');
+const wavOf=(id)=>path.join(BASE_DIR,id+'.wav');
+const customList=()=>{const f=path.join(ep,'audio/effects.json');return fs.existsSync(f)?JSON.parse(fs.readFileSync(f,'utf8')):null;};
+async function makeEffect(e,outDir){
+ const body=requestBody(e);fs.mkdirSync(path.join(outDir,'cache'),{recursive:true});
+ const mp3=await request('sound-generation',body,path.join(outDir,'cache',sha(JSON.stringify(body)).slice(0,24)+'.mp3'));
+ const raw=path.join(outDir,e.id+'.mp3');fs.writeFileSync(raw,mp3);
+ execFileSync('ffmpeg',['-y','-v','error','-i',raw,'-af','loudnorm=I=-20:TP=-2:LRA=11','-ar','48000','-ac','1','-c:a','pcm_s16le',path.join(outDir,e.id+'.wav')]);
+}
+async function baseline(){
+ const list=JSON.parse(fs.readFileSync(path.join(ROOT,'studio2/lib/sfx-baseline.json'),'utf8')).effects;
+ const plan=planSfx({baseline:list,exists:(id)=>fs.existsSync(wavOf(id))});
+ for(const e of plan.baseline)await makeEffect(e,BASE_DIR);
+ console.log('baseline ok:',plan.requests,'new sounds ('+plan.seconds+' s requested),',list.length-plan.requests,'already stored');
+}
 async function sfx(){
  const meta=JSON.parse(fs.readFileSync(path.join(ep,'voice/meta.json'),'utf8')),dur=Math.ceil((meta.duration+1)*30)/30;
  const out=path.join(ep,'audio');fs.mkdirSync(out,{recursive:true});
- for(const e of EFFECTS){const body={text:e.prompt,duration_seconds:e.seconds,prompt_influence:.65,model_id:'eleven_text_to_sound_v2',loop:false};
-  const mp3=await request('sound-generation',body,path.join(out,'cache',sha(JSON.stringify(body)).slice(0,24)+'.mp3'));const raw=path.join(out,e.id+'.mp3');fs.writeFileSync(raw,mp3);
-  execFileSync('ffmpeg',['-y','-v','error','-i',raw,'-af','loudnorm=I=-20:TP=-2:LRA=11','-ar','48000','-ac','1','-c:a','pcm_s16le',path.join(out,e.id+'.wav')]);}
- const body={prompt:MUSIC,music_length_ms:Math.round(dur*1000),force_instrumental:true,model_id:'music_v1'};
+ const custom=customList(),list=custom?validateList(custom.effects):EFFECTS,musicPrompt=custom&&custom.music?custom.music.prompt:MUSIC;
+ for(const e of list)await makeEffect(e,out);
+ const body={prompt:musicPrompt,music_length_ms:Math.round(dur*1000),force_instrumental:true,model_id:'music_v1'};
  const mp3=await request('music',body,path.join(out,'cache',sha(JSON.stringify(body)).slice(0,24)+'.mp3'));const raw=path.join(out,'score.mp3');fs.writeFileSync(raw,mp3);
  execFileSync('ffmpeg',['-y','-v','error','-i',raw,'-af','loudnorm=I=-22:TP=-2:LRA=9','-ar','48000','-ac','2','-c:a','pcm_s16le',path.join(out,'score.wav')]);
- console.log('sfx+music ok:',EFFECTS.length,'effects, score',probe(path.join(out,'score.wav')).toFixed(1),'s');
+ console.log('sfx+music ok:',list.length,'effects, score',probe(path.join(out,'score.wav')).toFixed(1),'s');
 }
-if(cmd==='dry'){const t=narration().join(' ');console.log(JSON.stringify({voiceId:film.voiceId,chars:t.length,words:t.split(/\s+/).length,effects:EFFECTS.map(e=>e.id),music:true,apiCalls:0}));}
+if(cmd==='dry'){const t=narration().join(' '),custom=customList(),base=JSON.parse(fs.readFileSync(path.join(ROOT,'studio2/lib/sfx-baseline.json'),'utf8')).effects;
+ const plan=planSfx({baseline:base,episode:custom?custom.effects:EFFECTS,exists:(id)=>fs.existsSync(wavOf(id))});
+ console.log(JSON.stringify({voiceId:film.voiceId,chars:t.length,words:t.split(/\s+/).length,baselineToMake:plan.baseline.map(e=>e.id),episodeEffects:(custom?custom.effects:EFFECTS).map(e=>e.id),music:true,requests:plan.requests+1,requestedSeconds:plan.seconds,apiCalls:0}));}
+else if(cmd==='baseline')await baseline();
 else if(cmd==='voice')await voice();
 else if(cmd==='sfx')await sfx();
 else console.log('usage: voice|sfx|dry');

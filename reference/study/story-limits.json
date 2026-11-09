@@ -1,0 +1,52 @@
+{
+ "about": "Limits for studio2/story-audit.mjs, taken from the reference clip (QlDPMzGmYac, 63.2 s). The numbers are measured by rea-video (rea/breakdown.json) and by the beat table in editorial-beats.json (22 beats). rea-video's guess of the picture type (it says live action) is wrong for this clip and is NOT used. A limit is the reference value with a margin, not a target to copy. Added from DEEP-ANALYSIS.md: maxFacts 2 (reference teaches 1), minCarrierShare 0.4 (the loop is in about half the beats), factRevealRange 0.4-0.8 (reference reveals the rule at 65%).",
+ "reference": {
+  "lengthSeconds": 63.17,
+  "shots": 10,
+  "averageShotSeconds": 6.32,
+  "cutsPerMinute": 8.5,
+  "editorialBeats": 22,
+  "editorialBeatsPerMinute": 20.9,
+  "explainerInsertShare": 0.18,
+  "movingCameraShare": 1.0,
+  "sfxHits": 78,
+  "sfxOnCaptionPops": 72,
+  "sources": [
+   "reference/study/rea/breakdown.json (Editing line: 8.5 cuts per minute, inserts 18%)",
+   "reference/study/editorial-beats.json (22 beats)",
+   "reference/study/ANALYSIS-TH.md section 8"
+  ],
+  "factsTaught": 1,
+  "carrierShare": 0.5,
+  "factRevealAt": 0.65,
+  "plantAt": 0.16,
+  "wordsPerSentence": 11.9,
+  "numberTokens": 2,
+  "sfxNote": "sfxHits 78 / sfxOnCaptionPops 72 are candidate transient detections and are NOT verified effects; rea-video finds only 12 salient transients in voice gaps (9 whoosh, 3 ding). See DEEP-ANALYSIS.md."
+ },
+ "limits": {
+  "lengthSeconds": [
+   55,
+   70
+  ],
+  "maxCutsPerMinute": 14,
+  "minAverageShotSeconds": 4.2,
+  "minEventsPerMinute": 14,
+  "maxExplainerShare": 0.2,
+  "maxExplainerRunSeconds": 5,
+  "minSilentReadableShare": 0.8,
+  "minGags": 3,
+  "requireFields": [
+   "want",
+   "stakes",
+   "reversal",
+   "payoff"
+  ],
+  "maxFacts": 2,
+  "minCarrierShare": 0.4,
+  "factRevealRange": [
+   0.4,
+   0.8
+  ]
+ }
+}

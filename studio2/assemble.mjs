@@ -8,6 +8,17 @@ const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const a=process.argv.slice(2),get=(k,d)=>a.includes(k)?a[a.indexOf(k)+1]:d;
 const ep=path.join(ROOT,get('--episode','episodes/time-machine-success')),frames=path.join(ep,get('--frames','renders/full')),out=path.join(ep,'out');
 fs.mkdirSync(out,{recursive:true});
+// Gate: the film may only be assembled after `node studio2/collide.mjs` passed on the CURRENT scene code (no model overlaps).
+import {sourceHash} from './lib/source-hash.mjs';
+if(!a.includes('--skip-collide')){
+ const rep=path.join(out,'collide.json');
+ if(!fs.existsSync(rep)){console.error('REFUSED: no collision report. Run: node studio2/collide.mjs --episode '+path.relative(ROOT,ep));process.exit(4);}
+ const c=JSON.parse(fs.readFileSync(rep,'utf8')),now=sourceHash(ROOT,ep);
+ if(!c.ok){console.error('REFUSED: the collision report lists '+c.overlaps.length+' overlap(s). Fix them and rerun node studio2/collide.mjs.');process.exit(4);}
+ if(c.sourceHash!==now){console.error('REFUSED: the collision report is for older scene code. Rerun node studio2/collide.mjs.');process.exit(4);}
+ if(!(c.step<=1/30+1e-6)){console.error('REFUSED: the collision report was not made at every frame (step '+c.step+'). Rerun node studio2/collide.mjs (default is every frame).');process.exit(4);}
+}
+
 const count=fs.readdirSync(frames).filter(f=>/^f\d{5}\.jpg$/.test(f)).length;
 if(!count)throw Error('no frames in '+frames);
 const final=path.join(out,'final.mp4'),dur=count/30;

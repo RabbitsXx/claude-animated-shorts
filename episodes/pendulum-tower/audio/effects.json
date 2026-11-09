@@ -1,0 +1,14 @@
+{
+ "about": "Sounds specific to pendulum-tower (ElevenLabs, authorised by the owner's message of 2026-11-09, see approvals.json 'spend'). The studio baseline in assets/sfx covers the rest (whooshes, thuds, clanks, crowd laughs and gasps, splat, chimes, ambience). Ceiling: 6 effects and 1 score.",
+ "effects": [
+  {"id": "pt-winch-groan", "seconds": 3.0, "prompt": "A heavy crawler crane winding up a steel cable: slow deep groan, cable creak under load and a ratchet clicking steadily, outdoors, no voices"},
+  {"id": "pt-ball-bonk", "seconds": 2.0, "prompt": "A huge hollow golden metal ball bonking once against a concrete wall, a deep resonant bong with a short ringing tail, then a small glass pane popping out, cartoon style, no voices"},
+  {"id": "pt-gale", "seconds": 4.0, "prompt": "A strong gale blowing around a tall building at night: rising wind howl with gusts, creaking steel and rattling windows, no voices"},
+  {"id": "pt-pendulum-creak", "seconds": 3.0, "prompt": "A giant heavy steel weight on thick cables swinging slowly: low rhythmic cable creak and a soft deep whoomp at each end of the swing, no voices"},
+  {"id": "pt-drill", "seconds": 2.0, "prompt": "A hand power drill biting through a concrete floor with a grinding whine, gritty crumbling dust at the end, no voices"},
+  {"id": "pt-pool-wave", "seconds": 3.0, "prompt": "A big cartoon splash of a person diving into a pool, then a heavy wave of pool water sloshing and pouring over a ledge, no voices"}
+ ],
+ "music": {
+  "prompt": "Original playful instrumental underscore for a quirky explainer cartoon: light corporate-style bed with pizzicato strings and marimba, steady bouncy tempo around 110 bpm, a tense low pulsing change for the night section in the middle, then bright and cheerful again, no vocals"
+ }
+}

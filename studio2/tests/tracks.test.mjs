@@ -1,7 +1,7 @@
 // Written after the first implementation of tracks.js/face.js; all later runtime code is test-first.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {key,ramp,bell,anchors,ease} from '../runtime/tracks.js';
+import {key,ramp,bell,anchors,ease,dissolveK,dissolving} from '../runtime/tracks.js';
 const words=['It','races','around','the','Sun','.','Go','back','an','hour','Go','back'].map((w,i)=>({word:w,start:i,end:i+.5}));
 test('key holds first value before and last value after the track',()=>{
  const k=[[1,10],[2,20]];assert.equal(key(k,0),10);assert.equal(key(k,9),20);
@@ -21,3 +21,13 @@ test('anchors finds a phrase and its second occurrence',()=>{
 });
 test('anchors throws loudly on a missing phrase',()=>{assert.throws(()=>anchors(words)('lever down'),/No word anchor/);});
 test('back ease overshoots then settles',()=>{assert.ok(ease.back(.8)>1);assert.equal(ease.back(1),1);});
+
+test('dissolveK clamps, eases and is monotonic',()=>{
+ assert.equal(dissolveK(0,1,.5),0);assert.equal(dissolveK(2,1,.5),1);assert.equal(dissolveK(1.25,1,.5),.5);
+ let prev=0;for(let i=0;i<=50;i++){const k=dissolveK(1+i*.01,1,.5);assert.ok(k>=prev);prev=k;}
+});
+
+test('a dissolve is in progress from its very first frame (k=0 shows the outgoing shot), not before or after',()=>{
+ assert.equal(dissolving(undefined),false);assert.equal(dissolving(0),true,'k=0 is the first frame of the dissolve: the outgoing shot, not the incoming one');
+ assert.equal(dissolving(.5),true);assert.equal(dissolving(1),false);
+});

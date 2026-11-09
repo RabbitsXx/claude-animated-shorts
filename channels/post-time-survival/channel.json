@@ -1,0 +1,30 @@
+{
+ "id": "post-time-survival",
+ "name": "Post Time Survival",
+ "storyProfile": "survival",
+ "language": "en",
+ "format": "vertical animated survival story Short (1080x1920, 30 fps), length set by lengthSeconds below",
+ "lengthSeconds": [
+  70,
+  150
+ ],
+ "lengthNote": "YouTube Shorts may run up to 180 s (3 minutes, since October 2024). This channel allows 70-150 s so a survival story has room for its steps; longer costs more render time and voice. Pick the length the story needs, not the maximum.",
+ "voiceId": "BTEPH6wbWkb66Dys0ry6",
+ "voiceNote": "The owner chose to reuse the first channel voice for the first film (2026-11-08); the two channels will sound alike until a different voice is chosen and paid for.",
+ "descriptionFooter": "🌲 Post Time Survival: original animated survival stories. Subscribe and join our animated survival world!",
+ "hashtags": [
+  "#Shorts",
+  "#SurvivalCartoon",
+  "#AnimatedStory"
+ ],
+ "disclosure": "Narration, sound effects and music were made with AI (ElevenLabs). Original story; all events are fiction.",
+ "coverStyle": "danger frame from the film: the hero's face in the first beat of real danger, the threat visible but not graphic, cold or dusk colours with one warm light; no text, no ring, no vignette, engine depth of field (studio2/library/cover-dof.mjs)",
+ "visualFlavour": "moody: dusk, night, fog, forest, ruins and tunnels; saturated key colour on the hero against a cool desaturated world; the threat is a silhouette or a shape that is easy to read at 120 px",
+ "soundFlavour": "tension bed and low drones, sudden stingers only at the danger peaks, silence before the peak, a warm release in the last beat",
+ "contentRules": [
+  "Original stories only; no real disasters, real victims or real people.",
+  "Cartoon peril, never gore: no blood, no injury shown, threats are shapes, silhouettes and consequences.",
+  "Label fiction as fiction in the description.",
+  "Every story: a hero who decides (a named hero, or \"you\" in a second-person POV film) with a choice beat before the peak, a threat with a rule, a danger ladder that rises, an ending that pays off the rule."
+ ]
+}

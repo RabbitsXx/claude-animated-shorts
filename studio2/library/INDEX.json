@@ -1,0 +1,799 @@
+{
+ "about": "Proven mechanics to reuse instead of rewriting. A part lists where it lives TODAY (phase A: files stay where they are; phase B moves them here), when to use it, which test or gate proves it, and which films used it. The library holds mechanics, never looks: every film still gets its own flavour (AGENTS.md). Read this file and docs/DEFECTS.json before writing scene code, then import the part; do not copy-edit it.",
+ "howToAdd": "At the end of a film (retro): a part is proven when a unit test or a gate that failed before now passes with it, and a second film could use it unchanged. Add it here with tags, useWhen, files, tests, usedIn. studio2/tests/library-index.test.mjs checks that every path exists.",
+ "parts": [
+  {
+   "name": "sign-text-fit",
+   "status": "proven",
+   "tags": [
+    "sign",
+    "text",
+    "in-world",
+    "crop"
+   ],
+   "useWhen": "Any in-world sign or banner. kit.sign()/signTexture() already shrink or wrap text to fit; call signDistance(width, vfov) to place the camera so the whole sign fits the narrow 9:16 frame (horizontal fov is only about 36 degrees at vfov 60).",
+   "files": [
+    "studio2/lib/textfit.mjs",
+    "studio2/runtime/kit.js"
+   ],
+   "tests": [
+    "studio2/tests/textfit.test.mjs"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "dissolve-between-beats",
+   "status": "proven",
+   "tags": [
+    "transition",
+    "dissolve",
+    "editing",
+    "reference-style"
+   ],
+   "useWhen": "Changing section (day to night, night to morning). A beat declares {dissolve: seconds}; main.update returns dissolveK and answers update(t,{outgoing:true}) with the previous beat; bootstrap blends both frames and collision-checks both. A dissolve counts from its first frame (dissolving(k) is true at k=0).",
+   "files": [
+    "studio2/runtime/tracks.js",
+    "studio2/runtime/bootstrap.js",
+    "episodes/square-wheel/scene2/main.mjs"
+   ],
+   "tests": [
+    "studio2/tests/tracks.test.mjs"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "camera-inside-solid-gate",
+   "status": "proven",
+   "tags": [
+    "gate",
+    "camera",
+    "black-frame",
+    "collision"
+   ],
+   "useWhen": "Always on: collide.mjs fails a shot whose camera sits inside a solid prop, a decor volume (hill slab) or an actor body. Sky domes (back-face) and blocks 60 m or larger are exempt.",
+   "files": [
+    "studio2/runtime/collide.js"
+   ],
+   "tests": [
+    "studio2/tests/collide.test.mjs"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "night-exposure-option",
+   "status": "proven",
+   "tags": [
+    "light",
+    "night",
+    "exposure",
+    "colour-script"
+   ],
+   "useWhen": "Reference-style day, night, day light script. Pass camera.exposure (about 0.6 at night) so mean luminance swings by 0.2 or more between 5-second windows (reference 0.28).",
+   "files": [
+    "studio2/runtime/engine2.js",
+    "episodes/square-wheel/scene2/main.mjs"
+   ],
+   "provenBy": "luminance swing 0.27 measured on square-wheel with studio2/.tmp/lumcheck.py method (see HANDOFF)",
+   "usedIn": [
+    "square-wheel"
+   ],
+   "tests": []
+  },
+  {
+   "name": "square-wheel-geometry",
+   "status": "proven",
+   "tags": [
+    "physics",
+    "wheel",
+    "catenary",
+    "math"
+   ],
+   "useWhen": "Anything rolling a polygon wheel over a matching road, or a round wheel over humps: exact poses for flat ground and hump roads (axle height constant to 1e-9).",
+   "files": [
+    "studio2/library/wheelmath.mjs"
+   ],
+   "tests": [
+    "studio2/tests/squarewheel.test.mjs"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "dig-strip",
+   "status": "proven",
+   "tags": [
+    "terrain",
+    "dig",
+    "glow",
+    "road"
+   ],
+   "useWhen": "A ground strip whose heights come from a function of x and a dig progress per position, with a glowing ribbon over the changing part (the reference's golden glow along the rail). buildDigStrip(ctx,{heightFn,maxHeight,length}); setDig(progressFn,key), setGlow(xa,xb,progressFn). The film wraps it (road.mjs) with its own height function.",
+   "files": [
+    "studio2/library/dig-strip.mjs",
+    "episodes/square-wheel/scene2/road.mjs"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ],
+   "tests": [
+    "studio2/tests/library.test.mjs"
+   ]
+  },
+  {
+   "name": "cart-and-egg-rig",
+   "status": "proven",
+   "tags": [
+    "vehicle",
+    "cart",
+    "eggs",
+    "ballistic",
+    "gag"
+   ],
+   "useWhen": "A cart whose pose is a function of one track coordinate u (flat before 0, hump road after), with cargo that dances, flies in ballistic arcs, lands as splats or sticks to a face. Egg flights must call poseAt(t0) with their own launch time.",
+   "files": [
+    "episodes/square-wheel/scene2/rig.mjs",
+    "episodes/square-wheel/scene2/props.mjs",
+    "studio2/library/ballistic.mjs"
+   ],
+   "provenBy": "collide gate pass over 1782 frames and review sheets",
+   "usedIn": [
+    "square-wheel"
+   ],
+   "tests": [
+    "studio2/tests/library.test.mjs"
+   ]
+  },
+  {
+   "name": "villager-crowd-poses",
+   "status": "proven",
+   "tags": [
+    "crowd",
+    "poses",
+    "laugh",
+    "cheer",
+    "gasp"
+   ],
+   "useWhen": "Background people: crowdSpec(i,{palette}) (VILLAGE palette is an example, pass your film's own), crowdPose(p,t,mode,i,target) with modes idle cheer laugh clap gasp point wave, and spacedLine({n,x0,x1,z,minSpacing:.7}) which guarantees neighbours never overlap (hats overlap below 0.7 m). Keep 0.5 m clear of fixed props.",
+   "files": [
+    "studio2/library/crowd.mjs",
+    "episodes/square-wheel/scene2/cast.mjs"
+   ],
+   "usedIn": [
+    "square-wheel",
+    "reaction-time-10x"
+   ],
+   "tests": [
+    "studio2/tests/library.test.mjs"
+   ]
+  },
+  {
+   "name": "story-clarity-audit",
+   "status": "proven",
+   "tags": [
+    "story",
+    "audit",
+    "clarity",
+    "reference"
+   ],
+   "useWhen": "Before any paid voice or scene work: STORY.json needs thesis, at most 2 facts, a carrier object in 40% of beats, a plant before the reveal and the reveal at 40-80% of the film.",
+   "files": [
+    "studio2/story-audit.mjs",
+    "reference/study/story-limits.json"
+   ],
+   "tests": [
+    "studio2/tests/story-clarity.test.mjs"
+   ],
+   "usedIn": [
+    "reaction-time-10x",
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "studio-sound-baseline",
+   "status": "proven",
+   "tags": [
+    "sound",
+    "sfx",
+    "elevenlabs",
+    "baseline",
+    "ambience",
+    "crowd"
+   ],
+   "useWhen": "Every film: 21 baseline sounds already stored in assets/sfx (whooshes, impacts, wood, metal, glass, cartoon pop and boing, splat, chimes, sad brass, crowd laugh/cheer/gasp, footsteps, day and night ambience beds). Use them from cues.mjs with B('id'); add only film-specific sounds in episodes/<id>/audio/effects.json. Never regenerate; requests are cached by hash. Needs the user's explicit OK to spend.",
+   "files": [
+    "studio2/lib/sfx-baseline.json",
+    "studio2/lib/sfx-plan.mjs",
+    "studio2/eleven.mjs",
+    "assets/sfx/whoosh-soft.wav",
+    "episodes/square-wheel/audio/cues.mjs"
+   ],
+   "tests": [
+    "studio2/tests/sfx-plan.test.mjs"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "film-retro",
+   "status": "proven",
+   "tags": [
+    "retro",
+    "history",
+    "process",
+    "metrics"
+   ],
+   "useWhen": "End of every film: node studio2/retro.mjs --episode episodes/<id> writes RETRO.md from the film's own files: gate runs and runs to the first pass (collide.mjs and render.mjs now log out/gate-history.jsonl and renders/render-history.jsonl), what failed most, the result numbers and which scene files are not in this index yet. Then log defects and promote parts.",
+   "files": [
+    "studio2/retro.mjs",
+    "studio2/lib/retro.mjs"
+   ],
+   "tests": [
+    "studio2/tests/library.test.mjs"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "captions-auto",
+   "status": "proven",
+   "tags": [
+    "captions",
+    "subtitles",
+    "reference-style"
+   ],
+   "useWhen": "Captions of one or two words as fits the phrase (the reference shows 1-2 words per pop). Set film.json captionWords to \"auto\" (or 1, 2, 3 for a fixed maximum; default 3 keeps older films unchanged). Articles go with their noun, linking words stand apart, long or slow words stand alone, breaks follow punctuation and pauses.",
+   "files": [
+    "studio2/lib/captions.mjs",
+    "studio2/runtime/bootstrap.js",
+    "studio2/render.mjs"
+   ],
+   "tests": [
+    "studio2/tests/captions.test.mjs"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "preflight-and-framecheck",
+   "status": "proven",
+   "tags": [
+    "qa",
+    "preflight",
+    "black-frame",
+    "flat-frame",
+    "brightness",
+    "process"
+   ],
+   "useWhen": "Before every full render run node studio2/preflight.mjs --episode episodes/<id>: unit tests, story audit, collision gate, a one-frame-per-second sample render, flat or black frames, shots that are mostly sky, one-frame flashes, day-night brightness swing and parity with the reference, in one command. After assembling run node studio2/framecheck.mjs on out/final.mp4.",
+   "files": [
+    "studio2/preflight.mjs",
+    "studio2/framecheck.mjs",
+    "studio2/lib/framecheck.mjs"
+   ],
+   "tests": [
+    "studio2/tests/framecheck.test.mjs"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "cover-depth-of-field",
+   "status": "proven",
+   "tags": [
+    "cover",
+    "thumbnail",
+    "blur",
+    "depth-of-field",
+    "hook"
+   ],
+   "useWhen": "Cover frame staged from the film's hook moment: coverDof(cameraPosition, facePosition) returns the engine's focus, aperture and maxblur so the far background blurs for real while the face and key prop stay sharp. Put the result into the camera options.",
+   "files": [
+    "studio2/library/cover-dof.mjs",
+    "episodes/square-wheel/scene2/cover.mjs"
+   ],
+   "tests": [
+    "studio2/tests/cover-dof.test.mjs"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "finish-chain",
+   "status": "proven",
+   "tags": [
+    "process",
+    "delivery",
+    "qa",
+    "automation"
+   ],
+   "useWhen": "End of every film, after the full render: node studio2/finish.mjs --episode episodes/<id> runs unit tests, collision gate, assemble, frame check and retro in the right order, stops at the first failure and prints package notes (file too big for a phone, missing cover files).",
+   "files": [
+    "studio2/finish.mjs",
+    "studio2/lib/finish.mjs",
+    "studio2/briefing.mjs",
+    "studio2/lib/briefing.mjs"
+   ],
+   "tests": [
+    "studio2/tests/finish.test.mjs",
+    "studio2/tests/briefing.test.mjs"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "camera-whip-pan-check",
+   "status": "proven",
+   "tags": [
+    "camera",
+    "gate",
+    "preflight",
+    "whip-pan"
+   ],
+   "useWhen": "Automatic: the collision gate records the camera path (out/collide.json cameras) and preflight.mjs fails a run of fast frames that turns the view 45 degrees or more. A single-frame jump is a cut and a quick small move is allowed.",
+   "files": [
+    "studio2/lib/camera-motion.mjs",
+    "studio2/preflight.mjs",
+    "studio2/runtime/bootstrap.js"
+   ],
+   "tests": [
+    "studio2/tests/camera-motion.test.mjs"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "render-smart",
+   "status": "proven",
+   "tags": [
+    "render",
+    "speed",
+    "partial",
+    "process"
+   ],
+   "useWhen": "After the first full render, whenever code, camera, light or captions change: node studio2/render-smart.mjs --episode episodes/<id> renders a 2 fps sample, compares with renders/full and re-renders only the stretches that differ (proved: 75 deleted frames restored in 0.6 min instead of 9, identical to the original). --against DIR --dry shows what a change touches. Audio-only changes need only assemble.mjs.",
+   "files": [
+    "studio2/render-smart.mjs",
+    "studio2/lib/dirty-ranges.mjs",
+    "studio2/imgdiff.py"
+   ],
+   "tests": [
+    "studio2/tests/dirty-ranges.test.mjs"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "asset-catalogue",
+   "status": "proven",
+   "tags": [
+    "sound",
+    "music",
+    "props",
+    "reuse",
+    "catalogue"
+   ],
+   "useWhen": "Before generating a sound or music or writing a prop: node studio2/catalog-assets.mjs --find \"egg splat\" [--kind sfx|music|prop] searches every film's sounds, scores and prop builders (assets/CATALOG.json, rebuilt with the same command after a film). The props picture is studio2/library/catalog/props-square-wheel.jpg, made with studio2/library/props-sheet.mjs.",
+   "files": [
+    "studio2/catalog-assets.mjs",
+    "studio2/lib/catalog.mjs",
+    "studio2/library/props-sheet.mjs",
+    "assets/CATALOG.json"
+   ],
+   "tests": [
+    "studio2/tests/catalog.test.mjs"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "cheap-looking",
+   "status": "experimental",
+   "tags": [
+    "tokens",
+    "images",
+    "process"
+   ],
+   "useWhen": "Look at one preflight sheet (out/preflight-sheet.jpg, the whole film) or studio2/sheet.py output instead of frames one by one; shrink a single frame with studio2/shrink.py before looking.",
+   "files": [
+    "studio2/shrink.py",
+    "studio2/sheet.py"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "channel-registry",
+   "status": "proven",
+   "tags": [
+    "channels",
+    "brand",
+    "process",
+    "separation"
+   ],
+   "useWhen": "Several YouTube channels, one toolchain: channels/<id>/channel.json (validated) holds story profile, footer, hashtags, disclosure, voice, flavour; film.json names its channel; new-episode.mjs requires --channel; the briefing lists films per channel and flags unassigned or unknown ones.",
+   "files": [
+    "studio2/lib/channels.mjs",
+    "channels/README.md",
+    "channels/post-time-survival/channel.json",
+    "channels/explainer-shorts/channel.json",
+    "studio2/new-episode.mjs"
+   ],
+   "tests": [
+    "studio2/tests/channels.test.mjs",
+    "studio2/tests/scaffold.test.mjs"
+   ],
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "survival-story-profile",
+   "status": "proven",
+   "tags": [
+    "story",
+    "survival",
+    "danger-ladder",
+    "audit"
+   ],
+   "useWhen": "Film of the channel post-time-survival: story-audit.mjs applies auditSurvival (protagonist, threat, stakes, rule, ending; danger 1-5 on every beat with at least 3 rises, peak 4-5 at 55-90%, a choice before the peak) instead of thesis, facts and carrier. Numbers are a design, not measured.",
+   "files": [
+    "studio2/lib/story-profiles.mjs",
+    "studio2/story-audit.mjs"
+   ],
+   "tests": [
+    "studio2/tests/story-survival.test.mjs"
+   ],
+   "usedIn": [
+    "(none yet: first film of channel post-time-survival; proven by unit tests and a throwaway-episode run)"
+   ]
+  },
+  {
+   "name": "channel-post-text",
+   "status": "proven",
+   "tags": [
+    "post",
+    "packaging",
+    "channels"
+   ],
+   "useWhen": "node studio2/post.mjs --episode episodes/<id> writes the one post.txt from POST.json plus the channel's disclosure, footer and hashtags (title max 100 characters).",
+   "files": [
+    "studio2/post.mjs",
+    "studio2/lib/post.mjs"
+   ],
+   "tests": [
+    "studio2/tests/post.test.mjs"
+   ],
+   "usedIn": [
+    "(none yet: first film of channel post-time-survival; proven by unit tests and a throwaway-episode run)"
+   ]
+  },
+  {
+   "name": "music-under-voice-check",
+   "status": "proven",
+   "tags": [
+    "sound",
+    "mix",
+    "music",
+    "preflight"
+   ],
+   "useWhen": "After writing cues.mjs and before the full render: node studio2/mixcheck.mjs --episode episodes/<id> measures how far the ducked score sits under the narration (aim 10-13 dB; preflight fails outside 8.5-15). Tune scoreVolume in cues.mjs.",
+   "files": [
+    "studio2/mixcheck.mjs",
+    "studio2/lib/mixlevels.mjs"
+   ],
+   "tests": [
+    "studio2/tests/mixlevels.test.mjs"
+   ],
+   "usedIn": [
+    "square-wheel",
+    "stranded-island"
+   ]
+  },
+  {
+   "name": "package-builder",
+   "status": "proven",
+   "tags": [
+    "delivery",
+    "package",
+    "post",
+    "qa"
+   ],
+   "useWhen": "Last step of a film, after finish.mjs and the staged cover: node studio2/package.mjs --episode episodes/<id> builds out/publish (final.mp4, cover-small.jpg, post.txt with the channel footer and AI disclosure, metadata.json, package-check.json) and checks decode, length against the channel range, size, black and frozen frames, loudness, peak, title length and files. It never uploads.",
+   "files": [
+    "studio2/package.mjs",
+    "studio2/lib/package-check.mjs"
+   ],
+   "tests": [
+    "studio2/tests/package-check.test.mjs"
+   ],
+   "usedIn": [
+    "stranded-island"
+   ]
+  },
+  {
+   "name": "character-look",
+   "status": "experimental",
+   "tags": [
+    "character",
+    "actor",
+    "outline",
+    "flat",
+    "face",
+    "ref-look"
+   ],
+   "useWhen": "Every character. createActor reads spec.look: 'ref' (default; flat unlit colour, thick black outline, thick stick arms with round blob hands, thin leg sticks, dark-oval-eye ink face) or 'classic' (older shaded toon). Tune the numbers in LOOKS, never in the scene. Flat 2.5D hair sheets (hair.js), one-piece body painted with collar, hem, seams and an emblem (clothes.js), lens mouth, D-shaped eyes. Hand-drawn line pressure (pen.js): outlines, brows and limbs get heavy/light width; world-space outline in metres.",
+   "files": [
+    "studio2/runtime/look.js",
+    "studio2/runtime/actor.js",
+    "studio2/runtime/face.js",
+    "studio2/runtime/engine2.js",
+    "studio2/runtime/hair.js",
+    "studio2/runtime/clothes.js",
+    "studio2/runtime/pen.js",
+    "studio2/lib/outline.mjs"
+   ],
+   "tests": [
+    "studio2/tests/look.test.mjs",
+    "studio2/tests/hair.test.mjs",
+    "studio2/tests/clothes.test.mjs",
+    "studio2/tests/face.test.mjs",
+    "studio2/tests/pen.test.mjs",
+    "studio2/tests/outline.test.mjs"
+   ],
+   "provenBy": "Unit test for the preset table; rendered side by side with the reference (episodes/square-wheel/out/character-look-vs-ref.jpg). Not yet used in a full film, so experimental.",
+   "usedIn": [
+    "square-wheel"
+   ]
+  },
+  {
+   "name": "model-gate",
+   "status": "experimental",
+   "tags": [
+    "models",
+    "gate",
+    "sheet",
+    "process"
+   ],
+   "useWhen": "Start of every film's art work: list the models in MODELS.json, build each in scene2/models/<id>.mjs, render its four-view sheet, pass it, only then the next; assemble the scene after all pass.",
+   "files": [
+    "studio2/lib/models.mjs",
+    "studio2/models.mjs",
+    "studio2/library/modelsheet.mjs"
+   ],
+   "tests": [
+    "studio2/tests/models.test.mjs"
+   ],
+   "usedIn": [
+    "ten-million"
+   ],
+   "provenBy": "Unit tests for the one-by-one rule; used for the hero of ten-million. Not yet used for a whole film."
+  },
+  {
+   "name": "voice-paragraph-placement",
+   "status": "experimental",
+   "tags": [
+    "voice",
+    "timing",
+    "mix",
+    "gate"
+   ],
+   "useWhen": "A film whose picture is fixed in beats (4 s each) and whose narration must land on them: one voice take, one paragraph per narration line, film.json voiceGaps from the real paragraph lengths, mixSeconds when the last beat is silent.",
+   "files": [
+    "studio2/voicegaps.mjs",
+    "studio2/lib/voice-gaps.mjs",
+    "studio2/mix.mjs",
+    "studio2/collide.mjs"
+   ],
+   "tests": [
+    "studio2/tests/voice-gaps.test.mjs"
+   ],
+   "usedIn": [
+    "spend-ten-million"
+   ],
+   "provenBy": "9 paragraphs placed on their beats (starts 0, 5.15, 12.1, 20.1, 28.1, 36.1, 40.1, 48.1, 52.1 s); mixSeconds made the mix 59.8 s and the gate 1794 frames."
+  },
+  {
+   "name": "multi-zone-world",
+   "status": "experimental",
+   "tags": [
+    "scene",
+    "zones",
+    "sky",
+    "fog",
+    "atmosphere"
+   ],
+   "useWhen": "A film that visits several places in 60 s: put each place in its own group 100 m apart, show one per beat, hide the rest, move the sky with the camera, keep one atmosphere table per beat, use zp() only for actors and the camera.",
+   "files": [
+    "episodes/spend-ten-million/scene2/main.mjs",
+    "episodes/spend-ten-million/scene2/scenery.mjs",
+    "episodes/spend-ten-million/scene2/landscape.mjs",
+    "episodes/spend-ten-million/scene2/trees.mjs",
+    "episodes/spend-ten-million/scene2/grass.mjs",
+    "episodes/spend-ten-million/scene2/water.mjs"
+   ],
+   "usedIn": [
+    "spend-ten-million"
+   ],
+   "provenBy": "Seven zones and an interior set in one film, collide PASS on 1794 frames; sky-follows-camera fixed a pale block, see docs/DEFECTS.json sky-box-fixed-at-origin and zone-child-double-offset. Not yet moved into studio2/library with a test."
+  },
+  {
+   "name": "enterable-prop-models",
+   "status": "experimental",
+   "tags": [
+    "models",
+    "mansion",
+    "jet",
+    "yacht",
+    "car",
+    "stairs",
+    "scale"
+   ],
+   "useWhen": "A prop the hero enters or uses: hollow mansion with hall and chandelier, jet with even airstairs and interior set, yacht with a helm station, convertible with a door, speed bump. Copy the staging code (stairH, ramp, hop-over, twist) with them.",
+   "files": [
+    "episodes/spend-ten-million/scene2/mansion.mjs",
+    "episodes/spend-ten-million/scene2/airfield.mjs",
+    "episodes/spend-ten-million/scene2/cabin.mjs",
+    "episodes/spend-ten-million/scene2/marina.mjs",
+    "episodes/spend-ten-million/scene2/street.mjs"
+   ],
+   "usedIn": [
+    "spend-ten-million"
+   ],
+   "provenBy": "Used in a delivered film with the collision gate passing; real sizes and lanes in docs/LESSONS.md section G. Not yet moved into studio2/library with tests."
+  },
+  {
+   "name": "story-fun-gate",
+   "status": "proven",
+   "tags": [
+    "story",
+    "comedy",
+    "gate",
+    "process"
+   ],
+   "useWhen": "Every new film (film.json funGate true): write the extra STORY.json fields (retell, antagonist, wantResolvedAt, twist, endingTone, weakestBeat, per-beat funny/pressure/fromRule) and run story-audit.mjs before showing or building anything.",
+   "files": [
+    "studio2/lib/story-fun.mjs",
+    "studio2/story-audit.mjs",
+    "studio2/lib/scaffold.mjs"
+   ],
+   "tests": [
+    "studio2/tests/story-fun.test.mjs"
+   ],
+   "usedIn": [
+    "stop-time-hour"
+   ],
+   "provenBy": "The old stop-time-hour story failed it with 38 problems; the rewritten story passes; five unit tests cover a flat list of pranks, an early resolved want, a late rival, a sad ending and an early twist."
+  },
+  {
+   "name": "model-fidelity-gate",
+   "status": "proven",
+   "tags": [
+    "models",
+    "scale",
+    "gate",
+    "real-world"
+   ],
+   "useWhen": "Every model of a new film (film.json fidelityGate true): fill reference, realDetails and interaction in MODELS.json, then pass the model; the tool refuses a modelled value outside its real range.",
+   "files": [
+    "studio2/lib/model-fidelity.mjs",
+    "studio2/lib/models.mjs",
+    "studio2/models.mjs",
+    "studio2/lib/scaffold.mjs"
+   ],
+   "tests": [
+    "studio2/tests/model-fidelity.test.mjs"
+   ],
+   "usedIn": [
+    "stop-time-hour"
+   ],
+   "provenBy": "Applied to the 11 models of stop-time-hour it found oversized touch points (remote, watch, pigeon, coffee drop) that were then resized; four unit tests cover in-range, out-of-range, missing data and the opt-in hook."
+  },
+  {
+   "name": "ref-contract",
+   "status": "proven",
+   "tags": [
+    "process",
+    "gates",
+    "automation",
+    "reference"
+   ],
+   "useWhen": "Every film: studio2/lib/ref-contract.mjs lists every gate (scaffold turns all on, preflight fails a film that dropped one) and the ordered steps; node studio2/next-step.mjs --episode episodes/<id> prints the first undone step and the session briefing prints it too.",
+   "files": [
+    "studio2/lib/ref-contract.mjs",
+    "studio2/next-step.mjs",
+    "studio2/lib/scaffold.mjs"
+   ],
+   "tests": [
+    "studio2/tests/ref-contract.test.mjs",
+    "studio2/tests/scaffold.test.mjs"
+   ],
+   "usedIn": [
+    "double-weight-hourly"
+   ]
+  },
+  {
+   "name": "camera-plan-gate",
+   "status": "proven",
+   "tags": [
+    "camera",
+    "gate",
+    "editing",
+    "reference",
+    "framing"
+   ],
+   "useWhen": "Before any render: node studio2/camera-plan.mjs reads out/collide.json and fails a shot that does not travel (floor 3% of the frame width per second, reference p10 3.5%, median 13.5%) and a film whose hero is too small (head 12% of the frame in 40% of frames). Reference numbers: python studio2/ref-camera.py (reference/study/camera-travel.json).",
+   "files": [
+    "studio2/lib/camera-plan.mjs",
+    "studio2/camera-plan.mjs",
+    "studio2/ref-camera.py"
+   ],
+   "tests": [
+    "studio2/tests/camera-plan.test.mjs"
+   ],
+   "usedIn": [
+    "double-weight-hourly"
+   ]
+  },
+  {
+   "name": "look-saturation-gate",
+   "status": "proven",
+   "tags": [
+    "colour",
+    "gate",
+    "preflight",
+    "reference"
+   ],
+   "useWhen": "Preflight colour step: median saturation at least .38 and strongly coloured share at least .33 (reference .47 / .47). Engine camera options saturation, skyLow and skyHigh set the grade and the sky colours per shot (dusk, night).",
+   "files": [
+    "studio2/lib/look-stats.mjs",
+    "studio2/runtime/engine2.js"
+   ],
+   "tests": [
+    "studio2/tests/look-stats.test.mjs"
+   ],
+   "usedIn": [
+    "double-weight-hourly"
+   ]
+  },
+  {
+   "name": "realism-layer",
+   "status": "proven",
+   "tags": [
+    "realism",
+    "materials",
+    "textures",
+    "gate",
+    "reference"
+   ],
+   "useWhen": "After a scene is built: texturize(ctx.scene,{THREE}) from /repo/studio2/library/realism.mjs gives every prop procedural PBR surfaces (wood, concrete, asphalt, metal, fabric, tile, plaster, paper, rubber) at real-world tile size; actors stay flat. Preflight's detail step (studio2/detail-check.py against reference/study/detail-stats.json) fails a film under 75% of the reference's fine detail.",
+   "files": [
+    "studio2/library/realism.mjs",
+    "studio2/detail-check.py",
+    "reference/study/detail-stats.json"
+   ],
+   "tests": [
+    "studio2/tests/realism.test.mjs"
+   ],
+   "usedIn": [
+    "double-weight-hourly"
+   ]
+  }
+ ]
+}

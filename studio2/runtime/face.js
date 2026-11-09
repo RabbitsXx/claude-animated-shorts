@@ -29,6 +29,7 @@ export function faceParams(p){
 export function mixFace(a,b,k){const A=faceParams(a),B=faceParams(b),o={};for(const n of Object.keys(FACE0))o[n]=A[n]+(B[n]-A[n])*k;return o;}
 // keys: [[t,faceNameOrParams,ease?]...] -> params at t (ease arrives at key)
 import {ease} from './tracks.js';
+import {taperStroke,quadPts} from './pen.js';
 export function faceTrack(keys,t){
  if(t<=keys[0][0])return faceParams(keys[0][1]);
  const n=keys.length;if(t>=keys[n-1][0])return faceParams(keys[n-1][1]);
@@ -36,8 +37,15 @@ export function faceTrack(keys,t){
  const [t0,a]=keys[i-1],[t1,b,e='io']=keys[i];return mixFace(a,b,ease[e]((t-t0)/(t1-t0)));
 }
 export const CANVAS={w:512,h:420};
-export function drawFace(pen,f,spec={}){
- const INK=spec.ink||'#351f22',W=512,H=420;
+// Reference-look mouth: a filled leaf (lens) shape. Corners and the curve follow smile / smirk / width; canvas y grows downward.
+export function lensMouth(f,cy=300){
+ const w=52*f.width,sm=f.smirk,smile=f.smile,ly=cy-8-smile*10+sm*10,ry=cy-8-smile*10-sm*14,ctrl=cy+smile*34+(smile<0?-6:2);
+ return {left:[256-w,ly],right:[256+w,ry],ctrl,thick:28,mid:(ly+ry)/4+ctrl/2};
+}
+export function drawFace(pen0,f,spec={}){
+ const INK=spec.ink||'#351f22',W=512,H=420,K=spec.inkScale||1;
+ // inkScale thickens every stroke (look 'ref'); the proxy keeps the whole drawing code unchanged
+ const pen=K===1?pen0:new Proxy(pen0,{get:(t,k)=>{const v=t[k];return typeof v==='function'?v.bind(t):v;},set:(t,k,v)=>{t[k]=k==='lineWidth'?v*K:v;return true;}});
  pen.clearRect(0,0,W,H);pen.strokeStyle=INK;pen.fillStyle=INK;pen.lineCap=pen.lineJoin='round';
  if(spec.dummy){ // crash-test dummy: quartered target discs, stitched mouth
   for(const x of [150,362]){const y=150;pen.fillStyle='#fffaee';pen.lineWidth=8;pen.beginPath();pen.arc(x,y,52*(.8+Math.min(1.4,(x<256?f.eyeL:f.eyeR))*.2),0,7);pen.fill();pen.stroke();pen.fillStyle=INK;pen.beginPath();pen.moveTo(x,y);pen.arc(x,y,48*(.8+Math.min(1.4,(x<256?f.eyeL:f.eyeR))*.2),0,Math.PI/2);pen.fill();pen.beginPath();pen.moveTo(x,y);pen.arc(x,y,48*(.8+Math.min(1.4,(x<256?f.eyeL:f.eyeR))*.2),Math.PI,Math.PI*1.5);pen.fill();}
@@ -45,7 +53,8 @@ export function drawFace(pen,f,spec={}){
   return;}
  const blinkClose=Math.max(0,Math.min(1,f.blink));
  // blush
- if(f.blush>0){pen.save();pen.globalAlpha=.5*Math.min(1,f.blush);pen.fillStyle='#f08a8a';for(const x of [92,420]){pen.beginPath();pen.ellipse(x,232,34,20,0,0,7);pen.fill();}pen.restore();}
+ const bl=Math.max(f.blush,spec.feminine?.35:0); // spec.feminine (added 2026-11-08): lashes, thin arched brows, small nose, rose lips, light blush
+ if(bl>0){pen.save();pen.globalAlpha=.5*Math.min(1,bl);pen.fillStyle='#f08a8a';for(const x of [92,420]){pen.beginPath();pen.ellipse(x,232,34,20,0,0,7);pen.fill();}pen.restore();}
  // eyes + brows
  for(const [i,x] of [145,367].entries()){
   const left=i===0,open=(left?f.eyeL:f.eyeR),bh=left?f.browL:f.browR,ang=left?f.angL:f.angR;
@@ -54,43 +63,61 @@ export function drawFace(pen,f,spec={}){
   pen.lineWidth=7;
   if(f.squint>.85||lid<.09){ // happy arc or closed lid line
    pen.beginPath();
-   if(f.squint>.85&&blinkClose<.5){pen.lineWidth=9;pen.arc(x,152,30,Math.PI*1.12,Math.PI*1.88);}
+   if(f.squint>.85&&blinkClose<.5&&spec.darkEyes){const d=left?1:-1;pen.fillStyle=INK;taperStroke(pen,[...quadPts([x-d*30,118],[x+d*6,130],[x+d*24,148],8),...quadPts([x+d*24,148],[x+d*6,166],[x-d*30,178],8).slice(1)],12*K,{seed:left?4:5,end:.5});pen.beginPath();}  // reference laugh: squeezed '> <' eyes
+   else if(f.squint>.85&&blinkClose<.5){pen.lineWidth=9;pen.arc(x,152,30,Math.PI*1.12,Math.PI*1.88);}
    else{pen.moveTo(x-34,150);pen.quadraticCurveTo(x,156,x+34,150);}
    pen.stroke();
   }else{
+   if(spec.darkEyes){ // reference look: a solid dark oval with one small highlight, no white of the eye
+    const ox=x+Math.max(-1,Math.min(1,f.lookX))*8,oy=145-Math.max(-1,Math.min(1,f.lookY))*6,E=spec.eyeScale||1,ew=Math.max(15,rx*.56)*E*1.05,eh=Math.max(4,ry*.92)*Math.min(E,1.15);
+    pen.fillStyle=INK;pen.beginPath();pen.ellipse(ox,oy-eh*.45,ew,eh*1.45,0,0,Math.PI);pen.closePath();pen.fill(); // D shape: flat lid on top, round below (as in the reference)
+   }else{
    pen.fillStyle='#fffaee';pen.beginPath();pen.ellipse(x,145,rx,Math.max(3,ry),0,0,7);pen.fill();pen.stroke();
    const px=x+Math.max(-1,Math.min(1,f.lookX))*(rx-17),py=145+Math.max(-1,Math.min(1,f.lookY))*Math.max(0,ry-13)*-1;
-   pen.fillStyle=INK;pen.beginPath();pen.ellipse(px,py,Math.min(13,rx*.37),Math.min(Math.max(3,ry)*.7,16),0,0,7);pen.fill();
+   pen.fillStyle=INK;pen.beginPath();pen.ellipse(px,py,Math.min(spec.feminine?15:13,rx*.4),Math.min(Math.max(3,ry)*.78,spec.feminine?18:16),0,0,7);pen.fill();
+   if(spec.feminine){const out=left?-1:1,ryy=Math.max(3,ry);
+    pen.save();pen.lineWidth=12;pen.beginPath();pen.ellipse(x,145,rx,ryy,0,Math.PI*1.04,Math.PI*1.96);pen.stroke();pen.lineWidth=7;
+    for(let k=0;k<3;k++){const a=Math.PI*(1.5+out*(.2+.1*k)),sx=x+rx*Math.cos(a),sy=145+ryy*Math.sin(a);pen.beginPath();pen.moveTo(sx,sy);pen.lineTo(sx+out*(12+k*3),sy-13-k*3);pen.stroke();}
+    pen.fillStyle='#ffffff';pen.beginPath();pen.arc(px+5,py-6,5,0,7);pen.fill();pen.restore();}
    // eyelid shadow when partly closed
    if(f.eyeL<.8||f.eyeR<.8||f.squint>.1){pen.lineWidth=8;pen.beginPath();pen.moveTo(x-rx,145-ry*.55);pen.quadraticCurveTo(x,145-ry*.85,x+rx,145-ry*.55);pen.stroke();}
+   }
   }
   // brow: inner end is toward the nose
-  const inner=left?1:-1,y0=84-bh*34;pen.lineWidth=11;pen.beginPath();
-  const iy=y0+ang*16,oy=y0-ang*10;pen.moveTo(x-inner*40,oy);pen.quadraticCurveTo(x,(iy+oy)/2-5,x+inner*40,iy);pen.stroke();
+  const inner=left?1:-1,y0=84-bh*34;pen.lineWidth=spec.feminine?7:11;pen.beginPath();
+  const iy=y0+ang*16,oy=y0-ang*10;if(spec.darkEyes){pen.fillStyle=INK;taperStroke(pen,quadPts([x-inner*40,oy],[x,(iy+oy)/2-5],[x+inner*40,iy],14),11*K*1.15,{seed:left?1:2,end:.55});}else{pen.moveTo(x-inner*40,oy+(spec.feminine?6:0));pen.quadraticCurveTo(x,(iy+oy)/2-(spec.feminine?14:5),x+inner*40,iy+(spec.feminine?3:0));pen.stroke();}
  }
  // glasses
  if(spec.glasses){pen.lineWidth=7;for(const x of [145,367]){pen.beginPath();pen.ellipse(x,146,52,50,0,0,7);pen.stroke();}pen.beginPath();pen.moveTo(197,142);pen.quadraticCurveTo(256,126,315,142);pen.stroke();}
  // nose
- pen.lineWidth=7;pen.beginPath();pen.moveTo(256,186);pen.lineTo(244,226);pen.lineTo(268,230);pen.stroke();
+ if(spec.feminine){pen.lineWidth=6;pen.beginPath();pen.moveTo(251,208);pen.quadraticCurveTo(243,226,257,228);pen.stroke();}
+ else if(!spec.darkEyes){pen.lineWidth=7;pen.beginPath();pen.moveTo(256,186);pen.lineTo(244,226);pen.lineTo(268,230);pen.stroke();}
  // mouth
  const w=52*f.width,cy=300,smile=f.smile,open=f.open,sm=f.smirk;
  const lc=[256-w,cy-8-smile*10+sm*10],rc=[256+w,cy-8-smile*10-sm*14];
  pen.lineWidth=9;
- if(open>.04){
-  const o=open*44,mid=cy+smile*18;
-  pen.beginPath();
-  if(f.round>0){const rr=w*(1-f.round)+22*f.round;pen.ellipse(256,cy+10,rr,Math.max(8,o*(.7+f.round*.5)),0,0,7);}
-  else{pen.moveTo(...lc);pen.quadraticCurveTo(256,mid-6,...rc);pen.quadraticCurveTo(256,mid+o*1.35,...lc);}
-  pen.closePath();pen.fillStyle='#6b2f37';pen.fill();
+ if(open>(spec.darkEyes?.12:.04)){
+  const o=open*44*(spec.mouthScale||1),mid=cy+smile*18,ref=!!spec.darkEyes;
+  // the mouth outline is its own path function: stroking after the tongue was drawn used to outline the TONGUE (a black ring), a bug since the first look
+  const mouthPath=()=>{pen.beginPath();
+   if(f.round>0){const rr=w*(1-f.round)+22*f.round;pen.ellipse(256,cy+10,rr,Math.max(8,o*(.7+f.round*.5)),0,0,7);}
+   else{pen.moveTo(...lc);pen.quadraticCurveTo(256,mid-6,...rc);pen.quadraticCurveTo(256,mid+o*1.35,...lc);}
+   pen.closePath();};
+  mouthPath();pen.fillStyle=ref?'#3a1a1f':'#6b2f37';pen.fill();
   pen.save();pen.clip();
-  if(f.teeth>0){pen.fillStyle='#fffaf0';pen.fillRect(256-w-6,cy-26,w*2+12,12+open*10);}
-  if(f.tongue>0||open>.5){pen.fillStyle='#e86c6c';pen.beginPath();pen.ellipse(256,cy+o*.95,w*.5,o*.35,0,0,7);pen.fill();}
-  pen.restore();pen.stroke();
+  if(f.teeth>0){pen.fillStyle='#fffaf0';const th=(ref?18+open*22:12+open*10);pen.fillRect(256-w-6,cy-26,w*2+12,th);
+   if(ref){pen.strokeStyle=INK;pen.lineWidth=2.5;for(let i=1;i<6;i++){const gx=256-w+i*(w*2/6);pen.beginPath();pen.moveTo(gx,cy-26);pen.lineTo(gx,cy-26+th);pen.stroke();}pen.beginPath();pen.moveTo(256-w-6,cy-26+th);pen.lineTo(256+w+6,cy-26+th);pen.stroke();}}
+  if(f.tongue>0||open>.5){pen.fillStyle='#ef7a82';pen.beginPath();pen.ellipse(256,ref?cy+o*.62:cy+o*.95,w*(ref?.62:.5),o*(ref?.3:.35),0,0,7);pen.fill();}
+  pen.restore();mouthPath();pen.stroke();
   if(f.teeth>0){pen.lineWidth=4;pen.beginPath();pen.moveTo(256-w+8,cy-12+open*10);pen.lineTo(256+w-8,cy-12+open*10);pen.stroke();}
+ }else if(spec.darkEyes){ // reference look: a flat dark leaf, no outline stroke
+  const m=lensMouth(f,cy);pen.fillStyle=INK;pen.beginPath();pen.moveTo(...m.left);pen.quadraticCurveTo(256,m.ctrl-m.thick,...m.right);pen.quadraticCurveTo(256,m.ctrl+m.thick,...m.left);pen.closePath();pen.fill();
  }else{
   pen.beginPath();pen.moveTo(...lc);pen.quadraticCurveTo(256,cy+smile*34+(smile<0?-6:2),...rc);pen.stroke();
   if(smile>.6){pen.lineWidth=5;for(const c of [lc,rc]){pen.beginPath();pen.moveTo(c[0]+(c===lc?-6:6),c[1]-12);pen.lineTo(c[0],c[1]);pen.stroke();}}
  }
+ // rose lips (feminine, closed mouth): a cupid-bow upper lip and a fuller lower lip painted over the mouth line
+ if(spec.feminine&&open<=.04){const lw=w*.85,my=cy+smile*14;pen.save();pen.fillStyle='#d9606a';pen.beginPath();pen.moveTo(256-lw,my-4);pen.quadraticCurveTo(256-lw*.4,my-18,256,my-8);pen.quadraticCurveTo(256+lw*.4,my-18,256+lw,my-4);pen.quadraticCurveTo(256,my+22,256-lw,my-4);pen.closePath();pen.fill();pen.lineWidth=6;pen.stroke();pen.restore();}
  // moustache
  if(spec.moustache){pen.fillStyle=spec.moustache;pen.lineWidth=6;for(const s of [-1,1]){pen.beginPath();pen.moveTo(256,262);pen.bezierCurveTo(256+s*38,242,256+s*96,250,256+s*112,284);pen.bezierCurveTo(256+s*84,270,256+s*44,276,256,274);pen.closePath();pen.fill();pen.stroke();}}
  // soot smudge

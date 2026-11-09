@@ -1,0 +1,123 @@
+{
+ "fps": 30.0,
+ "pairs": 253,
+ "cuts": 45,
+ "shots": [
+  {
+   "from": 0.0,
+   "seconds": 2.5,
+   "netPerSecond": 0.091,
+   "pathPerSecond": 0.148
+  },
+  {
+   "from": 3.0,
+   "seconds": 2.77,
+   "netPerSecond": 0.191,
+   "pathPerSecond": 0.319
+  },
+  {
+   "from": 7.267,
+   "seconds": 2.5,
+   "netPerSecond": 0.027,
+   "pathPerSecond": 0.059
+  },
+  {
+   "from": 10.267,
+   "seconds": 1.5,
+   "netPerSecond": 0.041,
+   "pathPerSecond": 0.047
+  },
+  {
+   "from": 12.0,
+   "seconds": 3.77,
+   "netPerSecond": 0.273,
+   "pathPerSecond": 0.333
+  },
+  {
+   "from": 16.5,
+   "seconds": 1.27,
+   "netPerSecond": 0.149,
+   "pathPerSecond": 0.159
+  },
+  {
+   "from": 18.0,
+   "seconds": 2.77,
+   "netPerSecond": 0.251,
+   "pathPerSecond": 0.289
+  },
+  {
+   "from": 21.0,
+   "seconds": 1.0,
+   "netPerSecond": 0.268,
+   "pathPerSecond": 0.276
+  },
+  {
+   "from": 22.267,
+   "seconds": 5.23,
+   "netPerSecond": 0.097,
+   "pathPerSecond": 0.174
+  },
+  {
+   "from": 28.767,
+   "seconds": 2.73,
+   "netPerSecond": 0.149,
+   "pathPerSecond": 0.169
+  },
+  {
+   "from": 31.767,
+   "seconds": 1.23,
+   "netPerSecond": 0.248,
+   "pathPerSecond": 0.253
+  },
+  {
+   "from": 36.767,
+   "seconds": 4.23,
+   "netPerSecond": 0.097,
+   "pathPerSecond": 0.207
+  },
+  {
+   "from": 41.767,
+   "seconds": 1.23,
+   "netPerSecond": 0.026,
+   "pathPerSecond": 0.026
+  },
+  {
+   "from": 46.5,
+   "seconds": 5.77,
+   "netPerSecond": 0.135,
+   "pathPerSecond": 0.159
+  },
+  {
+   "from": 52.5,
+   "seconds": 2.5,
+   "netPerSecond": 0.349,
+   "pathPerSecond": 0.349
+  },
+  {
+   "from": 55.267,
+   "seconds": 5.73,
+   "netPerSecond": 0.084,
+   "pathPerSecond": 0.266
+  },
+  {
+   "from": 61.767,
+   "seconds": 1.37,
+   "netPerSecond": 0.07,
+   "pathPerSecond": 0.139
+  }
+ ],
+ "netPerSecond": {
+  "10": 0.035,
+  "25": 0.084,
+  "50": 0.135,
+  "75": 0.248,
+  "90": 0.27
+ },
+ "speedPerSecond": {
+  "10": 0.023,
+  "25": 0.073,
+  "50": 0.19,
+  "75": 0.311,
+  "90": 0.432
+ }
+}
